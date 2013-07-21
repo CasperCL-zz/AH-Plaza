@@ -105,13 +105,13 @@ int credentialViewMoved = 0;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [self moveCredentialsViewUp: 160];
+    [self moveCredentialsViewUp: 170];
     NSString *currentURL = [_loginHelper stringByEvaluatingJavaScriptFromString:@"document.URL"];
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
     if(textField == _usernameTextField) {
-        [self moveCredentialsViewUp: 160];
+        [self moveCredentialsViewUp: 170];
         credentialViewMoved = 2;
         [_passwordTextField becomeFirstResponder];
     } else if (textField == _passwordTextField){
@@ -134,7 +134,7 @@ typedef enum {
 - (NSArray*) checkCredentials {
     NSMutableArray *errors = [[NSMutableArray alloc] init];
     CredentialsError err;
-    err = -1;
+    err = -1; // no err
 
     if([[_usernameTextField text] isEqualToString:@""]){
         err = USERNAME_EMPTY;
