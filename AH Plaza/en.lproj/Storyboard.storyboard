@@ -93,6 +93,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="xbb-fU-RDj" eventType="touchUpInside" id="2P1-d6-Vgb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -156,6 +159,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
                 <relationship kind="action" name="backgroundButtonClicked:"/>
+                <relationship kind="action" name="loginButtonPressed:"/>
                 <relationship kind="outlet" name="ahplazaImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="credentialsView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>

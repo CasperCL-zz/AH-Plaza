@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIView *credentialsView;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
+- (IBAction)loginButtonPressed:(id)sender;
+
+@property UIWebView *loginHelper;
 @property CGRect originalFrame;
 
 - (IBAction)backgroundButtonClicked:(id)sender;
