@@ -96,7 +96,6 @@ int credentialViewMoved = 0;
 }
 
 - (void) moveToDefaultLocation {
-    NSLog(@"%@", NSStringFromCGRect(_originalFrame));
     [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
         _credentialsView.frame = _originalFrame;
     } completion:^(BOOL finished) {
@@ -108,8 +107,6 @@ int credentialViewMoved = 0;
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     [self moveCredentialsViewUp: 160];
     NSString *currentURL = [_loginHelper stringByEvaluatingJavaScriptFromString:@"document.URL"];
-
-    NSLog(@"Current URL: %@", currentURL);
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
