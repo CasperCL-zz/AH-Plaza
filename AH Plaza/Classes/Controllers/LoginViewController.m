@@ -43,9 +43,40 @@ int credentialViewMoved = 0;
     NSURLRequest *urlReq = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"https://plaza.ah.nl/"]]; //plaza.ah.nl
     [_loginHelper loadRequest: urlReq];
     
+    //
+    [_loadingView setHidden: YES];
+    _loadingView.layer.cornerRadius = 7;
+    _loadingView.layer.masksToBounds = YES;
+    _coverView.hidden = YES;
+    
     [self showCredentialsView];
 }
 
+- (void) hideloadView {
+    _loadingView.alpha = 1.0f;
+    _coverView.alpha = 0.8f;
+    [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
+        _loadingView.alpha = 0.0f;
+        _coverView.alpha = 0.0f;
+        [self.view sendSubviewToBack: _ahplazaImage];
+    } completion:^(BOOL finished) {
+        _loadingView.hidden = YES;
+        _coverView.hidden = YES;
+    }];
+}
+
+- (void) showloadView {
+    _loadingView.alpha = 0.0f;
+    _coverView.alpha = 0.0f;
+    [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
+        _loadingView.alpha = 1.0f;
+        _coverView.alpha = 0.8f;
+        [self.view bringSubviewToFront: _ahplazaImage];
+    } completion:^(BOOL finished) {
+        _loadingView.hidden = NO;
+        _coverView.hidden = NO;
+    }];
+}
 
 
 - (void)didReceiveMemoryWarning
@@ -138,7 +169,7 @@ typedef enum {
     NSMutableArray *errors = [[NSMutableArray alloc] init];
     CredentialsError err;
     err = -1; // no err
-
+    
     if([[_usernameTextField text] isEqualToString:@""]){
         err = USERNAME_EMPTY;
         [errors addObject: [[NSNumber alloc] initWithInt: err]];
@@ -159,7 +190,7 @@ typedef enum {
     [_loginHelper stringByEvaluatingJavaScriptFromString: req];
     // Submit the form
     [_loginHelper stringByEvaluatingJavaScriptFromString: @"document.forms[0].submit();"];
-
+    [self showloadView];
     
     return errors;
 }
@@ -173,14 +204,44 @@ typedef enum {
         // Go to new view :D
         [_usernameTextField setText: @""];
         [_passwordTextField setText: @""];
+        [_usernameTextField resignFirstResponder];
+        [_passwordTextField resignFirstResponder];
+        [self moveToDefaultLocation];
     }
 }
 
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"%@", [_loginHelper stringByEvaluatingJavaScriptFromString:@"document.URL"]);
+    NSString * responseURL = [_loginHelper stringByEvaluatingJavaScriptFromString:@"document.URL"];
+    
+    if([responseURL isEqualToString: @"https://plaza.ah.nl/pkmslogin.form"]){  // Wrong credentials
+        [self hideloadView];
+    } else if ([responseURL isEqualToString: @"https://plaza.ah.nl/cgi-bin/final.pl"]) { // success
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuViewController"];
+        [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+        [vc setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
+        
+//        [self presentModalViewController:vc animated:YES];
+    }
+    
 }
 
+- (void) removeAllViews: (void (^)(BOOL finished)) completion {
+    CGRect imgFrame = _ahplazaImage.frame;
+    CGRect credFrame = _credentialsView.frame;
+    CGRect loadingFrame = _loadingView.frame;
+    
+    imgFrame.origin.y += 1000;
+    credFrame.origin.y += 1000;
+    loadingFrame.origin.y += 1000;
+    [UIView animateWithDuration: 2 animations:^{
+        _ahplazaImage.frame = imgFrame;
+        _credentialsView.frame = credFrame;
+        _loadingView.frame = loadingFrame;
+    } completion:completion];
+     
+}
 
 
 -(UIColor*)colorWithHexString:(NSString*)hex

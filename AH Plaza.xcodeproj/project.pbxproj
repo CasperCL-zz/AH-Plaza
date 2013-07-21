@@ -26,6 +26,7 @@
 		AF720FD9179C758200F77CA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720FD8179C758200F77CA6 /* Default-568h@2x.png */; };
 		AF720FDB179C763600F77CA6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720FDA179C763600F77CA6 /* Default@2x.png */; };
 		AF720FDD179C781800F77CA6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720FDC179C781800F77CA6 /* Default.png */; };
+		AF720FE0179C87A300F77CA6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720FDF179C87A300F77CA6 /* MenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		AF720FD8179C758200F77CA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AF720FDA179C763600F77CA6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AF720FDC179C781800F77CA6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AF720FDE179C87A300F77CA6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/Controllers/MenuViewController.h; sourceTree = "<group>"; };
+		AF720FDF179C87A300F77CA6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/Controllers/MenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 			children = (
 				AF720F90179BF20600F77CA6 /* LoginViewController.h */,
 				AF720F91179BF20600F77CA6 /* LoginViewController.m */,
+				AF720FDE179C87A300F77CA6 /* MenuViewController.h */,
+				AF720FDF179C87A300F77CA6 /* MenuViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				AF720EFB179BE2F400F77CA6 /* main.m in Sources */,
 				AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */,
 				AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */,
+				AF720FE0179C87A300F77CA6 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

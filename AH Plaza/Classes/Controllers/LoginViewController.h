@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ahplazaImage;
 
 @property (weak, nonatomic) IBOutlet UIView *credentialsView;
+@property (weak, nonatomic) IBOutlet UIView *loadingView;
+@property (weak, nonatomic) IBOutlet UIView *coverView;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 - (IBAction)loginButtonPressed:(id)sender;
