@@ -13,9 +13,16 @@
 		AF720EF9179BE2F400F77CA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF720EF7179BE2F400F77CA6 /* InfoPlist.strings */; };
 		AF720EFB179BE2F400F77CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720EFA179BE2F400F77CA6 /* main.m */; };
 		AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720EFE179BE2F400F77CA6 /* AppDelegate.m */; };
-		AF720F01179BE2F400F77CA6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F00179BE2F400F77CA6 /* Default.png */; };
-		AF720F03179BE2F400F77CA6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F02179BE2F400F77CA6 /* Default@2x.png */; };
-		AF720F05179BE2F400F77CA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F04179BE2F400F77CA6 /* Default-568h@2x.png */; };
+		AF720F0D179BE3D100F77CA6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */; };
+		AF720F52179BE72C00F77CA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */; };
+		AF720F53179BE72C00F77CA6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F50179BE72C00F77CA6 /* Default.png */; };
+		AF720F54179BE72C00F77CA6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F51179BE72C00F77CA6 /* Default@2x.png */; };
+		AF720F5B179BE77000F77CA6 /* app-icon_iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F59179BE77000F77CA6 /* app-icon_iphone4.png */; };
+		AF720F5C179BE77000F77CA6 /* app-icon_iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F5A179BE77000F77CA6 /* app-icon_iphone5.png */; };
+		AF720F60179BE80300F77CA6 /* ah-plaza.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F5F179BE80300F77CA6 /* ah-plaza.png */; };
+		AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720F91179BF20600F77CA6 /* LoginViewController.m */; };
+		AF720FC4179BF52C00F77CA6 /* iPhone_Login-Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720FC3179BF52C00F77CA6 /* iPhone_Login-Screen.png */; };
+		AF720FC9179BFAD200F77CA6 /* ah-button.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720FC8179BFAD200F77CA6 /* ah-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +36,17 @@
 		AF720EFC179BE2F400F77CA6 /* AH Plaza-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AH Plaza-Prefix.pch"; sourceTree = "<group>"; };
 		AF720EFD179BE2F400F77CA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF720EFE179BE2F400F77CA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF720F00179BE2F400F77CA6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		AF720F02179BE2F400F77CA6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		AF720F04179BE2F400F77CA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AF720F0C179BE3D100F77CA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		AF720F50179BE72C00F77CA6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/Default.png; sourceTree = "<group>"; };
+		AF720F51179BE72C00F77CA6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/Default@2x.png"; sourceTree = "<group>"; };
+		AF720F59179BE77000F77CA6 /* app-icon_iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon_iphone4.png"; path = "Resources/Images/app-icon_iphone4.png"; sourceTree = "<group>"; };
+		AF720F5A179BE77000F77CA6 /* app-icon_iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon_iphone5.png"; path = "Resources/Images/app-icon_iphone5.png"; sourceTree = "<group>"; };
+		AF720F5F179BE80300F77CA6 /* ah-plaza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ah-plaza.png"; path = "Resources/Images/ah-plaza.png"; sourceTree = "<group>"; };
+		AF720F90179BF20600F77CA6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/Controllers/LoginViewController.h; sourceTree = "<group>"; };
+		AF720F91179BF20600F77CA6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/Controllers/LoginViewController.m; sourceTree = "<group>"; };
+		AF720FC3179BF52C00F77CA6 /* iPhone_Login-Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone_Login-Screen.png"; sourceTree = "<group>"; };
+		AF720FC8179BFAD200F77CA6 /* ah-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ah-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +93,9 @@
 		AF720EF4179BE2F400F77CA6 /* AH Plaza */ = {
 			isa = PBXGroup;
 			children = (
-				AF720EFD179BE2F400F77CA6 /* AppDelegate.h */,
-				AF720EFE179BE2F400F77CA6 /* AppDelegate.m */,
+				AF720F93179BF20F00F77CA6 /* Controllers */,
+				AF720F0F179BE3F700F77CA6 /* Model */,
+				AF720F0E179BE3DA00F77CA6 /* View */,
 				AF720EF5179BE2F400F77CA6 /* Supporting Files */,
 			);
 			path = "AH Plaza";
@@ -88,15 +104,62 @@
 		AF720EF5179BE2F400F77CA6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF720F10179BE40B00F77CA6 /* Resources */,
+				AF720EFD179BE2F400F77CA6 /* AppDelegate.h */,
+				AF720EFE179BE2F400F77CA6 /* AppDelegate.m */,
 				AF720EF6179BE2F400F77CA6 /* AH Plaza-Info.plist */,
 				AF720EF7179BE2F400F77CA6 /* InfoPlist.strings */,
 				AF720EFA179BE2F400F77CA6 /* main.m */,
 				AF720EFC179BE2F400F77CA6 /* AH Plaza-Prefix.pch */,
-				AF720F00179BE2F400F77CA6 /* Default.png */,
-				AF720F02179BE2F400F77CA6 /* Default@2x.png */,
-				AF720F04179BE2F400F77CA6 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF720F0E179BE3DA00F77CA6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AF720F0F179BE3F700F77CA6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AF720F10179BE40B00F77CA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF720F11179BE41700F77CA6 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AF720F11179BE41700F77CA6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AF720FC8179BFAD200F77CA6 /* ah-button.png */,
+				AF720FC3179BF52C00F77CA6 /* iPhone_Login-Screen.png */,
+				AF720F5F179BE80300F77CA6 /* ah-plaza.png */,
+				AF720F59179BE77000F77CA6 /* app-icon_iphone4.png */,
+				AF720F5A179BE77000F77CA6 /* app-icon_iphone5.png */,
+				AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */,
+				AF720F50179BE72C00F77CA6 /* Default.png */,
+				AF720F51179BE72C00F77CA6 /* Default@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		AF720F93179BF20F00F77CA6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF720F90179BF20600F77CA6 /* LoginViewController.h */,
+				AF720F91179BF20600F77CA6 /* LoginViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +214,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF720EF9179BE2F400F77CA6 /* InfoPlist.strings in Resources */,
-				AF720F01179BE2F400F77CA6 /* Default.png in Resources */,
-				AF720F03179BE2F400F77CA6 /* Default@2x.png in Resources */,
-				AF720F05179BE2F400F77CA6 /* Default-568h@2x.png in Resources */,
+				AF720F0D179BE3D100F77CA6 /* Storyboard.storyboard in Resources */,
+				AF720F52179BE72C00F77CA6 /* Default-568h@2x.png in Resources */,
+				AF720F53179BE72C00F77CA6 /* Default.png in Resources */,
+				AF720F54179BE72C00F77CA6 /* Default@2x.png in Resources */,
+				AF720F5B179BE77000F77CA6 /* app-icon_iphone4.png in Resources */,
+				AF720F5C179BE77000F77CA6 /* app-icon_iphone5.png in Resources */,
+				AF720F60179BE80300F77CA6 /* ah-plaza.png in Resources */,
+				AF720FC4179BF52C00F77CA6 /* iPhone_Login-Screen.png in Resources */,
+				AF720FC9179BFAD200F77CA6 /* ah-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +235,7 @@
 			files = (
 				AF720EFB179BE2F400F77CA6 /* main.m in Sources */,
 				AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */,
+				AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +248,14 @@
 				AF720EF8179BE2F400F77CA6 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF720F0C179BE3D100F77CA6 /* en */,
+			);
+			name = Storyboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
