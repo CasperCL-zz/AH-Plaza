@@ -140,7 +140,6 @@ int credentialViewMoved = 0;
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     [self moveCredentialsViewUp: 170];
-    NSString *currentURL = [_loginHelper stringByEvaluatingJavaScriptFromString:@"document.URL"];
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
