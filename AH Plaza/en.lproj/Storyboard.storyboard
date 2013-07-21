@@ -46,7 +46,10 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="p3T-HW-5Oo">
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="XlW-nc-rUE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="xbb-fU-RDj" id="5Qe-nG-WHe"/>
@@ -61,7 +64,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Znt-JX-8SL">
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gpR-7d-F19"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="xbb-fU-RDj" id="V6L-0z-m8h"/>
@@ -77,7 +83,6 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TJ-T8-efX">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="C0E-uc-cPi"/>
                                             <constraint firstAttribute="width" constant="110" id="gNa-uu-UdV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="17"/>
@@ -95,6 +100,7 @@
                                     <constraint firstItem="cXp-9V-sav" firstAttribute="top" secondItem="UiY-Mp-89l" secondAttribute="top" constant="20" symbolic="YES" type="default" id="0af-VH-Gjk"/>
                                     <constraint firstAttribute="trailing" secondItem="p3T-HW-5Oo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1Eg-Yz-tj9"/>
                                     <constraint firstItem="2TJ-T8-efX" firstAttribute="centerX" secondItem="Znt-JX-8SL" secondAttribute="centerX" type="default" id="6og-Im-AWt"/>
+                                    <constraint firstAttribute="bottom" secondItem="2TJ-T8-efX" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="BjE-3n-OOr"/>
                                     <constraint firstItem="QmY-Br-IEu" firstAttribute="leading" secondItem="UiY-Mp-89l" secondAttribute="leading" type="default" id="BuL-90-1e6"/>
                                     <constraint firstAttribute="trailing" secondItem="UyD-Ns-dIF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CAb-JK-EDA"/>
                                     <constraint firstAttribute="trailing" secondItem="cXp-9V-sav" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EBX-JA-WI9"/>
@@ -123,9 +129,9 @@
                             <constraint firstAttribute="trailing" secondItem="UiY-Mp-89l" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="idX-25-T3Z"/>
                             <constraint firstItem="UiY-Mp-89l" firstAttribute="top" secondItem="XRl-vC-MCM" secondAttribute="bottom" constant="30" type="user" id="k34-yX-h4L"/>
                             <constraint firstItem="XRl-vC-MCM" firstAttribute="trailing" secondItem="n3w-Mo-hOd" secondAttribute="trailing" type="default" id="kGt-Qy-Zqj"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UiY-Mp-89l" secondAttribute="bottom" constant="61" type="user" id="p0s-7v-vGe"/>
                             <constraint firstItem="XRl-vC-MCM" firstAttribute="top" secondItem="n3w-Mo-hOd" secondAttribute="top" constant="20" symbolic="YES" type="default" id="uhN-xy-MQN"/>
                             <constraint firstItem="mMh-56-nDD" firstAttribute="leading" secondItem="n3w-Mo-hOd" secondAttribute="leading" type="default" id="vh7-Sz-xFN"/>
-                            <constraint firstAttribute="bottom" secondItem="UiY-Mp-89l" secondAttribute="bottom" constant="45" id="zc8-ls-9Gz"/>
                         </constraints>
                     </view>
                     <connections>

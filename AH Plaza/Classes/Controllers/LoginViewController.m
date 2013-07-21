@@ -16,7 +16,6 @@
 @implementation LoginViewController
 
 int credentialViewMoved = 0;
-CGRect originalFrame;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,11 +63,13 @@ CGRect originalFrame;
 		_ahplazaImage.frame = orginal;
     } completion:^(BOOL finished) {
     }];
-    
-    originalFrame = _credentialsView.frame;
 }
 
 - (IBAction)backgroundButtonClicked:(id)sender {
+    if(_originalFrame.origin.x == 0){
+        _originalFrame = _credentialsView.frame;
+    }
+    
     [_usernameTextField resignFirstResponder];
     [_passwordTextField resignFirstResponder];
     [self moveToDefaultLocation];
@@ -77,8 +78,6 @@ CGRect originalFrame;
 - (void) moveCredentialsViewUp {
     if(credentialViewMoved < 2){
         CGRect newFrame = _credentialsView.frame;
-        if(originalFrame.origin.x == 0)
-            originalFrame = _credentialsView.frame;
         newFrame.origin.y -= 80;
         [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
             _credentialsView.frame = newFrame;
@@ -91,11 +90,11 @@ CGRect originalFrame;
 
 - (void) moveToDefaultLocation {
     [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
-        _credentialsView.frame = originalFrame;
+        _credentialsView.frame = _originalFrame;
     } completion:^(BOOL finished) {
         credentialViewMoved = 0;
     }];
-
+    
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {

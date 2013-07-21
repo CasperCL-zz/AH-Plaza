@@ -15,6 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet UIView *credentialsView;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+
+@property CGRect originalFrame;
+
 - (IBAction)backgroundButtonClicked:(id)sender;
 
 @end
