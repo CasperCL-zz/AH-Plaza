@@ -10,4 +10,8 @@
 
 @interface MenuViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *componentsView;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonsLeftSide;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonsRightSide;
+
 @end

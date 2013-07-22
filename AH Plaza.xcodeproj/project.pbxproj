@@ -23,6 +23,15 @@
 		AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720F91179BF20600F77CA6 /* LoginViewController.m */; };
 		AF720FE0179C87A300F77CA6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720FDF179C87A300F77CA6 /* MenuViewController.m */; };
 		AF720FE2179C8DA700F77CA6 /* ah-button.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720FE1179C8DA700F77CA6 /* ah-button.png */; };
+		AFB7AE5C179D9C4900D58E08 /* info_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE54179D9C4900D58E08 /* info_ico.png */; };
+		AFB7AE5D179D9C4900D58E08 /* payment_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE55179D9C4900D58E08 /* payment_ico.png */; };
+		AFB7AE5E179D9C4900D58E08 /* planning_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE56179D9C4900D58E08 /* planning_ico.png */; };
+		AFB7AE5F179D9C4900D58E08 /* plaza_link_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE57179D9C4900D58E08 /* plaza_link_ico.png */; };
+		AFB7AE60179D9C4900D58E08 /* problems_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE58179D9C4900D58E08 /* problems_ico.png */; };
+		AFB7AE61179D9C4900D58E08 /* settings_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE59179D9C4900D58E08 /* settings_ico.png */; };
+		AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */; };
+		AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */; };
+		AFB7AE66179DE00600D58E08 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB7AE65179DE00600D58E08 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +57,16 @@
 		AF720FDE179C87A300F77CA6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/Controllers/MenuViewController.h; sourceTree = "<group>"; };
 		AF720FDF179C87A300F77CA6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/Controllers/MenuViewController.m; sourceTree = "<group>"; };
 		AF720FE1179C8DA700F77CA6 /* ah-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ah-button.png"; path = "Resources/Images/ah-button.png"; sourceTree = "<group>"; };
+		AFB7AE54179D9C4900D58E08 /* info_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info_ico.png; path = Resources/Images/icons/info_ico.png; sourceTree = "<group>"; };
+		AFB7AE55179D9C4900D58E08 /* payment_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = payment_ico.png; path = Resources/Images/icons/payment_ico.png; sourceTree = "<group>"; };
+		AFB7AE56179D9C4900D58E08 /* planning_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = planning_ico.png; path = Resources/Images/icons/planning_ico.png; sourceTree = "<group>"; };
+		AFB7AE57179D9C4900D58E08 /* plaza_link_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plaza_link_ico.png; path = Resources/Images/icons/plaza_link_ico.png; sourceTree = "<group>"; };
+		AFB7AE58179D9C4900D58E08 /* problems_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = problems_ico.png; path = Resources/Images/icons/problems_ico.png; sourceTree = "<group>"; };
+		AFB7AE59179D9C4900D58E08 /* settings_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings_ico.png; path = Resources/Images/icons/settings_ico.png; sourceTree = "<group>"; };
+		AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shiftklaar_ico.png; path = Resources/Images/icons/shiftklaar_ico.png; sourceTree = "<group>"; };
+		AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = webcal_ico.png; path = Resources/Images/icons/webcal_ico.png; sourceTree = "<group>"; };
+		AFB7AE64179DE00600D58E08 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/Controllers/SettingsViewController.h; sourceTree = "<group>"; };
+		AFB7AE65179DE00600D58E08 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/Controllers/SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +161,7 @@
 		AF720F11179BE41700F77CA6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AFB7AE53179D9C3300D58E08 /* icons */,
 				AF720FE1179C8DA700F77CA6 /* ah-button.png */,
 				AF720F5F179BE80300F77CA6 /* ah-plaza.png */,
 				AF720F59179BE77000F77CA6 /* app-icon_iphone4.png */,
@@ -160,8 +180,25 @@
 				AF720F91179BF20600F77CA6 /* LoginViewController.m */,
 				AF720FDE179C87A300F77CA6 /* MenuViewController.h */,
 				AF720FDF179C87A300F77CA6 /* MenuViewController.m */,
+				AFB7AE64179DE00600D58E08 /* SettingsViewController.h */,
+				AFB7AE65179DE00600D58E08 /* SettingsViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AFB7AE53179D9C3300D58E08 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				AFB7AE54179D9C4900D58E08 /* info_ico.png */,
+				AFB7AE55179D9C4900D58E08 /* payment_ico.png */,
+				AFB7AE56179D9C4900D58E08 /* planning_ico.png */,
+				AFB7AE57179D9C4900D58E08 /* plaza_link_ico.png */,
+				AFB7AE58179D9C4900D58E08 /* problems_ico.png */,
+				AFB7AE59179D9C4900D58E08 /* settings_ico.png */,
+				AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */,
+				AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */,
+			);
+			name = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +261,14 @@
 				AF720F5C179BE77000F77CA6 /* app-icon_iphone5.png in Resources */,
 				AF720F60179BE80300F77CA6 /* ah-plaza.png in Resources */,
 				AF720FE2179C8DA700F77CA6 /* ah-button.png in Resources */,
+				AFB7AE5C179D9C4900D58E08 /* info_ico.png in Resources */,
+				AFB7AE5D179D9C4900D58E08 /* payment_ico.png in Resources */,
+				AFB7AE5E179D9C4900D58E08 /* planning_ico.png in Resources */,
+				AFB7AE5F179D9C4900D58E08 /* plaza_link_ico.png in Resources */,
+				AFB7AE60179D9C4900D58E08 /* problems_ico.png in Resources */,
+				AFB7AE61179D9C4900D58E08 /* settings_ico.png in Resources */,
+				AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */,
+				AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +283,7 @@
 				AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */,
 				AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */,
 				AF720FE0179C87A300F77CA6 /* MenuViewController.m in Sources */,
+				AFB7AE66179DE00600D58E08 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +408,7 @@
 				AF720F0A179BE2F400F77CA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

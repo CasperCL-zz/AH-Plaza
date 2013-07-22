@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIView *loadingView;
 @property (weak, nonatomic) IBOutlet UIView *coverView;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
 
 - (IBAction)loginButtonPressed:(id)sender;
 

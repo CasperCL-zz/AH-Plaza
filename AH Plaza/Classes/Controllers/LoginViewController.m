@@ -49,10 +49,10 @@ int credentialViewMoved = 0;
     _loadingView.layer.masksToBounds = YES;
     _coverView.hidden = YES;
     
-    [self showCredentialsView];
+    [self showCredentialsView:^(BOOL finished) {}];
 }
 
-- (void) hideloadView {
+- (void) hideloadView: (void (^)(BOOL finished))completion{
     _loadingView.alpha = 1.0f;
     _coverView.alpha = 0.8f;
     [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
@@ -62,10 +62,11 @@ int credentialViewMoved = 0;
     } completion:^(BOOL finished) {
         _loadingView.hidden = YES;
         _coverView.hidden = YES;
+        completion(finished);
     }];
 }
 
-- (void) showloadView {
+- (void) showloadView: (void (^)(BOOL finished))completion {
     _loadingView.alpha = 0.0f;
     _coverView.alpha = 0.0f;
     [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
@@ -75,6 +76,7 @@ int credentialViewMoved = 0;
     } completion:^(BOOL finished) {
         _loadingView.hidden = NO;
         _coverView.hidden = NO;
+        completion(finished);
     }];
 }
 
@@ -85,7 +87,7 @@ int credentialViewMoved = 0;
     // Dispose of any resources that can be recreated.
 }
 
-- (void) showCredentialsView {
+- (void) showCredentialsView: (void (^)(BOOL finished))completion {
     CGRect orginal = _ahplazaImage.frame;
     CGRect center = _ahplazaImage.frame;
     CGPoint superCenter = CGPointMake([self.view bounds].size.width / 2.0, [self.view bounds].size.height / 2.0);
@@ -102,6 +104,7 @@ int credentialViewMoved = 0;
 	[UIView animateWithDuration:0.5 delay: 0 options:0 animations: ^{
 		_ahplazaImage.frame = orginal;
     } completion:^(BOOL finished) {
+        completion(finished);
     }];
 }
 
@@ -115,7 +118,7 @@ int credentialViewMoved = 0;
     [self moveToDefaultLocation];
 }
 
-- (void) moveCredentialsViewUp: (int) y{
+- (void) moveCredentialsViewUp: (int) y completion:(void (^)(BOOL finished))completion {
     if(!credentialViewMoved){
         _originalFrame = _credentialsView.frame;
         CGRect newFrame = _credentialsView.frame;
@@ -123,7 +126,7 @@ int credentialViewMoved = 0;
         [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
             _credentialsView.frame = newFrame;
         } completion:^(BOOL finished) {
-            
+            completion(finished);
         }];
         credentialViewMoved++;
     }
@@ -139,15 +142,16 @@ int credentialViewMoved = 0;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [self moveCredentialsViewUp: 170];
+    [self moveCredentialsViewUp: 170 completion: ^(BOOL finished) {}];
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
     if(textField == _usernameTextField) {
-        [self moveCredentialsViewUp: 170];
+        [self moveCredentialsViewUp: 170 completion: ^(BOOL finished) {}];
         credentialViewMoved = 2;
         [_passwordTextField becomeFirstResponder];
     } else if (textField == _passwordTextField){
+        [_usernameTextField resignFirstResponder];
         [_passwordTextField resignFirstResponder];
         [self checkCredentials];
         [self moveToDefaultLocation];
@@ -189,7 +193,6 @@ typedef enum {
     [_loginHelper stringByEvaluatingJavaScriptFromString: req];
     // Submit the form
     [_loginHelper stringByEvaluatingJavaScriptFromString: @"document.forms[0].submit();"];
-    [self showloadView];
     
     return errors;
 }
@@ -201,9 +204,14 @@ typedef enum {
     NSArray *errors = [self checkCredentials];
     if([errors count] == 0){
         // Go to new view :D
-        [_usernameTextField setText: @""];
-        [_passwordTextField setText: @""];
-        [_usernameTextField resignFirstResponder];
+//        [_usernameTextField setText: @""];
+//        [_passwordTextField setText: @""];
+//        [_usernameTextField resignFirstResponder];
+//        [_passwordTextField resignFirstResponder];
+//        
+//        [self showloadView:^(BOOL finished) {
+//            [self moveToDefaultLocation];
+//        }];
         [_passwordTextField resignFirstResponder];
         [self moveToDefaultLocation];
     }
@@ -214,14 +222,16 @@ typedef enum {
     NSString * responseURL = [_loginHelper stringByEvaluatingJavaScriptFromString:@"document.URL"];
     
     if([responseURL isEqualToString: @"https://plaza.ah.nl/pkmslogin.form"]){  // Wrong credentials
-        [self hideloadView];
+        [self hideloadView: ^(BOOL finished) {}];
     } else if ([responseURL isEqualToString: @"https://plaza.ah.nl/cgi-bin/final.pl"]) { // success
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
-        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuViewController"];
+        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuNavigationController"];
         [vc setModalPresentationStyle:UIModalPresentationFullScreen];
         [vc setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
         
-//        [self presentModalViewController:vc animated:YES];
+        [self zoomIntoCredentialsView:^(BOOL finished) {
+            [self presentModalViewController:vc animated:NO];
+        }];
     }
     
 }
@@ -240,6 +250,31 @@ typedef enum {
         _loadingView.frame = loadingFrame;
     } completion:completion];
      
+}
+
+- (void) zoomIntoCredentialsView: (void (^)(BOOL finished)) completion  {
+    [UIView animateWithDuration: 0.5 animations:^{
+        _usernameTextField.alpha = 0.0f;
+        _passwordTextField.alpha = 0.0f;
+        _loginButton.alpha = 0.0f;
+        _loadingView.alpha = 0.0f;
+        _usernameLabel.alpha = 0.0f;
+        _passwordLabel.alpha = 0.0f;
+        
+    } completion:^(BOOL finished) {
+        CGRect newFrame = _credentialsView.frame;
+        newFrame.size.height = self.view.frame.size.height;
+        newFrame.size.width = self.view.frame.size.width;
+        newFrame.origin.x = 0;
+        newFrame.origin.y = 0;
+        
+        [UIView animateWithDuration: 0.5 animations:^{
+            _credentialsView.frame = newFrame;
+        } completion:^(BOOL finished) {
+            if(finished)
+                completion(finished);
+        }];
+    }];
 }
 
 
@@ -279,4 +314,9 @@ typedef enum {
                            alpha:1.0f];
 }
 
+- (void)viewDidUnload {
+    [self setUsernameLabel:nil];
+    [self setPasswordLabel:nil];
+    [super viewDidUnload];
+}
 @end
