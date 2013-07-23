@@ -165,6 +165,7 @@ int credentialViewMoved = 0;
                             [vc setModalPresentationStyle:UIModalPresentationFullScreen];
                             [vc setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
                             
+                            sleep(0.3f);
                             [self zoomIntoCredentialsView:^(BOOL finished) {
                                 [self presentModalViewController:vc animated:NO];
                             }];

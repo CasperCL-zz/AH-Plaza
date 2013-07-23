@@ -62,9 +62,23 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
     [self stringByEvaluatingJavaScriptFromString: @"document.forms[0].submit();"];
 }
 
+-(void)webViewDidStartLoad:(UIWebView *)webView {
+    NSString * currentURL = [self stringByEvaluatingJavaScriptFromString:@"document.URL"];
+    
+    if([currentURL isEqualToString: LOGIN_SCCS_URL]){
+        _loginCallback(nil);
+        [self stopLoading];
+    } else if ([currentURL isEqualToString: LOGIN_FAIL_URL]) {
+        NSMutableArray *errors = [[NSMutableArray alloc] init];
+        [errors addObject: @"Gebruikersnaam of wachtwoord is incorrect"];
+        _loginCallback(errors);
+        [self stopLoading];
+    }
+}
+
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     NSString * currentURL = [self stringByEvaluatingJavaScriptFromString:@"document.URL"];
-    NSLog(@"Current URL: %@", currentURL);
+    NSLog(@"Finished Loading: %@", currentURL);
     
     if ([currentURL isEqualToString: TIMETABLE_URL]) {
         // Parse the HTML to weeks
@@ -74,13 +88,7 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
         NSLog(@"%@", html);
         
         _timetableCallback(weeks);
-    } else if([currentURL isEqualToString: LOGIN_SCCS_URL]){
-        _loginCallback(nil);
-    } else if ([currentURL isEqualToString: LOGIN_FAIL_URL]) {
-        NSMutableArray *errors = [[NSMutableArray alloc] init];
-        [errors addObject: @"Gebruikersnaam of wachtwoord is incorrect"];
-        _loginCallback(errors);
-    }
+    } 
 }
 
 /*
