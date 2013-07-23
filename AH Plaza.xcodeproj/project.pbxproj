@@ -23,6 +23,9 @@
 		AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720F91179BF20600F77CA6 /* LoginViewController.m */; };
 		AF720FE0179C87A300F77CA6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720FDF179C87A300F77CA6 /* MenuViewController.m */; };
 		AF720FE2179C8DA700F77CA6 /* ah-button.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720FE1179C8DA700F77CA6 /* ah-button.png */; };
+		AF9AC0FF179EA36A00CF3E98 /* PlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC0FE179EA36A00CF3E98 /* PlanningViewController.m */; };
+		AF9AC102179EA80500CF3E98 /* WebHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC101179EA80500CF3E98 /* WebHelper.m */; };
+		AF9AC105179EA8D400CF3E98 /* Week.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC104179EA8D400CF3E98 /* Week.m */; };
 		AFB7AE5C179D9C4900D58E08 /* info_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE54179D9C4900D58E08 /* info_ico.png */; };
 		AFB7AE5D179D9C4900D58E08 /* payment_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE55179D9C4900D58E08 /* payment_ico.png */; };
 		AFB7AE5E179D9C4900D58E08 /* planning_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE56179D9C4900D58E08 /* planning_ico.png */; };
@@ -57,6 +60,12 @@
 		AF720FDE179C87A300F77CA6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/Controllers/MenuViewController.h; sourceTree = "<group>"; };
 		AF720FDF179C87A300F77CA6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/Controllers/MenuViewController.m; sourceTree = "<group>"; };
 		AF720FE1179C8DA700F77CA6 /* ah-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ah-button.png"; path = "Resources/Images/ah-button.png"; sourceTree = "<group>"; };
+		AF9AC0FD179EA36A00CF3E98 /* PlanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlanningViewController.h; path = Classes/Controllers/PlanningViewController.h; sourceTree = "<group>"; };
+		AF9AC0FE179EA36A00CF3E98 /* PlanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlanningViewController.m; path = Classes/Controllers/PlanningViewController.m; sourceTree = "<group>"; };
+		AF9AC100179EA80500CF3E98 /* WebHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebHelper.h; path = Classes/WebHelper.h; sourceTree = "<group>"; };
+		AF9AC101179EA80500CF3E98 /* WebHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebHelper.m; path = Classes/WebHelper.m; sourceTree = "<group>"; };
+		AF9AC103179EA8D400CF3E98 /* Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Week.h; path = Classes/Model/Week.h; sourceTree = "<group>"; };
+		AF9AC104179EA8D400CF3E98 /* Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Week.m; path = Classes/Model/Week.m; sourceTree = "<group>"; };
 		AFB7AE54179D9C4900D58E08 /* info_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info_ico.png; path = Resources/Images/icons/info_ico.png; sourceTree = "<group>"; };
 		AFB7AE55179D9C4900D58E08 /* payment_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = payment_ico.png; path = Resources/Images/icons/payment_ico.png; sourceTree = "<group>"; };
 		AFB7AE56179D9C4900D58E08 /* planning_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = planning_ico.png; path = Resources/Images/icons/planning_ico.png; sourceTree = "<group>"; };
@@ -113,6 +122,8 @@
 		AF720EF4179BE2F400F77CA6 /* AH Plaza */ = {
 			isa = PBXGroup;
 			children = (
+				AF9AC100179EA80500CF3E98 /* WebHelper.h */,
+				AF9AC101179EA80500CF3E98 /* WebHelper.m */,
 				AF720F93179BF20F00F77CA6 /* Controllers */,
 				AF720F0F179BE3F700F77CA6 /* Model */,
 				AF720F0E179BE3DA00F77CA6 /* View */,
@@ -146,6 +157,8 @@
 		AF720F0F179BE3F700F77CA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF9AC103179EA8D400CF3E98 /* Week.h */,
+				AF9AC104179EA8D400CF3E98 /* Week.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -182,6 +195,8 @@
 				AF720FDF179C87A300F77CA6 /* MenuViewController.m */,
 				AFB7AE64179DE00600D58E08 /* SettingsViewController.h */,
 				AFB7AE65179DE00600D58E08 /* SettingsViewController.m */,
+				AF9AC0FD179EA36A00CF3E98 /* PlanningViewController.h */,
+				AF9AC0FE179EA36A00CF3E98 /* PlanningViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -284,6 +299,9 @@
 				AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */,
 				AF720FE0179C87A300F77CA6 /* MenuViewController.m in Sources */,
 				AFB7AE66179DE00600D58E08 /* SettingsViewController.m in Sources */,
+				AF9AC0FF179EA36A00CF3E98 /* PlanningViewController.m in Sources */,
+				AF9AC102179EA80500CF3E98 /* WebHelper.m in Sources */,
+				AF9AC105179EA8D400CF3E98 /* Week.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "WebHelper.h"
+
 
 @interface LoginViewController ()
 
@@ -29,6 +31,8 @@ int credentialViewMoved = 0;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [WebHelper sharedInstance];
+    
     [self.view setBackgroundColor: [self colorWithHexString:@"2F7FB9"]];
     
 	// Do any additional setup after loading the view.
@@ -37,11 +41,6 @@ int credentialViewMoved = 0;
     
     _loginButton.layer.cornerRadius = 10;
     _loginButton.layer.masksToBounds = YES;
-    
-    _loginHelper = [[UIWebView alloc] init];
-    [_loginHelper setDelegate: self];
-    NSURLRequest *urlReq = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"https://plaza.ah.nl/"]]; //plaza.ah.nl
-    [_loginHelper loadRequest: urlReq];
     
     //
     [_loadingView setHidden: YES];
@@ -69,13 +68,13 @@ int credentialViewMoved = 0;
 - (void) showloadView: (void (^)(BOOL finished))completion {
     _loadingView.alpha = 0.0f;
     _coverView.alpha = 0.0f;
+    _loadingView.hidden = NO;
+    _coverView.hidden = NO;
     [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
         _loadingView.alpha = 1.0f;
         _coverView.alpha = 0.8f;
         [self.view bringSubviewToFront: _ahplazaImage];
     } completion:^(BOOL finished) {
-        _loadingView.hidden = NO;
-        _coverView.hidden = NO;
         completion(finished);
     }];
 }
@@ -115,7 +114,7 @@ int credentialViewMoved = 0;
     
     [_usernameTextField resignFirstResponder];
     [_passwordTextField resignFirstResponder];
-    [self moveToDefaultLocation];
+    [self moveToDefaultLocation:^(BOOL finished) {}];
 }
 
 - (void) moveCredentialsViewUp: (int) y completion:(void (^)(BOOL finished))completion {
@@ -132,11 +131,12 @@ int credentialViewMoved = 0;
     }
 }
 
-- (void) moveToDefaultLocation {
+- (void) moveToDefaultLocation:(void (^)(BOOL finished))completion {
     [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
         _credentialsView.frame = _originalFrame;
     } completion:^(BOOL finished) {
         credentialViewMoved = 0;
+        completion(finished);
     }];
     
 }
@@ -153,8 +153,28 @@ int credentialViewMoved = 0;
     } else if (textField == _passwordTextField){
         [_usernameTextField resignFirstResponder];
         [_passwordTextField resignFirstResponder];
-        [self checkCredentials];
-        [self moveToDefaultLocation];
+        
+        
+        [self moveToDefaultLocation:^(BOOL finished) {
+            [self showloadView:^(BOOL finished) {
+                [self checkCredentials:^(NSArray *error) {
+                    if([error count] == 0) {
+                        [self hideloadView:^(BOOL finished) {
+                            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+                            UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuNavigationController"];
+                            [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+                            [vc setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
+                            
+                            [self zoomIntoCredentialsView:^(BOOL finished) {
+                                [self presentModalViewController:vc animated:NO];
+                            }];
+                        }];
+                    }
+                }];
+
+            }];
+        }];
+        
     }
     return YES;
 }
@@ -168,7 +188,7 @@ typedef enum {
     DATABASE_ERR
 } CredentialsError;
 
-- (NSArray*) checkCredentials {
+- (void) checkCredentials:(void (^)(NSArray * error))completion {
     NSMutableArray *errors = [[NSMutableArray alloc] init];
     CredentialsError err;
     err = -1; // no err
@@ -184,56 +204,41 @@ typedef enum {
     
     // Do not check if the credentials are valid (this is a long and uncessary process for now)
     if(err == USERNAME_EMPTY || err == PASSWD_EMPTY)
-        return errors;
+        completion(errors);
     
-    // Fill in the credentials in the webform via JavaScript
-    NSString *req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"username\")[0].value='%@'", [_usernameTextField text]];
-    [_loginHelper stringByEvaluatingJavaScriptFromString: req];
-    req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"password\")[0].value='%@'", [_passwordTextField text]];
-    [_loginHelper stringByEvaluatingJavaScriptFromString: req];
-    // Submit the form
-    [_loginHelper stringByEvaluatingJavaScriptFromString: @"document.forms[0].submit();"];
-    
-    return errors;
+    [[WebHelper sharedInstance] login:[_usernameTextField text] WithPassword:[_passwordTextField text] onCompletion:^(NSArray *errors) {
+        completion(errors);
+    }];
 }
 
-- (void) logIn {
-    
-}
 - (IBAction)loginButtonPressed:(id)sender {
-    NSArray *errors = [self checkCredentials];
-    if([errors count] == 0){
-        // Go to new view :D
-//        [_usernameTextField setText: @""];
-//        [_passwordTextField setText: @""];
-//        [_usernameTextField resignFirstResponder];
-//        [_passwordTextField resignFirstResponder];
-//        
-//        [self showloadView:^(BOOL finished) {
-//            [self moveToDefaultLocation];
-//        }];
-        [_passwordTextField resignFirstResponder];
-        [self moveToDefaultLocation];
-    }
-}
-
-
--(void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSString * responseURL = [_loginHelper stringByEvaluatingJavaScriptFromString:@"document.URL"];
     
-    if([responseURL isEqualToString: @"https://plaza.ah.nl/pkmslogin.form"]){  // Wrong credentials
-        [self hideloadView: ^(BOOL finished) {}];
-    } else if ([responseURL isEqualToString: @"https://plaza.ah.nl/cgi-bin/final.pl"]) { // success
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
-        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuNavigationController"];
-        [vc setModalPresentationStyle:UIModalPresentationFullScreen];
-        [vc setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
-        
-        [self zoomIntoCredentialsView:^(BOOL finished) {
-            [self presentModalViewController:vc animated:NO];
+    [_usernameTextField resignFirstResponder];
+    [_passwordTextField resignFirstResponder];
+    
+    
+    [self moveToDefaultLocation:^(BOOL finished) {
+        [self showloadView:^(BOOL finished) {
+            [self checkCredentials:^(NSArray *error) {
+                if([error count] == 0) {
+                    [self hideloadView:^(BOOL finished) {
+                        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+                        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuNavigationController"];
+                        [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+                        [vc setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
+                        
+                        [self zoomIntoCredentialsView:^(BOOL finished) {
+                            [self presentModalViewController:vc animated:NO];
+                        }];
+                    }];
+                } else {
+                    
+                }
+            }];
+            
         }];
-    }
-    
+    }];
+
 }
 
 - (void) removeAllViews: (void (^)(BOOL finished)) completion {
@@ -249,7 +254,7 @@ typedef enum {
         _credentialsView.frame = credFrame;
         _loadingView.frame = loadingFrame;
     } completion:completion];
-     
+    
 }
 
 - (void) zoomIntoCredentialsView: (void (^)(BOOL finished)) completion  {

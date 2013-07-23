@@ -28,14 +28,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self animateTransition:^{
-        [self settleIconsAndShowLabels];
+//        [self settleIconsAndShowLabels];
     }];
     [self customizeNavBar];
 }
 
-- (void) viewDidAppear:(BOOL)animated {
-    [self settleIconsAndShowLabels];
-}
+//- (void) viewDidAppear:(BOOL)animated {
+//    [self settleIconsAndShowLabels];
+//}
 
 - (void)didReceiveMemoryWarning
 {

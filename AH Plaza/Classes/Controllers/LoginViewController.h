@@ -22,7 +22,6 @@
 
 - (IBAction)loginButtonPressed:(id)sender;
 
-@property UIWebView *loginHelper;
 @property CGRect originalFrame;
 
 - (IBAction)backgroundButtonClicked:(id)sender;
