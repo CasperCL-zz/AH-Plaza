@@ -35,6 +35,8 @@
 		AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */; };
 		AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */; };
 		AFB7AE66179DE00600D58E08 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB7AE65179DE00600D58E08 /* SettingsViewController.m */; };
+		AFDF014C17A9138A005CC5AA /* PayCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */; };
+		AFDF014E17A91DDD005CC5AA /* Planning.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFDF014D17A91DDD005CC5AA /* Planning.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,9 @@
 		AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = webcal_ico.png; path = Resources/Images/icons/webcal_ico.png; sourceTree = "<group>"; };
 		AFB7AE64179DE00600D58E08 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/Controllers/SettingsViewController.h; sourceTree = "<group>"; };
 		AFB7AE65179DE00600D58E08 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/Controllers/SettingsViewController.m; sourceTree = "<group>"; };
+		AFDF014A17A9138A005CC5AA /* PayCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCheckViewController.h; path = Classes/Controllers/PayCheckViewController.h; sourceTree = "<group>"; };
+		AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCheckViewController.m; path = Classes/Controllers/PayCheckViewController.m; sourceTree = "<group>"; };
+		AFDF014D17A91DDD005CC5AA /* Planning.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Planning.xib; path = Classes/View/Planning.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */,
+				AFDF014D17A91DDD005CC5AA /* Planning.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 				AFB7AE65179DE00600D58E08 /* SettingsViewController.m */,
 				AF9AC0FD179EA36A00CF3E98 /* PlanningViewController.h */,
 				AF9AC0FE179EA36A00CF3E98 /* PlanningViewController.m */,
+				AFDF014A17A9138A005CC5AA /* PayCheckViewController.h */,
+				AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 				AFB7AE61179D9C4900D58E08 /* settings_ico.png in Resources */,
 				AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */,
 				AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */,
+				AFDF014E17A91DDD005CC5AA /* Planning.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +311,7 @@
 				AF9AC0FF179EA36A00CF3E98 /* PlanningViewController.m in Sources */,
 				AF9AC102179EA80500CF3E98 /* WebHelper.m in Sources */,
 				AF9AC105179EA8D400CF3E98 /* Week.m in Sources */,
+				AFDF014C17A9138A005CC5AA /* PayCheckViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

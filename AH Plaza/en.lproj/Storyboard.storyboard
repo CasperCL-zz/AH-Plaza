@@ -402,43 +402,464 @@
         <!--Planning View Controller - Werkrooster-->
         <scene sceneID="CUP-Kd-SaL">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1i0-fW-x6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="QmQ-NA-0W2" customClass="PlanningViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Lo-VA-X3Y">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Deze week (week 30)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVZ-m8-k4v">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKD-bU-aUm">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naF-da-mv4">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAY-0i-SFk">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="68" id="Pbs-KS-AdU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNb-2y-fkQ">
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVY-Ls-zSN">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="gPj-yu-Tvr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="totaal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jH0-yV-i64">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="avv-0H-w1A"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="QVY-Ls-zSN" firstAttribute="baseline" secondItem="dNb-2y-fkQ" secondAttribute="baseline" type="default" id="20b-4O-WBm"/>
+                                            <constraint firstItem="QVY-Ls-zSN" firstAttribute="top" secondItem="jH0-yV-i64" secondAttribute="top" type="default" id="Gjr-37-Kfe"/>
+                                            <constraint firstItem="RAY-0i-SFk" firstAttribute="leading" secondItem="naF-da-mv4" secondAttribute="leading" type="default" id="IR8-aN-mxV"/>
+                                            <constraint firstItem="QVY-Ls-zSN" firstAttribute="baseline" secondItem="jH0-yV-i64" secondAttribute="baseline" type="default" id="LST-fU-OqS"/>
+                                            <constraint firstItem="RAY-0i-SFk" firstAttribute="top" secondItem="naF-da-mv4" secondAttribute="top" type="default" id="T0h-NP-bxo"/>
+                                            <constraint firstItem="QVY-Ls-zSN" firstAttribute="top" secondItem="naF-da-mv4" secondAttribute="top" constant="1" id="XQU-iC-sXz"/>
+                                            <constraint firstItem="RAY-0i-SFk" firstAttribute="bottom" secondItem="naF-da-mv4" secondAttribute="bottom" type="default" id="cZo-Qp-j8Z"/>
+                                            <constraint firstItem="QVY-Ls-zSN" firstAttribute="leading" secondItem="dNb-2y-fkQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="mwM-FN-Ca9"/>
+                                            <constraint firstItem="jH0-yV-i64" firstAttribute="trailing" secondItem="naF-da-mv4" secondAttribute="trailing" type="default" id="qF7-jK-RyS"/>
+                                            <constraint firstItem="QVY-Ls-zSN" firstAttribute="top" secondItem="dNb-2y-fkQ" secondAttribute="top" type="default" id="sqQ-0l-nMR"/>
+                                            <constraint firstItem="dNb-2y-fkQ" firstAttribute="leading" secondItem="RAY-0i-SFk" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="vm8-B3-5rh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRD-2Z-DQl">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uX-lG-K0l">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="68" id="X5m-aR-CI5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihe-bD-sIu">
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsQ-FR-QGQ">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="l16-ai-LtV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="totaal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIR-AT-zJv">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="Hu2-ey-fKP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="IIR-AT-zJv" firstAttribute="trailing" secondItem="pRD-2Z-DQl" secondAttribute="trailing" type="default" id="DJU-K2-lec"/>
+                                            <constraint firstItem="JsQ-FR-QGQ" firstAttribute="baseline" secondItem="Ihe-bD-sIu" secondAttribute="baseline" type="default" id="QWE-g6-4cr"/>
+                                            <constraint firstItem="JsQ-FR-QGQ" firstAttribute="leading" secondItem="Ihe-bD-sIu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Tfl-Ml-hRr"/>
+                                            <constraint firstItem="6uX-lG-K0l" firstAttribute="bottom" secondItem="pRD-2Z-DQl" secondAttribute="bottom" type="default" id="WyU-gh-XPk"/>
+                                            <constraint firstItem="JsQ-FR-QGQ" firstAttribute="top" secondItem="Ihe-bD-sIu" secondAttribute="top" type="default" id="Ywq-MO-ELq"/>
+                                            <constraint firstItem="JsQ-FR-QGQ" firstAttribute="baseline" secondItem="IIR-AT-zJv" secondAttribute="baseline" type="default" id="aup-Q8-L3i"/>
+                                            <constraint firstItem="Ihe-bD-sIu" firstAttribute="leading" secondItem="6uX-lG-K0l" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="bQ0-uQ-EFR"/>
+                                            <constraint firstItem="6uX-lG-K0l" firstAttribute="leading" secondItem="pRD-2Z-DQl" secondAttribute="leading" type="default" id="ehT-Xa-j0w"/>
+                                            <constraint firstItem="6uX-lG-K0l" firstAttribute="top" secondItem="pRD-2Z-DQl" secondAttribute="top" type="default" id="ejY-5f-LPK"/>
+                                            <constraint firstItem="JsQ-FR-QGQ" firstAttribute="top" secondItem="IIR-AT-zJv" secondAttribute="top" type="default" id="gRF-Ya-5Kb"/>
+                                            <constraint firstItem="JsQ-FR-QGQ" firstAttribute="top" secondItem="pRD-2Z-DQl" secondAttribute="top" constant="1" id="tWq-Yb-ZHz"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3C-zn-RJA">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="WO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwR-Nl-yR3">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="68" id="xma-Oe-7SI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDW-bb-VsG">
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gi-fr-pCa">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="vWd-mm-NJV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="totaal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRw-Dv-1bp">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="OTl-gN-Icu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="IwR-Nl-yR3" firstAttribute="leading" secondItem="h3C-zn-RJA" secondAttribute="leading" type="default" id="0FF-lS-gdu"/>
+                                            <constraint firstItem="1gi-fr-pCa" firstAttribute="baseline" secondItem="LRw-Dv-1bp" secondAttribute="baseline" type="default" id="Dqi-bH-1w6"/>
+                                            <constraint firstItem="IwR-Nl-yR3" firstAttribute="bottom" secondItem="h3C-zn-RJA" secondAttribute="bottom" type="default" id="Grb-YE-bH0"/>
+                                            <constraint firstItem="LRw-Dv-1bp" firstAttribute="trailing" secondItem="h3C-zn-RJA" secondAttribute="trailing" type="default" id="KzP-kP-epw"/>
+                                            <constraint firstItem="IwR-Nl-yR3" firstAttribute="top" secondItem="h3C-zn-RJA" secondAttribute="top" type="default" id="NVH-KX-8DV"/>
+                                            <constraint firstItem="oDW-bb-VsG" firstAttribute="leading" secondItem="IwR-Nl-yR3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="W2J-mm-l17"/>
+                                            <constraint firstItem="1gi-fr-pCa" firstAttribute="baseline" secondItem="oDW-bb-VsG" secondAttribute="baseline" type="default" id="Yzl-LL-7kz"/>
+                                            <constraint firstItem="1gi-fr-pCa" firstAttribute="top" secondItem="h3C-zn-RJA" secondAttribute="top" constant="1" id="cOb-6P-17c"/>
+                                            <constraint firstItem="1gi-fr-pCa" firstAttribute="top" secondItem="oDW-bb-VsG" secondAttribute="top" type="default" id="gQK-Xg-Pg4"/>
+                                            <constraint firstItem="1gi-fr-pCa" firstAttribute="leading" secondItem="oDW-bb-VsG" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gtu-Mo-8RT"/>
+                                            <constraint firstItem="1gi-fr-pCa" firstAttribute="top" secondItem="LRw-Dv-1bp" secondAttribute="top" type="default" id="lQ6-Hd-f2K"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kG-qx-AWS">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkK-FT-NU3">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="68" id="xDz-Jf-jaM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46Z-Uc-4Mt">
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M5-cx-qTN">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="uwg-9f-lWr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="totaal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yH4-lc-5Iz">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="ef3-hc-Zq5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="2M5-cx-qTN" firstAttribute="baseline" secondItem="46Z-Uc-4Mt" secondAttribute="baseline" type="default" id="0u4-4t-7Zg"/>
+                                            <constraint firstItem="yH4-lc-5Iz" firstAttribute="trailing" secondItem="5kG-qx-AWS" secondAttribute="trailing" type="default" id="6hG-ij-9tt"/>
+                                            <constraint firstItem="2M5-cx-qTN" firstAttribute="leading" secondItem="46Z-Uc-4Mt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="74S-rN-xUk"/>
+                                            <constraint firstItem="wkK-FT-NU3" firstAttribute="bottom" secondItem="5kG-qx-AWS" secondAttribute="bottom" type="default" id="HAe-AZ-gCM"/>
+                                            <constraint firstItem="46Z-Uc-4Mt" firstAttribute="leading" secondItem="wkK-FT-NU3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="MgD-Gs-mfV"/>
+                                            <constraint firstItem="wkK-FT-NU3" firstAttribute="top" secondItem="5kG-qx-AWS" secondAttribute="top" type="default" id="Zkt-f6-4uN"/>
+                                            <constraint firstItem="2M5-cx-qTN" firstAttribute="top" secondItem="yH4-lc-5Iz" secondAttribute="top" type="default" id="aHW-9x-Naa"/>
+                                            <constraint firstItem="2M5-cx-qTN" firstAttribute="baseline" secondItem="yH4-lc-5Iz" secondAttribute="baseline" type="default" id="n2V-Dy-EMi"/>
+                                            <constraint firstItem="wkK-FT-NU3" firstAttribute="leading" secondItem="5kG-qx-AWS" secondAttribute="leading" type="default" id="tUw-6N-F0X"/>
+                                            <constraint firstItem="2M5-cx-qTN" firstAttribute="top" secondItem="5kG-qx-AWS" secondAttribute="top" constant="1" id="uGb-iF-JX5"/>
+                                            <constraint firstItem="2M5-cx-qTN" firstAttribute="top" secondItem="46Z-Uc-4Mt" secondAttribute="top" type="default" id="xci-pp-idQ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vte-58-0pE">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="VR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVl-Co-JfI">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="68" id="Dbv-bI-z2N"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWw-VQ-dmU">
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c63-xe-Jvr">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="eev-tw-8Y3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="totaal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf8-lk-ZSE">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="x9A-h5-GyH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="c63-xe-Jvr" firstAttribute="baseline" secondItem="sWw-VQ-dmU" secondAttribute="baseline" type="default" id="CT1-E8-Y6y"/>
+                                            <constraint firstItem="sWw-VQ-dmU" firstAttribute="leading" secondItem="fVl-Co-JfI" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="IuM-ew-lU8"/>
+                                            <constraint firstItem="c63-xe-Jvr" firstAttribute="top" secondItem="sWw-VQ-dmU" secondAttribute="top" type="default" id="Kzz-Ri-z20"/>
+                                            <constraint firstItem="fVl-Co-JfI" firstAttribute="top" secondItem="Vte-58-0pE" secondAttribute="top" type="default" id="LXJ-I8-pPS"/>
+                                            <constraint firstItem="c63-xe-Jvr" firstAttribute="top" secondItem="Xf8-lk-ZSE" secondAttribute="top" type="default" id="WmW-J9-qFD"/>
+                                            <constraint firstItem="Xf8-lk-ZSE" firstAttribute="trailing" secondItem="Vte-58-0pE" secondAttribute="trailing" type="default" id="agv-uK-1kg"/>
+                                            <constraint firstItem="c63-xe-Jvr" firstAttribute="top" secondItem="Vte-58-0pE" secondAttribute="top" constant="1" id="cli-gj-yAm"/>
+                                            <constraint firstItem="fVl-Co-JfI" firstAttribute="bottom" secondItem="Vte-58-0pE" secondAttribute="bottom" type="default" id="fey-mD-TRX"/>
+                                            <constraint firstItem="c63-xe-Jvr" firstAttribute="leading" secondItem="sWw-VQ-dmU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pSd-ON-A7L"/>
+                                            <constraint firstItem="fVl-Co-JfI" firstAttribute="leading" secondItem="Vte-58-0pE" secondAttribute="leading" type="default" id="yGv-Nd-iOj"/>
+                                            <constraint firstItem="c63-xe-Jvr" firstAttribute="baseline" secondItem="Xf8-lk-ZSE" secondAttribute="baseline" type="default" id="yp3-v6-eef"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8H-iP-xUC">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ZA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ur3-nu-7br">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="68" id="deq-Oj-WjR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpk-w6-vH1">
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aim-0D-9QT">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="xSa-yg-U9X"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="totaal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1th-4O-8Lu">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="ZV8-NK-bVJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ur3-nu-7br" firstAttribute="leading" secondItem="U8H-iP-xUC" secondAttribute="leading" type="default" id="83R-Ec-6te"/>
+                                            <constraint firstItem="aim-0D-9QT" firstAttribute="baseline" secondItem="1th-4O-8Lu" secondAttribute="baseline" type="default" id="A5m-N5-5mN"/>
+                                            <constraint firstItem="Xpk-w6-vH1" firstAttribute="leading" secondItem="ur3-nu-7br" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="GXg-BI-iEL"/>
+                                            <constraint firstItem="aim-0D-9QT" firstAttribute="baseline" secondItem="Xpk-w6-vH1" secondAttribute="baseline" type="default" id="NLs-io-1OL"/>
+                                            <constraint firstItem="ur3-nu-7br" firstAttribute="top" secondItem="U8H-iP-xUC" secondAttribute="top" type="default" id="Z3U-20-SKY"/>
+                                            <constraint firstItem="ur3-nu-7br" firstAttribute="bottom" secondItem="U8H-iP-xUC" secondAttribute="bottom" type="default" id="bIh-Ga-wLs"/>
+                                            <constraint firstItem="1th-4O-8Lu" firstAttribute="trailing" secondItem="U8H-iP-xUC" secondAttribute="trailing" type="default" id="dxP-dS-qGf"/>
+                                            <constraint firstItem="aim-0D-9QT" firstAttribute="top" secondItem="1th-4O-8Lu" secondAttribute="top" type="default" id="hgB-dO-xFp"/>
+                                            <constraint firstItem="aim-0D-9QT" firstAttribute="top" secondItem="U8H-iP-xUC" secondAttribute="top" constant="1" id="nsT-DT-eox"/>
+                                            <constraint firstItem="aim-0D-9QT" firstAttribute="leading" secondItem="Xpk-w6-vH1" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="q1E-Ea-LlV"/>
+                                            <constraint firstItem="aim-0D-9QT" firstAttribute="top" secondItem="Xpk-w6-vH1" secondAttribute="top" type="default" id="zqU-V6-xrf"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Igf-CK-vuD">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ZO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deD-iV-R0i">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="68" id="HJo-XK-yTv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8u-xd-FFo">
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQq-3a-NJA">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Voj-Kl-uW5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="totaal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHV-Un-L3Y">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="5fh-ia-osL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="IQq-3a-NJA" firstAttribute="top" secondItem="dHV-Un-L3Y" secondAttribute="top" type="default" id="2Io-IG-GCT"/>
+                                            <constraint firstItem="IQq-3a-NJA" firstAttribute="leading" secondItem="Y8u-xd-FFo" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="A3z-Pk-uze"/>
+                                            <constraint firstItem="IQq-3a-NJA" firstAttribute="baseline" secondItem="dHV-Un-L3Y" secondAttribute="baseline" type="default" id="DDd-gP-5Xb"/>
+                                            <constraint firstItem="IQq-3a-NJA" firstAttribute="top" secondItem="Y8u-xd-FFo" secondAttribute="top" type="default" id="Hhy-xx-mjF"/>
+                                            <constraint firstItem="dHV-Un-L3Y" firstAttribute="trailing" secondItem="Igf-CK-vuD" secondAttribute="trailing" type="default" id="QH7-Ou-dp1"/>
+                                            <constraint firstItem="IQq-3a-NJA" firstAttribute="top" secondItem="Igf-CK-vuD" secondAttribute="top" constant="1" id="aS2-9x-ADT"/>
+                                            <constraint firstItem="IQq-3a-NJA" firstAttribute="baseline" secondItem="Y8u-xd-FFo" secondAttribute="baseline" type="default" id="aZE-LH-RCe"/>
+                                            <constraint firstItem="deD-iV-R0i" firstAttribute="top" secondItem="Igf-CK-vuD" secondAttribute="top" type="default" id="cT7-up-BrM"/>
+                                            <constraint firstItem="deD-iV-R0i" firstAttribute="bottom" secondItem="Igf-CK-vuD" secondAttribute="bottom" type="default" id="fZ0-6n-gQU"/>
+                                            <constraint firstItem="deD-iV-R0i" firstAttribute="leading" secondItem="Igf-CK-vuD" secondAttribute="leading" type="default" id="g9c-Gi-7tT"/>
+                                            <constraint firstItem="Y8u-xd-FFo" firstAttribute="leading" secondItem="deD-iV-R0i" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="m6j-hi-PJv"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oc-Kh-J33">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sE-ZK-ACQ">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="68" id="nfB-5i-XXx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx0-2l-J2D">
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQH-dB-c15">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="zM0-98-iz9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="totaal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dk-8R-M4y">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="c7A-M3-iKS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="gQH-dB-c15" firstAttribute="top" secondItem="6dk-8R-M4y" secondAttribute="top" type="default" id="750-9t-hYL"/>
+                                            <constraint firstItem="gQH-dB-c15" firstAttribute="baseline" secondItem="Yx0-2l-J2D" secondAttribute="baseline" type="default" id="9Oq-YR-nTp"/>
+                                            <constraint firstItem="2sE-ZK-ACQ" firstAttribute="leading" secondItem="9oc-Kh-J33" secondAttribute="leading" type="default" id="HIc-NX-R0z"/>
+                                            <constraint firstItem="2sE-ZK-ACQ" firstAttribute="bottom" secondItem="9oc-Kh-J33" secondAttribute="bottom" type="default" id="JXm-yi-PGa"/>
+                                            <constraint firstItem="2sE-ZK-ACQ" firstAttribute="top" secondItem="9oc-Kh-J33" secondAttribute="top" type="default" id="NNi-39-LHO"/>
+                                            <constraint firstItem="gQH-dB-c15" firstAttribute="leading" secondItem="Yx0-2l-J2D" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="OAo-Dc-vdE"/>
+                                            <constraint firstItem="gQH-dB-c15" firstAttribute="top" secondItem="9oc-Kh-J33" secondAttribute="top" constant="1" id="SrS-3o-55w"/>
+                                            <constraint firstItem="6dk-8R-M4y" firstAttribute="trailing" secondItem="9oc-Kh-J33" secondAttribute="trailing" type="default" id="U0l-9a-iEH"/>
+                                            <constraint firstItem="Yx0-2l-J2D" firstAttribute="leading" secondItem="2sE-ZK-ACQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="WKV-9x-kjj"/>
+                                            <constraint firstItem="gQH-dB-c15" firstAttribute="baseline" secondItem="6dk-8R-M4y" secondAttribute="baseline" type="default" id="eob-lC-eV1"/>
+                                            <constraint firstItem="gQH-dB-c15" firstAttribute="top" secondItem="Yx0-2l-J2D" secondAttribute="top" type="default" id="ylv-Oa-ddM"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn6-MF-ZB9">
+                                        <color key="backgroundColor" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="7f3-aM-Fow"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="FHo-Ri-vNh"/>
-                                    <constraint firstAttribute="width" constant="182" id="RIL-5n-vtu"/>
+                                    <constraint firstItem="5kG-qx-AWS" firstAttribute="top" secondItem="h3C-zn-RJA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4XF-GN-8PD"/>
+                                    <constraint firstItem="h3C-zn-RJA" firstAttribute="top" secondItem="sKD-bU-aUm" secondAttribute="top" constant="78" id="5vv-H2-nWt"/>
+                                    <constraint firstItem="h3C-zn-RJA" firstAttribute="leading" secondItem="sKD-bU-aUm" secondAttribute="leading" type="default" id="7Gj-H9-2PO"/>
+                                    <constraint firstItem="9oc-Kh-J33" firstAttribute="top" secondItem="gn6-MF-ZB9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="D0d-Wi-KaM"/>
+                                    <constraint firstItem="pRD-2Z-DQl" firstAttribute="top" secondItem="sKD-bU-aUm" secondAttribute="top" constant="49" id="D7N-Dq-TTn"/>
+                                    <constraint firstItem="5kG-qx-AWS" firstAttribute="top" secondItem="sKD-bU-aUm" secondAttribute="top" constant="107" id="DqE-YB-xjq"/>
+                                    <constraint firstItem="Vte-58-0pE" firstAttribute="trailing" secondItem="sKD-bU-aUm" secondAttribute="trailing" type="default" id="FHF-YO-4fT"/>
+                                    <constraint firstItem="9oc-Kh-J33" firstAttribute="leading" secondItem="sKD-bU-aUm" secondAttribute="leading" type="default" id="G62-7v-6Qx"/>
+                                    <constraint firstItem="Igf-CK-vuD" firstAttribute="top" secondItem="sKD-bU-aUm" secondAttribute="top" constant="194" id="GfY-z6-WCn"/>
+                                    <constraint firstItem="pRD-2Z-DQl" firstAttribute="trailing" secondItem="sKD-bU-aUm" secondAttribute="trailing" type="default" id="KpM-LI-VLR"/>
+                                    <constraint firstItem="U8H-iP-xUC" firstAttribute="trailing" secondItem="sKD-bU-aUm" secondAttribute="trailing" type="default" id="LIx-TR-GFv"/>
+                                    <constraint firstItem="9oc-Kh-J33" firstAttribute="top" secondItem="sKD-bU-aUm" secondAttribute="top" constant="232" id="LjX-x2-Qiq"/>
+                                    <constraint firstItem="naF-da-mv4" firstAttribute="trailing" secondItem="sKD-bU-aUm" secondAttribute="trailing" type="default" id="Rqd-BZ-9fB"/>
+                                    <constraint firstItem="U8H-iP-xUC" firstAttribute="top" secondItem="sKD-bU-aUm" secondAttribute="top" constant="165" id="SIs-a2-TqW"/>
+                                    <constraint firstItem="gn6-MF-ZB9" firstAttribute="leading" secondItem="sKD-bU-aUm" secondAttribute="leading" type="default" id="VIH-nn-xG5"/>
+                                    <constraint firstItem="5kG-qx-AWS" firstAttribute="trailing" secondItem="sKD-bU-aUm" secondAttribute="trailing" type="default" id="XIz-7P-lXG"/>
+                                    <constraint firstItem="Igf-CK-vuD" firstAttribute="leading" secondItem="sKD-bU-aUm" secondAttribute="leading" type="default" id="Xaf-H4-aZp"/>
+                                    <constraint firstItem="pRD-2Z-DQl" firstAttribute="leading" secondItem="sKD-bU-aUm" secondAttribute="leading" type="default" id="aNj-rG-edy"/>
+                                    <constraint firstItem="Igf-CK-vuD" firstAttribute="trailing" secondItem="sKD-bU-aUm" secondAttribute="trailing" type="default" id="b0o-yM-b5W"/>
+                                    <constraint firstItem="Vte-58-0pE" firstAttribute="leading" secondItem="sKD-bU-aUm" secondAttribute="leading" type="default" id="bYW-b7-8Kv"/>
+                                    <constraint firstItem="pRD-2Z-DQl" firstAttribute="top" secondItem="naF-da-mv4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="baA-cV-NGU"/>
+                                    <constraint firstItem="U8H-iP-xUC" firstAttribute="top" secondItem="Vte-58-0pE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cyk-Yg-3Wl"/>
+                                    <constraint firstItem="gn6-MF-ZB9" firstAttribute="trailing" secondItem="sKD-bU-aUm" secondAttribute="trailing" type="default" id="dMC-zO-j7Y"/>
+                                    <constraint firstItem="naF-da-mv4" firstAttribute="top" secondItem="sKD-bU-aUm" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fVE-LL-IwK"/>
+                                    <constraint firstItem="9oc-Kh-J33" firstAttribute="trailing" secondItem="sKD-bU-aUm" secondAttribute="trailing" type="default" id="iYQ-vo-AgY"/>
+                                    <constraint firstItem="Igf-CK-vuD" firstAttribute="top" secondItem="U8H-iP-xUC" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jyH-Ow-Brk"/>
+                                    <constraint firstItem="gn6-MF-ZB9" firstAttribute="top" secondItem="Igf-CK-vuD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kmW-7N-3pj"/>
+                                    <constraint firstItem="Vte-58-0pE" firstAttribute="top" secondItem="sKD-bU-aUm" secondAttribute="top" constant="136" id="oPc-aM-G3v"/>
+                                    <constraint firstItem="naF-da-mv4" firstAttribute="leading" secondItem="sKD-bU-aUm" secondAttribute="leading" type="default" id="oX7-RL-AfO"/>
+                                    <constraint firstItem="h3C-zn-RJA" firstAttribute="trailing" secondItem="sKD-bU-aUm" secondAttribute="trailing" type="default" id="tjT-AC-VxD"/>
+                                    <constraint firstItem="U8H-iP-xUC" firstAttribute="leading" secondItem="sKD-bU-aUm" secondAttribute="leading" type="default" id="u8b-iB-egp"/>
+                                    <constraint firstItem="Vte-58-0pE" firstAttribute="top" secondItem="5kG-qx-AWS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="v0J-4e-Fgu"/>
+                                    <constraint firstItem="5kG-qx-AWS" firstAttribute="leading" secondItem="sKD-bU-aUm" secondAttribute="leading" type="default" id="wco-Jq-aYg"/>
+                                    <constraint firstItem="h3C-zn-RJA" firstAttribute="top" secondItem="pRD-2Z-DQl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xtr-Xv-umV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Week 30" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38W-57-9Ia">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="bcp-JS-F7s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKD-bU-aUm">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="sKD-bU-aUm" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="4nE-VK-0j3"/>
-                            <constraint firstItem="lVZ-m8-k4v" firstAttribute="centerX" secondItem="8Lo-VA-X3Y" secondAttribute="centerX" type="default" id="eIB-de-r3h"/>
-                            <constraint firstItem="sKD-bU-aUm" firstAttribute="top" secondItem="lVZ-m8-k4v" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hfg-zt-pEM"/>
-                            <constraint firstItem="sKD-bU-aUm" firstAttribute="leading" secondItem="8Lo-VA-X3Y" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="iXm-3u-awa"/>
-                            <constraint firstItem="lVZ-m8-k4v" firstAttribute="top" secondItem="8Lo-VA-X3Y" secondAttribute="top" constant="20" symbolic="YES" type="default" id="jcd-17-bWJ"/>
-                            <constraint firstItem="lVZ-m8-k4v" firstAttribute="centerX" secondItem="sKD-bU-aUm" secondAttribute="centerX" type="default" id="w5V-In-YIe"/>
+                            <constraint firstAttribute="trailing" secondItem="sKD-bU-aUm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0CU-Ym-NLK"/>
+                            <constraint firstItem="38W-57-9Ia" firstAttribute="top" secondItem="8Lo-VA-X3Y" secondAttribute="top" constant="20" symbolic="YES" type="default" id="A6e-7K-BGV"/>
+                            <constraint firstItem="38W-57-9Ia" firstAttribute="centerX" secondItem="sKD-bU-aUm" secondAttribute="centerX" type="default" id="hPo-8W-JsL"/>
+                            <constraint firstItem="sKD-bU-aUm" firstAttribute="top" secondItem="38W-57-9Ia" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rXY-dX-03T"/>
+                            <constraint firstAttribute="bottom" secondItem="sKD-bU-aUm" secondAttribute="bottom" constant="86" id="tEL-k2-jdx"/>
+                            <constraint firstItem="sKD-bU-aUm" firstAttribute="leading" secondItem="8Lo-VA-X3Y" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tU4-El-w8J"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Werkrooster" id="bme-FD-3c5"/>
                     <connections>
                         <outlet property="roosterView" destination="sKD-bU-aUm" id="plH-j3-HqW"/>
-                        <outlet property="weekLabel" destination="lVZ-m8-k4v" id="inA-Gi-3v2"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1i0-fW-x6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="-335"/>
+            <point key="canvasLocation" x="868" y="-335"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="avg-EX-pbs">

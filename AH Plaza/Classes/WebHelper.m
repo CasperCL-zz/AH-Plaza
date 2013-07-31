@@ -10,7 +10,9 @@
 
 @implementation WebHelper
 
+NSString * HOME_URL = @"https://plaza.ah.nl/";
 NSString * TIMETABLE_URL = @"https://plaza.ah.nl/store_rendering_p1/wps/myportal/ahplaza/rooster";
+NSString * PAY_CHECK_BASE = @"https://plaza.ah.nl/wps/AppLaunch2/AppLaunchServlet?appid=clrpay";
 NSString * LOGIN_FAIL_URL = @"https://plaza.ah.nl/pkmslogin.form";
 NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
 
@@ -38,20 +40,23 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
     self = [super init];
     if (self) {
         [self setDelegate: self];
-        NSURLRequest *urlReq = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"https://plaza.ah.nl/"]]; //plaza.ah.nl
+        NSURLRequest *urlReq = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString: HOME_URL]]; //plaza.ah.nl
         [self loadRequest: urlReq];
     }
     return self;
 }
 
-- (void) loadTimetablePage: (void (^)(NSArray* weeks)) completion {
-    _timetableCallback = completion;
-}
 
-
-- (void)login: (NSString*) username WithPassword: (NSString*) password onCompletion:(callbackLogin)callback {
+- (void)login: (NSString*) username WithPassword: (NSString*) password onCompletion:(callbackLogin) callback {
     _loginCallback = callback;
-
+    
+    NSArray * err1;
+    if(_internetOffline) {
+        err1 = [[NSArray alloc] initWithObjects:@"Geen internetverbinding", nil];
+        callback(err1);
+        return;
+    }
+    
     // Fill in the credentials in the webform via JavaScript
     NSString *req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"username\")[0].value='%@'", username];
     [self stringByEvaluatingJavaScriptFromString: req];
@@ -62,17 +67,40 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
     [self stringByEvaluatingJavaScriptFromString: @"document.forms[0].submit();"];
 }
 
+
+- (void) loadTimetablePage: (void (^)(NSArray* weeks)) completion {
+    _timetableCallback = completion;
+    NSURLRequest *urlReq = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString: TIMETABLE_URL]];
+    [self loadRequest: urlReq];
+}
+
+- (void)loadPayCheckPage: (callbackPayCheck) callback {
+    _paycheckCallback = callback;
+    
+    // Makes the uiwebview load the page
+    NSString *hidfldval = [self stringByEvaluatingJavaScriptFromString: @"document.getElementById('hdfld').value"];
+    NSString *strURL = [[NSString alloc] initWithFormat: @"%@%@%@", PAY_CHECK_BASE,  @"&", hidfldval];
+    NSURLRequest * urlReq = [[NSURLRequest alloc] initWithURL: [[NSURL alloc] initWithString: strURL]];
+    [self loadRequest: urlReq];
+    [NSException raise:@"Unimplemented Exception" format:@"Unimplemented method loadPayCheckPage"];
+}
+
+
 -(void)webViewDidStartLoad:(UIWebView *)webView {
     NSString * currentURL = [self stringByEvaluatingJavaScriptFromString:@"document.URL"];
     
-    if([currentURL isEqualToString: LOGIN_SCCS_URL]){
-        _loginCallback(nil);
-        [self stopLoading];
-    } else if ([currentURL isEqualToString: LOGIN_FAIL_URL]) {
-        NSMutableArray *errors = [[NSMutableArray alloc] init];
-        [errors addObject: @"Gebruikersnaam of wachtwoord is incorrect"];
-        _loginCallback(errors);
-        [self stopLoading];
+    if(_loginCallback) {
+        if([currentURL isEqualToString: LOGIN_SCCS_URL]){
+            _loginCallback(nil);
+            [self stopLoading];
+            _loginCallback = nil;
+        } else if ([currentURL isEqualToString: LOGIN_FAIL_URL]) {
+            NSMutableArray *errors = [[NSMutableArray alloc] init];
+            [errors addObject: @"Gebruikersnaam of wachtwoord is incorrect"];
+            _loginCallback(errors);
+            [self stopLoading];
+            _loginCallback = nil;
+        }
     }
 }
 
@@ -88,16 +116,29 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
         NSLog(@"%@", html);
         
         _timetableCallback(weeks);
-    } 
+    }
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    NSInteger errorCode = [error code];
+    
+    if(errorCode != NSURLErrorCancelled) {
+        NSLog(@"An error occured in the webview with Error code: %i", errorCode);
+        switch (errorCode) {
+            case -1009: // Error Domain=NSURLErrorDomain "The Internet connection appears to be offline."
+                _internetOffline = YES;
+                break;
+        }
+    }
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 @end

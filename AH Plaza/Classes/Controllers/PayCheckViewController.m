@@ -1,20 +1,18 @@
 //
-//  PlanningViewController.m
-//  AH Plaza
+//  PayCheckViewController.m
+//  AH Plaza Unofficial
 //
-//  Created by Casper Eekhof on 23-07-13.
+//  Created by Casper Eekhof on 31-07-13.
 //  Copyright (c) 2013 JTC. All rights reserved.
 //
 
-#import "PlanningViewController.h"
-#import <QuartzCore/QuartzCore.h>
-#import "WebHelper.h"
+#import "PayCheckViewController.h"
 
-@interface PlanningViewController ()
+@interface PayCheckViewController ()
 
 @end
 
-@implementation PlanningViewController
+@implementation PayCheckViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,11 +27,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    [[WebHelper sharedInstance] loadTimetablePage:^(NSArray *weeks) {
-        
-    }];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,9 +35,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidUnload {
-    [self setRoosterView:nil];
-    [self setWeekLabel:nil];
-    [super viewDidUnload];
-}
 @end

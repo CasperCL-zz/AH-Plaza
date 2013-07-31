@@ -13,14 +13,16 @@
 
 typedef void (^callbackTimetable)(NSArray* weeks);
 typedef void (^callbackLogin)(NSArray* errors);
+typedef void (^callbackPayCheck)(NSArray * months);
 
 + (id)sharedInstance;
 - (void)login: (NSString*) username WithPassword: (NSString*) password onCompletion: (callbackLogin) callback;
 - (void)loadTimetablePage: (callbackTimetable) callback;
+- (void)loadPayCheckPage: (callbackPayCheck) callback;
 
-
+@property (strong, atomic)callbackPayCheck paycheckCallback;
 @property (strong, atomic)callbackTimetable timetableCallback;
 @property (strong, atomic)callbackLogin loginCallback;
-
+@property BOOL internetOffline;
 
 @end

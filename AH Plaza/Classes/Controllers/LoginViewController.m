@@ -51,6 +51,13 @@ int credentialViewMoved = 0;
     [self showCredentialsView:^(BOOL finished) {}];
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
 - (void) hideloadView: (void (^)(BOOL finished))completion{
     _loadingView.alpha = 1.0f;
     _coverView.alpha = 0.8f;
@@ -80,11 +87,6 @@ int credentialViewMoved = 0;
 }
 
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (void) showCredentialsView: (void (^)(BOOL finished))completion {
     CGRect orginal = _ahplazaImage.frame;
@@ -170,9 +172,14 @@ int credentialViewMoved = 0;
                                 [self presentModalViewController:vc animated:NO];
                             }];
                         }];
+                    } else {
+                        NSLog(@"error");
+                        [self hideloadView:^(BOOL finished) {
+                            
+                        }];
                     }
                 }];
-
+                
             }];
         }];
         
@@ -233,13 +240,16 @@ typedef enum {
                         }];
                     }];
                 } else {
-                    
+                    NSLog(@"error");
+                    [self hideloadView:^(BOOL finished) {
+                        
+                    }];
                 }
             }];
             
         }];
     }];
-
+    
 }
 
 - (void) removeAllViews: (void (^)(BOOL finished)) completion {
