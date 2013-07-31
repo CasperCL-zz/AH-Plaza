@@ -14,15 +14,6 @@
 {
     self = [super init];
     if (self) {
-        NSArray * keys = [[NSArray alloc] initWithObjects:
-                          @"Maandag",
-                          @"Dinsdag",
-                          @"Woensdag",
-                          @"Donderdag",
-                          @"Vrijdag",
-                          @"Zaterdag",
-                          @"Zondag", nil];
-        _workingTimes = [[NSMutableDictionary alloc] initWithObjects: nil forKeys: keys];
     }
     return self;
 }

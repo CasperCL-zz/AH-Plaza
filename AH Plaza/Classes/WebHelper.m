@@ -7,6 +7,8 @@
 //
 
 #import "WebHelper.h"
+#import "Week.h"
+#import "HTMLParser.h"
 
 @implementation WebHelper
 
@@ -108,26 +110,31 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
     NSString * currentURL = [self stringByEvaluatingJavaScriptFromString:@"document.URL"];
     NSLog(@"Finished Loading: %@", currentURL);
     
-    if ([currentURL isEqualToString: TIMETABLE_URL]) {
-        // Parse the HTML to weeks
-        NSMutableArray * weeks = [[NSMutableArray alloc] init];
-        NSString *html = [self stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];
-        
-        NSLog(@"%@", html);
-        
-        _timetableCallback(weeks);
+    // Check if the session is not expired
+    if(![currentURL isEqualToString: @"https://plaza.ah.nl/pkmslogout?filename=wpslogout.html"]) {
+        if ([currentURL isEqualToString: TIMETABLE_URL]) {
+            // Parse the HTML to weeks
+            NSArray *weeks = [[HTMLParser sharedInstance] htmlToWeeks: self];
+            
+            _timetableCallback(weeks);
+        }
+    } else {
+        NSLog(@"Session expired");
+        [NSException raise:@"Session Expired" format:@"Needs method for reauthentication"];
     }
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     NSInteger errorCode = [error code];
     
-    if(errorCode != NSURLErrorCancelled) {
+    if(errorCode != NSURLErrorCancelled) { // Ignore fast redirection
         NSLog(@"An error occured in the webview with Error code: %i", errorCode);
         switch (errorCode) {
             case -1009: // Error Domain=NSURLErrorDomain "The Internet connection appears to be offline."
                 _internetOffline = YES;
                 break;
+            default:
+                NSLog(@"Unhandeled error: \n%@\n", error);
         }
     }
 }

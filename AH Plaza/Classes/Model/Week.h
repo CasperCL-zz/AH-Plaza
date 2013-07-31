@@ -10,7 +10,8 @@
 
 @interface Week : NSObject
 
-@property NSMutableDictionary *workingTimes;
-@property int weekNr;
+@property NSDictionary *workingTimes;
+@property NSString *weekID;
+@property NSString *fromTillDate;
 
 @end
