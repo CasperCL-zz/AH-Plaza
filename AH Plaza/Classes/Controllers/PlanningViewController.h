@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlanningView.h"
 
 @interface PlanningViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *weekLabel;
-@property (weak, nonatomic) IBOutlet UIView *roosterView;
+@property int page;
+@property PlanningView * planningView;
 
 @end

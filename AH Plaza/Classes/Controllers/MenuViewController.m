@@ -7,6 +7,8 @@
 //
 
 #import "MenuViewController.h"
+#import "PlanningView.h"
+#import "PlanningViewController.h"
 
 @interface MenuViewController ()
 
@@ -132,4 +134,12 @@
 }
 
 
+- (IBAction)showPlanning:(id)sender {
+    PlanningViewController *vc = [[PlanningViewController alloc] init];
+    PlanningView *planningView = [[[NSBundle mainBundle] loadNibNamed:@"PlanningView" owner: vc options:nil] objectAtIndex: 0];
+    vc.view = planningView;
+    
+    [vc setPlanningView: planningView];
+    [self.navigationController pushViewController: vc animated: YES];
+}
 @end

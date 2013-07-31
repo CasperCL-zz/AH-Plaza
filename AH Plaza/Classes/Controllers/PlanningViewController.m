@@ -30,9 +30,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [[WebHelper sharedInstance] loadTimetablePage:^(NSArray *weeks) {
-        
-    }];
+    _page = 0;
+    
+    [[(PlanningView *)self.view mondayFromLabel] setText:@"test"];
+//    [[WebHelper sharedInstance] loadTimetablePage:^(NSArray *weeks) {
+//    }];
 
 }
 
@@ -43,8 +45,6 @@
 }
 
 - (void)viewDidUnload {
-    [self setRoosterView:nil];
-    [self setWeekLabel:nil];
     [super viewDidUnload];
 }
 @end

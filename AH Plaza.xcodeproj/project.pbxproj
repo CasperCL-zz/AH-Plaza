@@ -36,8 +36,9 @@
 		AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */; };
 		AFB7AE66179DE00600D58E08 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB7AE65179DE00600D58E08 /* SettingsViewController.m */; };
 		AFDF014C17A9138A005CC5AA /* PayCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */; };
-		AFDF014E17A91DDD005CC5AA /* Planning.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFDF014D17A91DDD005CC5AA /* Planning.xib */; };
+		AFDF014E17A91DDD005CC5AA /* PlanningView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFDF014D17A91DDD005CC5AA /* PlanningView.xib */; };
 		AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015017A94D4B005CC5AA /* HTMLParser.m */; };
+		AFDF015517A95872005CC5AA /* PlanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015417A95872005CC5AA /* PlanningView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,9 +82,11 @@
 		AFB7AE65179DE00600D58E08 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/Controllers/SettingsViewController.m; sourceTree = "<group>"; };
 		AFDF014A17A9138A005CC5AA /* PayCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCheckViewController.h; path = Classes/Controllers/PayCheckViewController.h; sourceTree = "<group>"; };
 		AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCheckViewController.m; path = Classes/Controllers/PayCheckViewController.m; sourceTree = "<group>"; };
-		AFDF014D17A91DDD005CC5AA /* Planning.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Planning.xib; path = Classes/View/Planning.xib; sourceTree = "<group>"; };
+		AFDF014D17A91DDD005CC5AA /* PlanningView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlanningView.xib; path = Classes/View/PlanningView.xib; sourceTree = "<group>"; };
 		AFDF014F17A94D4B005CC5AA /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMLParser.h; path = Classes/HTMLParser.h; sourceTree = "<group>"; };
 		AFDF015017A94D4B005CC5AA /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMLParser.m; path = Classes/HTMLParser.m; sourceTree = "<group>"; };
+		AFDF015317A95872005CC5AA /* PlanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlanningView.h; path = Classes/View/PlanningView.h; sourceTree = "<group>"; };
+		AFDF015417A95872005CC5AA /* PlanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlanningView.m; path = Classes/View/PlanningView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */,
-				AFDF014D17A91DDD005CC5AA /* Planning.xib */,
+				AFDF014D17A91DDD005CC5AA /* PlanningView.xib */,
+				AFDF015317A95872005CC5AA /* PlanningView.h */,
+				AFDF015417A95872005CC5AA /* PlanningView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -297,7 +302,7 @@
 				AFB7AE61179D9C4900D58E08 /* settings_ico.png in Resources */,
 				AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */,
 				AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */,
-				AFDF014E17A91DDD005CC5AA /* Planning.xib in Resources */,
+				AFDF014E17A91DDD005CC5AA /* PlanningView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +323,7 @@
 				AF9AC105179EA8D400CF3E98 /* Week.m in Sources */,
 				AFDF014C17A9138A005CC5AA /* PayCheckViewController.m in Sources */,
 				AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */,
+				AFDF015517A95872005CC5AA /* PlanningView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
