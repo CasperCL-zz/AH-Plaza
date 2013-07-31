@@ -47,6 +47,7 @@ int credentialViewMoved = 0;
     _loadingView.layer.cornerRadius = 7;
     _loadingView.layer.masksToBounds = YES;
     _coverView.hidden = YES;
+    [_usernameTextField setAutocorrectionType: UITextAutocorrectionTypeNo];
     
     [self showCredentialsView:^(BOOL finished) {}];
 }
