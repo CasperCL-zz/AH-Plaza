@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
 
 - (IBAction)loginButtonPressed:(id)sender;
-
+ 
 @property CGRect originalFrame;
 
 - (IBAction)backgroundButtonClicked:(id)sender;
