@@ -65,13 +65,13 @@
         }
         
         NSArray * keys = [[NSArray alloc] initWithObjects:
-                          @"Monday",
-                          @"Tuesday",
-                          @"Wednesday",
-                          @"Thursday",
-                          @"Friday",
-                          @"Saturday",
-                          @"Sunday",
+                          @"monday",
+                          @"tuesday",
+                          @"wednesday",
+                          @"thursday",
+                          @"friday",
+                          @"saturday",
+                          @"sunday",
                           nil];
         NSDictionary * workingTimes = [[NSDictionary alloc] initWithObjects: fromTill forKeys: keys];
         [tmp setWorkingTimes: workingTimes];

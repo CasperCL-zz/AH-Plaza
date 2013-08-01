@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF313D5217AA9193004CC815 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D4E17AA8ED8004CC815 /* RootViewController.m */; };
+		AF313D5417AA9193004CC815 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5017AA8ED8004CC815 /* ModelController.m */; };
 		AF720EEF179BE2F400F77CA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EEE179BE2F400F77CA6 /* UIKit.framework */; };
 		AF720EF1179BE2F400F77CA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF0179BE2F400F77CA6 /* Foundation.framework */; };
 		AF720EF3179BE2F400F77CA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF2179BE2F400F77CA6 /* CoreGraphics.framework */; };
@@ -36,12 +38,14 @@
 		AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */; };
 		AFB7AE66179DE00600D58E08 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB7AE65179DE00600D58E08 /* SettingsViewController.m */; };
 		AFDF014C17A9138A005CC5AA /* PayCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */; };
-		AFDF014E17A91DDD005CC5AA /* PlanningView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFDF014D17A91DDD005CC5AA /* PlanningView.xib */; };
 		AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015017A94D4B005CC5AA /* HTMLParser.m */; };
-		AFDF015517A95872005CC5AA /* PlanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015417A95872005CC5AA /* PlanningView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF313D4D17AA8ED8004CC815 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		AF313D4E17AA8ED8004CC815 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		AF313D4F17AA8ED8004CC815 /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
+		AF313D5017AA8ED8004CC815 /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		AF720EEB179BE2F400F77CA6 /* AH Plaza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AH Plaza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF720EEE179BE2F400F77CA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF720EF0179BE2F400F77CA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,11 +86,8 @@
 		AFB7AE65179DE00600D58E08 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/Controllers/SettingsViewController.m; sourceTree = "<group>"; };
 		AFDF014A17A9138A005CC5AA /* PayCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCheckViewController.h; path = Classes/Controllers/PayCheckViewController.h; sourceTree = "<group>"; };
 		AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCheckViewController.m; path = Classes/Controllers/PayCheckViewController.m; sourceTree = "<group>"; };
-		AFDF014D17A91DDD005CC5AA /* PlanningView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlanningView.xib; path = Classes/View/PlanningView.xib; sourceTree = "<group>"; };
 		AFDF014F17A94D4B005CC5AA /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMLParser.h; path = Classes/HTMLParser.h; sourceTree = "<group>"; };
 		AFDF015017A94D4B005CC5AA /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMLParser.m; path = Classes/HTMLParser.m; sourceTree = "<group>"; };
-		AFDF015317A95872005CC5AA /* PlanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlanningView.h; path = Classes/View/PlanningView.h; sourceTree = "<group>"; };
-		AFDF015417A95872005CC5AA /* PlanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlanningView.m; path = Classes/View/PlanningView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF313D4B17AA8EBC004CC815 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				AF720FDE179C87A300F77CA6 /* MenuViewController.h */,
+				AF720FDF179C87A300F77CA6 /* MenuViewController.m */,
+				AFB7AE64179DE00600D58E08 /* SettingsViewController.h */,
+				AFB7AE65179DE00600D58E08 /* SettingsViewController.m */,
+				AFDF014A17A9138A005CC5AA /* PayCheckViewController.h */,
+				AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */,
+				AF313D4C17AA8EC1004CC815 /* Planning */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		AF313D4C17AA8EC1004CC815 /* Planning */ = {
+			isa = PBXGroup;
+			children = (
+				AF313D4D17AA8ED8004CC815 /* RootViewController.h */,
+				AF313D4E17AA8ED8004CC815 /* RootViewController.m */,
+				AF313D4F17AA8ED8004CC815 /* ModelController.h */,
+				AF313D5017AA8ED8004CC815 /* ModelController.m */,
+				AF9AC0FD179EA36A00CF3E98 /* PlanningViewController.h */,
+				AF9AC0FE179EA36A00CF3E98 /* PlanningViewController.m */,
+			);
+			name = Planning;
+			sourceTree = "<group>";
+		};
 		AF720EE2179BE2F400F77CA6 = {
 			isa = PBXGroup;
 			children = (
@@ -163,9 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */,
-				AFDF014D17A91DDD005CC5AA /* PlanningView.xib */,
-				AFDF015317A95872005CC5AA /* PlanningView.h */,
-				AFDF015417A95872005CC5AA /* PlanningView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -207,14 +232,7 @@
 			children = (
 				AF720F90179BF20600F77CA6 /* LoginViewController.h */,
 				AF720F91179BF20600F77CA6 /* LoginViewController.m */,
-				AF720FDE179C87A300F77CA6 /* MenuViewController.h */,
-				AF720FDF179C87A300F77CA6 /* MenuViewController.m */,
-				AFB7AE64179DE00600D58E08 /* SettingsViewController.h */,
-				AFB7AE65179DE00600D58E08 /* SettingsViewController.m */,
-				AF9AC0FD179EA36A00CF3E98 /* PlanningViewController.h */,
-				AF9AC0FE179EA36A00CF3E98 /* PlanningViewController.m */,
-				AFDF014A17A9138A005CC5AA /* PayCheckViewController.h */,
-				AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */,
+				AF313D4B17AA8EBC004CC815 /* Menu */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -302,7 +320,6 @@
 				AFB7AE61179D9C4900D58E08 /* settings_ico.png in Resources */,
 				AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */,
 				AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */,
-				AFDF014E17A91DDD005CC5AA /* PlanningView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF313D5217AA9193004CC815 /* RootViewController.m in Sources */,
+				AF313D5417AA9193004CC815 /* ModelController.m in Sources */,
 				AF720EFB179BE2F400F77CA6 /* main.m in Sources */,
 				AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */,
 				AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */,
@@ -323,7 +342,6 @@
 				AF9AC105179EA8D400CF3E98 /* Week.m in Sources */,
 				AFDF014C17A9138A005CC5AA /* PayCheckViewController.m in Sources */,
 				AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */,
-				AFDF015517A95872005CC5AA /* PlanningView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
