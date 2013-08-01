@@ -16,6 +16,8 @@
 
 @implementation PlanningViewController
 
+double totalHoursWorked;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,6 +31,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    totalHoursWorked = 0;
+    
     
     if([[_dataObject workingTimes] count]) {
         [_weekLabel setText: [_dataObject weekID]];
@@ -74,13 +78,17 @@
         [_sundayFromLabel setText: from];
         [_sundayTillLabel setText: till];
         [_sundayTotalLabel setText: [self calculateTotalFrom: from till: till]];
+        
+        NSString *totalHoursWorkedS = [self timeDoubleToString: totalHoursWorked];
+        [_overallTotal setText: totalHoursWorkedS];
+        
     } else {
         // Show error
     }
 }
 
 -(NSString*) calculateTotalFrom: (NSString*)from till: (NSString*) till {
-    NSMutableString *total = [[NSMutableString alloc] init];
+
     if([from isEqualToString:@"-"])
         return @"00:00";
     
@@ -93,13 +101,10 @@
     else
         difference = abs((doubleFormatFrom - 24)) + doubleFormatTill;
 
-    NSNumberFormatter * formatter = [[NSNumberFormatter alloc] init];
-    [formatter setMaximumFractionDigits:0];
-    NSString *hours = [formatter stringFromNumber:[NSNumber numberWithDouble: difference]];
-    NSString *minutes = [[NSString alloc] initWithFormat:@"%i", (int)(difference - [hours characterAtIndex: 0] - '0')* 60];
-    NSLog(@"H: %@ M: %@", hours, minutes);
     
-    return total;
+    
+    totalHoursWorked += difference;
+    return [self timeDoubleToString: difference];
 }
 
 -(double) timeStringToDouble: (NSString*) timeString {
@@ -114,6 +119,21 @@
     timeDouble = (n1*10) + n2 + ( (double)((n3*10) + (n4)) / 60);
     
     return timeDouble;
+}
+
+- (NSString*) timeDoubleToString: (double) timeDouble {
+    NSString *hours;
+    if(floor(timeDouble) < 10)
+        hours = [[NSString alloc] initWithFormat:@"0%i", (int)floor(timeDouble)];
+    else
+        hours = [[NSString alloc] initWithFormat:@"%i", (int)floor(timeDouble)];
+    NSString *minutes;
+    if((int)((timeDouble - floor(timeDouble))* 60))
+        minutes = [[NSString alloc] initWithFormat:@"%i", (int)((timeDouble - floor(timeDouble))* 60)];
+    else
+        minutes = @"00";
+    
+    return [[NSString alloc] initWithFormat:@"%@:%@", hours, minutes];
 }
 
 - (void)didReceiveMemoryWarning
