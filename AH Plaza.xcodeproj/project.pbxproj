@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF313D5217AA9193004CC815 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D4E17AA8ED8004CC815 /* RootViewController.m */; };
-		AF313D5417AA9193004CC815 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5017AA8ED8004CC815 /* ModelController.m */; };
+		AF313D6A17ABDFA7004CC815 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5C17ABDFA5004CC815 /* MenuViewController.m */; };
+		AF313D6B17ABDFA7004CC815 /* PayCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5E17ABDFA6004CC815 /* PayCheckViewController.m */; };
+		AF313D6C17ABDFA7004CC815 /* PaymentDaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D6017ABDFA6004CC815 /* PaymentDaysViewController.m */; };
+		AF313D7017ABDFA7004CC815 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D6917ABDFA7004CC815 /* SettingsViewController.m */; };
+		AF313D7817ABE051004CC815 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7317ABE051004CC815 /* ModelController.m */; };
+		AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7517ABE051004CC815 /* PlanningViewController.m */; };
+		AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7717ABE051004CC815 /* RootViewController.m */; };
 		AF720EEF179BE2F400F77CA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EEE179BE2F400F77CA6 /* UIKit.framework */; };
 		AF720EF1179BE2F400F77CA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF0179BE2F400F77CA6 /* Foundation.framework */; };
 		AF720EF3179BE2F400F77CA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF2179BE2F400F77CA6 /* CoreGraphics.framework */; };
@@ -23,9 +28,7 @@
 		AF720F5C179BE77000F77CA6 /* app-icon_iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F5A179BE77000F77CA6 /* app-icon_iphone5.png */; };
 		AF720F60179BE80300F77CA6 /* ah-plaza.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F5F179BE80300F77CA6 /* ah-plaza.png */; };
 		AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720F91179BF20600F77CA6 /* LoginViewController.m */; };
-		AF720FE0179C87A300F77CA6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720FDF179C87A300F77CA6 /* MenuViewController.m */; };
 		AF720FE2179C8DA700F77CA6 /* ah-button.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720FE1179C8DA700F77CA6 /* ah-button.png */; };
-		AF9AC0FF179EA36A00CF3E98 /* PlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC0FE179EA36A00CF3E98 /* PlanningViewController.m */; };
 		AF9AC102179EA80500CF3E98 /* WebHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC101179EA80500CF3E98 /* WebHelper.m */; };
 		AF9AC105179EA8D400CF3E98 /* Week.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC104179EA8D400CF3E98 /* Week.m */; };
 		AFB7AE5C179D9C4900D58E08 /* info_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE54179D9C4900D58E08 /* info_ico.png */; };
@@ -36,16 +39,24 @@
 		AFB7AE61179D9C4900D58E08 /* settings_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE59179D9C4900D58E08 /* settings_ico.png */; };
 		AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */; };
 		AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */; };
-		AFB7AE66179DE00600D58E08 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB7AE65179DE00600D58E08 /* SettingsViewController.m */; };
-		AFDF014C17A9138A005CC5AA /* PayCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */; };
 		AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015017A94D4B005CC5AA /* HTMLParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF313D4D17AA8ED8004CC815 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		AF313D4E17AA8ED8004CC815 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		AF313D4F17AA8ED8004CC815 /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
-		AF313D5017AA8ED8004CC815 /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
+		AF313D5B17ABDFA5004CC815 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/Controllers/Menu/MenuViewController.h; sourceTree = "<group>"; };
+		AF313D5C17ABDFA5004CC815 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/Controllers/Menu/MenuViewController.m; sourceTree = "<group>"; };
+		AF313D5D17ABDFA5004CC815 /* PayCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCheckViewController.h; path = Classes/Controllers/Menu/PayCheckViewController.h; sourceTree = "<group>"; };
+		AF313D5E17ABDFA6004CC815 /* PayCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCheckViewController.m; path = Classes/Controllers/Menu/PayCheckViewController.m; sourceTree = "<group>"; };
+		AF313D5F17ABDFA6004CC815 /* PaymentDaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentDaysViewController.h; path = Classes/Controllers/Menu/PaymentDaysViewController.h; sourceTree = "<group>"; };
+		AF313D6017ABDFA6004CC815 /* PaymentDaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentDaysViewController.m; path = Classes/Controllers/Menu/PaymentDaysViewController.m; sourceTree = "<group>"; };
+		AF313D6817ABDFA6004CC815 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/Controllers/Menu/SettingsViewController.h; sourceTree = "<group>"; };
+		AF313D6917ABDFA7004CC815 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/Controllers/Menu/SettingsViewController.m; sourceTree = "<group>"; };
+		AF313D7217ABE051004CC815 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
+		AF313D7317ABE051004CC815 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
+		AF313D7417ABE051004CC815 /* PlanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningViewController.h; sourceTree = "<group>"; };
+		AF313D7517ABE051004CC815 /* PlanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningViewController.m; sourceTree = "<group>"; };
+		AF313D7617ABE051004CC815 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		AF313D7717ABE051004CC815 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		AF720EEB179BE2F400F77CA6 /* AH Plaza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AH Plaza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF720EEE179BE2F400F77CA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF720EF0179BE2F400F77CA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,11 +76,7 @@
 		AF720F5F179BE80300F77CA6 /* ah-plaza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ah-plaza.png"; path = "Resources/Images/ah-plaza.png"; sourceTree = "<group>"; };
 		AF720F90179BF20600F77CA6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/Controllers/LoginViewController.h; sourceTree = "<group>"; };
 		AF720F91179BF20600F77CA6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/Controllers/LoginViewController.m; sourceTree = "<group>"; };
-		AF720FDE179C87A300F77CA6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/Controllers/MenuViewController.h; sourceTree = "<group>"; };
-		AF720FDF179C87A300F77CA6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/Controllers/MenuViewController.m; sourceTree = "<group>"; };
 		AF720FE1179C8DA700F77CA6 /* ah-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ah-button.png"; path = "Resources/Images/ah-button.png"; sourceTree = "<group>"; };
-		AF9AC0FD179EA36A00CF3E98 /* PlanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlanningViewController.h; path = Classes/Controllers/PlanningViewController.h; sourceTree = "<group>"; };
-		AF9AC0FE179EA36A00CF3E98 /* PlanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlanningViewController.m; path = Classes/Controllers/PlanningViewController.m; sourceTree = "<group>"; };
 		AF9AC100179EA80500CF3E98 /* WebHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebHelper.h; path = Classes/WebHelper.h; sourceTree = "<group>"; };
 		AF9AC101179EA80500CF3E98 /* WebHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebHelper.m; path = Classes/WebHelper.m; sourceTree = "<group>"; };
 		AF9AC103179EA8D400CF3E98 /* Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Week.h; path = Classes/Model/Week.h; sourceTree = "<group>"; };
@@ -82,10 +89,6 @@
 		AFB7AE59179D9C4900D58E08 /* settings_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings_ico.png; path = Resources/Images/icons/settings_ico.png; sourceTree = "<group>"; };
 		AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shiftklaar_ico.png; path = Resources/Images/icons/shiftklaar_ico.png; sourceTree = "<group>"; };
 		AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = webcal_ico.png; path = Resources/Images/icons/webcal_ico.png; sourceTree = "<group>"; };
-		AFB7AE64179DE00600D58E08 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/Controllers/SettingsViewController.h; sourceTree = "<group>"; };
-		AFB7AE65179DE00600D58E08 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/Controllers/SettingsViewController.m; sourceTree = "<group>"; };
-		AFDF014A17A9138A005CC5AA /* PayCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCheckViewController.h; path = Classes/Controllers/PayCheckViewController.h; sourceTree = "<group>"; };
-		AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCheckViewController.m; path = Classes/Controllers/PayCheckViewController.m; sourceTree = "<group>"; };
 		AFDF014F17A94D4B005CC5AA /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMLParser.h; path = Classes/HTMLParser.h; sourceTree = "<group>"; };
 		AFDF015017A94D4B005CC5AA /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMLParser.m; path = Classes/HTMLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,28 +110,39 @@
 		AF313D4B17AA8EBC004CC815 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				AF720FDE179C87A300F77CA6 /* MenuViewController.h */,
-				AF720FDF179C87A300F77CA6 /* MenuViewController.m */,
-				AFB7AE64179DE00600D58E08 /* SettingsViewController.h */,
-				AFB7AE65179DE00600D58E08 /* SettingsViewController.m */,
-				AFDF014A17A9138A005CC5AA /* PayCheckViewController.h */,
-				AFDF014B17A9138A005CC5AA /* PayCheckViewController.m */,
-				AF313D4C17AA8EC1004CC815 /* Planning */,
+				AF313D5B17ABDFA5004CC815 /* MenuViewController.h */,
+				AF313D5C17ABDFA5004CC815 /* MenuViewController.m */,
+				AF313D7B17ABE068004CC815 /* Menu-items */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
 		};
-		AF313D4C17AA8EC1004CC815 /* Planning */ = {
+		AF313D7117ABE051004CC815 /* Planning */ = {
 			isa = PBXGroup;
 			children = (
-				AF313D4D17AA8ED8004CC815 /* RootViewController.h */,
-				AF313D4E17AA8ED8004CC815 /* RootViewController.m */,
-				AF313D4F17AA8ED8004CC815 /* ModelController.h */,
-				AF313D5017AA8ED8004CC815 /* ModelController.m */,
-				AF9AC0FD179EA36A00CF3E98 /* PlanningViewController.h */,
-				AF9AC0FE179EA36A00CF3E98 /* PlanningViewController.m */,
+				AF313D7217ABE051004CC815 /* ModelController.h */,
+				AF313D7317ABE051004CC815 /* ModelController.m */,
+				AF313D7417ABE051004CC815 /* PlanningViewController.h */,
+				AF313D7517ABE051004CC815 /* PlanningViewController.m */,
+				AF313D7617ABE051004CC815 /* RootViewController.h */,
+				AF313D7717ABE051004CC815 /* RootViewController.m */,
 			);
 			name = Planning;
+			path = Classes/Controllers/Menu/Planning;
+			sourceTree = "<group>";
+		};
+		AF313D7B17ABE068004CC815 /* Menu-items */ = {
+			isa = PBXGroup;
+			children = (
+				AF313D5F17ABDFA6004CC815 /* PaymentDaysViewController.h */,
+				AF313D6017ABDFA6004CC815 /* PaymentDaysViewController.m */,
+				AF313D5D17ABDFA5004CC815 /* PayCheckViewController.h */,
+				AF313D5E17ABDFA6004CC815 /* PayCheckViewController.m */,
+				AF313D6817ABDFA6004CC815 /* SettingsViewController.h */,
+				AF313D6917ABDFA7004CC815 /* SettingsViewController.m */,
+				AF313D7117ABE051004CC815 /* Planning */,
+			);
+			name = "Menu-items";
 			sourceTree = "<group>";
 		};
 		AF720EE2179BE2F400F77CA6 = {
@@ -330,18 +344,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF313D5217AA9193004CC815 /* RootViewController.m in Sources */,
-				AF313D5417AA9193004CC815 /* ModelController.m in Sources */,
 				AF720EFB179BE2F400F77CA6 /* main.m in Sources */,
 				AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */,
 				AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */,
-				AF720FE0179C87A300F77CA6 /* MenuViewController.m in Sources */,
-				AFB7AE66179DE00600D58E08 /* SettingsViewController.m in Sources */,
-				AF9AC0FF179EA36A00CF3E98 /* PlanningViewController.m in Sources */,
 				AF9AC102179EA80500CF3E98 /* WebHelper.m in Sources */,
 				AF9AC105179EA8D400CF3E98 /* Week.m in Sources */,
-				AFDF014C17A9138A005CC5AA /* PayCheckViewController.m in Sources */,
 				AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */,
+				AF313D6A17ABDFA7004CC815 /* MenuViewController.m in Sources */,
+				AF313D6B17ABDFA7004CC815 /* PayCheckViewController.m in Sources */,
+				AF313D6C17ABDFA7004CC815 /* PaymentDaysViewController.m in Sources */,
+				AF313D7017ABDFA7004CC815 /* SettingsViewController.m in Sources */,
+				AF313D7817ABE051004CC815 /* ModelController.m in Sources */,
+				AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */,
+				AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

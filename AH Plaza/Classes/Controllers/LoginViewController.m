@@ -284,6 +284,9 @@ typedef enum {
         newFrame.size.width = self.view.frame.size.width;
         newFrame.origin.x = 0;
         newFrame.origin.y = 0;
+        _credentialsView.layer.cornerRadius = 0;
+        _credentialsView.layer.masksToBounds = NO;
+
         
         [UIView animateWithDuration: 0.5 animations:^{
             _credentialsView.frame = newFrame;
