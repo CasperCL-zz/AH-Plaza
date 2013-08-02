@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yms-SG-ASO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xbb-fU-RDj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -419,14 +419,18 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNb-2y-fkQ">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNb-2y-fkQ">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="lxW-2I-g3S"/>
+                                                    <constraint firstAttribute="width" constant="43" id="uLe-6m-jaQ"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVY-Ls-zSN">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVY-Ls-zSN">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="gPj-yu-Tvr"/>
+                                                    <constraint firstAttribute="width" constant="43" id="dBP-IW-0jD"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -444,11 +448,11 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="QVY-Ls-zSN" firstAttribute="baseline" secondItem="dNb-2y-fkQ" secondAttribute="baseline" type="default" id="20b-4O-WBm"/>
+                                            <constraint firstItem="dNb-2y-fkQ" firstAttribute="top" secondItem="naF-da-mv4" secondAttribute="top" constant="1" id="8bo-W8-r3j"/>
                                             <constraint firstItem="QVY-Ls-zSN" firstAttribute="top" secondItem="jH0-yV-i64" secondAttribute="top" type="default" id="Gjr-37-Kfe"/>
                                             <constraint firstItem="RAY-0i-SFk" firstAttribute="leading" secondItem="naF-da-mv4" secondAttribute="leading" type="default" id="IR8-aN-mxV"/>
                                             <constraint firstItem="QVY-Ls-zSN" firstAttribute="baseline" secondItem="jH0-yV-i64" secondAttribute="baseline" type="default" id="LST-fU-OqS"/>
                                             <constraint firstItem="RAY-0i-SFk" firstAttribute="top" secondItem="naF-da-mv4" secondAttribute="top" type="default" id="T0h-NP-bxo"/>
-                                            <constraint firstItem="QVY-Ls-zSN" firstAttribute="top" secondItem="naF-da-mv4" secondAttribute="top" constant="1" id="XQU-iC-sXz"/>
                                             <constraint firstItem="RAY-0i-SFk" firstAttribute="bottom" secondItem="naF-da-mv4" secondAttribute="bottom" type="default" id="cZo-Qp-j8Z"/>
                                             <constraint firstItem="QVY-Ls-zSN" firstAttribute="leading" secondItem="dNb-2y-fkQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="mwM-FN-Ca9"/>
                                             <constraint firstItem="jH0-yV-i64" firstAttribute="trailing" secondItem="naF-da-mv4" secondAttribute="trailing" type="default" id="qF7-jK-RyS"/>
@@ -466,14 +470,18 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihe-bD-sIu">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihe-bD-sIu">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="oCC-k3-Dhx"/>
+                                                    <constraint firstAttribute="width" constant="43" id="yzC-tA-8KH"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsQ-FR-QGQ">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsQ-FR-QGQ">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="l16-ai-LtV"/>
+                                                    <constraint firstAttribute="width" constant="43" id="hYf-j6-sxA"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -500,7 +508,7 @@
                                             <constraint firstItem="6uX-lG-K0l" firstAttribute="leading" secondItem="pRD-2Z-DQl" secondAttribute="leading" type="default" id="ehT-Xa-j0w"/>
                                             <constraint firstItem="6uX-lG-K0l" firstAttribute="top" secondItem="pRD-2Z-DQl" secondAttribute="top" type="default" id="ejY-5f-LPK"/>
                                             <constraint firstItem="JsQ-FR-QGQ" firstAttribute="top" secondItem="IIR-AT-zJv" secondAttribute="top" type="default" id="gRF-Ya-5Kb"/>
-                                            <constraint firstItem="JsQ-FR-QGQ" firstAttribute="top" secondItem="pRD-2Z-DQl" secondAttribute="top" constant="1" id="tWq-Yb-ZHz"/>
+                                            <constraint firstItem="Ihe-bD-sIu" firstAttribute="top" secondItem="pRD-2Z-DQl" secondAttribute="top" constant="1" id="oOS-L5-De9"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3C-zn-RJA">
@@ -513,14 +521,18 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDW-bb-VsG">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDW-bb-VsG">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Qbe-2c-cfe"/>
+                                                    <constraint firstAttribute="width" constant="43" id="jNk-o8-ska"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gi-fr-pCa">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gi-fr-pCa">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="vWd-mm-NJV"/>
+                                                    <constraint firstAttribute="width" constant="43" id="XZI-Eo-W4o"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -542,9 +554,9 @@
                                             <constraint firstItem="IwR-Nl-yR3" firstAttribute="bottom" secondItem="h3C-zn-RJA" secondAttribute="bottom" type="default" id="Grb-YE-bH0"/>
                                             <constraint firstItem="LRw-Dv-1bp" firstAttribute="trailing" secondItem="h3C-zn-RJA" secondAttribute="trailing" type="default" id="KzP-kP-epw"/>
                                             <constraint firstItem="IwR-Nl-yR3" firstAttribute="top" secondItem="h3C-zn-RJA" secondAttribute="top" type="default" id="NVH-KX-8DV"/>
+                                            <constraint firstItem="oDW-bb-VsG" firstAttribute="top" secondItem="h3C-zn-RJA" secondAttribute="top" constant="1" id="PSE-Ck-Oc4"/>
                                             <constraint firstItem="oDW-bb-VsG" firstAttribute="leading" secondItem="IwR-Nl-yR3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="W2J-mm-l17"/>
                                             <constraint firstItem="1gi-fr-pCa" firstAttribute="baseline" secondItem="oDW-bb-VsG" secondAttribute="baseline" type="default" id="Yzl-LL-7kz"/>
-                                            <constraint firstItem="1gi-fr-pCa" firstAttribute="top" secondItem="h3C-zn-RJA" secondAttribute="top" constant="1" id="cOb-6P-17c"/>
                                             <constraint firstItem="1gi-fr-pCa" firstAttribute="top" secondItem="oDW-bb-VsG" secondAttribute="top" type="default" id="gQK-Xg-Pg4"/>
                                             <constraint firstItem="1gi-fr-pCa" firstAttribute="leading" secondItem="oDW-bb-VsG" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gtu-Mo-8RT"/>
                                             <constraint firstItem="1gi-fr-pCa" firstAttribute="top" secondItem="LRw-Dv-1bp" secondAttribute="top" type="default" id="lQ6-Hd-f2K"/>
@@ -560,14 +572,18 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46Z-Uc-4Mt">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46Z-Uc-4Mt">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="WOh-1l-C3Q"/>
+                                                    <constraint firstAttribute="width" constant="43" id="Y89-3x-RqF"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M5-cx-qTN">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M5-cx-qTN">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="uwg-9f-lWr"/>
+                                                    <constraint firstAttribute="width" constant="43" id="6x4-qZ-WcB"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -589,11 +605,11 @@
                                             <constraint firstItem="2M5-cx-qTN" firstAttribute="leading" secondItem="46Z-Uc-4Mt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="74S-rN-xUk"/>
                                             <constraint firstItem="wkK-FT-NU3" firstAttribute="bottom" secondItem="5kG-qx-AWS" secondAttribute="bottom" type="default" id="HAe-AZ-gCM"/>
                                             <constraint firstItem="46Z-Uc-4Mt" firstAttribute="leading" secondItem="wkK-FT-NU3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="MgD-Gs-mfV"/>
+                                            <constraint firstItem="46Z-Uc-4Mt" firstAttribute="top" secondItem="5kG-qx-AWS" secondAttribute="top" constant="1" id="XJV-Ka-dvg"/>
                                             <constraint firstItem="wkK-FT-NU3" firstAttribute="top" secondItem="5kG-qx-AWS" secondAttribute="top" type="default" id="Zkt-f6-4uN"/>
                                             <constraint firstItem="2M5-cx-qTN" firstAttribute="top" secondItem="yH4-lc-5Iz" secondAttribute="top" type="default" id="aHW-9x-Naa"/>
                                             <constraint firstItem="2M5-cx-qTN" firstAttribute="baseline" secondItem="yH4-lc-5Iz" secondAttribute="baseline" type="default" id="n2V-Dy-EMi"/>
                                             <constraint firstItem="wkK-FT-NU3" firstAttribute="leading" secondItem="5kG-qx-AWS" secondAttribute="leading" type="default" id="tUw-6N-F0X"/>
-                                            <constraint firstItem="2M5-cx-qTN" firstAttribute="top" secondItem="5kG-qx-AWS" secondAttribute="top" constant="1" id="uGb-iF-JX5"/>
                                             <constraint firstItem="2M5-cx-qTN" firstAttribute="top" secondItem="46Z-Uc-4Mt" secondAttribute="top" type="default" id="xci-pp-idQ"/>
                                         </constraints>
                                     </view>
@@ -607,14 +623,18 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWw-VQ-dmU">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWw-VQ-dmU">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Pgx-5X-e0u"/>
+                                                    <constraint firstAttribute="width" constant="43" id="qXG-wX-Wjv"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c63-xe-Jvr">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c63-xe-Jvr">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="eev-tw-8Y3"/>
+                                                    <constraint firstAttribute="width" constant="43" id="UYH-nb-iTK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -637,10 +657,10 @@
                                             <constraint firstItem="fVl-Co-JfI" firstAttribute="top" secondItem="Vte-58-0pE" secondAttribute="top" type="default" id="LXJ-I8-pPS"/>
                                             <constraint firstItem="c63-xe-Jvr" firstAttribute="top" secondItem="Xf8-lk-ZSE" secondAttribute="top" type="default" id="WmW-J9-qFD"/>
                                             <constraint firstItem="Xf8-lk-ZSE" firstAttribute="trailing" secondItem="Vte-58-0pE" secondAttribute="trailing" type="default" id="agv-uK-1kg"/>
-                                            <constraint firstItem="c63-xe-Jvr" firstAttribute="top" secondItem="Vte-58-0pE" secondAttribute="top" constant="1" id="cli-gj-yAm"/>
                                             <constraint firstItem="fVl-Co-JfI" firstAttribute="bottom" secondItem="Vte-58-0pE" secondAttribute="bottom" type="default" id="fey-mD-TRX"/>
                                             <constraint firstItem="c63-xe-Jvr" firstAttribute="leading" secondItem="sWw-VQ-dmU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pSd-ON-A7L"/>
                                             <constraint firstItem="fVl-Co-JfI" firstAttribute="leading" secondItem="Vte-58-0pE" secondAttribute="leading" type="default" id="yGv-Nd-iOj"/>
+                                            <constraint firstItem="sWw-VQ-dmU" firstAttribute="top" secondItem="Vte-58-0pE" secondAttribute="top" constant="1" id="yVh-bq-rGP"/>
                                             <constraint firstItem="c63-xe-Jvr" firstAttribute="baseline" secondItem="Xf8-lk-ZSE" secondAttribute="baseline" type="default" id="yp3-v6-eef"/>
                                         </constraints>
                                     </view>
@@ -654,14 +674,18 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpk-w6-vH1">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpk-w6-vH1">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="43" id="4rv-kV-xab"/>
+                                                    <constraint firstAttribute="height" constant="21" id="SIb-44-Sjm"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aim-0D-9QT">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aim-0D-9QT">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="xSa-yg-U9X"/>
+                                                    <constraint firstAttribute="width" constant="43" id="Hd0-4k-GdE"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -682,11 +706,11 @@
                                             <constraint firstItem="aim-0D-9QT" firstAttribute="baseline" secondItem="1th-4O-8Lu" secondAttribute="baseline" type="default" id="A5m-N5-5mN"/>
                                             <constraint firstItem="Xpk-w6-vH1" firstAttribute="leading" secondItem="ur3-nu-7br" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="GXg-BI-iEL"/>
                                             <constraint firstItem="aim-0D-9QT" firstAttribute="baseline" secondItem="Xpk-w6-vH1" secondAttribute="baseline" type="default" id="NLs-io-1OL"/>
+                                            <constraint firstItem="Xpk-w6-vH1" firstAttribute="top" secondItem="U8H-iP-xUC" secondAttribute="top" constant="1" id="OSU-Ik-ufm"/>
                                             <constraint firstItem="ur3-nu-7br" firstAttribute="top" secondItem="U8H-iP-xUC" secondAttribute="top" type="default" id="Z3U-20-SKY"/>
                                             <constraint firstItem="ur3-nu-7br" firstAttribute="bottom" secondItem="U8H-iP-xUC" secondAttribute="bottom" type="default" id="bIh-Ga-wLs"/>
                                             <constraint firstItem="1th-4O-8Lu" firstAttribute="trailing" secondItem="U8H-iP-xUC" secondAttribute="trailing" type="default" id="dxP-dS-qGf"/>
                                             <constraint firstItem="aim-0D-9QT" firstAttribute="top" secondItem="1th-4O-8Lu" secondAttribute="top" type="default" id="hgB-dO-xFp"/>
-                                            <constraint firstItem="aim-0D-9QT" firstAttribute="top" secondItem="U8H-iP-xUC" secondAttribute="top" constant="1" id="nsT-DT-eox"/>
                                             <constraint firstItem="aim-0D-9QT" firstAttribute="leading" secondItem="Xpk-w6-vH1" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="q1E-Ea-LlV"/>
                                             <constraint firstItem="aim-0D-9QT" firstAttribute="top" secondItem="Xpk-w6-vH1" secondAttribute="top" type="default" id="zqU-V6-xrf"/>
                                         </constraints>
@@ -701,14 +725,18 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8u-xd-FFo">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8u-xd-FFo">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="CqB-86-xRm"/>
+                                                    <constraint firstAttribute="width" constant="43" id="Fk5-Ax-0g2"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQq-3a-NJA">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQq-3a-NJA">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="Voj-Kl-uW5"/>
+                                                    <constraint firstAttribute="width" constant="43" id="pKA-Fa-bQq"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -730,7 +758,7 @@
                                             <constraint firstItem="IQq-3a-NJA" firstAttribute="baseline" secondItem="dHV-Un-L3Y" secondAttribute="baseline" type="default" id="DDd-gP-5Xb"/>
                                             <constraint firstItem="IQq-3a-NJA" firstAttribute="top" secondItem="Y8u-xd-FFo" secondAttribute="top" type="default" id="Hhy-xx-mjF"/>
                                             <constraint firstItem="dHV-Un-L3Y" firstAttribute="trailing" secondItem="Igf-CK-vuD" secondAttribute="trailing" type="default" id="QH7-Ou-dp1"/>
-                                            <constraint firstItem="IQq-3a-NJA" firstAttribute="top" secondItem="Igf-CK-vuD" secondAttribute="top" constant="1" id="aS2-9x-ADT"/>
+                                            <constraint firstItem="Y8u-xd-FFo" firstAttribute="top" secondItem="Igf-CK-vuD" secondAttribute="top" constant="1" id="WhM-gS-711"/>
                                             <constraint firstItem="IQq-3a-NJA" firstAttribute="baseline" secondItem="Y8u-xd-FFo" secondAttribute="baseline" type="default" id="aZE-LH-RCe"/>
                                             <constraint firstItem="deD-iV-R0i" firstAttribute="top" secondItem="Igf-CK-vuD" secondAttribute="top" type="default" id="cT7-up-BrM"/>
                                             <constraint firstItem="deD-iV-R0i" firstAttribute="bottom" secondItem="Igf-CK-vuD" secondAttribute="bottom" type="default" id="fZ0-6n-gQU"/>
