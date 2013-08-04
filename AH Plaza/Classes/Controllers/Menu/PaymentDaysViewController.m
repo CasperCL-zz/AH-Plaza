@@ -7,6 +7,7 @@
 //
 
 #import "PaymentDaysViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface PaymentDaysViewController ()
 
@@ -27,6 +28,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    
+    _upcommingPaymentView.layer.cornerRadius = 10;
+    _upcommingPaymentView.layer.masksToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +40,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setUpcommingPaymentView:nil];
+    [self setUpcommingPaymentsDaysTable:nil];
+    [super viewDidUnload];
+}
 @end

@@ -51,6 +51,8 @@
         // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
         self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
         
+        // Hide the dialog
+        [_dialogView setHidden: YES];
     }];
 }
 
@@ -91,4 +93,8 @@
     return UIPageViewControllerSpineLocationMin;
 }
 
+- (void)viewDidUnload {
+    [self setDialogView:nil];
+    [super viewDidUnload];
+}
 @end

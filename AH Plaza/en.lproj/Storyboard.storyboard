@@ -135,7 +135,9 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ls4-bc-wCz"/>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ls4-bc-wCz">
+                                        <color key="color" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -394,17 +396,78 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Z-sV-wAH">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="2gT-Zb-6YT"/>
+                                </constraints>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yg1-va-ZPI">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hnp-34-TfH">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="25 juli" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQD-fo-4mK">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="47" id="aB1-sk-KM9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Uitbetaling op:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLV-LS-09j">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="134" id="2pp-n5-q7Z"/>
+                                                    <constraint firstAttribute="height" constant="21" id="6nI-Uh-Egv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="xLV-LS-09j" firstAttribute="centerY" secondItem="Hnp-34-TfH" secondAttribute="centerY" type="default" id="2jS-Y4-TGT"/>
+                                            <constraint firstItem="xLV-LS-09j" firstAttribute="leading" secondItem="Hnp-34-TfH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6Ax-n8-xpM"/>
+                                            <constraint firstAttribute="trailing" secondItem="jQD-fo-4mK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9hV-es-VXg"/>
+                                            <constraint firstItem="xLV-LS-09j" firstAttribute="top" secondItem="jQD-fo-4mK" secondAttribute="top" type="default" id="XUY-1Z-i9C"/>
+                                            <constraint firstItem="xLV-LS-09j" firstAttribute="baseline" secondItem="jQD-fo-4mK" secondAttribute="baseline" type="default" id="hcM-ho-ZIw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Hnp-34-TfH" firstAttribute="leading" secondItem="Yg1-va-ZPI" secondAttribute="leading" constant="31" id="5QL-Nw-Xkn"/>
+                                    <constraint firstItem="Hnp-34-TfH" firstAttribute="centerY" secondItem="Yg1-va-ZPI" secondAttribute="centerY" type="default" id="IIN-nZ-8RD"/>
+                                    <constraint firstItem="Hnp-34-TfH" firstAttribute="top" secondItem="Yg1-va-ZPI" secondAttribute="top" constant="32" id="aae-EM-Fk6"/>
+                                    <constraint firstItem="Hnp-34-TfH" firstAttribute="centerX" secondItem="Yg1-va-ZPI" secondAttribute="centerX" type="default" id="sdZ-ql-cej"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Volgende uitbetalingsdata:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XK3-5L-VyY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="4z3-oK-uik"/>
+                                    <constraint firstAttribute="height" constant="21" id="B9K-MX-xqA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Yg1-va-ZPI" firstAttribute="trailing" secondItem="3J6-uI-NVF" secondAttribute="trailing" type="default" id="14t-fI-eHv"/>
+                            <constraint firstItem="Z0Z-sV-wAH" firstAttribute="leading" secondItem="3J6-uI-NVF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4Z4-H1-0WW"/>
                             <constraint firstItem="Z0Z-sV-wAH" firstAttribute="bottom" secondItem="3J6-uI-NVF" secondAttribute="bottom" type="default" id="HWX-iO-zED"/>
-                            <constraint firstItem="Z0Z-sV-wAH" firstAttribute="leading" secondItem="3J6-uI-NVF" secondAttribute="leading" type="default" id="iSf-Q0-PsS"/>
-                            <constraint firstItem="Z0Z-sV-wAH" firstAttribute="top" secondItem="3J6-uI-NVF" secondAttribute="top" type="default" id="kLs-8W-0c1"/>
-                            <constraint firstItem="Z0Z-sV-wAH" firstAttribute="trailing" secondItem="3J6-uI-NVF" secondAttribute="trailing" type="default" id="p2s-du-ftX"/>
+                            <constraint firstItem="Yg1-va-ZPI" firstAttribute="top" secondItem="3J6-uI-NVF" secondAttribute="top" type="default" id="asb-ES-v4C"/>
+                            <constraint firstAttribute="trailing" secondItem="Z0Z-sV-wAH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dP7-h3-39I"/>
+                            <constraint firstItem="XK3-5L-VyY" firstAttribute="leading" secondItem="3J6-uI-NVF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jvy-Mv-C8J"/>
+                            <constraint firstItem="Z0Z-sV-wAH" firstAttribute="top" secondItem="XK3-5L-VyY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oXq-JY-PmL"/>
+                            <constraint firstItem="Yg1-va-ZPI" firstAttribute="leading" secondItem="3J6-uI-NVF" secondAttribute="leading" type="default" id="rOC-Xr-rOr"/>
+                            <constraint firstItem="XK3-5L-VyY" firstAttribute="top" secondItem="Yg1-va-ZPI" secondAttribute="bottom" constant="15" type="user" id="s0K-N8-fFi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Uitbetalingsdata" id="Z1v-uo-g4n"/>
+                    <connections>
+                        <outlet property="upcommingPaymentView" destination="Hnp-34-TfH" id="rYE-QR-Mai"/>
+                        <outlet property="upcommingPaymentsDaysTable" destination="Z0Z-sV-wAH" id="zF9-1P-K68"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WqJ-JT-s1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -960,28 +1023,43 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Je rooster wordt geladen.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujS-d3-kQ4">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oon-sc-kx1">
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Je rooster wordt geladen.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujS-d3-kQ4">
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="reb-cV-t5Z">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="yhM-jD-3PZ"/>
+                                        </constraints>
+                                        <color key="color" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="MCN-UZ-omu"/>
+                                    <constraint firstItem="ujS-d3-kQ4" firstAttribute="leading" secondItem="oon-sc-kx1" secondAttribute="leading" type="default" id="1ha-9P-zML"/>
+                                    <constraint firstAttribute="bottom" secondItem="ujS-d3-kQ4" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="JKV-n2-dxi"/>
+                                    <constraint firstItem="reb-cV-t5Z" firstAttribute="top" secondItem="oon-sc-kx1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="LcZ-fe-byC"/>
+                                    <constraint firstItem="ujS-d3-kQ4" firstAttribute="top" secondItem="reb-cV-t5Z" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QmF-TY-UHg"/>
+                                    <constraint firstItem="reb-cV-t5Z" firstAttribute="centerX" secondItem="ujS-d3-kQ4" secondAttribute="centerX" type="default" id="YPu-UC-org"/>
+                                    <constraint firstItem="ujS-d3-kQ4" firstAttribute="trailing" secondItem="oon-sc-kx1" secondAttribute="trailing" type="default" id="vuP-N0-Nej"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="reb-cV-t5Z">
-                                <color key="color" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
-                            </activityIndicatorView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ujS-d3-kQ4" firstAttribute="leading" secondItem="g5j-jY-LIe" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4cU-cT-IgQ"/>
-                            <constraint firstItem="reb-cV-t5Z" firstAttribute="centerX" secondItem="ujS-d3-kQ4" secondAttribute="centerX" type="default" id="LBR-Ai-yvj"/>
-                            <constraint firstAttribute="trailing" secondItem="ujS-d3-kQ4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jx1-pe-ZsT"/>
-                            <constraint firstItem="ujS-d3-kQ4" firstAttribute="top" secondItem="reb-cV-t5Z" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nbe-O5-UCg"/>
-                            <constraint firstItem="reb-cV-t5Z" firstAttribute="top" secondItem="g5j-jY-LIe" secondAttribute="top" constant="169" id="zUy-pg-IRc"/>
+                            <constraint firstAttribute="trailing" secondItem="oon-sc-kx1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4OJ-3J-Jmf"/>
+                            <constraint firstItem="oon-sc-kx1" firstAttribute="leading" secondItem="g5j-jY-LIe" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BQg-d8-FrV"/>
+                            <constraint firstItem="oon-sc-kx1" firstAttribute="top" secondItem="g5j-jY-LIe" secondAttribute="top" constant="163" id="Gja-K1-wzp"/>
+                            <constraint firstAttribute="bottom" secondItem="oon-sc-kx1" secondAttribute="bottom" constant="164" id="peE-Bf-Old"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Werkrooster" id="Sbf-W5-ab3"/>
+                    <connections>
+                        <outlet property="dialogView" destination="oon-sc-kx1" id="mab-1h-Yx2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKt-B5-UGh" sceneMemberID="firstResponder"/>
             </objects>
@@ -990,8 +1068,7 @@
         <!--Navigation Controller-->
         <scene sceneID="9j7-Su-PQM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8nt-e3-1pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="dy5-At-v9B" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationPlanningViewController" id="dy5-At-v9B" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dm1-k1-pTC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1002,6 +1079,7 @@
                         <segue destination="QmQ-NA-0W2" kind="relationship" relationship="rootViewController" id="rYr-6n-22Q"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nt-e3-1pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1141" y="-948"/>
         </scene>
@@ -1046,6 +1124,10 @@
         </class>
         <class className="PaymentDaysViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PaymentDaysViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="upcommingPaymentView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="upcommingPaymentsDaysTable" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="PlanningViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PlanningViewController.h"/>
@@ -1077,6 +1159,9 @@
         </class>
         <class className="RootViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dialogView" candidateClass="UIView"/>
+            </relationships>
         </class>
         <class className="SettingsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
