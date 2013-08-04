@@ -13,5 +13,6 @@
 @property NSDictionary *workingTimes;
 @property NSString *weekID;
 @property NSString *fromTillDate;
+@property NSString *totalHours;
 
 @end

@@ -40,14 +40,14 @@
                          @"sunday",
                          nil];
         
-        NSArray * fromTillKeys = [[NSArray alloc] initWithObjects: @"from", @"till", nil];
-        NSArray *dataTmp = [[NSArray alloc] initWithObjects:@"01:00", @"10:30", nil];
+        NSArray * fromTillKeys = [[NSArray alloc] initWithObjects: @"from", @"till", @"total", nil];
+        NSArray *dataTmp = [[NSArray alloc] initWithObjects:@"-", @"-", @"00:00", nil];
         NSDictionary *fromTill1 = [[NSDictionary alloc] initWithObjects: dataTmp forKeys: fromTillKeys];
-        NSArray *dataTmp2 = [[NSArray alloc] initWithObjects:@"12:15", @"13:45", nil];
+        NSArray *dataTmp2 = [[NSArray alloc] initWithObjects:@"-", @"-", @"00:00", nil];
         NSDictionary *fromTill2 = [[NSDictionary alloc] initWithObjects: dataTmp2 forKeys: fromTillKeys];
         
         
-        
+        week.totalHours = @"00:00";
         NSArray * objects = [[NSArray alloc] initWithObjects: fromTill1, fromTill2, fromTill2, fromTill2, fromTill2, fromTill2, fromTill2, nil];
         week.workingTimes = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
         week.weekID = @"Week 31";
