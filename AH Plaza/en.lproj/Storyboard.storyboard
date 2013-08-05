@@ -435,8 +435,8 @@
                                 <color key="backgroundColor" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstItem="Hnp-34-TfH" firstAttribute="leading" secondItem="Yg1-va-ZPI" secondAttribute="leading" constant="31" id="5QL-Nw-Xkn"/>
-                                    <constraint firstItem="Hnp-34-TfH" firstAttribute="centerY" secondItem="Yg1-va-ZPI" secondAttribute="centerY" type="default" id="IIN-nZ-8RD"/>
-                                    <constraint firstItem="Hnp-34-TfH" firstAttribute="top" secondItem="Yg1-va-ZPI" secondAttribute="top" constant="32" id="aae-EM-Fk6"/>
+                                    <constraint firstItem="Hnp-34-TfH" firstAttribute="top" secondItem="Yg1-va-ZPI" secondAttribute="top" constant="20" symbolic="YES" type="default" id="84f-y1-TnO"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hnp-34-TfH" secondAttribute="bottom" constant="44" id="leH-ii-Ged"/>
                                     <constraint firstItem="Hnp-34-TfH" firstAttribute="centerX" secondItem="Yg1-va-ZPI" secondAttribute="centerX" type="default" id="sdZ-ql-cej"/>
                                 </constraints>
                             </view>
