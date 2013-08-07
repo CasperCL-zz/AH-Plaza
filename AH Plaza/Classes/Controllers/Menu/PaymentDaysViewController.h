@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PaymentDaysViewController : UIViewController
+@interface PaymentDaysViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *upcommingPaymentView;
+@property (weak, nonatomic) IBOutlet UILabel *nextPaymentLabel;
 @property (weak, nonatomic) IBOutlet UITableView *upcommingPaymentsDaysTable;
 
 @end

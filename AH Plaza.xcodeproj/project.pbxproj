@@ -14,6 +14,7 @@
 		AF313D7817ABE051004CC815 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7317ABE051004CC815 /* ModelController.m */; };
 		AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7517ABE051004CC815 /* PlanningViewController.m */; };
 		AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7717ABE051004CC815 /* RootViewController.m */; };
+		AF5F34F017B28043006543CA /* Euro_banknotes.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5F34EF17B28043006543CA /* Euro_banknotes.png */; };
 		AF720EEF179BE2F400F77CA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EEE179BE2F400F77CA6 /* UIKit.framework */; };
 		AF720EF1179BE2F400F77CA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF0179BE2F400F77CA6 /* Foundation.framework */; };
 		AF720EF3179BE2F400F77CA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF2179BE2F400F77CA6 /* CoreGraphics.framework */; };
@@ -58,6 +59,7 @@
 		AF313D7517ABE051004CC815 /* PlanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningViewController.m; sourceTree = "<group>"; };
 		AF313D7617ABE051004CC815 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		AF313D7717ABE051004CC815 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		AF5F34EF17B28043006543CA /* Euro_banknotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Euro_banknotes.png; sourceTree = "<group>"; };
 		AF720EEB179BE2F400F77CA6 /* AH Plaza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AH Plaza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF720EEE179BE2F400F77CA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF720EF0179BE2F400F77CA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -236,6 +238,7 @@
 				AF720F5F179BE80300F77CA6 /* ah-plaza.png */,
 				AF720F59179BE77000F77CA6 /* app-icon_iphone4.png */,
 				AF720F5A179BE77000F77CA6 /* app-icon_iphone5.png */,
+				AF5F34EF17B28043006543CA /* Euro_banknotes.png */,
 				AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */,
 				AF720F50179BE72C00F77CA6 /* Default.png */,
 				AF720F51179BE72C00F77CA6 /* Default@2x.png */,
@@ -338,6 +341,7 @@
 				AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */,
 				AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */,
 				AFE3821517AFF7E300AD3D37 /* reload_ico.png in Resources */,
+				AF5F34F017B28043006543CA /* Euro_banknotes.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
