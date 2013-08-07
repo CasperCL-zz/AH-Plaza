@@ -15,6 +15,7 @@ Verkoopmedewerker AH en IT'er aan de Hogeschool van Amsterdam :)
 Functies
 =========
 De functies van deze app zijn:
+
     1. Het bekijken van het werkrooster     ✔
         a. Het bekijken van de totaal gewerkte uren per dag en per week     ✔
     2. Het bekijken van de uitbetalingsdata     ✔
