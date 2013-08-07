@@ -24,38 +24,6 @@
 
 @implementation ModelController
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        Week * week = [[Week alloc] init];
-        
-        NSArray *keys = [[NSArray alloc] initWithObjects:
-                         @"monday",
-                         @"tuesday",
-                         @"wednesday",
-                         @"thursday",
-                         @"friday",
-                         @"saturday",
-                         @"sunday",
-                         nil];
-        
-        NSArray * fromTillKeys = [[NSArray alloc] initWithObjects: @"from", @"till", @"total", nil];
-        NSArray *dataTmp = [[NSArray alloc] initWithObjects:@"-", @"-", @"00:00", nil];
-        NSDictionary *fromTill1 = [[NSDictionary alloc] initWithObjects: dataTmp forKeys: fromTillKeys];
-        NSArray *dataTmp2 = [[NSArray alloc] initWithObjects:@"-", @"-", @"00:00", nil];
-        NSDictionary *fromTill2 = [[NSDictionary alloc] initWithObjects: dataTmp2 forKeys: fromTillKeys];
-        
-        
-        week.totalHours = @"00:00";
-        NSArray * objects = [[NSArray alloc] initWithObjects: fromTill1, fromTill2, fromTill2, fromTill2, fromTill2, fromTill2, fromTill2, nil];
-        week.workingTimes = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
-        week.weekID = @"Week 31";
-        _pageData = [[NSArray alloc] initWithObjects: week, nil];
-    }
-    return self;
-}
-
 - (PlanningViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
 {   
     // Return the data view controller for the given index.

@@ -89,17 +89,20 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
 
 
 -(void)webViewDidStartLoad:(UIWebView *)webView {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: YES];
     NSString * currentURL = [self stringByEvaluatingJavaScriptFromString:@"document.URL"];
     
     if(_loginCallback) {
         if([currentURL isEqualToString: LOGIN_SCCS_URL]){
             _loginCallback(nil);
             [self stopLoading];
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
             _loginCallback = nil;
         } else if ([currentURL isEqualToString: LOGIN_FAIL_URL]) {
             NSMutableArray *errors = [[NSMutableArray alloc] init];
             [errors addObject: @"Gebruikersnaam of wachtwoord is incorrect"];
             _loginCallback(errors);
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
             [self stopLoading];
             _loginCallback = nil;
         }
@@ -107,6 +110,7 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
     NSString * currentURL = [self stringByEvaluatingJavaScriptFromString:@"document.URL"];
     NSLog(@"Finished Loading: %@", currentURL);
     
