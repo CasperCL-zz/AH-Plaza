@@ -48,6 +48,7 @@
                                     stringByAppendingPathComponent:@"Documents"];
     NSString *fileLocation = [[NSString alloc] initWithFormat: @"%@/%@", documentsDirectory , @"date.ahpu"];
     
+    // If there is no date.ahpu file write a standard date to it
     NSDateComponents* dateComponents = [[NSDateComponents alloc]init];
     if(![[NSFileManager defaultManager] fileExistsAtPath: fileLocation]) {
         [dateComponents setHour: 14];
@@ -56,20 +57,18 @@
         [dateComponents setYear: 2013];
         NSDate *dateToWrite = [cal dateFromComponents:dateComponents];
         [NSKeyedArchiver archiveRootObject: dateToWrite toFile: fileLocation];
-        NSLog(@"Wrote: %@", dateToWrite);
         originalDate = dateToWrite;
     } else  {
+        // read the previous date
         NSDate *savedDate = [NSKeyedUnarchiver unarchiveObjectWithFile: fileLocation];
-        NSLog(@"Read: %@", savedDate);
         originalDate = savedDate;
     }
     
-    // Check if outdated
+    // Check if the saved date is outdated to the next payment day
     NSDate * now = [[NSDate alloc] init];
     BOOL outdated = [originalDate compare: now] == NSOrderedAscending;
     if(outdated){ // if outdated go to new date
         while ([originalDate compare: now] == NSOrderedAscending) {
-            NSLog(@"date is outdated");
             dateComponents = [[NSDateComponents alloc]init];
             [dateComponents setDay: 28];
             NSCalendar* calendar = [NSCalendar currentCalendar];
