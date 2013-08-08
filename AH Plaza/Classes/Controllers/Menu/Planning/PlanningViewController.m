@@ -9,6 +9,7 @@
 #import "PlanningViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "WebHelper.h"
+#import "SettingsManager.h"
 
 @interface PlanningViewController ()
 
@@ -33,6 +34,17 @@ double totalHoursWorked;
 	// Do any additional setup after loading the view.
     totalHoursWorked = 0;
     
+    if(![[SettingsManager sharedInstance] planningInstructionsDisplayed]) {
+        _instructionDialogBackground.alpha = 0.7f;
+        _instructionDialogView.alpha = 1.0f;
+        _instructionDialogView.hidden = NO;
+        _instructionDialogBackground.hidden = NO;
+        
+        _instructionDialogView.layer.cornerRadius = 10.0;
+        _instructionDialogView.layer.masksToBounds = YES;
+        [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(hideInstructions) userInfo:nil repeats:NO];
+        [[SettingsManager sharedInstance] setPlanningInstructionsDisplayed: YES];
+    }
     
     if([[_dataObject workingTimes] count]) {
         [_weekLabel setText: [_dataObject weekID]];
@@ -94,6 +106,17 @@ double totalHoursWorked;
     // Dispose of any resources that can be recreated.
 }
 
+- (void) hideInstructions {
+    [UIView animateWithDuration: 2.0 animations:^{
+        _instructionDialogBackground.alpha = 0.0f;
+        _instructionDialogView.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        _instructionDialogBackground.hidden = YES;
+        _instructionDialogView.hidden = YES;
+    }];
+}
+
+
 - (void)viewDidUnload {
     [self setWeekLabel:nil];
     [self setMondayFromLabel:nil];
@@ -101,6 +124,8 @@ double totalHoursWorked;
     [self setMondayTotalLabel:nil];
     [self setTuesdayFromLabel:nil];
     [self setOverallTotal:nil];
+    [self setInstructionDialogBackground:nil];
+    [self setInstructionDialogView:nil];
     [super viewDidUnload];
 }
 @end

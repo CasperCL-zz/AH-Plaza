@@ -358,6 +358,9 @@
                                     <constraint firstAttribute="width" constant="77" id="rhQ-8v-mGe"/>
                                 </constraints>
                                 <color key="onTintColor" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <action selector="autoLoginSliderValueChanged:" destination="4pk-Jh-tQF" eventType="valueChanged" id="6nQ-wY-EKo"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Auto-login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyB-SM-LFW">
                                 <constraints>
@@ -407,53 +410,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="186" id="Soy-ax-bk4"/>
                                 </constraints>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fQe-Tp-fzi">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aQ3-VP-Qw2">
-                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nWt-mM-y88">
-                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hhK-So-Xh3">
-                                        <rect key="frame" x="0.0" y="154" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="n4C-Yu-qqm">
-                                        <rect key="frame" x="0.0" y="198" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="nVA-Ds-zaV" id="X3B-Xs-Eim"/>
                                     <outlet property="delegate" destination="nVA-Ds-zaV" id="KTs-N4-ZVO"/>
@@ -1004,14 +960,50 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oW8-mv-xQB">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkv-yZ-FoK">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="swipe-right.png" translatesAutoresizingMaskIntoConstraints="NO" id="ft3-Qg-fl9">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="71" id="dgP-6F-4nF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Je kan tussen de weken swipen" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="225" translatesAutoresizingMaskIntoConstraints="NO" id="eAO-wb-joU">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="225" id="zCW-CH-ZuX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ft3-Qg-fl9" firstAttribute="bottom" secondItem="rkv-yZ-FoK" secondAttribute="bottom" type="default" id="Cp9-IM-Rai"/>
+                                    <constraint firstItem="eAO-wb-joU" firstAttribute="centerY" secondItem="ft3-Qg-fl9" secondAttribute="centerY" type="default" id="KWe-gY-4R9"/>
+                                    <constraint firstItem="ft3-Qg-fl9" firstAttribute="top" secondItem="rkv-yZ-FoK" secondAttribute="top" type="default" id="Mml-Pl-gT7"/>
+                                    <constraint firstItem="eAO-wb-joU" firstAttribute="leading" secondItem="rkv-yZ-FoK" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="flu-D5-Ljs"/>
+                                    <constraint firstItem="ft3-Qg-fl9" firstAttribute="leading" secondItem="rkv-yZ-FoK" secondAttribute="leading" constant="234" id="x3W-0Y-Cq4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="sKD-bU-aUm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0CU-Ym-NLK"/>
                             <constraint firstAttribute="bottom" secondItem="sKD-bU-aUm" secondAttribute="bottom" constant="83" id="0ZB-Hm-nBK"/>
                             <constraint firstAttribute="trailing" secondItem="38W-57-9Ia" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1a0-pA-eDu"/>
+                            <constraint firstItem="oW8-mv-xQB" firstAttribute="trailing" secondItem="8Lo-VA-X3Y" secondAttribute="trailing" type="default" id="5z1-u6-Mrg"/>
+                            <constraint firstItem="rkv-yZ-FoK" firstAttribute="centerX" secondItem="38W-57-9Ia" secondAttribute="centerX" type="default" id="74n-am-TFs"/>
                             <constraint firstItem="sKD-bU-aUm" firstAttribute="top" secondItem="38W-57-9Ia" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8uH-1L-GBt"/>
+                            <constraint firstItem="rkv-yZ-FoK" firstAttribute="leading" secondItem="8Lo-VA-X3Y" secondAttribute="leading" constant="10" id="90w-EQ-z3a"/>
                             <constraint firstItem="38W-57-9Ia" firstAttribute="top" secondItem="8Lo-VA-X3Y" secondAttribute="top" constant="20" symbolic="YES" type="default" id="A6e-7K-BGV"/>
+                            <constraint firstItem="oW8-mv-xQB" firstAttribute="top" secondItem="8Lo-VA-X3Y" secondAttribute="top" type="default" id="DW5-Gt-UER"/>
+                            <constraint firstItem="oW8-mv-xQB" firstAttribute="bottom" secondItem="8Lo-VA-X3Y" secondAttribute="bottom" type="default" id="Jh1-75-Ioe"/>
+                            <constraint firstItem="rkv-yZ-FoK" firstAttribute="top" secondItem="8Lo-VA-X3Y" secondAttribute="top" constant="166" id="L28-48-hOm"/>
+                            <constraint firstItem="oW8-mv-xQB" firstAttribute="leading" secondItem="8Lo-VA-X3Y" secondAttribute="leading" type="default" id="Qx2-3f-f3U"/>
+                            <constraint firstItem="rkv-yZ-FoK" firstAttribute="centerY" secondItem="oW8-mv-xQB" secondAttribute="centerY" type="default" id="XmG-F2-0RW"/>
                             <constraint firstItem="38W-57-9Ia" firstAttribute="leading" secondItem="8Lo-VA-X3Y" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gKQ-KA-msl"/>
                             <constraint firstItem="sKD-bU-aUm" firstAttribute="leading" secondItem="8Lo-VA-X3Y" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tU4-El-w8J"/>
                         </constraints>
@@ -1021,6 +1013,8 @@
                         <outlet property="fridayFromLabel" destination="sWw-VQ-dmU" id="1eF-Rk-sDW"/>
                         <outlet property="fridayTillLabel" destination="c63-xe-Jvr" id="fkt-zy-r2p"/>
                         <outlet property="fridayTotalLabel" destination="Xf8-lk-ZSE" id="eOV-z9-3gU"/>
+                        <outlet property="instructionDialogBackground" destination="oW8-mv-xQB" id="fC5-vw-jYJ"/>
+                        <outlet property="instructionDialogView" destination="rkv-yZ-FoK" id="auZ-Cg-bdp"/>
                         <outlet property="mondayFromLabel" destination="dNb-2y-fkQ" id="654-Wa-O5p"/>
                         <outlet property="mondayTillLabel" destination="QVY-Ls-zSN" id="NPA-fj-pb5"/>
                         <outlet property="mondayTotalLabel" destination="jH0-yV-i64" id="pIB-Kz-qdQ"/>
@@ -1187,6 +1181,7 @@
         <image name="plaza_link_ico.png" width="94" height="94"/>
         <image name="settings_ico.png" width="94" height="94"/>
         <image name="shiftklaar_ico.png" width="94" height="94"/>
+        <image name="swipe-right.png" width="319" height="319"/>
     </resources>
     <classes>
         <class className="LoginViewController" superclassName="UIViewController">
@@ -1232,6 +1227,8 @@
                 <relationship kind="outlet" name="fridayFromLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="fridayTillLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="fridayTotalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="instructionDialogBackground" candidateClass="UIView"/>
+                <relationship kind="outlet" name="instructionDialogView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="mondayFromLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mondayTillLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mondayTotalLabel" candidateClass="UILabel"/>
@@ -1263,6 +1260,7 @@
         <class className="SettingsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="autoLoginSliderValueChanged:"/>
                 <relationship kind="outlet" name="keepLoggedInSwitch" candidateClass="UISwitch"/>
             </relationships>
         </class>

@@ -112,15 +112,14 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
     NSString * currentURL = [self stringByEvaluatingJavaScriptFromString:@"document.URL"];
-    NSLog(@"Finished Loading: %@", currentURL);
     
     // Check if the session is not expired
     if(![currentURL isEqualToString: @"https://plaza.ah.nl/pkmslogout?filename=wpslogout.html"]) {
         if ([currentURL isEqualToString: TIMETABLE_URL]) {
             // Parse the HTML to weeks
             NSArray *weeks = [[HTMLParser sharedInstance] htmlToWeeks: self];
-            
-            _timetableCallback(weeks);
+            if([weeks count] != 0)
+                _timetableCallback(weeks);
         }
     } else {
         NSLog(@"Session expired");

@@ -11,5 +11,6 @@
 @interface SettingsViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISwitch *keepLoggedInSwitch;
+- (IBAction)autoLoginSliderValueChanged:(id)sender;
 
 @end

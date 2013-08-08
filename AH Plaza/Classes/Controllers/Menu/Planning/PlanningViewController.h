@@ -13,6 +13,13 @@
 
 @property Week * dataObject;
 
+
+// Instruction dialog
+@property (weak, nonatomic) IBOutlet UIView *instructionDialogBackground;
+@property (weak, nonatomic) IBOutlet UIView *instructionDialogView;
+
+
+
 // The labels
 @property (weak, nonatomic) IBOutlet UILabel *weekLabel;
 

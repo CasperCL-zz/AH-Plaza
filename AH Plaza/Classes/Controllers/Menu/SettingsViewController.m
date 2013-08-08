@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "SettingsManager.h"
 
 @interface SettingsViewController ()
 
@@ -27,8 +28,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-//    [_keepLoggedInSwitch setLeftLabelText: @"Ja"];
-//    [_keepLoggedInSwitch setRightLabelText: @"Nee"];
+    
+    [_keepLoggedInSwitch setOn: [[SettingsManager sharedInstance] autologinEnabled]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,5 +41,8 @@
 - (void)viewDidUnload {
     [self setKeepLoggedInSwitch:nil];
     [super viewDidUnload];
+}
+- (IBAction)autoLoginSliderValueChanged:(id)sender {
+    [[SettingsManager sharedInstance] setAutologinEnabled: [_keepLoggedInSwitch isOn]];
 }
 @end
