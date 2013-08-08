@@ -42,6 +42,8 @@
 		AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */; };
 		AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015017A94D4B005CC5AA /* HTMLParser.m */; };
 		AFE3821517AFF7E300AD3D37 /* reload_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE3821417AFF7E300AD3D37 /* reload_ico.png */; };
+		AFFE9DEB17B384DA0094AF1F /* ahold-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AFFE9DEA17B384DA0094AF1F /* ahold-logo.png */; };
+		AFFE9DEF17B38A340094AF1F /* calendar_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFFE9DEE17B38A340094AF1F /* calendar_ico.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +97,8 @@
 		AFDF014F17A94D4B005CC5AA /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMLParser.h; path = Classes/HTMLParser.h; sourceTree = "<group>"; };
 		AFDF015017A94D4B005CC5AA /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMLParser.m; path = Classes/HTMLParser.m; sourceTree = "<group>"; };
 		AFE3821417AFF7E300AD3D37 /* reload_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reload_ico.png; path = Resources/Images/icons/reload_ico.png; sourceTree = "<group>"; };
+		AFFE9DEA17B384DA0094AF1F /* ahold-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ahold-logo.png"; sourceTree = "<group>"; };
+		AFFE9DEE17B38A340094AF1F /* calendar_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_ico.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +241,7 @@
 				AF720FE1179C8DA700F77CA6 /* ah-button.png */,
 				AF720F5F179BE80300F77CA6 /* ah-plaza.png */,
 				AF720F59179BE77000F77CA6 /* app-icon_iphone4.png */,
+				AFFE9DEE17B38A340094AF1F /* calendar_ico.png */,
 				AF720F5A179BE77000F77CA6 /* app-icon_iphone5.png */,
 				AF5F34EF17B28043006543CA /* Euro_banknotes.png */,
 				AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */,
@@ -259,6 +264,7 @@
 		AFB7AE53179D9C3300D58E08 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				AFFE9DEA17B384DA0094AF1F /* ahold-logo.png */,
 				AFE3821417AFF7E300AD3D37 /* reload_ico.png */,
 				AFB7AE54179D9C4900D58E08 /* info_ico.png */,
 				AFB7AE55179D9C4900D58E08 /* payment_ico.png */,
@@ -342,6 +348,8 @@
 				AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */,
 				AFE3821517AFF7E300AD3D37 /* reload_ico.png in Resources */,
 				AF5F34F017B28043006543CA /* Euro_banknotes.png in Resources */,
+				AFFE9DEB17B384DA0094AF1F /* ahold-logo.png in Resources */,
+				AFFE9DEF17B38A340094AF1F /* calendar_ico.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

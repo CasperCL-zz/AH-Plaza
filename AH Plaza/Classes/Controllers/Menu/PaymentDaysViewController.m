@@ -88,8 +88,18 @@
         
         if(i != 0)
             [_tableText addObject: newDateS];
-        else
+        else {
+            NSDate *todaysDate = [NSDate date];
+            NSTimeInterval lastDiff = [originalDate timeIntervalSinceNow];
+            NSTimeInterval todaysDiff = [todaysDate timeIntervalSinceNow];
+            NSTimeInterval dateDiff = (lastDiff - todaysDiff) / (60*60*24);
+            
+            [_nextDateLabel setText: [[NSString alloc] initWithFormat:@"%@%@", @"op ", newDateS]];
+            int days = (int)round(dateDiff);
+            newDateS = [[NSString alloc] initWithFormat:@"%i", days];
+            [_daysOrDayLabel setText: days > 1 ? @"dagen" : @"dag" ];
             [_nextPaymentLabel setText: newDateS];
+        }
         
         dateComponents = [[NSDateComponents alloc]init];
         [dateComponents setDay: 28];
@@ -97,9 +107,6 @@
         NSDate* newDate = [calendar dateByAddingComponents: dateComponents toDate: originalDate options:0];
         
         originalDate = newDate;
-        
-
-        NSLog(@"New Date: %@", newDateS);
     }
     [_upcommingPaymentsDaysTable reloadData];
 }
@@ -114,6 +121,8 @@
     [self setUpcommingPaymentView:nil];
     [self setUpcommingPaymentsDaysTable:nil];
     [self setNextPaymentLabel:nil];
+    [self setNextDateLabel:nil];
+    [self setDaysOrDayLabel:nil];
     [super viewDidUnload];
 }
 
