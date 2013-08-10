@@ -12,7 +12,10 @@
 
 + (id)sharedInstance;
 
+- (void) reset;
+
 @property (nonatomic) BOOL autologinEnabled;
 @property (nonatomic) BOOL planningInstructionsDisplayed;
+@property (nonatomic) BOOL notificationPaymentEnabled;
 
 @end

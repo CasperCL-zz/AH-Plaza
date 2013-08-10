@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xbb-fU-RDj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IcK-Wa-UgN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -340,7 +340,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajB-D0-qaj">
+                                <color key="backgroundColor" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="Brj-Oz-Vbx"/>
                                     <constraint firstAttribute="height" constant="44" id="sFm-Yj-2hO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -351,6 +353,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetSettings:" destination="4pk-Jh-tQF" eventType="touchUpInside" id="apY-Pi-KBk"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-Jv-4hb">
                                 <subviews>
@@ -358,6 +363,10 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="77" id="sPE-Lp-qWx"/>
                                         </constraints>
+                                        <color key="onTintColor" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="notificationSwitchValueChanged:" destination="4pk-Jh-tQF" eventType="valueChanged" id="Aaa-bT-Q3x"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Betaling Notificatie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZf-tH-3hZ">
                                         <constraints>
@@ -388,16 +397,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ajB-D0-qaj" firstAttribute="centerX" secondItem="UOM-Jv-4hb" secondAttribute="centerX" type="default" id="Bf2-PF-1q8"/>
                             <constraint firstAttribute="trailing" secondItem="UOM-Jv-4hb" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="FQI-Mj-B6n"/>
                             <constraint firstItem="eks-IX-NJ6" firstAttribute="leading" secondItem="GbU-MM-NkE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FZF-pz-XmK"/>
-                            <constraint firstItem="ajB-D0-qaj" firstAttribute="centerX" secondItem="UOM-Jv-4hb" secondAttribute="centerX" type="default" id="Fgh-Qf-1mf"/>
+                            <constraint firstAttribute="bottom" secondItem="ajB-D0-qaj" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Ijn-vN-VMh"/>
                             <constraint firstItem="QIq-Qi-0QJ" firstAttribute="top" secondItem="oyB-SM-LFW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KAh-wN-XSS"/>
                             <constraint firstItem="UOM-Jv-4hb" firstAttribute="leading" secondItem="GbU-MM-NkE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="L0r-3U-T2U"/>
                             <constraint firstItem="UOM-Jv-4hb" firstAttribute="top" secondItem="QIq-Qi-0QJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="L88-y2-QCQ"/>
                             <constraint firstItem="QIq-Qi-0QJ" firstAttribute="leading" secondItem="oyB-SM-LFW" secondAttribute="leading" type="default" id="b7b-aK-VEC"/>
                             <constraint firstAttribute="bottom" secondItem="UOM-Jv-4hb" secondAttribute="bottom" constant="254" id="bRC-Fh-kiF"/>
                             <constraint firstItem="oyB-SM-LFW" firstAttribute="leading" secondItem="eks-IX-NJ6" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="eVL-Uq-VfD"/>
-                            <constraint firstAttribute="bottom" secondItem="ajB-D0-qaj" secondAttribute="bottom" constant="19" id="hJI-7B-tQf"/>
                             <constraint firstItem="oyB-SM-LFW" firstAttribute="top" secondItem="eks-IX-NJ6" secondAttribute="top" type="default" id="hyt-vQ-mAe"/>
                             <constraint firstItem="eks-IX-NJ6" firstAttribute="top" secondItem="GbU-MM-NkE" secondAttribute="top" constant="23" id="na5-Zs-7OI"/>
                             <constraint firstAttribute="trailing" secondItem="QIq-Qi-0QJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="t4R-0K-FCi"/>
@@ -407,7 +416,10 @@
                     <navigationItem key="navigationItem" title="Instellingen" id="I8A-fz-DVj"/>
                     <connections>
                         <outlet property="keepLoggedInSwitch" destination="eks-IX-NJ6" id="r4L-y5-dDU"/>
+                        <outlet property="notificationSwitch" destination="S8T-ZS-4UF" id="0k7-j3-rPQ"/>
                         <outlet property="resetButton" destination="ajB-D0-qaj" id="dOZ-Zr-jPa"/>
+                        <outletCollection property="switches" destination="S8T-ZS-4UF" id="8Dv-T9-T5C"/>
+                        <outletCollection property="switches" destination="eks-IX-NJ6" id="whL-Bt-3Nm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lP7-qA-XhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1267,8 +1279,12 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="autoLoginSliderValueChanged:"/>
+                <relationship kind="action" name="notificationSwitchValueChanged:"/>
+                <relationship kind="action" name="resetSettings:"/>
                 <relationship kind="outlet" name="keepLoggedInSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="notificationSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
+                <relationship kind="outletCollection" name="switches" candidateClass="UISwitch"/>
             </relationships>
         </class>
     </classes>

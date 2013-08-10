@@ -58,7 +58,6 @@
         [dateComponents setYear: 2013];
         
         NSDate *dateToWrite = [cal dateFromComponents:dateComponents];
-        NSLog(@"Date to write: %@ ", dateToWrite);
         [NSKeyedArchiver archiveRootObject: dateToWrite toFile: fileLocation];
         originalDate = dateToWrite;
     } else  {

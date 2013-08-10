@@ -31,6 +31,7 @@ NSString *fileLocation;
 - (void)encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeObject:[[NSNumber alloc] initWithBool: self.planningInstructionsDisplayed] forKey:@"planningInstructionsDisplayed"];
     [encoder encodeObject:[[NSNumber alloc] initWithBool: self.autologinEnabled] forKey:@"autologinEnabled"];
+    [encoder encodeObject:[[NSNumber alloc] initWithBool: self.notificationPaymentEnabled] forKey:@"notificationPaymentEnabled"];
 }
 
 - (id)initWithCoder:(NSCoder *)coder
@@ -39,6 +40,7 @@ NSString *fileLocation;
     if (self) {
         self.planningInstructionsDisplayed = [[coder decodeObjectForKey: @"planningInstructionsDisplayed"] boolValue];
         self.autologinEnabled = [[coder decodeObjectForKey: @"autologinEnabled"] boolValue];
+        self.notificationPaymentEnabled = [[coder decodeObjectForKey: @"notificationPaymentEnabled"] boolValue];
     }
     return self;
 }
@@ -57,6 +59,13 @@ NSString *fileLocation;
 }
 
 
+- (void) reset {
+    [[NSFileManager defaultManager] removeItemAtPath: fileLocation error: nil]; // ignore error
+    _autologinEnabled = NO;
+    _planningInstructionsDisplayed = NO;
+    _notificationPaymentEnabled = NO;
+}
+
 // Intercept all setters and inject the save settings method
 -(void)setPlanningInstructionsDisplayed:(BOOL)planningInstructionsDisplayed {
     self->_planningInstructionsDisplayed = planningInstructionsDisplayed;
@@ -66,6 +75,11 @@ NSString *fileLocation;
 
 -(void)setAutologinEnabled:(BOOL)autologinEnabled {
     self->_autologinEnabled = autologinEnabled;
+    [self saveSettings];
+}
+
+-(void)setNotificationPaymentEnabled:(BOOL)notificationPaymentEnabled {
+    self->_notificationPaymentEnabled = notificationPaymentEnabled;
     [self saveSettings];
 }
 

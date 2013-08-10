@@ -11,7 +11,14 @@
 @interface SettingsViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISwitch *keepLoggedInSwitch;
-- (IBAction)autoLoginSliderValueChanged:(id)sender;
+@property (weak, nonatomic) IBOutlet UISwitch *notificationSwitch;
+
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
+
+@property (strong, nonatomic) IBOutletCollection(UISwitch) NSArray *switches;
+
+- (IBAction)autoLoginSliderValueChanged:(id)sender;
+- (IBAction)notificationSwitchValueChanged:(id)sender;
+- (IBAction)resetSettings:(id)sender;
 
 @end

@@ -31,6 +31,7 @@
 	// Do any additional setup after loading the view.
     
     [_keepLoggedInSwitch setOn: [[SettingsManager sharedInstance] autologinEnabled]];
+    [_notificationSwitch setOn: [[SettingsManager sharedInstance] notificationPaymentEnabled]];
     _resetButton.layer.cornerRadius = 10;
     _resetButton.layer.masksToBounds = YES;
 }
@@ -44,9 +45,21 @@
 - (void)viewDidUnload {
     [self setKeepLoggedInSwitch:nil];
     [self setResetButton:nil];
+    [self setNotificationSwitch:nil];
+    [self setSwitches:nil];
     [super viewDidUnload];
 }
 - (IBAction)autoLoginSliderValueChanged:(id)sender {
     [[SettingsManager sharedInstance] setAutologinEnabled: [_keepLoggedInSwitch isOn]];
+}
+- (IBAction)notificationSwitchValueChanged:(id)sender {
+    [[SettingsManager sharedInstance] setNotificationPaymentEnabled: [_notificationSwitch isOn]];
+}
+
+- (IBAction)resetSettings:(id)sender {
+    [[SettingsManager sharedInstance] reset];
+    for (UISwitch *swtch in _switches) {
+        [swtch setOn: NO animated: YES];
+    }
 }
 @end
