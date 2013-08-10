@@ -51,11 +51,14 @@
     // If there is no date.ahpu file write a standard date to it
     NSDateComponents* dateComponents = [[NSDateComponents alloc]init];
     if(![[NSFileManager defaultManager] fileExistsAtPath: fileLocation]) {
-        [dateComponents setHour: 14];
+        [dateComponents setTimeZone: [NSTimeZone systemTimeZone]];
+        [dateComponents setHour: 2];
         [dateComponents setDay: 22];
         [dateComponents setMonth: 7];
         [dateComponents setYear: 2013];
+        
         NSDate *dateToWrite = [cal dateFromComponents:dateComponents];
+        NSLog(@"Date to write: %@ ", dateToWrite);
         [NSKeyedArchiver archiveRootObject: dateToWrite toFile: fileLocation];
         originalDate = dateToWrite;
     } else  {
@@ -95,8 +98,9 @@
             NSTimeInterval dateDiff = (lastDiff - todaysDiff) / (60*60*24);
             
             [_nextDateLabel setText: [[NSString alloc] initWithFormat:@"%@%@", @"op ", newDateS]];
-            int days = (int)round(dateDiff);
+            int days = (int)ceil(dateDiff);
             newDateS = [[NSString alloc] initWithFormat:@"%i", days];
+            NSLog(@"days %f", dateDiff);
             [_daysOrDayLabel setText: days > 1 ? @"dagen" : @"dag" ];
             [_nextPaymentLabel setText: newDateS];
         }

@@ -517,6 +517,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Uitbetalingsdata" id="Z1v-uo-g4n"/>
                     <connections>
+                        <outlet property="daysOrDayLabel" destination="Sev-WJ-GTA" id="mbh-yd-8gf"/>
                         <outlet property="nextDateLabel" destination="FoT-wY-0Mp" id="mxQ-zB-Rsp"/>
                         <outlet property="nextPaymentLabel" destination="K3k-9s-jmB" id="XEC-e1-dKP"/>
                         <outlet property="upcommingPaymentView" destination="OFq-9v-4ST" id="N7h-3C-UWU"/>

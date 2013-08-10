@@ -18,6 +18,7 @@
 @implementation LoginViewController
 
 int credentialViewMoved = 0;
+BOOL isInTransition;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -79,13 +80,15 @@ int credentialViewMoved = 0;
 }
 
 - (IBAction)backgroundButtonClicked:(id)sender {
-    if(_originalFrame.origin.x == 0){
-        _originalFrame = _credentialsView.frame;
+    if(!isInTransition) {
+        if(_originalFrame.origin.x == 0){
+            _originalFrame = _credentialsView.frame;
+        }
+        
+        [_usernameTextField resignFirstResponder];
+        [_passwordTextField resignFirstResponder];
+        [self moveToDefaultLocation:^(BOOL finished) {}];
     }
-    
-    [_usernameTextField resignFirstResponder];
-    [_passwordTextField resignFirstResponder];
-    [self moveToDefaultLocation:^(BOOL finished) {}];
 }
 
 - (void) moveCredentialsViewUp: (int) y completion:(void (^)(BOOL finished))completion {
@@ -127,7 +130,7 @@ int credentialViewMoved = 0;
         
         
         [self moveToDefaultLocation:^(BOOL finished) {
-            [_popup showPopupWithAnimationDuration:1.0 withActivityIndicatorAndText:@"Laden.." onCompletion:^(BOOL finished) {
+            [_popup showPopupWithAnimationDuration:1.0 withActivityIndicatorAndText:@"Inloggen.." onCompletion:^(BOOL finished) {
                 [self checkCredentials:^(NSArray *error) {
                     if([error count] == 0) {
                         [_popup hidePopupWithAnimationDuration: 1.0 onCompletion: ^(BOOL finished) {
@@ -195,7 +198,7 @@ typedef enum {
     
     
     [self moveToDefaultLocation:^(BOOL finished) {
-        [_popup showPopupWithAnimationDuration:1.0 withActivityIndicatorAndText:@"Laden.." onCompletion:^(BOOL finished) {
+        [_popup showPopupWithAnimationDuration:1.0 withActivityIndicatorAndText:@"Inloggen.." onCompletion:^(BOOL finished) {
             [self checkCredentials:^(NSArray *error) {
                 if([error count] == 0) {
                     [_popup hidePopupWithAnimationDuration:1.0 onCompletion:^(BOOL finished) {
@@ -233,6 +236,10 @@ typedef enum {
 }
 
 - (void) zoomIntoCredentialsView: (void (^)(BOOL finished)) completion  {
+    isInTransition = YES;
+    [_usernameTextField setEnabled: NO];
+    [_passwordTextField setEnabled: NO];
+    
     [UIView animateWithDuration: 0.5 animations:^{
         _usernameTextField.alpha = 0.0f;
         _passwordTextField.alpha = 0.0f;
