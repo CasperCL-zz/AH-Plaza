@@ -14,7 +14,6 @@
 		AF313D7817ABE051004CC815 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7317ABE051004CC815 /* ModelController.m */; };
 		AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7517ABE051004CC815 /* PlanningViewController.m */; };
 		AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7717ABE051004CC815 /* RootViewController.m */; };
-		AF5F34F017B28043006543CA /* Euro_banknotes.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5F34EF17B28043006543CA /* Euro_banknotes.png */; };
 		AF720EEF179BE2F400F77CA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EEE179BE2F400F77CA6 /* UIKit.framework */; };
 		AF720EF1179BE2F400F77CA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF0179BE2F400F77CA6 /* Foundation.framework */; };
 		AF720EF3179BE2F400F77CA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF2179BE2F400F77CA6 /* CoreGraphics.framework */; };
@@ -41,12 +40,12 @@
 		AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */; };
 		AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */; };
 		AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015017A94D4B005CC5AA /* HTMLParser.m */; };
+		AFE316A717B661CF00ACA245 /* Popup.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE316A617B661CF00ACA245 /* Popup.m */; };
+		AFE316A917B661F600ACA245 /* calendar_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE316A817B661F600ACA245 /* calendar_ico.png */; };
 		AFE3821517AFF7E300AD3D37 /* reload_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE3821417AFF7E300AD3D37 /* reload_ico.png */; };
 		AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5E41017B3BC250028896F /* SettingsManager.m */; };
 		AFF5E41817B3C5670028896F /* swipe-left.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5E41617B3C5670028896F /* swipe-left.png */; };
 		AFF5E41917B3C5670028896F /* swipe-right.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5E41717B3C5670028896F /* swipe-right.png */; };
-		AFFE9DEB17B384DA0094AF1F /* ahold-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AFFE9DEA17B384DA0094AF1F /* ahold-logo.png */; };
-		AFFE9DEF17B38A340094AF1F /* calendar_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFFE9DEE17B38A340094AF1F /* calendar_ico.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +63,6 @@
 		AF313D7517ABE051004CC815 /* PlanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningViewController.m; sourceTree = "<group>"; };
 		AF313D7617ABE051004CC815 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		AF313D7717ABE051004CC815 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		AF5F34EF17B28043006543CA /* Euro_banknotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Euro_banknotes.png; sourceTree = "<group>"; };
 		AF720EEB179BE2F400F77CA6 /* AH Plaza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AH Plaza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF720EEE179BE2F400F77CA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF720EF0179BE2F400F77CA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,13 +97,14 @@
 		AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = webcal_ico.png; path = Resources/Images/icons/webcal_ico.png; sourceTree = "<group>"; };
 		AFDF014F17A94D4B005CC5AA /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMLParser.h; path = Classes/HTMLParser.h; sourceTree = "<group>"; };
 		AFDF015017A94D4B005CC5AA /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMLParser.m; path = Classes/HTMLParser.m; sourceTree = "<group>"; };
+		AFE316A517B661CF00ACA245 /* Popup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Popup.h; path = "AH Plaza/Classes/Frameworks/Popup/Popup.h"; sourceTree = "<group>"; };
+		AFE316A617B661CF00ACA245 /* Popup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Popup.m; path = "AH Plaza/Classes/Frameworks/Popup/Popup.m"; sourceTree = "<group>"; };
+		AFE316A817B661F600ACA245 /* calendar_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar_ico.png; path = Resources/Images/icons/calendar_ico.png; sourceTree = "<group>"; };
 		AFE3821417AFF7E300AD3D37 /* reload_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reload_ico.png; path = Resources/Images/icons/reload_ico.png; sourceTree = "<group>"; };
 		AFF5E40F17B3BC250028896F /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsManager.h; path = Classes/SettingsManager.h; sourceTree = "<group>"; };
 		AFF5E41017B3BC250028896F /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsManager.m; path = Classes/SettingsManager.m; sourceTree = "<group>"; };
 		AFF5E41617B3C5670028896F /* swipe-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipe-left.png"; path = "Resources/Images/swipe-left.png"; sourceTree = "<group>"; };
 		AFF5E41717B3C5670028896F /* swipe-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipe-right.png"; path = "Resources/Images/swipe-right.png"; sourceTree = "<group>"; };
-		AFFE9DEA17B384DA0094AF1F /* ahold-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ahold-logo.png"; sourceTree = "<group>"; };
-		AFFE9DEE17B38A340094AF1F /* calendar_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_ico.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +179,7 @@
 		AF720EED179BE2F400F77CA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFE316A117B6616000ACA245 /* Popup */,
 				AF720EEE179BE2F400F77CA6 /* UIKit.framework */,
 				AF720EF0179BE2F400F77CA6 /* Foundation.framework */,
 				AF720EF2179BE2F400F77CA6 /* CoreGraphics.framework */,
@@ -246,9 +246,7 @@
 				AFB7AE53179D9C3300D58E08 /* icons */,
 				AF720FE1179C8DA700F77CA6 /* ah-button.png */,
 				AF720F5F179BE80300F77CA6 /* ah-plaza.png */,
-				AFFE9DEE17B38A340094AF1F /* calendar_ico.png */,
 				AF720F5A179BE77000F77CA6 /* app-icon_iphone5.png */,
-				AF5F34EF17B28043006543CA /* Euro_banknotes.png */,
 				AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */,
 				AF720F50179BE72C00F77CA6 /* Default.png */,
 				AF720F51179BE72C00F77CA6 /* Default@2x.png */,
@@ -272,7 +270,6 @@
 			children = (
 				AFF5E41617B3C5670028896F /* swipe-left.png */,
 				AFF5E41717B3C5670028896F /* swipe-right.png */,
-				AFFE9DEA17B384DA0094AF1F /* ahold-logo.png */,
 				AFE3821417AFF7E300AD3D37 /* reload_ico.png */,
 				AFB7AE54179D9C4900D58E08 /* info_ico.png */,
 				AFB7AE55179D9C4900D58E08 /* payment_ico.png */,
@@ -282,8 +279,18 @@
 				AFB7AE59179D9C4900D58E08 /* settings_ico.png */,
 				AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */,
 				AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */,
+				AFE316A817B661F600ACA245 /* calendar_ico.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		AFE316A117B6616000ACA245 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				AFE316A517B661CF00ACA245 /* Popup.h */,
+				AFE316A617B661CF00ACA245 /* Popup.m */,
+			);
+			name = Popup;
 			sourceTree = "<group>";
 		};
 		AFF5E40E17B3BC030028896F /* Database Communication */ = {
@@ -366,11 +373,9 @@
 				AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */,
 				AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */,
 				AFE3821517AFF7E300AD3D37 /* reload_ico.png in Resources */,
-				AF5F34F017B28043006543CA /* Euro_banknotes.png in Resources */,
-				AFFE9DEB17B384DA0094AF1F /* ahold-logo.png in Resources */,
-				AFFE9DEF17B38A340094AF1F /* calendar_ico.png in Resources */,
 				AFF5E41817B3C5670028896F /* swipe-left.png in Resources */,
 				AFF5E41917B3C5670028896F /* swipe-right.png in Resources */,
+				AFE316A917B661F600ACA245 /* calendar_ico.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +400,7 @@
 				AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */,
 				AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */,
 				AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */,
+				AFE316A717B661CF00ACA245 /* Popup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

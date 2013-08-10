@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "SettingsManager.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface SettingsViewController ()
 
@@ -30,6 +31,8 @@
 	// Do any additional setup after loading the view.
     
     [_keepLoggedInSwitch setOn: [[SettingsManager sharedInstance] autologinEnabled]];
+    _resetButton.layer.cornerRadius = 10;
+    _resetButton.layer.masksToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +43,7 @@
 
 - (void)viewDidUnload {
     [self setKeepLoggedInSwitch:nil];
+    [self setResetButton:nil];
     [super viewDidUnload];
 }
 - (IBAction)autoLoginSliderValueChanged:(id)sender {

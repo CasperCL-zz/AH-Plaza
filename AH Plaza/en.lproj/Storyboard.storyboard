@@ -375,15 +375,67 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajB-D0-qaj">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="sFm-Yj-2hO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Herstel instellingen" backgroundImage="ah-button.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-Jv-4hb">
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S8T-ZS-4UF">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="sPE-Lp-qWx"/>
+                                        </constraints>
+                                    </switch>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Betaling Notificatie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZf-tH-3hZ">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="B2z-2g-puY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ontvang een notificatie wanneer je uitbetaald krijgt" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="195" translatesAutoresizingMaskIntoConstraints="NO" id="b4T-dd-hWV">
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hZf-tH-3hZ" firstAttribute="leading" secondItem="S8T-ZS-4UF" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="12s-12-4GK"/>
+                                    <constraint firstItem="b4T-dd-hWV" firstAttribute="leading" secondItem="S8T-ZS-4UF" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ITR-gD-2fB"/>
+                                    <constraint firstItem="hZf-tH-3hZ" firstAttribute="trailing" secondItem="UOM-Jv-4hb" secondAttribute="trailing" type="default" id="J9z-9r-c6b"/>
+                                    <constraint firstItem="S8T-ZS-4UF" firstAttribute="leading" secondItem="UOM-Jv-4hb" secondAttribute="leading" type="default" id="Mty-Zo-ybA"/>
+                                    <constraint firstItem="b4T-dd-hWV" firstAttribute="trailing" secondItem="UOM-Jv-4hb" secondAttribute="trailing" type="default" id="XkT-o6-Su4"/>
+                                    <constraint firstItem="b4T-dd-hWV" firstAttribute="top" secondItem="hZf-tH-3hZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dVd-88-Z2Z"/>
+                                    <constraint firstItem="S8T-ZS-4UF" firstAttribute="top" secondItem="UOM-Jv-4hb" secondAttribute="top" constant="20" symbolic="YES" type="default" id="h9G-uM-awd"/>
+                                    <constraint firstItem="hZf-tH-3hZ" firstAttribute="top" secondItem="UOM-Jv-4hb" secondAttribute="top" constant="20" symbolic="YES" type="default" id="hJQ-wp-96R"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UOM-Jv-4hb" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="FQI-Mj-B6n"/>
                             <constraint firstItem="eks-IX-NJ6" firstAttribute="leading" secondItem="GbU-MM-NkE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FZF-pz-XmK"/>
+                            <constraint firstItem="ajB-D0-qaj" firstAttribute="centerX" secondItem="UOM-Jv-4hb" secondAttribute="centerX" type="default" id="Fgh-Qf-1mf"/>
                             <constraint firstItem="QIq-Qi-0QJ" firstAttribute="top" secondItem="oyB-SM-LFW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KAh-wN-XSS"/>
-                            <constraint firstItem="eks-IX-NJ6" firstAttribute="top" secondItem="GbU-MM-NkE" secondAttribute="top" constant="20" symbolic="YES" type="default" id="YIE-uU-Nye"/>
+                            <constraint firstItem="UOM-Jv-4hb" firstAttribute="leading" secondItem="GbU-MM-NkE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="L0r-3U-T2U"/>
+                            <constraint firstItem="UOM-Jv-4hb" firstAttribute="top" secondItem="QIq-Qi-0QJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="L88-y2-QCQ"/>
                             <constraint firstItem="QIq-Qi-0QJ" firstAttribute="leading" secondItem="oyB-SM-LFW" secondAttribute="leading" type="default" id="b7b-aK-VEC"/>
+                            <constraint firstAttribute="bottom" secondItem="UOM-Jv-4hb" secondAttribute="bottom" constant="254" id="bRC-Fh-kiF"/>
                             <constraint firstItem="oyB-SM-LFW" firstAttribute="leading" secondItem="eks-IX-NJ6" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="eVL-Uq-VfD"/>
-                            <constraint firstItem="oyB-SM-LFW" firstAttribute="centerY" secondItem="eks-IX-NJ6" secondAttribute="centerY" type="default" id="ibf-z3-gBL"/>
+                            <constraint firstAttribute="bottom" secondItem="ajB-D0-qaj" secondAttribute="bottom" constant="19" id="hJI-7B-tQf"/>
+                            <constraint firstItem="oyB-SM-LFW" firstAttribute="top" secondItem="eks-IX-NJ6" secondAttribute="top" type="default" id="hyt-vQ-mAe"/>
+                            <constraint firstItem="eks-IX-NJ6" firstAttribute="top" secondItem="GbU-MM-NkE" secondAttribute="top" constant="23" id="na5-Zs-7OI"/>
                             <constraint firstAttribute="trailing" secondItem="QIq-Qi-0QJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="t4R-0K-FCi"/>
                             <constraint firstAttribute="trailing" secondItem="oyB-SM-LFW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tvx-or-a0D"/>
                         </constraints>
@@ -391,6 +443,7 @@
                     <navigationItem key="navigationItem" title="Instellingen" id="I8A-fz-DVj"/>
                     <connections>
                         <outlet property="keepLoggedInSwitch" destination="eks-IX-NJ6" id="r4L-y5-dDU"/>
+                        <outlet property="resetButton" destination="ajB-D0-qaj" id="dOZ-Zr-jPa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lP7-qA-XhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1112,14 +1165,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oon-sc-kx1">
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Je rooster wordt geladen.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujS-d3-kQ4">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="mvZ-Pc-oLU"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="reb-cV-t5Z">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="yhM-jD-3PZ"/>
-                                        </constraints>
                                         <color key="color" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
                                     </activityIndicatorView>
                                 </subviews>
@@ -1128,7 +1181,6 @@
                                     <constraint firstItem="ujS-d3-kQ4" firstAttribute="leading" secondItem="oon-sc-kx1" secondAttribute="leading" type="default" id="1ha-9P-zML"/>
                                     <constraint firstAttribute="bottom" secondItem="ujS-d3-kQ4" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="JKV-n2-dxi"/>
                                     <constraint firstItem="reb-cV-t5Z" firstAttribute="top" secondItem="oon-sc-kx1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="LcZ-fe-byC"/>
-                                    <constraint firstItem="ujS-d3-kQ4" firstAttribute="top" secondItem="reb-cV-t5Z" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QmF-TY-UHg"/>
                                     <constraint firstItem="reb-cV-t5Z" firstAttribute="centerX" secondItem="ujS-d3-kQ4" secondAttribute="centerX" type="default" id="YPu-UC-org"/>
                                     <constraint firstItem="ujS-d3-kQ4" firstAttribute="trailing" secondItem="oon-sc-kx1" secondAttribute="trailing" type="default" id="vuP-N0-Nej"/>
                                 </constraints>
@@ -1137,9 +1189,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oon-sc-kx1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4OJ-3J-Jmf"/>
+                            <constraint firstItem="oon-sc-kx1" firstAttribute="centerY" secondItem="g5j-jY-LIe" secondAttribute="centerY" type="default" id="775-jg-vVz"/>
                             <constraint firstItem="oon-sc-kx1" firstAttribute="leading" secondItem="g5j-jY-LIe" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BQg-d8-FrV"/>
                             <constraint firstItem="oon-sc-kx1" firstAttribute="top" secondItem="g5j-jY-LIe" secondAttribute="top" constant="163" id="Gja-K1-wzp"/>
-                            <constraint firstAttribute="bottom" secondItem="oon-sc-kx1" secondAttribute="bottom" constant="164" id="peE-Bf-Old"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Werkrooster" id="Sbf-W5-ab3"/>
@@ -1262,6 +1314,7 @@
             <relationships>
                 <relationship kind="action" name="autoLoginSliderValueChanged:"/>
                 <relationship kind="outlet" name="keepLoggedInSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

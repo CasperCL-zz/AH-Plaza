@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch *keepLoggedInSwitch;
 - (IBAction)autoLoginSliderValueChanged:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *resetButton;
 
 @end
