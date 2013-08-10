@@ -121,46 +121,13 @@
                                     <constraint firstItem="p3T-HW-5Oo" firstAttribute="leading" secondItem="UiY-Mp-89l" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="t0S-F4-zDm"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AZ-zh-8xs">
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3A-8G-VWd">
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3T1-M6-0Yg">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="1HT-qx-sKV"/>
-                                            <constraint firstAttribute="height" constant="21" id="nkL-Xm-Ola"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ls4-bc-wCz">
-                                        <color key="color" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="3T1-M6-0Yg" firstAttribute="centerX" secondItem="J3A-8G-VWd" secondAttribute="centerX" type="default" id="4v6-KR-iPk"/>
-                                    <constraint firstItem="Ls4-bc-wCz" firstAttribute="top" secondItem="J3A-8G-VWd" secondAttribute="top" constant="20" symbolic="YES" type="default" id="DxV-Vx-spJ"/>
-                                    <constraint firstItem="3T1-M6-0Yg" firstAttribute="top" secondItem="Ls4-bc-wCz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="J0T-HB-JUe"/>
-                                    <constraint firstItem="Ls4-bc-wCz" firstAttribute="centerX" secondItem="3T1-M6-0Yg" secondAttribute="centerX" type="default" id="qdz-IX-PUe"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.56862747669219971" blue="0.77647066116333008" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="J3A-8G-VWd" firstAttribute="centerY" secondItem="8AZ-zh-8xs" secondAttribute="centerY" type="default" id="0l0-Zm-osh"/>
-                            <constraint firstItem="8AZ-zh-8xs" firstAttribute="bottom" secondItem="n3w-Mo-hOd" secondAttribute="bottom" type="default" id="895-pe-F0p"/>
                             <constraint firstItem="XRl-vC-MCM" firstAttribute="leading" secondItem="n3w-Mo-hOd" secondAttribute="leading" type="default" id="CBB-lC-r8z"/>
-                            <constraint firstItem="8AZ-zh-8xs" firstAttribute="leading" secondItem="n3w-Mo-hOd" secondAttribute="leading" type="default" id="G7u-FP-x29"/>
-                            <constraint firstItem="J3A-8G-VWd" firstAttribute="leading" secondItem="n3w-Mo-hOd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HRJ-pu-j78"/>
-                            <constraint firstItem="J3A-8G-VWd" firstAttribute="top" secondItem="n3w-Mo-hOd" secondAttribute="top" constant="185" id="II9-uq-Qpx"/>
-                            <constraint firstAttribute="trailing" secondItem="J3A-8G-VWd" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Mga-vY-Cl7"/>
-                            <constraint firstItem="8AZ-zh-8xs" firstAttribute="trailing" secondItem="n3w-Mo-hOd" secondAttribute="trailing" type="default" id="Pvp-D0-Cye"/>
-                            <constraint firstItem="8AZ-zh-8xs" firstAttribute="top" secondItem="n3w-Mo-hOd" secondAttribute="top" type="default" id="ZeK-jl-B5i"/>
                             <constraint firstItem="UiY-Mp-89l" firstAttribute="leading" secondItem="n3w-Mo-hOd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bng-kJ-Ue7"/>
                             <constraint firstItem="mMh-56-nDD" firstAttribute="top" secondItem="n3w-Mo-hOd" secondAttribute="top" type="default" id="dKh-hr-u6F"/>
+                            <constraint firstItem="mMh-56-nDD" firstAttribute="bottom" secondItem="n3w-Mo-hOd" secondAttribute="bottom" type="default" id="gGq-DN-47w"/>
                             <constraint firstItem="mMh-56-nDD" firstAttribute="trailing" secondItem="n3w-Mo-hOd" secondAttribute="trailing" type="default" id="hvV-Fb-zni"/>
                             <constraint firstAttribute="trailing" secondItem="UiY-Mp-89l" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="idX-25-T3Z"/>
                             <constraint firstItem="UiY-Mp-89l" firstAttribute="top" secondItem="XRl-vC-MCM" secondAttribute="bottom" constant="30" type="user" id="k34-yX-h4L"/>
@@ -168,14 +135,11 @@
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UiY-Mp-89l" secondAttribute="bottom" constant="61" type="user" id="p0s-7v-vGe"/>
                             <constraint firstItem="XRl-vC-MCM" firstAttribute="top" secondItem="n3w-Mo-hOd" secondAttribute="top" constant="20" symbolic="YES" type="default" id="uhN-xy-MQN"/>
                             <constraint firstItem="mMh-56-nDD" firstAttribute="leading" secondItem="n3w-Mo-hOd" secondAttribute="leading" type="default" id="vh7-Sz-xFN"/>
-                            <constraint firstItem="J3A-8G-VWd" firstAttribute="centerY" secondItem="mMh-56-nDD" secondAttribute="centerY" type="default" id="x7B-ge-XqA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ahplazaImage" destination="XRl-vC-MCM" id="kCr-1C-3YF"/>
-                        <outlet property="coverView" destination="8AZ-zh-8xs" id="omv-Xd-P43"/>
                         <outlet property="credentialsView" destination="UiY-Mp-89l" id="fYp-ga-hBA"/>
-                        <outlet property="loadingView" destination="J3A-8G-VWd" id="EXG-nR-lDy"/>
                         <outlet property="loginButton" destination="2TJ-T8-efX" id="zqR-s4-zj8"/>
                         <outlet property="passwordLabel" destination="UyD-Ns-dIF" id="glc-Ks-Loz"/>
                         <outlet property="passwordTextField" destination="Znt-JX-8SL" id="Jsz-4u-ax6"/>
@@ -477,11 +441,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" image="Euro_banknotes.png" translatesAutoresizingMaskIntoConstraints="NO" id="f5l-Sk-FUa">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="191" id="CWr-sv-DAs"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFq-9v-4ST">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="calendar_ico.png" translatesAutoresizingMaskIntoConstraints="NO" id="CXT-yL-048">
@@ -545,14 +504,11 @@
                         <color key="backgroundColor" red="0.0" green="0.56862747670000002" blue="0.77647066119999997" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="XK3-5L-VyY" firstAttribute="leading" secondItem="3J6-uI-NVF" secondAttribute="leading" type="default" id="9vj-QD-3np"/>
-                            <constraint firstItem="f5l-Sk-FUa" firstAttribute="leading" secondItem="3J6-uI-NVF" secondAttribute="leading" type="default" id="GCq-Yo-Uwx"/>
+                            <constraint firstItem="XK3-5L-VyY" firstAttribute="top" secondItem="3J6-uI-NVF" secondAttribute="top" constant="187" id="FXg-tD-1gl"/>
                             <constraint firstItem="XK3-5L-VyY" firstAttribute="top" secondItem="OFq-9v-4ST" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LcS-Jn-M10"/>
                             <constraint firstItem="XK3-5L-VyY" firstAttribute="trailing" secondItem="3J6-uI-NVF" secondAttribute="trailing" type="default" id="Lgk-aH-GPt"/>
-                            <constraint firstItem="f5l-Sk-FUa" firstAttribute="top" secondItem="XK3-5L-VyY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RZn-Ze-8dh"/>
                             <constraint firstItem="Z0Z-sV-wAH" firstAttribute="bottom" secondItem="3J6-uI-NVF" secondAttribute="bottom" type="default" id="Tyn-St-PD1"/>
-                            <constraint firstItem="f5l-Sk-FUa" firstAttribute="trailing" secondItem="3J6-uI-NVF" secondAttribute="trailing" type="default" id="VnF-Ww-ETf"/>
                             <constraint firstItem="OFq-9v-4ST" firstAttribute="top" secondItem="3J6-uI-NVF" secondAttribute="top" constant="20" symbolic="YES" type="default" id="X1k-np-0Ot"/>
-                            <constraint firstItem="f5l-Sk-FUa" firstAttribute="bottom" secondItem="3J6-uI-NVF" secondAttribute="bottom" type="default" id="ZyK-7s-xXa"/>
                             <constraint firstItem="OFq-9v-4ST" firstAttribute="leading" secondItem="3J6-uI-NVF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pyc-B5-Ezk"/>
                             <constraint firstItem="Z0Z-sV-wAH" firstAttribute="trailing" secondItem="3J6-uI-NVF" secondAttribute="trailing" type="default" id="uLC-bX-mS6"/>
                             <constraint firstItem="Z0Z-sV-wAH" firstAttribute="leading" secondItem="3J6-uI-NVF" secondAttribute="leading" type="default" id="urZ-ij-hlS"/>
@@ -1223,7 +1179,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Euro_banknotes.png" width="479" height="366"/>
         <image name="ah-button.png" width="125" height="50"/>
         <image name="ah-plaza.png" width="150" height="150"/>
         <image name="calendar_ico.png" width="128" height="128"/>
@@ -1242,9 +1197,7 @@
                 <relationship kind="action" name="backgroundButtonClicked:"/>
                 <relationship kind="action" name="loginButtonPressed:"/>
                 <relationship kind="outlet" name="ahplazaImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="coverView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="credentialsView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="loadingView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="passwordLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>

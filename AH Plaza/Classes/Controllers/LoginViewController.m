@@ -32,6 +32,8 @@ int credentialViewMoved = 0;
 {
     [super viewDidLoad];
     [WebHelper sharedInstance];
+    _popup = [[Popup alloc] initWithView: self.view];
+    [_popup setFont: @"STHeitiTC-Light"];
     
     [self.view setBackgroundColor: [self colorWithHexString:@"2F7FB9"]];
     
@@ -43,10 +45,7 @@ int credentialViewMoved = 0;
     _loginButton.layer.masksToBounds = YES;
     
     //
-    [_loadingView setHidden: YES];
-    _loadingView.layer.cornerRadius = 7;
-    _loadingView.layer.masksToBounds = YES;
-    _coverView.hidden = YES;
+    
     [_usernameTextField setAutocorrectionType: UITextAutocorrectionTypeNo];
     
     [self showCredentialsView:^(BOOL finished) {}];
@@ -57,37 +56,6 @@ int credentialViewMoved = 0;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-- (void) hideloadView: (void (^)(BOOL finished))completion{
-    _loadingView.alpha = 1.0f;
-    _coverView.alpha = 0.8f;
-    [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
-        _loadingView.alpha = 0.0f;
-        _coverView.alpha = 0.0f;
-        [self.view sendSubviewToBack: _ahplazaImage];
-    } completion:^(BOOL finished) {
-        _loadingView.hidden = YES;
-        _coverView.hidden = YES;
-        completion(finished);
-    }];
-}
-
-- (void) showloadView: (void (^)(BOOL finished))completion {
-    _loadingView.alpha = 0.0f;
-    _coverView.alpha = 0.0f;
-    _loadingView.hidden = NO;
-    _coverView.hidden = NO;
-    [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
-        _loadingView.alpha = 1.0f;
-        _coverView.alpha = 0.8f;
-        [self.view bringSubviewToFront: _ahplazaImage];
-    } completion:^(BOOL finished) {
-        completion(finished);
-    }];
-}
-
-
 
 - (void) showCredentialsView: (void (^)(BOOL finished))completion {
     CGRect orginal = _ahplazaImage.frame;
@@ -159,10 +127,10 @@ int credentialViewMoved = 0;
         
         
         [self moveToDefaultLocation:^(BOOL finished) {
-            [self showloadView:^(BOOL finished) {
+            [_popup showPopupWithAnimationDuration:1.0 withActivityIndicatorAndText:@"Laden.." onCompletion:^(BOOL finished) {
                 [self checkCredentials:^(NSArray *error) {
                     if([error count] == 0) {
-                        [self hideloadView:^(BOOL finished) {
+                        [_popup hidePopupWithAnimationDuration: 1.0 onCompletion: ^(BOOL finished) {
                             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
                             UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuNavigationController"];
                             [vc setModalPresentationStyle:UIModalPresentationFullScreen];
@@ -175,7 +143,7 @@ int credentialViewMoved = 0;
                         }];
                     } else {
                         NSLog(@"error");
-                        [self hideloadView:^(BOOL finished) {
+                        [_popup hidePopupWithAnimationDuration:1.0 onCompletion:^(BOOL finished) {
                             
                         }];
                     }
@@ -227,10 +195,10 @@ typedef enum {
     
     
     [self moveToDefaultLocation:^(BOOL finished) {
-        [self showloadView:^(BOOL finished) {
+        [_popup showPopupWithAnimationDuration:1.0 withActivityIndicatorAndText:@"Laden.." onCompletion:^(BOOL finished) {
             [self checkCredentials:^(NSArray *error) {
                 if([error count] == 0) {
-                    [self hideloadView:^(BOOL finished) {
+                    [_popup hidePopupWithAnimationDuration:1.0 onCompletion:^(BOOL finished) {
                         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
                         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuNavigationController"];
                         [vc setModalPresentationStyle:UIModalPresentationFullScreen];
@@ -242,9 +210,7 @@ typedef enum {
                     }];
                 } else {
                     NSLog(@"error");
-                    [self hideloadView:^(BOOL finished) {
-                        
-                    }];
+                    [_popup hidePopupWithAnimationDuration:1.0 onCompletion:^(BOOL finished) {}];
                 }
             }];
             
@@ -256,15 +222,12 @@ typedef enum {
 - (void) removeAllViews: (void (^)(BOOL finished)) completion {
     CGRect imgFrame = _ahplazaImage.frame;
     CGRect credFrame = _credentialsView.frame;
-    CGRect loadingFrame = _loadingView.frame;
     
     imgFrame.origin.y += 1000;
     credFrame.origin.y += 1000;
-    loadingFrame.origin.y += 1000;
     [UIView animateWithDuration: 2 animations:^{
         _ahplazaImage.frame = imgFrame;
         _credentialsView.frame = credFrame;
-        _loadingView.frame = loadingFrame;
     } completion:completion];
     
 }
@@ -274,7 +237,6 @@ typedef enum {
         _usernameTextField.alpha = 0.0f;
         _passwordTextField.alpha = 0.0f;
         _loginButton.alpha = 0.0f;
-        _loadingView.alpha = 0.0f;
         _usernameLabel.alpha = 0.0f;
         _passwordLabel.alpha = 0.0f;
         
@@ -284,7 +246,7 @@ typedef enum {
         newFrame.size.width = self.view.frame.size.width;
         newFrame.origin.x = 0;
         newFrame.origin.y = 0;
-
+        
         
         [UIView animateWithDuration: 0.5 animations:^{
             _credentialsView.frame = newFrame;
