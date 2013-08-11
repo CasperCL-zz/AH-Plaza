@@ -9,7 +9,9 @@
 #import "LoginViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "WebHelper.h"
-
+#import "NSData+AES256.h"
+#import "SettingsManager.h"
+#import "../Keys.h"
 
 @interface LoginViewController ()
 
@@ -19,6 +21,8 @@
 
 int credentialViewMoved = 0;
 BOOL isInTransition;
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,6 +54,22 @@ BOOL isInTransition;
     [_usernameTextField setAutocorrectionType: UITextAutocorrectionTypeNo];
     
     [self showCredentialsView:^(BOOL finished) {}];
+    if([[SettingsManager sharedInstance] autologinEnabled]){
+        NSString *documentsDirectory = [NSHomeDirectory()
+                                        stringByAppendingPathComponent:@"Documents"];
+        NSString *fileLocation =  [[NSString alloc] initWithFormat: @"%@/%@", documentsDirectory , @"user.ahpu"];
+        
+        NSArray *userData = [NSKeyedUnarchiver unarchiveObjectWithFile: fileLocation];
+        
+        NSData *plainUsername = [[userData objectAtIndex: 0] AES256DecryptWithKey: UsernameEncryptionKey];
+        NSData *plainPassword = [[userData objectAtIndex: 1] AES256DecryptWithKey: PasswordEncryptionKey];
+        
+//        printf("%s\n", [[[NSString alloc] initWithData:plainUsername encoding:NSUTF8StringEncoding] UTF8String]);
+//        printf("%s\n", [[[NSString alloc] initWithData:plainPassword encoding:NSUTF8StringEncoding] UTF8String]);
+        [_usernameTextField setText: [[NSString alloc] initWithData:plainUsername encoding:NSUTF8StringEncoding]];
+        [_passwordTextField setText: [[NSString alloc] initWithData:plainPassword encoding:NSUTF8StringEncoding]];
+        [self login];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -128,33 +148,8 @@ BOOL isInTransition;
         [_usernameTextField resignFirstResponder];
         [_passwordTextField resignFirstResponder];
         
-        
-        [self moveToDefaultLocation:^(BOOL finished) {
-            [_popup showPopupWithAnimationDuration:1.0 withActivityIndicatorAndText:@"Inloggen.." onCompletion:^(BOOL finished) {
-                [self checkCredentials:^(NSArray *error) {
-                    if([error count] == 0) {
-                        [_popup hidePopupWithAnimationDuration: 1.0 onCompletion: ^(BOOL finished) {
-                            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
-                            UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuNavigationController"];
-                            [vc setModalPresentationStyle:UIModalPresentationFullScreen];
-                            [vc setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
-                            
-                            sleep(0.3f);
-                            [self zoomIntoCredentialsView:^(BOOL finished) {
-                                [self presentModalViewController:vc animated:NO];
-                            }];
-                        }];
-                    } else {
-                        NSLog(@"error");
-                        [_popup hidePopupWithAnimationDuration:1.0 onCompletion:^(BOOL finished) {
-                            
-                        }];
-                    }
-                }];
-                
-            }];
-        }];
-        
+        [self login];
+    
     }
     return YES;
 }
@@ -184,8 +179,11 @@ BOOL isInTransition;
     
     [_usernameTextField resignFirstResponder];
     [_passwordTextField resignFirstResponder];
-    
-    
+    [self login];
+}
+
+
+- (void) login {
     [self moveToDefaultLocation:^(BOOL finished) {
         [_popup showPopupWithAnimationDuration:1.0 withActivityIndicatorAndText:@"Inloggen.." onCompletion:^(BOOL finished) {
             [self checkCredentials:^(NSArray *error) {
@@ -196,6 +194,8 @@ BOOL isInTransition;
                         [vc setModalPresentationStyle:UIModalPresentationFullScreen];
                         [vc setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
                         
+                        [self saveCredentials];
+                        sleep(0.3f);
                         [self zoomIntoCredentialsView:^(BOOL finished) {
                             [self presentModalViewController:vc animated:NO];
                         }];
@@ -210,7 +210,22 @@ BOOL isInTransition;
             
         }];
     }];
+
+}
+
+- (void) saveCredentials {
+	NSString *username = [_usernameTextField text];
+    NSString *password = [_passwordTextField text];
     
+	NSData *plainUsername = [username dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *plainPassword = [password dataUsingEncoding:NSUTF8StringEncoding];
+	NSData *encryptedUsername = [plainUsername AES256EncryptWithKey: UsernameEncryptionKey];
+	NSData *encryptedPassword = [plainPassword AES256EncryptWithKey: PasswordEncryptionKey];
+    
+    NSString *documentsDirectory = [NSHomeDirectory()
+                          stringByAppendingPathComponent:@"Documents"];
+    NSString *fileLocation =  [[NSString alloc] initWithFormat: @"%@/%@", documentsDirectory , @"user.ahpu"];
+    [NSKeyedArchiver archiveRootObject:[[NSArray alloc] initWithObjects: encryptedUsername, encryptedPassword, nil] toFile: fileLocation];
 }
 
 - (void) removeAllViews: (void (^)(BOOL finished)) completion {
