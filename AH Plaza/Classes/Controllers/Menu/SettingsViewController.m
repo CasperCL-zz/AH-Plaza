@@ -9,8 +9,11 @@
 #import "SettingsViewController.h"
 #import "SettingsManager.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Popup.h"
 
 @interface SettingsViewController ()
+
+@property Popup *popup;
 
 @end
 
@@ -57,9 +60,19 @@
 }
 
 - (IBAction)resetSettings:(id)sender {
-    [[SettingsManager sharedInstance] reset];
-    for (UISwitch *swtch in _switches) {
-        [swtch setOn: NO animated: YES];
-    }
+    _popup = [[Popup alloc] initWithView: self.view];
+    [_popup setFont: @"STHeitiTC-Light"];
+    [_popup setButton1BackgroundImage:[UIImage imageNamed:@"ah-button"] forState:UIControlStateNormal];
+    [_popup setButton2BackgroundImage:[UIImage imageNamed:@"ah-button"] forState:UIControlStateNormal];
+    [_popup showPopupWithAnimationDuration: 0.5 withText:@"Weet je zeker dat je alle instellingen wilt terugzetten?" withButton1Text:@"Ja" withButton2Text:@"Nee" withResult:^(RESULT result) {
+        if (result == OKAY) {
+            [[SettingsManager sharedInstance] reset];
+            for (UISwitch *swtch in _switches) {
+                [swtch setOn: NO animated: YES];
+            }
+        }
+    } onCompletion:^(BOOL finished) {}];
+    
+    
 }
 @end

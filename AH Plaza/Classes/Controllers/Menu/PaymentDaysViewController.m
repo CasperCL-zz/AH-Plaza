@@ -99,7 +99,6 @@
             [_nextDateLabel setText: [[NSString alloc] initWithFormat:@"%@%@", @"op ", newDateS]];
             int days = (int)ceil(dateDiff);
             newDateS = [[NSString alloc] initWithFormat:@"%i", days];
-            NSLog(@"days %f", dateDiff);
             [_daysOrDayLabel setText: days > 1 ? @"dagen" : @"dag" ];
             [_nextPaymentLabel setText: newDateS];
         }

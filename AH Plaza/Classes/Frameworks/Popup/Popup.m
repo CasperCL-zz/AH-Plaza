@@ -287,12 +287,12 @@
 }
 
 - (void) button1Tapped {
-    [self hidePopupWithAnimationDuration: 1.0 onCompletion:^(BOOL finished) {}];
+    [self hidePopupWithAnimationDuration: 0.5 onCompletion:^(BOOL finished) {}];
     _resultCallback(OKAY);
 }
 
 - (void) button2Tapped {
-    [self hidePopupWithAnimationDuration: 1.0 onCompletion:^(BOOL finished) {}];
+    [self hidePopupWithAnimationDuration: 0.5 onCompletion:^(BOOL finished) {}];
     _resultCallback(CANCELED);
 }
 
@@ -302,6 +302,14 @@
     [_dialogLabel setFont: newFont];
     [[_button1 titleLabel] setFont: newFont];
     [[_button2 titleLabel] setFont: newFont];
+}
+
+- (void) setButton1BackgroundImage: (UIImage*) image forState:(UIControlState) controlState {
+    [_button1 setBackgroundImage: image forState: controlState];
+}
+
+- (void) setButton2BackgroundImage: (UIImage*) image forState:(UIControlState) controlState {
+    [_button2 setBackgroundImage:image forState: controlState];
 }
 
 @end

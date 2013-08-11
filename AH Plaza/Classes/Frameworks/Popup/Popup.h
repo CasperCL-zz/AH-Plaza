@@ -34,6 +34,9 @@ typedef void(^onCompletion)(BOOL finished);
 
 - (id) initWithView: (UIView*) view;
 
+- (void) setButton1BackgroundImage: (UIImage*) image forState:(UIControlState) controlState;
+- (void) setButton2BackgroundImage: (UIImage*) image forState:(UIControlState) controlState;
+
 - (void) hidePopupWithAnimationDuration:(float) duration onCompletion:(onCompletion) completion;
 
 - (void) showPopupWithAnimationDuration:(float) duration withText: (NSString*) text onCompletion:(onCompletion) completion;

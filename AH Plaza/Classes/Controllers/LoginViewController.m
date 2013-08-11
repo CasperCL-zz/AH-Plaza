@@ -21,7 +21,9 @@
 
 int credentialViewMoved = 0;
 BOOL isInTransition;
-
+CGRect credentialsFrame;
+CGRect imageFrame;
+BOOL loadedCookies;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -37,8 +39,24 @@ BOOL isInTransition;
 {
     [super viewDidLoad];
     [WebHelper sharedInstance];
+    callback homePageLoadCallback = ^() {
+        loadedCookies = YES;
+        [_loginButton setEnabled: loadedCookies];
+        if([[SettingsManager sharedInstance] autologinEnabled])
+            [self login];
+    };
+    
+    credentialsFrame.origin.x = 20;
+    credentialsFrame.origin.y = 190;
+    credentialsFrame.size.width = 280;
+    credentialsFrame.size.height = 210;
+    [_credentialsView setFrame: credentialsFrame];
+    
+    [[WebHelper sharedInstance] setHomePageLoadedCallback: homePageLoadCallback];
     _popup = [[Popup alloc] initWithView: self.view];
     [_popup setFont: @"STHeitiTC-Light"];
+    [_popup setButton1BackgroundImage:[UIImage imageNamed:@"ah-button"] forState:UIControlStateNormal];
+    [_popup setButton2BackgroundImage:[UIImage imageNamed:@"ah-button"] forState:UIControlStateNormal];
     
     [self.view setBackgroundColor: [self colorWithHexString:@"2F7FB9"]];
     
@@ -49,7 +67,7 @@ BOOL isInTransition;
     _loginButton.layer.cornerRadius = 10;
     _loginButton.layer.masksToBounds = YES;
     
-    //
+    
     
     [_usernameTextField setAutocorrectionType: UITextAutocorrectionTypeNo];
     
@@ -64,11 +82,8 @@ BOOL isInTransition;
         NSData *plainUsername = [[userData objectAtIndex: 0] AES256DecryptWithKey: UsernameEncryptionKey];
         NSData *plainPassword = [[userData objectAtIndex: 1] AES256DecryptWithKey: PasswordEncryptionKey];
         
-//        printf("%s\n", [[[NSString alloc] initWithData:plainUsername encoding:NSUTF8StringEncoding] UTF8String]);
-//        printf("%s\n", [[[NSString alloc] initWithData:plainPassword encoding:NSUTF8StringEncoding] UTF8String]);
         [_usernameTextField setText: [[NSString alloc] initWithData:plainUsername encoding:NSUTF8StringEncoding]];
         [_passwordTextField setText: [[NSString alloc] initWithData:plainPassword encoding:NSUTF8StringEncoding]];
-        [self login];
     }
 }
 
@@ -101,9 +116,6 @@ BOOL isInTransition;
 
 - (IBAction)backgroundButtonClicked:(id)sender {
     if(!isInTransition) {
-        if(_originalFrame.origin.x == 0){
-            _originalFrame = _credentialsView.frame;
-        }
         
         [_usernameTextField resignFirstResponder];
         [_passwordTextField resignFirstResponder];
@@ -113,7 +125,6 @@ BOOL isInTransition;
 
 - (void) moveCredentialsViewUp: (int) y completion:(void (^)(BOOL finished))completion {
     if(!credentialViewMoved){
-        _originalFrame = _credentialsView.frame;
         CGRect newFrame = _credentialsView.frame;
         newFrame.origin.y -= y;
         [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
@@ -127,7 +138,7 @@ BOOL isInTransition;
 
 - (void) moveToDefaultLocation:(void (^)(BOOL finished))completion {
     [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
-        _credentialsView.frame = _originalFrame;
+        _credentialsView.frame = credentialsFrame;
     } completion:^(BOOL finished) {
         credentialViewMoved = 0;
         completion(finished);
@@ -149,7 +160,7 @@ BOOL isInTransition;
         [_passwordTextField resignFirstResponder];
         
         [self login];
-    
+        
     }
     return YES;
 }
@@ -169,7 +180,6 @@ BOOL isInTransition;
         completion(errors);
         return;
     }
-    
     [[WebHelper sharedInstance] login:[_usernameTextField text] WithPassword:[_passwordTextField text] onCompletion:^(NSArray *errors) {
         completion(errors);
     }];
@@ -185,32 +195,32 @@ BOOL isInTransition;
 
 - (void) login {
     [self moveToDefaultLocation:^(BOOL finished) {
-        [_popup showPopupWithAnimationDuration:1.0 withActivityIndicatorAndText:@"Inloggen.." onCompletion:^(BOOL finished) {
-            [self checkCredentials:^(NSArray *error) {
-                if([error count] == 0) {
-                    [_popup hidePopupWithAnimationDuration:1.0 onCompletion:^(BOOL finished) {
-                        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
-                        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuNavigationController"];
-                        [vc setModalPresentationStyle:UIModalPresentationFullScreen];
-                        [vc setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
-                        
-                        [self saveCredentials];
-                        sleep(0.3f);
-                        [self zoomIntoCredentialsView:^(BOOL finished) {
-                            [self presentModalViewController:vc animated:NO];
+        if (loadedCookies)
+            [_popup showPopupWithAnimationDuration:1.0 withActivityIndicatorAndText:@"Inloggen.." onCompletion:^(BOOL finished) {
+                [self checkCredentials:^(NSArray *error) {
+                    if([error count] == 0) {
+                        [_popup hidePopupWithAnimationDuration:1.0 onCompletion:^(BOOL finished) {
+                            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+                            UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuNavigationController"];
+                            [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+                            [vc setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
+                            
+                            [self saveCredentials];
+                            sleep(0.3f);
+                            [self zoomIntoCredentialsView:^(BOOL finished) {
+                                [self presentModalViewController:vc animated:NO];
+                            }];
                         }];
-                    }];
-                } else {
-                    NSLog(@"error");
-                    [_popup hidePopupWithAnimationDuration:0.0 onCompletion:^(BOOL finished) {
-                        [_popup showPopupWithAnimationDuration:0.0 withText:[error objectAtIndex:0] withButtonText:@"OK" withResult:^(RESULT result) {} onCompletion:^(BOOL finished) {}];
-                    }];
-                }
+                    } else {
+                        [_popup hidePopupWithAnimationDuration:.3 onCompletion:^(BOOL finished) {
+                            [_popup showPopupWithAnimationDuration:.3 withText:[error objectAtIndex:0] withButtonText:@"OK" withResult:^(RESULT result) {} onCompletion:^(BOOL finished) {}];
+                        }];
+                    }
+                }];
+                
             }];
-            
-        }];
     }];
-
+    
 }
 
 - (void) saveCredentials {
@@ -223,7 +233,7 @@ BOOL isInTransition;
 	NSData *encryptedPassword = [plainPassword AES256EncryptWithKey: PasswordEncryptionKey];
     
     NSString *documentsDirectory = [NSHomeDirectory()
-                          stringByAppendingPathComponent:@"Documents"];
+                                    stringByAppendingPathComponent:@"Documents"];
     NSString *fileLocation =  [[NSString alloc] initWithFormat: @"%@/%@", documentsDirectory , @"user.ahpu"];
     [NSKeyedArchiver archiveRootObject:[[NSArray alloc] initWithObjects: encryptedUsername, encryptedPassword, nil] toFile: fileLocation];
 }

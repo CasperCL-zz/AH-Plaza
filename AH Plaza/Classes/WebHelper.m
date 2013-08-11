@@ -48,7 +48,6 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
     return self;
 }
 
-
 - (void)login: (NSString*) username WithPassword: (NSString*) password onCompletion:(callbackLogin) callback {
     _loginCallback = callback;
     
@@ -108,7 +107,9 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
     
     // Check if the session is not expired
     if(![currentURL isEqualToString: @"https://plaza.ah.nl/pkmslogout?filename=wpslogout.html"]) {
-        if ([currentURL isEqualToString: TIMETABLE_URL]) {
+        if([currentURL isEqualToString: HOME_URL]) {
+            _homePageLoadedCallback();
+        } else if ([currentURL isEqualToString: TIMETABLE_URL]) {
             // Parse the HTML to weeks
             NSArray *weeks = [[HTMLParser sharedInstance] htmlToWeeks: self];
             if([weeks count] != 0)

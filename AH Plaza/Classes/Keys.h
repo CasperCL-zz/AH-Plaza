@@ -9,7 +9,7 @@
 #ifndef AH_Plaza_Keys_h
 #define AH_Plaza_Keys_h
 
-#define UsernameEncryptionKey @""
-#define PasswordEncryptionKey @""
+#define UsernameEncryptionKey @"ZtcRC8njabQvym@GP6f+q9JVUHs_5A-Y"
+#define PasswordEncryptionKey @"+9kT?vEVXtKzyesw-NSUgBqcu!b3xrHZ"
 
 #endif
