@@ -90,7 +90,13 @@
 - (void) showPopupWithAnimationDuration:(float) duration withText: (NSString*) text onCompletion:(onCompletion) completion {
     [self removeDialogComponents];
     
-        
+    CGRect dialogFrame;
+    dialogFrame.size.height = 90;
+    dialogFrame.size.width = 280;
+    dialogFrame.origin.x = (_background.frame.size.width / 2) - (dialogFrame.size.width / 2); // center the view
+    dialogFrame.origin.y = (_background.frame.size.height / 2) - (dialogFrame.size.height / 2);
+    [_dialog setFrame: dialogFrame];
+    
     CGRect labelFrame;
     int paddingLeftRight = 10;
     int paddingTopBottom = 10;
@@ -111,6 +117,14 @@
 - (void) showPopupWithAnimationDuration:(float) duration withActivityIndicatorAndText: (NSString*) text onCompletion:(onCompletion) completion {
     [self removeDialogComponents];
     // The amount of taken space seen from the top of the dialog
+    
+    CGRect dialogFrame;
+    dialogFrame.size.height = 90;
+    dialogFrame.size.width = 280;
+    dialogFrame.origin.x = (_background.frame.size.width / 2) - (dialogFrame.size.width / 2); // center the view
+    dialogFrame.origin.y = (_background.frame.size.height / 2) - (dialogFrame.size.height / 2);
+    [_dialog setFrame: dialogFrame];
+    
     int spaceTakenFromTop = 0;
     
     CGRect aiFrame;

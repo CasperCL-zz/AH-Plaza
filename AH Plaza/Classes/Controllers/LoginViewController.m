@@ -159,32 +159,21 @@ BOOL isInTransition;
     return YES;
 }
 
-typedef enum {
-    USERNAME_EMPTY,
-    PASSWD_EMPTY,
-    USERNAME_ERR,
-    PASSWD_ERR,
-    PASSWD_OUTDATED_ERR,
-    DATABASE_ERR
-} CredentialsError;
-
 - (void) checkCredentials:(void (^)(NSArray * error))completion {
     NSMutableArray *errors = [[NSMutableArray alloc] init];
-    CredentialsError err;
-    err = -1; // no err
     
     if([[_usernameTextField text] isEqualToString:@""]){
-        err = USERNAME_EMPTY;
-        [errors addObject: [[NSNumber alloc] initWithInt: err]];
+        [errors addObject: @"Vul een gebruikersnaam in."];
     }
     if([[_passwordTextField text] isEqualToString:@""]){
-        err = PASSWD_EMPTY;
-        [errors addObject: [[NSNumber alloc] initWithInt: err]];
+        [errors addObject: @"Vul een wachtwoord in."];
     }
     
     // Do not check if the credentials are valid (this is a long and uncessary process for now)
-    if(err == USERNAME_EMPTY || err == PASSWD_EMPTY)
+    if([errors count] > 0) {
         completion(errors);
+        return;
+    }
     
     [[WebHelper sharedInstance] login:[_usernameTextField text] WithPassword:[_passwordTextField text] onCompletion:^(NSArray *errors) {
         completion(errors);
@@ -213,7 +202,9 @@ typedef enum {
                     }];
                 } else {
                     NSLog(@"error");
-                    [_popup hidePopupWithAnimationDuration:1.0 onCompletion:^(BOOL finished) {}];
+                    [_popup hidePopupWithAnimationDuration:0.0 onCompletion:^(BOOL finished) {
+                        [_popup showPopupWithAnimationDuration:0.0 withText:[error objectAtIndex:0] withButtonText:@"OK" withResult:^(RESULT result) {} onCompletion:^(BOOL finished) {}];
+                    }];
                 }
             }];
             

@@ -98,13 +98,6 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
             [self stopLoading];
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
             _loginCallback = nil;
-        } else if ([currentURL isEqualToString: LOGIN_FAIL_URL]) {
-            NSMutableArray *errors = [[NSMutableArray alloc] init];
-            [errors addObject: @"Gebruikersnaam of wachtwoord is incorrect"];
-            _loginCallback(errors);
-            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
-            [self stopLoading];
-            _loginCallback = nil;
         }
     }
 }
@@ -120,6 +113,13 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
             NSArray *weeks = [[HTMLParser sharedInstance] htmlToWeeks: self];
             if([weeks count] != 0)
                 _timetableCallback(weeks);
+        } if ([currentURL isEqualToString: LOGIN_FAIL_URL]) {
+            NSMutableArray *errors = [[NSMutableArray alloc] init];
+            [errors addObject: @"Gebruikersnaam of wachtwoord is incorrect"];
+            _loginCallback(errors);
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
+            [self stopLoading];
+            _loginCallback = nil;
         }
     } else {
         NSLog(@"Session expired");
