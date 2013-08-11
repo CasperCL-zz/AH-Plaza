@@ -19,7 +19,7 @@ De functies van deze app zijn:
     1. Het bekijken van het werkrooster     ✔
         a. Het bekijken van de totaal gewerkte uren per dag en per week     ✔
     2. Het bekijken van de uitbetalingsdata     ✔
-    3. Het bekijken van loonstroken
+    3. Het bekijken van  ✔
     4. Het niet opnieuw te hoeven inloggen
 
 =========
