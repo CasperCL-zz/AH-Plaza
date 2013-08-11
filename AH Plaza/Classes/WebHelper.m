@@ -124,7 +124,7 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
         }
     } else {
         NSLog(@"Session expired");
-        [NSException raise:@"Session Expired" format:@"Needs method for reauthentication"];
+        [self reauthenticate];
     }
 }
 
@@ -141,6 +141,12 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
                 NSLog(@"Unhandeled error: \n%@\n", error);
         }
     }
+}
+
+- (void) reauthenticate {
+    [NSException raise:@"Session Expired" format:@"Needs method for reauthentication"];
+    NSURLRequest *urlReq = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString: HOME_URL]];
+    [self loadRequest: urlReq];
 }
 
 /*

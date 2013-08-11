@@ -104,7 +104,6 @@
 		AFE3821417AFF7E300AD3D37 /* reload_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reload_ico.png; path = Resources/Images/icons/reload_ico.png; sourceTree = "<group>"; };
 		AFE8489417B77FB400A02938 /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+AES256.h"; path = "AH Plaza/Classes/NSData+AES256.h"; sourceTree = "<group>"; };
 		AFE8489517B77FB400A02938 /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+AES256.m"; path = "AH Plaza/Classes/NSData+AES256.m"; sourceTree = "<group>"; };
-		AFE8489717B7875300A02938 /* Keys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Keys.h; path = Classes/Keys.h; sourceTree = "<group>"; };
 		AFF5E40F17B3BC250028896F /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsManager.h; path = Classes/SettingsManager.h; sourceTree = "<group>"; };
 		AFF5E41017B3BC250028896F /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsManager.m; path = Classes/SettingsManager.m; sourceTree = "<group>"; };
 		AFF5E41617B3C5670028896F /* swipe-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipe-left.png"; path = "Resources/Images/swipe-left.png"; sourceTree = "<group>"; };
@@ -198,7 +197,6 @@
 			children = (
 				AFF5E40F17B3BC250028896F /* SettingsManager.h */,
 				AFF5E41017B3BC250028896F /* SettingsManager.m */,
-				AFE8489717B7875300A02938 /* Keys.h */,
 				AFF5E40E17B3BC030028896F /* Database Communication */,
 				AF720F93179BF20F00F77CA6 /* Controllers */,
 				AF720F0F179BE3F700F77CA6 /* Model */,

@@ -20,6 +20,7 @@ typedef void (^callback)();
 - (void)login: (NSString*) username WithPassword: (NSString*) password onCompletion: (callbackLogin) callback;
 - (void)loadTimetablePage: (callbackTimetable) callback;
 - (void)loadPayCheckPage: (callbackPayCheck) callback;
+- (void) reauthenticate;
 
 @property (strong, atomic)callbackPayCheck paycheckCallback;
 @property (strong, atomic)callbackTimetable timetableCallback;
