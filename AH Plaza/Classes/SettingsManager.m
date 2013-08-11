@@ -60,10 +60,9 @@ NSString *fileLocation;
 
 
 - (void) reset {
-    [[NSFileManager defaultManager] removeItemAtPath: fileLocation error: nil]; // ignore error
     _autologinEnabled = NO;
-    _planningInstructionsDisplayed = NO;
     _notificationPaymentEnabled = NO;
+    [self saveSettings];
 }
 
 // Intercept all setters and inject the save settings method
