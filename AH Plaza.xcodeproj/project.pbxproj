@@ -196,7 +196,7 @@
 				AFE8489417B77FB400A02938 /* NSData+AES256.h */,
 				AFE8489517B77FB400A02938 /* NSData+AES256.m */,
 				AFF5E40E17B3BC030028896F /* Database Communication */,
-				AF720F93179BF20F00F77CA6 /* Controllers */,
+				AF720F93179BF20F00F77CA6 /* ViewControllers */,
 				AF720F0F179BE3F700F77CA6 /* Model */,
 				AF720F0E179BE3DA00F77CA6 /* View */,
 				AF720EF5179BE2F400F77CA6 /* Supporting Files */,
@@ -258,14 +258,14 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		AF720F93179BF20F00F77CA6 /* Controllers */ = {
+		AF720F93179BF20F00F77CA6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				AF720F90179BF20600F77CA6 /* LoginViewController.h */,
 				AF720F91179BF20600F77CA6 /* LoginViewController.m */,
 				AF313D4B17AA8EBC004CC815 /* Menu */,
 			);
-			name = Controllers;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		AFB7AE53179D9C3300D58E08 /* icons */ = {

@@ -45,6 +45,7 @@ BOOL loadedCookies;
         if([[SettingsManager sharedInstance] autologinEnabled])
             [self login];
     };
+    [[WebHelper sharedInstance] setHomePageLoadedCallback: homePageLoadCallback];
     
     credentialsFrame.origin.x = 20;
     credentialsFrame.origin.y = 190;
@@ -52,7 +53,6 @@ BOOL loadedCookies;
     credentialsFrame.size.height = 210;
     [_credentialsView setFrame: credentialsFrame];
     
-    [[WebHelper sharedInstance] setHomePageLoadedCallback: homePageLoadCallback];
     _popup = [[Popup alloc] initWithView: self.view];
     [_popup setFont: @"STHeitiTC-Light"];
     [_popup setButton1BackgroundImage:[UIImage imageNamed:@"ah-button"] forState:UIControlStateNormal];

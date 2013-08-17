@@ -73,7 +73,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TJ-T8-efX">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="a0Z-4j-gqc"/>
+                                            <constraint firstAttribute="height" constant="35" id="YqV-iX-TDo"/>
                                             <constraint firstAttribute="width" constant="110" id="gNa-uu-UdV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="17"/>
@@ -94,20 +94,21 @@
                                     <constraint firstItem="cXp-9V-sav" firstAttribute="top" secondItem="UiY-Mp-89l" secondAttribute="top" constant="20" symbolic="YES" type="default" id="0af-VH-Gjk"/>
                                     <constraint firstAttribute="trailing" secondItem="p3T-HW-5Oo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1Eg-Yz-tj9"/>
                                     <constraint firstItem="2TJ-T8-efX" firstAttribute="centerX" secondItem="Znt-JX-8SL" secondAttribute="centerX" type="default" id="6og-Im-AWt"/>
-                                    <constraint firstAttribute="bottom" secondItem="2TJ-T8-efX" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="BjE-3n-OOr"/>
                                     <constraint firstItem="QmY-Br-IEu" firstAttribute="leading" secondItem="UiY-Mp-89l" secondAttribute="leading" type="default" id="BuL-90-1e6"/>
                                     <constraint firstAttribute="trailing" secondItem="UyD-Ns-dIF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CAb-JK-EDA"/>
                                     <constraint firstAttribute="trailing" secondItem="cXp-9V-sav" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EBX-JA-WI9"/>
                                     <constraint firstItem="p3T-HW-5Oo" firstAttribute="top" secondItem="UiY-Mp-89l" secondAttribute="top" constant="49" id="OaR-aZ-Yhu"/>
                                     <constraint firstItem="p3T-HW-5Oo" firstAttribute="top" secondItem="cXp-9V-sav" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PVF-gs-Zae"/>
+                                    <constraint firstItem="Znt-JX-8SL" firstAttribute="top" secondItem="UyD-Ns-dIF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Pib-qo-CfH"/>
+                                    <constraint firstAttribute="bottom" secondItem="2TJ-T8-efX" secondAttribute="bottom" constant="21" id="S4f-BP-zAC"/>
                                     <constraint firstAttribute="trailing" secondItem="Znt-JX-8SL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="SOA-5e-h8V"/>
                                     <constraint firstItem="Znt-JX-8SL" firstAttribute="leading" secondItem="UiY-Mp-89l" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="TJQ-yx-jr4"/>
-                                    <constraint firstItem="Znt-JX-8SL" firstAttribute="top" secondItem="UyD-Ns-dIF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UEu-kC-rDp"/>
                                     <constraint firstItem="cXp-9V-sav" firstAttribute="leading" secondItem="UiY-Mp-89l" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Uwa-fM-zNX"/>
                                     <constraint firstItem="QmY-Br-IEu" firstAttribute="trailing" secondItem="UiY-Mp-89l" secondAttribute="trailing" type="default" id="aHM-dh-ZzY"/>
                                     <constraint firstItem="QmY-Br-IEu" firstAttribute="top" secondItem="UiY-Mp-89l" secondAttribute="top" type="default" id="h3H-mZ-aCE"/>
-                                    <constraint firstItem="2TJ-T8-efX" firstAttribute="top" secondItem="Znt-JX-8SL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ks8-un-BuJ"/>
                                     <constraint firstItem="UyD-Ns-dIF" firstAttribute="leading" secondItem="UiY-Mp-89l" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nE8-SC-bny"/>
+                                    <constraint firstItem="UyD-Ns-dIF" firstAttribute="top" secondItem="p3T-HW-5Oo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rtn-Hj-ydG"/>
+                                    <constraint firstItem="2TJ-T8-efX" firstAttribute="top" secondItem="Znt-JX-8SL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sFr-Ea-r3z"/>
                                     <constraint firstItem="p3T-HW-5Oo" firstAttribute="leading" secondItem="UiY-Mp-89l" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="t0S-F4-zDm"/>
                                 </constraints>
                             </view>
@@ -122,7 +123,6 @@
                             <constraint firstAttribute="trailing" secondItem="UiY-Mp-89l" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="idX-25-T3Z"/>
                             <constraint firstItem="UiY-Mp-89l" firstAttribute="top" secondItem="XRl-vC-MCM" secondAttribute="bottom" constant="30" type="user" id="k34-yX-h4L"/>
                             <constraint firstItem="XRl-vC-MCM" firstAttribute="trailing" secondItem="n3w-Mo-hOd" secondAttribute="trailing" type="default" id="kGt-Qy-Zqj"/>
-                            <constraint firstAttribute="bottom" secondItem="UiY-Mp-89l" secondAttribute="bottom" constant="60" id="kb5-q8-nGQ"/>
                             <constraint firstItem="XRl-vC-MCM" firstAttribute="top" secondItem="n3w-Mo-hOd" secondAttribute="top" constant="20" symbolic="YES" type="default" id="uhN-xy-MQN"/>
                             <constraint firstItem="mMh-56-nDD" firstAttribute="leading" secondItem="n3w-Mo-hOd" secondAttribute="leading" type="default" id="vh7-Sz-xFN"/>
                             <constraint firstItem="UiY-Mp-89l" firstAttribute="top" secondItem="n3w-Mo-hOd" secondAttribute="top" constant="190" id="vzo-Ig-Zcy"/>
@@ -348,7 +348,7 @@
                                     <action selector="resetSettings:" destination="4pk-Jh-tQF" eventType="touchUpInside" id="apY-Pi-KBk"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-Jv-4hb">
+                            <view userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-Jv-4hb">
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S8T-ZS-4UF">
                                         <constraints>
@@ -1126,7 +1126,7 @@
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Je rooster wordt geladen.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujS-d3-kQ4">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="mvZ-Pc-oLU"/>
+                                            <constraint firstAttribute="height" constant="24" id="mtI-IS-KXV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1140,9 +1140,10 @@
                                 <constraints>
                                     <constraint firstItem="ujS-d3-kQ4" firstAttribute="leading" secondItem="oon-sc-kx1" secondAttribute="leading" type="default" id="1ha-9P-zML"/>
                                     <constraint firstAttribute="bottom" secondItem="ujS-d3-kQ4" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="JKV-n2-dxi"/>
-                                    <constraint firstItem="reb-cV-t5Z" firstAttribute="top" secondItem="oon-sc-kx1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="LcZ-fe-byC"/>
                                     <constraint firstItem="reb-cV-t5Z" firstAttribute="centerX" secondItem="ujS-d3-kQ4" secondAttribute="centerX" type="default" id="YPu-UC-org"/>
+                                    <constraint firstItem="reb-cV-t5Z" firstAttribute="top" secondItem="oon-sc-kx1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="pyB-WZ-Peb"/>
                                     <constraint firstItem="ujS-d3-kQ4" firstAttribute="trailing" secondItem="oon-sc-kx1" secondAttribute="trailing" type="default" id="vuP-N0-Nej"/>
+                                    <constraint firstItem="ujS-d3-kQ4" firstAttribute="top" secondItem="reb-cV-t5Z" secondAttribute="bottom" constant="5" type="user" id="wEf-on-Rds"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1151,7 +1152,6 @@
                             <constraint firstAttribute="trailing" secondItem="oon-sc-kx1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4OJ-3J-Jmf"/>
                             <constraint firstItem="oon-sc-kx1" firstAttribute="centerY" secondItem="g5j-jY-LIe" secondAttribute="centerY" type="default" id="775-jg-vVz"/>
                             <constraint firstItem="oon-sc-kx1" firstAttribute="leading" secondItem="g5j-jY-LIe" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BQg-d8-FrV"/>
-                            <constraint firstItem="oon-sc-kx1" firstAttribute="top" secondItem="g5j-jY-LIe" secondAttribute="top" constant="163" id="Gja-K1-wzp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Werkrooster" id="Sbf-W5-ab3"/>
@@ -1194,6 +1194,91 @@
         <image name="shiftklaar_ico.png" width="94" height="94"/>
         <image name="swipe-right.png" width="319" height="319"/>
     </resources>
+    <classes>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundButtonClicked:"/>
+                <relationship kind="action" name="loginButtonPressed:"/>
+                <relationship kind="outlet" name="ahplazaImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="credentialsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="passwordLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="componentsView" candidateClass="UIView"/>
+                <relationship kind="outletCollection" name="buttonsLeftSide" candidateClass="UIButton"/>
+                <relationship kind="outletCollection" name="buttonsRightSide" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PaymentDaysViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PaymentDaysViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="daysOrDayLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextDateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextPaymentLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="upcommingPaymentView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="upcommingPaymentsDaysTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="PlanningViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlanningViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="fridayFromLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fridayTillLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fridayTotalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="instructionDialogBackground" candidateClass="UIView"/>
+                <relationship kind="outlet" name="instructionDialogView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mondayFromLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mondayTillLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mondayTotalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="overallTotal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="saturdayFromLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="saturdayTillLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="saturdayTotalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sundayFromLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sundayTillLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sundayTotalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thursdayFromLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thursdayTillLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thursdayTotalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tuesdayFromLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tuesdayTillLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tuesdayTotalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wedsdayFromLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wedsdayTillLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wedsdayTotalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="weekLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="RootViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dialogView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="SettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="autoLoginSliderValueChanged:"/>
+                <relationship kind="action" name="notificationSwitchValueChanged:"/>
+                <relationship kind="action" name="resetSettings:"/>
+                <relationship kind="outlet" name="keepLoggedInSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="notificationSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
+                <relationship kind="outletCollection" name="switches" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
