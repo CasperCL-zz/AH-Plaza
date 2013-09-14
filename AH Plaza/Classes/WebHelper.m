@@ -134,8 +134,6 @@ NSString * CHANGE_PASS_URL = @"https://plaza.ah.nl/pkmspasswd";
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
     NSString * currentURL = [self stringByEvaluatingJavaScriptFromString:@"document.URL"];
-    NSLog(@"loaded: %@", currentURL);
-    NSLog(@"Body: %@", [self stringByEvaluatingJavaScriptFromString: @"document.body.innerHTML"]);
     
     
     // Check if the session is not expired
