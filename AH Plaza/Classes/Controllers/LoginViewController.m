@@ -12,6 +12,8 @@
 #import "NSData+AES256.h"
 #import "SettingsManager.h"
 #import "../Keys.h"
+#import "../Helpers/Constants.h"
+#import "ChangePasswordViewController.h"
 
 @interface LoginViewController ()
 
@@ -48,25 +50,33 @@ BOOL loadedCookies;
     [[WebHelper sharedInstance] setHomePageLoadedCallback: homePageLoadCallback];
     
     credentialsFrame.origin.x = 20;
-    credentialsFrame.origin.y = 190;
+    credentialsFrame.origin.y = 210;
     credentialsFrame.size.width = 280;
-    credentialsFrame.size.height = 210;
-    [_credentialsView setFrame: credentialsFrame];
+    credentialsFrame.size.height = 209;
     
+    
+    UIColor *bgColor = UIColorFromRGB(ah_blue);
     _popup = [[Popup alloc] initWithView: self.view];
     [_popup setFont: @"STHeitiTC-Light"];
     [_popup setButton1BackgroundImage:[UIImage imageNamed:@"ah-button"] forState:UIControlStateNormal];
     [_popup setButton2BackgroundImage:[UIImage imageNamed:@"ah-button"] forState:UIControlStateNormal];
+    [_popup setTextColor: bgColor highlighted: [UIColor whiteColor]];
+    [_popup setDialogBackgroundColor: bgColor];
     
-    [self.view setBackgroundColor: [self colorWithHexString:@"2F7FB9"]];
+    [_credentialsView setBackgroundColor: bgColor];
     
 	// Do any additional setup after loading the view.
-    _credentialsView.layer.cornerRadius = 10;
+    _credentialsView.layer.cornerRadius = 5;
     _credentialsView.layer.masksToBounds = YES;
     
-    _loginButton.layer.cornerRadius = 10;
+    _loginButton.layer.cornerRadius = 5;
     _loginButton.layer.masksToBounds = YES;
     
+    _usernameLabel.layer.cornerRadius = 5;
+    _usernameLabel.layer.masksToBounds = YES;
+    
+    _passwordLabel.layer.cornerRadius = 5;
+    _passwordLabel.layer.masksToBounds = YES;
     
     
     [_usernameTextField setAutocorrectionType: UITextAutocorrectionTypeNo];
@@ -116,7 +126,6 @@ BOOL loadedCookies;
 
 - (IBAction)backgroundButtonClicked:(id)sender {
     if(!isInTransition) {
-        
         [_usernameTextField resignFirstResponder];
         [_passwordTextField resignFirstResponder];
         [self moveToDefaultLocation:^(BOOL finished) {}];
@@ -124,16 +133,13 @@ BOOL loadedCookies;
 }
 
 - (void) moveCredentialsViewUp: (int) y completion:(void (^)(BOOL finished))completion {
-    if(!credentialViewMoved){
-        CGRect newFrame = _credentialsView.frame;
-        newFrame.origin.y -= y;
-        [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
-            _credentialsView.frame = newFrame;
-        } completion:^(BOOL finished) {
-            completion(finished);
-        }];
-        credentialViewMoved++;
-    }
+    CGRect newFrame = _credentialsView.frame;
+    newFrame.origin.y -= y;
+    [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
+        _credentialsView.frame = newFrame;
+    } completion:^(BOOL finished) {
+        completion(finished);
+    }];
 }
 
 - (void) moveToDefaultLocation:(void (^)(BOOL finished))completion {
@@ -147,7 +153,10 @@ BOOL loadedCookies;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [self moveCredentialsViewUp: 170 completion: ^(BOOL finished) {}];
+    if(!credentialViewMoved){
+        credentialViewMoved = YES;
+        [self moveCredentialsViewUp: 170 completion: ^(BOOL finished) {}];
+    }
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
@@ -213,7 +222,17 @@ BOOL loadedCookies;
                         }];
                     } else {
                         [_popup hidePopupWithAnimationDuration:.3 onCompletion:^(BOOL finished) {
-                            [_popup showPopupWithAnimationDuration:.3 withText:[error objectAtIndex:0] withButtonText:@"OK" withResult:^(RESULT result) {} onCompletion:^(BOOL finished) {}];
+                            [_popup showPopupWithAnimationDuration:.3 withText:[error objectAtIndex:0] withButtonText:@"OK" withResult:^(RESULT result) {
+                                
+                                if([[error objectAtIndex:0] isEqualToString: @"Je moet je wachtwoord wijzigen"]){
+                                    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+                                    ChangePasswordViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
+                                    [vc setOldPassword: [_passwordTextField text]];
+                                    [vc setUsername: [_usernameTextField text]];
+                                    
+                                    [self presentModalViewController:vc animated:YES];
+                                }
+                            } onCompletion:^(BOOL finished) {}];
                         }];
                     }
                 }];
@@ -256,65 +275,30 @@ BOOL loadedCookies;
     [_usernameTextField setEnabled: NO];
     [_passwordTextField setEnabled: NO];
     
-    [UIView animateWithDuration: 0.5 animations:^{
-        _usernameTextField.alpha = 0.0f;
-        _passwordTextField.alpha = 0.0f;
-        _loginButton.alpha = 0.0f;
-        _usernameLabel.alpha = 0.0f;
-        _passwordLabel.alpha = 0.0f;
-        
+    [UIView animateWithDuration: 1.0 animations:^{
+        //        _usernameTextField.alpha = 0.0f;
+        //        _passwordTextField.alpha = 0.0f;
+        //        _loginButton.alpha = 0.0f;
+        //        _usernameLabel.alpha = 0.0f;
+        //        _passwordLabel.alpha = 0.0f;
+        _credentialsView.alpha = 0.0f;
+        _ahplazaImage.alpha = 0.0f;
     } completion:^(BOOL finished) {
-        CGRect newFrame = _credentialsView.frame;
-        newFrame.size.height = self.view.frame.size.height;
-        newFrame.size.width = self.view.frame.size.width;
-        newFrame.origin.x = 0;
-        newFrame.origin.y = 0;
-        
-        
-        [UIView animateWithDuration: 0.5 animations:^{
-            _credentialsView.frame = newFrame;
-        } completion:^(BOOL finished) {
-            if(finished)
-                completion(finished);
-        }];
+        completion(finished);
+        //        CGRect newFrame = _credentialsView.frame;
+        //        newFrame.size.height = self.view.frame.size.height;
+        //        newFrame.size.width = self.view.frame.size.width;
+        //        newFrame.origin.x = 0;
+        //        newFrame.origin.y = 0;
+        //
+        //
+        //        [UIView animateWithDuration: 0.5 animations:^{
+        //            _credentialsView.frame = newFrame;
+        //        } completion:^(BOOL finished) {
+        //            if(finished)
+        //                completion(finished);
+        //        }];
     }];
-}
-
-
--(UIColor*)colorWithHexString:(NSString*)hex
-{
-    NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
-    
-    // String should be 6 or 8 characters
-    if ([cString length] < 6) return [UIColor grayColor];
-    
-    // strip 0X if it appears
-    if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
-    
-    if ([cString length] != 6) return  [UIColor grayColor];
-    
-    // Separate into r, g, b substrings
-    NSRange range;
-    range.location = 0;
-    range.length = 2;
-    NSString *rString = [cString substringWithRange:range];
-    
-    range.location = 2;
-    NSString *gString = [cString substringWithRange:range];
-    
-    range.location = 4;
-    NSString *bString = [cString substringWithRange:range];
-    
-    // Scan values
-    unsigned int r, g, b;
-    [[NSScanner scannerWithString:rString] scanHexInt:&r];
-    [[NSScanner scannerWithString:gString] scanHexInt:&g];
-    [[NSScanner scannerWithString:bString] scanHexInt:&b];
-    
-    return [UIColor colorWithRed:((float) r / 255.0f)
-                           green:((float) g / 255.0f)
-                            blue:((float) b / 255.0f)
-                           alpha:1.0f];
 }
 
 - (void)viewDidUnload {

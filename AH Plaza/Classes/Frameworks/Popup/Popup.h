@@ -45,5 +45,7 @@ typedef void(^onCompletion)(BOOL finished);
 - (void) showPopupWithAnimationDuration:(float) duration withText: (NSString*) text withButton1Text: (NSString*) button1Text withButton2Text: (NSString*) button2Text withResult: (result) result onCompletion:(onCompletion) completion;
 
 - (void) setFont:(NSString*) fontName;
+- (void) setDialogBackgroundColor: (UIColor*) color;
+- (void) setTextColor: (UIColor*) color highlighted:(UIColor*) highlightedColor;
 
 @end

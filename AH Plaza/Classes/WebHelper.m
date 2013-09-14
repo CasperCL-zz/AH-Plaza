@@ -17,6 +17,7 @@ NSString * TIMETABLE_URL = @"https://plaza.ah.nl/store_rendering_p1/wps/myportal
 NSString * PAY_CHECK_BASE = @"https://plaza.ah.nl/wps/AppLaunch2/AppLaunchServlet?appid=clrpay";
 NSString * LOGIN_FAIL_URL = @"https://plaza.ah.nl/pkmslogin.form";
 NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
+NSString * CHANGE_PASS_URL = @"https://plaza.ah.nl/pkmspasswd";
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -64,6 +65,31 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
     req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"password\")[0].value='%@'", password];
     [self stringByEvaluatingJavaScriptFromString: req];
     
+    [self submitForm];
+}
+
+- (void) changePassword: (NSString*) password withOldPassword: (NSString*) oldPassword onCompletion:(callbackErrors) callback {
+    _changePasswordCallback = callback;
+    NSArray * err1;
+    if(_internetOffline) {
+        err1 = [[NSArray alloc] initWithObjects:@"Geen internetverbinding", nil];
+        callback(err1);
+        return;
+    }
+    
+    // Fill in the credentials in the webform via JavaScript
+    NSString *req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"old\")[0].value='%@'", oldPassword];
+    [self stringByEvaluatingJavaScriptFromString: req];
+    NSLog(@"%@ ",     [self stringByEvaluatingJavaScriptFromString: req]);
+    req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"new\")[0].value='%@'", password];
+    [self stringByEvaluatingJavaScriptFromString: req];
+    req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"new2\")[0].value='%@'", password];
+    [self stringByEvaluatingJavaScriptFromString: req];
+    
+    [self submitForm];
+}
+
+- (void) submitForm {
     // Submit the form
     [self stringByEvaluatingJavaScriptFromString: @"document.forms[0].submit();"];
 }
@@ -99,11 +125,18 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
             _loginCallback = nil;
         }
     }
+    if(_changePasswordCallback && [currentURL isEqualToString: LOGIN_SCCS_URL]){
+        _changePasswordCallback(nil);
+        _changePasswordCallback = nil;
+    }
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
     NSString * currentURL = [self stringByEvaluatingJavaScriptFromString:@"document.URL"];
+    NSLog(@"loaded: %@", currentURL);
+    NSLog(@"Body: %@", [self stringByEvaluatingJavaScriptFromString: @"document.body.innerHTML"]);
+    
     
     // Check if the session is not expired
     if(![currentURL isEqualToString: @"https://plaza.ah.nl/pkmslogout?filename=wpslogout.html"]) {
@@ -114,15 +147,33 @@ NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
             NSArray *weeks = [[HTMLParser sharedInstance] htmlToWeeks: self];
             if([weeks count] != 0)
                 _timetableCallback(weeks);
-        } if ([currentURL isEqualToString: LOGIN_FAIL_URL]) {
+        } else if ([currentURL isEqualToString: LOGIN_FAIL_URL]) {
             NSMutableArray *errors = [[NSMutableArray alloc] init];
-            [errors addObject: @"Gebruikersnaam of wachtwoord is incorrect"];
+            
+            NSString *changePasswordPageCheck = @"document.getElementsByName('new')[0]";
+            NSString *javaScriptResponse = [self stringByEvaluatingJavaScriptFromString: changePasswordPageCheck];
+            if(![javaScriptResponse isEqualToString: @"undefined"]){
+                [errors addObject: @"Je moet je wachtwoord wijzigen"];
+            } else {
+                [errors addObject: @"Gebruikersnaam of wachtwoord is incorrect"];
+            }
+            
+            
             _loginCallback(errors);
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
             [self stopLoading];
             _loginCallback = nil;
+        } else if([currentURL isEqualToString: CHANGE_PASS_URL]){
+            if(_changePasswordCallback) {
+                NSArray *error = @[@"Je wachtwoord voldoet niet aan de eisen"];
+                _changePasswordCallback(error);
+                _changePasswordCallback = nil;
+            }
         }
     } else {
+        NSMutableArray *errors = [[NSMutableArray alloc] init];
+        [errors addObject: @"U moet opnieuw inloggen"];
+        _loginCallback(errors);
         NSLog(@"Session expired");
         [self reauthenticate];
     }

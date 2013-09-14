@@ -10,6 +10,7 @@
 #import "SettingsManager.h"
 #import <QuartzCore/QuartzCore.h>
 #import "Popup.h"
+#import "../../Helpers/Constants.h"
 
 @interface SettingsViewController ()
 
@@ -35,8 +36,15 @@
     
     [_keepLoggedInSwitch setOn: [[SettingsManager sharedInstance] autologinEnabled]];
     [_notificationSwitch setOn: [[SettingsManager sharedInstance] notificationPaymentEnabled]];
+    
+    [_keepLoggedInSwitch setOnTintColor: UIColorFromRGB(ah_blue)];
+    [_notificationSwitch setOnTintColor: UIColorFromRGB(ah_blue)];
+    
     _resetButton.layer.cornerRadius = 10;
     _resetButton.layer.masksToBounds = YES;
+    
+    
+    _popup = [[Popup alloc] initWithView: self.view];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,10 +68,12 @@
 }
 
 - (IBAction)resetSettings:(id)sender {
-    _popup = [[Popup alloc] initWithView: self.view];
+    UIColor *bgColor = UIColorFromRGB(ah_blue);
+    
     [_popup setFont: @"STHeitiTC-Light"];
     [_popup setButton1BackgroundImage:[UIImage imageNamed:@"ah-button"] forState:UIControlStateNormal];
     [_popup setButton2BackgroundImage:[UIImage imageNamed:@"ah-button"] forState:UIControlStateNormal];
+    [_popup setTextColor: bgColor highlighted: [UIColor whiteColor]];
     [_popup showPopupWithAnimationDuration: 0.5 withText:@"Weet je zeker dat je alle instellingen wilt terugzetten?" withButton1Text:@"Ja" withButton2Text:@"Nee" withResult:^(RESULT result) {
         if (result == OKAY) {
             [[SettingsManager sharedInstance] reset];

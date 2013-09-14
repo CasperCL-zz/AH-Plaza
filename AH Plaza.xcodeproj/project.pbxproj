@@ -24,8 +24,6 @@
 		AF720F52179BE72C00F77CA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */; };
 		AF720F53179BE72C00F77CA6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F50179BE72C00F77CA6 /* Default.png */; };
 		AF720F54179BE72C00F77CA6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F51179BE72C00F77CA6 /* Default@2x.png */; };
-		AF720F5B179BE77000F77CA6 /* app-icon_iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F59179BE77000F77CA6 /* app-icon_iphone4.png */; };
-		AF720F5C179BE77000F77CA6 /* app-icon_iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F5A179BE77000F77CA6 /* app-icon_iphone5.png */; };
 		AF720F60179BE80300F77CA6 /* ah-plaza.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F5F179BE80300F77CA6 /* ah-plaza.png */; };
 		AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720F91179BF20600F77CA6 /* LoginViewController.m */; };
 		AF720FE2179C8DA700F77CA6 /* ah-button.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720FE1179C8DA700F77CA6 /* ah-button.png */; };
@@ -39,6 +37,10 @@
 		AFB7AE61179D9C4900D58E08 /* settings_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE59179D9C4900D58E08 /* settings_ico.png */; };
 		AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */; };
 		AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */; };
+		AFC6C82617DB5D0E0061B03C /* AH-Plaza_iPhone5.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC6C82517DB5D0E0061B03C /* AH-Plaza_iPhone5.png */; };
+		AFC6C82817DB5D130061B03C /* AH-Plaza_iPhone4.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC6C82717DB5D130061B03C /* AH-Plaza_iPhone4.png */; };
+		AFC6C82A17DB66650061B03C /* AH-Plaza_logo_text.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC6C82917DB66650061B03C /* AH-Plaza_logo_text.png */; };
+		AFC6C82C17DB740C0061B03C /* ah-button-inverse.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC6C82B17DB740C0061B03C /* ah-button-inverse.png */; };
 		AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015017A94D4B005CC5AA /* HTMLParser.m */; };
 		AFE316A717B661CF00ACA245 /* Popup.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE316A617B661CF00ACA245 /* Popup.m */; };
 		AFE316A917B661F600ACA245 /* calendar_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE316A817B661F600ACA245 /* calendar_ico.png */; };
@@ -46,6 +48,8 @@
 		AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5E41017B3BC250028896F /* SettingsManager.m */; };
 		AFF5E41817B3C5670028896F /* swipe-left.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5E41617B3C5670028896F /* swipe-left.png */; };
 		AFF5E41917B3C5670028896F /* swipe-right.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5E41717B3C5670028896F /* swipe-right.png */; };
+		AFFBA48817DC735F009295D8 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBA48717DC735F009295D8 /* ChangePasswordViewController.m */; };
+		AFFBA48B17DD0FA6009295D8 /* NSString+JRStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBA48A17DD0FA6009295D8 /* NSString+JRStringAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,8 +81,6 @@
 		AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/Default-568h@2x.png"; sourceTree = "<group>"; };
 		AF720F50179BE72C00F77CA6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/Default.png; sourceTree = "<group>"; };
 		AF720F51179BE72C00F77CA6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/Default@2x.png"; sourceTree = "<group>"; };
-		AF720F59179BE77000F77CA6 /* app-icon_iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon_iphone4.png"; path = "Resources/Images/app-icon_iphone4.png"; sourceTree = "<group>"; };
-		AF720F5A179BE77000F77CA6 /* app-icon_iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon_iphone5.png"; path = "Resources/Images/app-icon_iphone5.png"; sourceTree = "<group>"; };
 		AF720F5F179BE80300F77CA6 /* ah-plaza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ah-plaza.png"; path = "Resources/Images/ah-plaza.png"; sourceTree = "<group>"; };
 		AF720F90179BF20600F77CA6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/Controllers/LoginViewController.h; sourceTree = "<group>"; };
 		AF720F91179BF20600F77CA6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/Controllers/LoginViewController.m; sourceTree = "<group>"; };
@@ -95,6 +97,11 @@
 		AFB7AE59179D9C4900D58E08 /* settings_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings_ico.png; path = Resources/Images/icons/settings_ico.png; sourceTree = "<group>"; };
 		AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shiftklaar_ico.png; path = Resources/Images/icons/shiftklaar_ico.png; sourceTree = "<group>"; };
 		AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = webcal_ico.png; path = Resources/Images/icons/webcal_ico.png; sourceTree = "<group>"; };
+		AFC6C82517DB5D0E0061B03C /* AH-Plaza_iPhone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AH-Plaza_iPhone5.png"; path = "../AH-Plaza_iPhone5.png"; sourceTree = "<group>"; };
+		AFC6C82717DB5D130061B03C /* AH-Plaza_iPhone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AH-Plaza_iPhone4.png"; path = "../AH-Plaza_iPhone4.png"; sourceTree = "<group>"; };
+		AFC6C82917DB66650061B03C /* AH-Plaza_logo_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AH-Plaza_logo_text.png"; path = "../AH-Plaza_logo_text.png"; sourceTree = "<group>"; };
+		AFC6C82B17DB740C0061B03C /* ah-button-inverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ah-button-inverse.png"; path = "Resources/Images/ah-button-inverse.png"; sourceTree = "<group>"; };
+		AFC6C82E17DB74A90061B03C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Classes/Helpers/Constants.h; sourceTree = "<group>"; };
 		AFDF014F17A94D4B005CC5AA /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMLParser.h; path = Classes/HTMLParser.h; sourceTree = "<group>"; };
 		AFDF015017A94D4B005CC5AA /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMLParser.m; path = Classes/HTMLParser.m; sourceTree = "<group>"; };
 		AFE316A517B661CF00ACA245 /* Popup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Popup.h; path = "AH Plaza/Classes/Frameworks/Popup/Popup.h"; sourceTree = "<group>"; };
@@ -106,6 +113,10 @@
 		AFF5E41017B3BC250028896F /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsManager.m; path = Classes/SettingsManager.m; sourceTree = "<group>"; };
 		AFF5E41617B3C5670028896F /* swipe-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipe-left.png"; path = "Resources/Images/swipe-left.png"; sourceTree = "<group>"; };
 		AFF5E41717B3C5670028896F /* swipe-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipe-right.png"; path = "Resources/Images/swipe-right.png"; sourceTree = "<group>"; };
+		AFFBA48617DC735F009295D8 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePasswordViewController.h; path = Classes/Controllers/ChangePasswordViewController.h; sourceTree = "<group>"; };
+		AFFBA48717DC735F009295D8 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePasswordViewController.m; path = Classes/Controllers/ChangePasswordViewController.m; sourceTree = "<group>"; };
+		AFFBA48917DD0FA6009295D8 /* NSString+JRStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JRStringAdditions.h"; path = "Classes/Helpers/NSString+JRStringAdditions.h"; sourceTree = "<group>"; };
+		AFFBA48A17DD0FA6009295D8 /* NSString+JRStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JRStringAdditions.m"; path = "Classes/Helpers/NSString+JRStringAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,11 +202,11 @@
 		AF720EF4179BE2F400F77CA6 /* AH Plaza */ = {
 			isa = PBXGroup;
 			children = (
+				AFC6C82D17DB74800061B03C /* Helpers */,
 				AFF5E40F17B3BC250028896F /* SettingsManager.h */,
 				AFF5E41017B3BC250028896F /* SettingsManager.m */,
 				AFE8489417B77FB400A02938 /* NSData+AES256.h */,
 				AFE8489517B77FB400A02938 /* NSData+AES256.m */,
-				AFF5E40E17B3BC030028896F /* Database Communication */,
 				AF720F93179BF20F00F77CA6 /* ViewControllers */,
 				AF720F0F179BE3F700F77CA6 /* Model */,
 				AF720F0E179BE3DA00F77CA6 /* View */,
@@ -246,14 +257,16 @@
 		AF720F11179BE41700F77CA6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AFC6C82B17DB740C0061B03C /* ah-button-inverse.png */,
+				AFC6C82717DB5D130061B03C /* AH-Plaza_iPhone4.png */,
+				AFC6C82517DB5D0E0061B03C /* AH-Plaza_iPhone5.png */,
 				AFB7AE53179D9C3300D58E08 /* icons */,
 				AF720FE1179C8DA700F77CA6 /* ah-button.png */,
+				AFC6C82917DB66650061B03C /* AH-Plaza_logo_text.png */,
 				AF720F5F179BE80300F77CA6 /* ah-plaza.png */,
-				AF720F5A179BE77000F77CA6 /* app-icon_iphone5.png */,
 				AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */,
 				AF720F50179BE72C00F77CA6 /* Default.png */,
 				AF720F51179BE72C00F77CA6 /* Default@2x.png */,
-				AF720F59179BE77000F77CA6 /* app-icon_iphone4.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -263,6 +276,8 @@
 			children = (
 				AF720F90179BF20600F77CA6 /* LoginViewController.h */,
 				AF720F91179BF20600F77CA6 /* LoginViewController.m */,
+				AFFBA48617DC735F009295D8 /* ChangePasswordViewController.h */,
+				AFFBA48717DC735F009295D8 /* ChangePasswordViewController.m */,
 				AF313D4B17AA8EBC004CC815 /* Menu */,
 			);
 			name = ViewControllers;
@@ -286,6 +301,20 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
+		AFC6C82D17DB74800061B03C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF9AC100179EA80500CF3E98 /* WebHelper.h */,
+				AF9AC101179EA80500CF3E98 /* WebHelper.m */,
+				AFDF014F17A94D4B005CC5AA /* HTMLParser.h */,
+				AFDF015017A94D4B005CC5AA /* HTMLParser.m */,
+				AFFBA48917DD0FA6009295D8 /* NSString+JRStringAdditions.h */,
+				AFFBA48A17DD0FA6009295D8 /* NSString+JRStringAdditions.m */,
+				AFC6C82E17DB74A90061B03C /* Constants.h */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		AFE316A117B6616000ACA245 /* Popup */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,17 +322,6 @@
 				AFE316A617B661CF00ACA245 /* Popup.m */,
 			);
 			name = Popup;
-			sourceTree = "<group>";
-		};
-		AFF5E40E17B3BC030028896F /* Database Communication */ = {
-			isa = PBXGroup;
-			children = (
-				AF9AC100179EA80500CF3E98 /* WebHelper.h */,
-				AF9AC101179EA80500CF3E98 /* WebHelper.m */,
-				AFDF014F17A94D4B005CC5AA /* HTMLParser.h */,
-				AFDF015017A94D4B005CC5AA /* HTMLParser.m */,
-			);
-			name = "Database Communication";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,8 +380,6 @@
 				AF720F52179BE72C00F77CA6 /* Default-568h@2x.png in Resources */,
 				AF720F53179BE72C00F77CA6 /* Default.png in Resources */,
 				AF720F54179BE72C00F77CA6 /* Default@2x.png in Resources */,
-				AF720F5B179BE77000F77CA6 /* app-icon_iphone4.png in Resources */,
-				AF720F5C179BE77000F77CA6 /* app-icon_iphone5.png in Resources */,
 				AF720F60179BE80300F77CA6 /* ah-plaza.png in Resources */,
 				AF720FE2179C8DA700F77CA6 /* ah-button.png in Resources */,
 				AFB7AE5C179D9C4900D58E08 /* info_ico.png in Resources */,
@@ -377,6 +393,10 @@
 				AFF5E41817B3C5670028896F /* swipe-left.png in Resources */,
 				AFF5E41917B3C5670028896F /* swipe-right.png in Resources */,
 				AFE316A917B661F600ACA245 /* calendar_ico.png in Resources */,
+				AFC6C82617DB5D0E0061B03C /* AH-Plaza_iPhone5.png in Resources */,
+				AFC6C82817DB5D130061B03C /* AH-Plaza_iPhone4.png in Resources */,
+				AFC6C82A17DB66650061B03C /* AH-Plaza_logo_text.png in Resources */,
+				AFC6C82C17DB740C0061B03C /* ah-button-inverse.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +423,8 @@
 				AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */,
 				AFE316A717B661CF00ACA245 /* Popup.m in Sources */,
 				AFE8489617B77FB400A02938 /* NSData+AES256.m in Sources */,
+				AFFBA48817DC735F009295D8 /* ChangePasswordViewController.m in Sources */,
+				AFFBA48B17DD0FA6009295D8 /* NSString+JRStringAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
