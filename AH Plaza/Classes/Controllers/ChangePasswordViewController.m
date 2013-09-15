@@ -13,6 +13,8 @@
 #import "Constants.h"
 #import "NSString+JRStringAdditions.h"
 #import "MenuViewController.h"
+#import "../Keys.h"
+#import "NSData+AES256.h"
 
 @interface ChangePasswordViewController ()
 
@@ -74,7 +76,7 @@
                 } onCompletion:^(BOOL finished) {}];
             } else {
                 [_popup showPopupWithAnimationDuration:.5 withText:@"Je wachtwoord is gewijzigd" withButtonText:@"OK" withResult:^(RESULT result) {
-                    
+                    [self saveCredentials];
                     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
                     MenuViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuViewController"];
                     [self presentModalViewController:vc animated: YES];
@@ -84,6 +86,23 @@
     } else {
         [_popup showPopupWithAnimationDuration:.5 withText:error withButtonText:@"OK" withResult:^(RESULT result) {} onCompletion:^(BOOL finished) {}];
     }
+}
+
+
+- (void) saveCredentials {
+	NSString *username = _username;
+    NSString *password = [_passwordTextField text];
+    _username = nil;
+    
+	NSData *plainUsername = [username dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *plainPassword = [password dataUsingEncoding:NSUTF8StringEncoding];
+	NSData *encryptedUsername = [plainUsername AES256EncryptWithKey: UsernameEncryptionKey];
+	NSData *encryptedPassword = [plainPassword AES256EncryptWithKey: PasswordEncryptionKey];
+    
+    NSString *documentsDirectory = [NSHomeDirectory()
+                                    stringByAppendingPathComponent:@"Documents"];
+    NSString *fileLocation =  [[NSString alloc] initWithFormat: @"%@/%@", documentsDirectory , @"user.ahpu"];
+    [NSKeyedArchiver archiveRootObject:[[NSArray alloc] initWithObjects: encryptedUsername, encryptedPassword, nil] toFile: fileLocation];
 }
 
 - (IBAction)overlayButtonPressed:(id)sender {
