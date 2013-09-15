@@ -99,6 +99,7 @@
                                     <constraint firstItem="QmY-Br-IEu" firstAttribute="leading" secondItem="UiY-Mp-89l" secondAttribute="leading" type="default" id="BuL-90-1e6"/>
                                     <constraint firstAttribute="trailing" secondItem="UyD-Ns-dIF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CAb-JK-EDA"/>
                                     <constraint firstAttribute="trailing" secondItem="cXp-9V-sav" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EBX-JA-WI9"/>
+                                    <constraint firstAttribute="height" constant="210" type="user" id="LTL-fc-1ac"/>
                                     <constraint firstItem="p3T-HW-5Oo" firstAttribute="top" secondItem="UiY-Mp-89l" secondAttribute="top" constant="49" id="OaR-aZ-Yhu"/>
                                     <constraint firstItem="p3T-HW-5Oo" firstAttribute="top" secondItem="cXp-9V-sav" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PVF-gs-Zae"/>
                                     <constraint firstAttribute="trailing" secondItem="Znt-JX-8SL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="SOA-5e-h8V"/>
@@ -123,10 +124,10 @@
                             <constraint firstAttribute="trailing" secondItem="UiY-Mp-89l" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="idX-25-T3Z"/>
                             <constraint firstItem="UiY-Mp-89l" firstAttribute="top" secondItem="XRl-vC-MCM" secondAttribute="bottom" constant="30" type="user" id="k34-yX-h4L"/>
                             <constraint firstItem="XRl-vC-MCM" firstAttribute="trailing" secondItem="n3w-Mo-hOd" secondAttribute="trailing" type="default" id="kGt-Qy-Zqj"/>
-                            <constraint firstAttribute="bottom" secondItem="UiY-Mp-89l" secondAttribute="bottom" constant="60" id="kb5-q8-nGQ"/>
+                            <constraint firstAttribute="bottom" secondItem="UiY-Mp-89l" secondAttribute="bottom" priority="365" constant="60" type="user" id="kb5-q8-nGQ"/>
                             <constraint firstItem="XRl-vC-MCM" firstAttribute="top" secondItem="n3w-Mo-hOd" secondAttribute="top" constant="20" symbolic="YES" type="default" id="uhN-xy-MQN"/>
                             <constraint firstItem="mMh-56-nDD" firstAttribute="leading" secondItem="n3w-Mo-hOd" secondAttribute="leading" type="default" id="vh7-Sz-xFN"/>
-                            <constraint firstItem="UiY-Mp-89l" firstAttribute="top" secondItem="n3w-Mo-hOd" secondAttribute="top" constant="190" id="vzo-Ig-Zcy"/>
+                            <constraint firstItem="UiY-Mp-89l" firstAttribute="top" secondItem="n3w-Mo-hOd" secondAttribute="top" constant="190" type="user" id="vzo-Ig-Zcy"/>
                         </constraints>
                     </view>
                     <connections>
