@@ -9,6 +9,7 @@
 #import "WebHelper.h"
 #import "Week.h"
 #import "HTMLParser.h"
+#import "NSString+JRStringAdditions.h"
 
 @implementation WebHelper
 
@@ -18,7 +19,9 @@ NSString * PAY_CHECK_BASE = @"https://plaza.ah.nl/wps/AppLaunch2/AppLaunchServle
 NSString * LOGIN_FAIL_URL = @"https://plaza.ah.nl/pkmslogin.form";
 NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
 NSString * CHANGE_PASS_URL = @"https://plaza.ah.nl/pkmspasswd";
-
+NSString * LOGIN_FORM = @"<form onsubmit=\"return checkrequired(this)\" method=\"POST\" action=\"/pkmslogin.form\"><font size=\"+2\"><table border=\"0\" width=\"400\"><tbody><tr><td align=\"LEFT\"><ul><li>Gebruikersnaam</li></ul></td><td><input type=\"TEXT\" name=\"username\" size=\"15\" autocomplete=\"off\"></td></tr><tr><td align=\"LEFT\"><ul><li>Wachtwoord</li></ul></td><td><input type=\"PASSWORD\" name=\"password\" size=\"15\" autocomplete=\"off\"></td><input type=\"HIDDEN\" name=\"login-form-type\" value=\"pwd\"></tr></tbody></table></font><br>&nbsp; <input type=\"SUBMIT\" value=\"Aanmelden\"></form>";
+NSString *_username;
+NSString *_password;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -43,10 +46,14 @@ NSString * CHANGE_PASS_URL = @"https://plaza.ah.nl/pkmspasswd";
     self = [super init];
     if (self) {
         [self setDelegate: self];
-        NSURLRequest *urlReq = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString: HOME_URL]]; //plaza.ah.nl
-        [self loadRequest: urlReq];
+        [self loadHomePage];
     }
     return self;
+}
+
+- (void) loadHomePage {
+    NSURLRequest *urlReq = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString: HOME_URL]]; //plaza.ah.nl
+    [self loadRequest: urlReq];
 }
 
 - (void)login: (NSString*) username WithPassword: (NSString*) password onCompletion:(callbackLogin) callback {
@@ -59,13 +66,21 @@ NSString * CHANGE_PASS_URL = @"https://plaza.ah.nl/pkmspasswd";
         return;
     }
     
+    
     // Fill in the credentials in the webform via JavaScript
     NSString *req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"username\")[0].value='%@'", username];
-    [self stringByEvaluatingJavaScriptFromString: req];
-    req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"password\")[0].value='%@'", password];
-    [self stringByEvaluatingJavaScriptFromString: req];
     
-    [self submitForm];
+    
+    NSString *result = [self stringByEvaluatingJavaScriptFromString: req];
+    if([result length] != 0) {
+        req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"password\")[0].value='%@'", password];
+        [self stringByEvaluatingJavaScriptFromString: req];
+        [self submitForm];
+    } else {
+        [self loadHomePage];
+        _username = username;
+        _password = password;
+    }
 }
 
 - (void) changePassword: (NSString*) password withOldPassword: (NSString*) oldPassword onCompletion:(callbackErrors) callback {
@@ -80,7 +95,6 @@ NSString * CHANGE_PASS_URL = @"https://plaza.ah.nl/pkmspasswd";
     // Fill in the credentials in the webform via JavaScript
     NSString *req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"old\")[0].value='%@'", oldPassword];
     [self stringByEvaluatingJavaScriptFromString: req];
-    NSLog(@"%@ ",     [self stringByEvaluatingJavaScriptFromString: req]);
     req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"new\")[0].value='%@'", password];
     [self stringByEvaluatingJavaScriptFromString: req];
     req = [[NSString alloc] initWithFormat:@"document.getElementsByName(\"new2\")[0].value='%@'", password];
@@ -139,7 +153,14 @@ NSString * CHANGE_PASS_URL = @"https://plaza.ah.nl/pkmspasswd";
     // Check if the session is not expired
     if(![currentURL isEqualToString: @"https://plaza.ah.nl/pkmslogout?filename=wpslogout.html"]) {
         if([currentURL isEqualToString: HOME_URL]) {
-            _homePageLoadedCallback();
+            if(_homePageLoadedCallback){
+                _homePageLoadedCallback();
+                _homePageLoadedCallback = nil;
+            } else { // auto login
+                [self login:_username WithPassword:_password onCompletion: _loginCallback];
+                _username = nil;
+                _password = nil;
+            }
         } else if ([currentURL isEqualToString: TIMETABLE_URL]) {
             // Parse the HTML to weeks
             NSArray *weeks = [[HTMLParser sharedInstance] htmlToWeeks: self];
@@ -150,8 +171,11 @@ NSString * CHANGE_PASS_URL = @"https://plaza.ah.nl/pkmspasswd";
             
             NSString *changePasswordPageCheck = @"document.getElementsByName('new')[0]";
             NSString *javaScriptResponse = [self stringByEvaluatingJavaScriptFromString: changePasswordPageCheck];
-            if(![javaScriptResponse isEqualToString: @"undefined"]){
+            if([javaScriptResponse length] > 0){ // if the page contains the a tag with the name: 'new'
                 [errors addObject: @"Je moet je wachtwoord wijzigen"];
+            } else if ([[self stringByEvaluatingJavaScriptFromString:@"document.title"] isEqualToString: @"AH Plaza - Account Locked Out"]){
+                [errors addObject: @"Je account is geblokkeerd na te veel foutive pogingen\n Vraag bij je filiaal, om je account te resetten"];
+                [self loadHTMLString: LOGIN_FORM baseURL:[[NSURL alloc] initWithString: HOME_URL]];
             } else {
                 [errors addObject: @"Gebruikersnaam of wachtwoord is incorrect"];
             }

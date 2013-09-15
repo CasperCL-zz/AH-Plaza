@@ -26,6 +26,7 @@ BOOL isInTransition;
 CGRect credentialsFrame;
 CGRect imageFrame;
 BOOL loadedCookies;
+int tries;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -40,7 +41,10 @@ BOOL loadedCookies;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [WebHelper sharedInstance];
+    [WebHelper sharedInstance]; // start loading the front page
+    tries = 0;
+    credentialViewMoved = NO;
+    
     callback homePageLoadCallback = ^() {
         loadedCookies = YES;
         [_loginButton setEnabled: loadedCookies];
@@ -53,6 +57,7 @@ BOOL loadedCookies;
     credentialsFrame.origin.y = 210;
     credentialsFrame.size.width = 280;
     credentialsFrame.size.height = 209;
+    _credentialsView.frame = credentialsFrame;
     
     
     UIColor *bgColor = UIColorFromRGB(ah_blue);
@@ -114,12 +119,9 @@ BOOL loadedCookies;
     _credentialsView.alpha = 0.0f;
     [UIView animateWithDuration:0.5 delay: 0 options:0 animations:^{
         _credentialsView.alpha = 1.0f;
-    } completion:^(BOOL finished) {
-        _credentialsView.hidden = NO;
-    }];
-	[UIView animateWithDuration:0.5 delay: 0 options:0 animations: ^{
 		_ahplazaImage.frame = orginal;
     } completion:^(BOOL finished) {
+        _credentialsView.hidden = NO;
         completion(finished);
     }];
 }
@@ -195,7 +197,6 @@ BOOL loadedCookies;
 }
 
 - (IBAction)loginButtonPressed:(id)sender {
-    
     [_usernameTextField resignFirstResponder];
     [_passwordTextField resignFirstResponder];
     [self login];
@@ -222,9 +223,16 @@ BOOL loadedCookies;
                         }];
                     } else {
                         [_popup hidePopupWithAnimationDuration:.3 onCompletion:^(BOOL finished) {
-                            [_popup showPopupWithAnimationDuration:.3 withText:[error objectAtIndex:0] withButtonText:@"OK" withResult:^(RESULT result) {
+                            NSString *err = [error objectAtIndex:0];
+                            
+                            if([err isEqualToString: @"Gebruikersnaam of wachtwoord is incorrect"]){
+                                tries++;
+                                err = [[NSString alloc] initWithFormat: @"%@\n%@%i%@", err, @"poging (", tries, @"/3)"];
+                            }
+                            
+                            [_popup showPopupWithAnimationDuration:.3 withText:err withButtonText:@"OK" withResult:^(RESULT result) {
                                 
-                                if([[error objectAtIndex:0] isEqualToString: @"Je moet je wachtwoord wijzigen"]){
+                                if([err isEqualToString: @"Je moet je wachtwoord wijzigen"]){
                                     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
                                     ChangePasswordViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
                                     [vc setOldPassword: [_passwordTextField text]];
@@ -301,9 +309,4 @@ BOOL loadedCookies;
     }];
 }
 
-- (void)viewDidUnload {
-    [self setUsernameLabel:nil];
-    [self setPasswordLabel:nil];
-    [super viewDidUnload];
-}
 @end
