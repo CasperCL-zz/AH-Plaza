@@ -14,6 +14,8 @@
 		AF313D7817ABE051004CC815 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7317ABE051004CC815 /* ModelController.m */; };
 		AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7517ABE051004CC815 /* PlanningViewController.m */; };
 		AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7717ABE051004CC815 /* RootViewController.m */; };
+		AF6E26F517E5CBFB006C74BA /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E26EF17E5CBFB006C74BA /* libTestFlight.a */; };
+		AF6E26F917E5CC61006C74BA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E26F817E5CC61006C74BA /* libz.dylib */; };
 		AF720EEF179BE2F400F77CA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EEE179BE2F400F77CA6 /* UIKit.framework */; };
 		AF720EF1179BE2F400F77CA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF0179BE2F400F77CA6 /* Foundation.framework */; };
 		AF720EF3179BE2F400F77CA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF2179BE2F400F77CA6 /* CoreGraphics.framework */; };
@@ -67,6 +69,11 @@
 		AF313D7517ABE051004CC815 /* PlanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningViewController.m; sourceTree = "<group>"; };
 		AF313D7617ABE051004CC815 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		AF313D7717ABE051004CC815 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		AF6E26EF17E5CBFB006C74BA /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		AF6E26F217E5CBFB006C74BA /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		AF6E26F317E5CBFB006C74BA /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		AF6E26F417E5CBFB006C74BA /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		AF6E26F817E5CC61006C74BA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AF720EEB179BE2F400F77CA6 /* AH Plaza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AH Plaza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF720EEE179BE2F400F77CA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AF720EF0179BE2F400F77CA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,9 +131,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6E26F917E5CC61006C74BA /* libz.dylib in Frameworks */,
 				AF720EEF179BE2F400F77CA6 /* UIKit.framework in Frameworks */,
 				AF720EF1179BE2F400F77CA6 /* Foundation.framework in Frameworks */,
 				AF720EF3179BE2F400F77CA6 /* CoreGraphics.framework in Frameworks */,
+				AF6E26F517E5CBFB006C74BA /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +252,19 @@
 				AF313D7717ABE051004CC815 /* RootViewController.m */,
 			);
 			name = RootViewController;
+			sourceTree = "<group>";
+		};
+		AF6E26EE17E5CBFB006C74BA /* TestFlightSDK2.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				AF6E26F817E5CC61006C74BA /* libz.dylib */,
+				AF6E26EF17E5CBFB006C74BA /* libTestFlight.a */,
+				AF6E26F217E5CBFB006C74BA /* TestFlight+AsyncLogging.h */,
+				AF6E26F317E5CBFB006C74BA /* TestFlight+ManualSessions.h */,
+				AF6E26F417E5CBFB006C74BA /* TestFlight.h */,
+			);
+			name = TestFlightSDK2.0.0;
+			path = Classes/Helpers/TestFlightSDK2.0.0;
 			sourceTree = "<group>";
 		};
 		AF720EE2179BE2F400F77CA6 = {
@@ -373,6 +395,7 @@
 		AFC6C82D17DB74800061B03C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				AF6E26EE17E5CBFB006C74BA /* TestFlightSDK2.0.0 */,
 				AFE316A117B6616000ACA245 /* Popup */,
 				AF9AC100179EA80500CF3E98 /* WebHelper.h */,
 				AF9AC101179EA80500CF3E98 /* WebHelper.m */,
@@ -586,6 +609,10 @@
 				GCC_PREFIX_HEADER = "AH Plaza/AH Plaza-Prefix.pch";
 				INFOPLIST_FILE = "AH Plaza/AH Plaza-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AH Plaza/Classes/Helpers/TestFlightSDK2.0.0\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -598,6 +625,10 @@
 				GCC_PREFIX_HEADER = "AH Plaza/AH Plaza-Prefix.pch";
 				INFOPLIST_FILE = "AH Plaza/AH Plaza-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AH Plaza/Classes/Helpers/TestFlightSDK2.0.0\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
