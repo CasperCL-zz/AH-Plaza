@@ -29,15 +29,6 @@ BOOL loadedCookies;
 int tries;
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -85,6 +76,7 @@ int tries;
     
     
     [_usernameTextField setAutocorrectionType: UITextAutocorrectionTypeNo];
+    
     
     [self showCredentialsView:^(BOOL finished) {}];
     if([[SettingsManager sharedInstance] autologinEnabled]){
@@ -225,7 +217,7 @@ int tries;
                         [_popup hidePopupWithAnimationDuration:.3 onCompletion:^(BOOL finished) {
                             NSString *err = [error objectAtIndex:0];
                             
-                            if([err isEqualToString: @"Gebruikersnaam of wachtwoord is incorrect"]){
+                            if([err isEqualToString: @"Gebruikersnaam of wachtwoord is incorrect"] && tries < 3){
                                 tries++;
                                 err = [[NSString alloc] initWithFormat: @"%@\n%@%i%@", err, @"poging (", tries, @"/3)"];
                             }
