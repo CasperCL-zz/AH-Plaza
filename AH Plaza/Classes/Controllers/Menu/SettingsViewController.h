@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AHViewController.h"
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : AHViewController
 
 @property (weak, nonatomic) IBOutlet UISwitch *keepLoggedInSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *notificationSwitch;

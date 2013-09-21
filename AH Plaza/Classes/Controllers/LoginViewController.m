@@ -14,6 +14,8 @@
 #import "../Keys.h"
 #import "../Helpers/Constants.h"
 #import "ChangePasswordViewController.h"
+#import "../Helpers/ViewDeck/IIViewDeckController.h"
+#import "LeftMenuViewController.h"
 
 @interface LoginViewController ()
 
@@ -84,13 +86,21 @@ int tries;
                                         stringByAppendingPathComponent:@"Documents"];
         NSString *fileLocation =  [[NSString alloc] initWithFormat: @"%@/%@", documentsDirectory , @"user.ahpu"];
         
-        NSArray *userData = [NSKeyedUnarchiver unarchiveObjectWithFile: fileLocation];
-        
-        NSData *plainUsername = [[userData objectAtIndex: 0] AES256DecryptWithKey: UsernameEncryptionKey];
-        NSData *plainPassword = [[userData objectAtIndex: 1] AES256DecryptWithKey: PasswordEncryptionKey];
-        
-        [_usernameTextField setText: [[NSString alloc] initWithData:plainUsername encoding:NSUTF8StringEncoding]];
-        [_passwordTextField setText: [[NSString alloc] initWithData:plainPassword encoding:NSUTF8StringEncoding]];
+        if([[NSFileManager defaultManager] fileExistsAtPath:fileLocation isDirectory:NO]){
+            NSArray *userData = [NSKeyedUnarchiver unarchiveObjectWithFile: fileLocation];
+            
+            if([userData count]) {
+                NSData *plainUsername = [[userData objectAtIndex: 0] AES256DecryptWithKey: UsernameEncryptionKey];
+                NSData *plainPassword = [[userData objectAtIndex: 1] AES256DecryptWithKey: PasswordEncryptionKey];
+                
+                [_usernameTextField setText: [[NSString alloc] initWithData:plainUsername encoding:NSUTF8StringEncoding]];
+                [_passwordTextField setText: [[NSString alloc] initWithData:plainPassword encoding:NSUTF8StringEncoding]];
+            } else {
+                [[SettingsManager sharedInstance] setAutologinEnabled: NO];
+            }
+        } else {
+            [[SettingsManager sharedInstance] setAutologinEnabled: NO];
+        }
     }
 }
 
@@ -103,8 +113,8 @@ int tries;
 - (void) showCredentialsView: (void (^)(BOOL finished))completion {
     CGRect orginal = _ahplazaImage.frame;
     CGRect center = _ahplazaImage.frame;
-    CGPoint superCenter = CGPointMake([self.view bounds].size.width / 2.0, [self.view bounds].size.height / 2.0);
-    center.origin = superCenter;
+    center.origin.x = self.view.frame.size.width /2 - orginal.size.width / 2;
+    center.origin.y = self.view.frame.size.height /2 - orginal.size.height / 2;
     _ahplazaImage.frame = center;
     
     
@@ -210,7 +220,16 @@ int tries;
                             [self saveCredentials];
                             sleep(0.3f);
                             [self zoomIntoCredentialsView:^(BOOL finished) {
-                                [self presentModalViewController:vc animated:NO];
+                                LeftMenuViewController * menu = [storyboard instantiateViewControllerWithIdentifier:@"LeftMenu"];
+                                
+                                IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:vc  leftViewController:menu
+                                                                                                               rightViewController:nil];
+                                [deckController setCenterhiddenInteractivity: IIViewDeckCenterHiddenNotUserInteractiveWithTapToClose];
+                                deckController.bounceDurationFactor = 0.5;
+                                
+                                deckController.leftSize = 100;
+                                
+                                [self presentViewController: deckController animated: YES completion:^{}];
                             }];
                         }];
                     } else {

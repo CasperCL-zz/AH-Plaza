@@ -22,6 +22,7 @@ NSString * CHANGE_PASS_URL = @"https://plaza.ah.nl/pkmspasswd";
 NSString * LOGIN_FORM = @"<form onsubmit=\"return checkrequired(this)\" method=\"POST\" action=\"/pkmslogin.form\"><font size=\"+2\"><table border=\"0\" width=\"400\"><tbody><tr><td align=\"LEFT\"><ul><li>Gebruikersnaam</li></ul></td><td><input type=\"TEXT\" name=\"username\" size=\"15\" autocomplete=\"off\"></td></tr><tr><td align=\"LEFT\"><ul><li>Wachtwoord</li></ul></td><td><input type=\"PASSWORD\" name=\"password\" size=\"15\" autocomplete=\"off\"></td><input type=\"HIDDEN\" name=\"login-form-type\" value=\"pwd\"></tr></tbody></table></font><br>&nbsp; <input type=\"SUBMIT\" value=\"Aanmelden\"></form>";
 NSString *_username;
 NSString *_password;
+NSString * accountBlockedString  = @"Je account / gebruikersnaam is geblokkeerd. Gebruik de onderstaande link om via \"SelfHelp\" je wachtwoord opnieuw in te voeren of bel de helpdesk.";
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -173,7 +174,8 @@ NSString *_password;
             NSString *javaScriptResponse = [self stringByEvaluatingJavaScriptFromString: changePasswordPageCheck];
             if([javaScriptResponse length] > 0){ // if the page contains the a tag with the name: 'new'
                 [errors addObject: @"Je moet je wachtwoord wijzigen"];
-            } else if ([[self stringByEvaluatingJavaScriptFromString:@"document.title"] isEqualToString: @"AH Plaza - Account Locked Out"]){
+            } else if ([[self stringByEvaluatingJavaScriptFromString:@"document.title"] isEqualToString: @"AH Plaza - Account Locked Out"]
+                       || [[self stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"] containsString: accountBlockedString]){
                 [errors addObject: @"Je account is geblokkeerd na te veel foutive pogingen\n Vraag bij je filiaal, om je account te resetten"];
                 [self loadHTMLString: LOGIN_FORM baseURL:[[NSURL alloc] initWithString: HOME_URL]];
             } else {

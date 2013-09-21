@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AHViewController.h"
 
-@interface MenuViewController : UIViewController
+@interface MenuViewController : AHViewController
 
 @property (weak, nonatomic) IBOutlet UIView *componentsView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonsLeftSide;

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Week.h"
+#import "AHViewController.h"
 
-@interface PlanningViewController : UIViewController
+@interface PlanningViewController : AHViewController
 
 @property Week * dataObject;
 

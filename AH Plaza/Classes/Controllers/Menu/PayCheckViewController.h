@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AHViewController.h"
 
-@interface PayCheckViewController : UIViewController
+@interface PayCheckViewController : AHViewController
 
 @end

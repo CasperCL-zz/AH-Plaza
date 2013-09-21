@@ -8,6 +8,7 @@
 
 #import "PaymentDaysViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Constants.h"
 
 @interface PaymentDaysViewController ()
 
@@ -34,8 +35,9 @@
     _tableText = [[NSMutableArray alloc] init];
     
     
-    _upcommingPaymentView.layer.cornerRadius = 10;
+    _upcommingPaymentView.layer.cornerRadius = 5;
     _upcommingPaymentView.layer.masksToBounds = YES;
+    [_upcommingPaymentView setBackgroundColor: UIColorFromRGB(ah_blue)];
     
     
     
@@ -100,6 +102,7 @@
             int days = (int)ceil(dateDiff);
             newDateS = [[NSString alloc] initWithFormat:@"%i", days];
             [_daysOrDayLabel setText: days > 1 ? @"dagen" : @"dag" ];
+            [_daysOrDayLabel setTextColor: UIColorFromRGB(0xFE3232)];
             [_nextPaymentLabel setText: newDateS];
         }
         
@@ -127,6 +130,8 @@
     [self setDaysOrDayLabel:nil];
     [super viewDidUnload];
 }
+
+
 
 
 

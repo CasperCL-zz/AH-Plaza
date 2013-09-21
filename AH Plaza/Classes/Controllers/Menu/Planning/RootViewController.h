@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AHViewController.h"
 
-@interface RootViewController : UIViewController <UIPageViewControllerDelegate>
+@interface RootViewController : AHViewController <UIPageViewControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (weak, nonatomic) IBOutlet UIView *dialogView;

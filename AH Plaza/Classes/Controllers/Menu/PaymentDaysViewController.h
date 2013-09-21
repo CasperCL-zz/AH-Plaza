@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AHViewController.h"
 
-@interface PaymentDaysViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface PaymentDaysViewController : AHViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *upcommingPaymentView;
 @property (weak, nonatomic) IBOutlet UILabel *nextPaymentLabel;
 @property (weak, nonatomic) IBOutlet UITableView *upcommingPaymentsDaysTable;

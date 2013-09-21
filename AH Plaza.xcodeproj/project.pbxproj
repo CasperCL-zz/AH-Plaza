@@ -14,6 +14,8 @@
 		AF313D7817ABE051004CC815 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7317ABE051004CC815 /* ModelController.m */; };
 		AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7517ABE051004CC815 /* PlanningViewController.m */; };
 		AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7717ABE051004CC815 /* RootViewController.m */; };
+		AF45DFAE17EDD5AA009C9ED8 /* AHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF45DFAD17EDD5AA009C9ED8 /* AHViewController.m */; };
+		AF45DFB617EDFC68009C9ED8 /* AHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF45DFB517EDFC68009C9ED8 /* AHNavigationController.m */; };
 		AF6E26F517E5CBFB006C74BA /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E26EF17E5CBFB006C74BA /* libTestFlight.a */; };
 		AF6E26F917E5CC61006C74BA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E26F817E5CC61006C74BA /* libz.dylib */; };
 		AF720EEF179BE2F400F77CA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EEE179BE2F400F77CA6 /* UIKit.framework */; };
@@ -23,33 +25,19 @@
 		AF720EFB179BE2F400F77CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720EFA179BE2F400F77CA6 /* main.m */; };
 		AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720EFE179BE2F400F77CA6 /* AppDelegate.m */; };
 		AF720F0D179BE3D100F77CA6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */; };
-		AF720F52179BE72C00F77CA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */; };
-		AF720F53179BE72C00F77CA6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F50179BE72C00F77CA6 /* Default.png */; };
-		AF720F54179BE72C00F77CA6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F51179BE72C00F77CA6 /* Default@2x.png */; };
-		AF720F60179BE80300F77CA6 /* ah-plaza.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720F5F179BE80300F77CA6 /* ah-plaza.png */; };
 		AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720F91179BF20600F77CA6 /* LoginViewController.m */; };
-		AF720FE2179C8DA700F77CA6 /* ah-button.png in Resources */ = {isa = PBXBuildFile; fileRef = AF720FE1179C8DA700F77CA6 /* ah-button.png */; };
 		AF9AC102179EA80500CF3E98 /* WebHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC101179EA80500CF3E98 /* WebHelper.m */; };
 		AF9AC105179EA8D400CF3E98 /* Week.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC104179EA8D400CF3E98 /* Week.m */; };
-		AFB7AE5C179D9C4900D58E08 /* info_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE54179D9C4900D58E08 /* info_ico.png */; };
-		AFB7AE5D179D9C4900D58E08 /* payment_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE55179D9C4900D58E08 /* payment_ico.png */; };
-		AFB7AE5E179D9C4900D58E08 /* planning_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE56179D9C4900D58E08 /* planning_ico.png */; };
-		AFB7AE5F179D9C4900D58E08 /* plaza_link_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE57179D9C4900D58E08 /* plaza_link_ico.png */; };
-		AFB7AE60179D9C4900D58E08 /* problems_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE58179D9C4900D58E08 /* problems_ico.png */; };
-		AFB7AE61179D9C4900D58E08 /* settings_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE59179D9C4900D58E08 /* settings_ico.png */; };
-		AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */; };
-		AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */; };
-		AFC6C82617DB5D0E0061B03C /* AH-Plaza_iPhone5.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC6C82517DB5D0E0061B03C /* AH-Plaza_iPhone5.png */; };
-		AFC6C82817DB5D130061B03C /* AH-Plaza_iPhone4.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC6C82717DB5D130061B03C /* AH-Plaza_iPhone4.png */; };
-		AFC6C82A17DB66650061B03C /* AH-Plaza_logo_text.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC6C82917DB66650061B03C /* AH-Plaza_logo_text.png */; };
-		AFC6C82C17DB740C0061B03C /* ah-button-inverse.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC6C82B17DB740C0061B03C /* ah-button-inverse.png */; };
+		AFDA881D17EBA09A00A59FDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDA881C17EBA09A00A59FDF /* Images.xcassets */; };
+		AFDA88B717E65525007AC0FB /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B217E65525007AC0FB /* IISideController.m */; };
+		AFDA88B817E65525007AC0FB /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B417E65525007AC0FB /* IIViewDeckController.m */; };
+		AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B617E65525007AC0FB /* IIWrapController.m */; };
+		AFDA88BE17E655A8007AC0FB /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88BD17E655A8007AC0FB /* LeftMenuViewController.m */; };
+		AFDA88C117E657BC007AC0FB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDA88C017E657BC007AC0FB /* QuartzCore.framework */; };
 		AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015017A94D4B005CC5AA /* HTMLParser.m */; };
 		AFE316A717B661CF00ACA245 /* Popup.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE316A617B661CF00ACA245 /* Popup.m */; };
-		AFE316A917B661F600ACA245 /* calendar_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE316A817B661F600ACA245 /* calendar_ico.png */; };
 		AFE8489617B77FB400A02938 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE8489517B77FB400A02938 /* NSData+AES256.m */; };
 		AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5E41017B3BC250028896F /* SettingsManager.m */; };
-		AFF5E41817B3C5670028896F /* swipe-left.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5E41617B3C5670028896F /* swipe-left.png */; };
-		AFF5E41917B3C5670028896F /* swipe-right.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF5E41717B3C5670028896F /* swipe-right.png */; };
 		AFFBA48817DC735F009295D8 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBA48717DC735F009295D8 /* ChangePasswordViewController.m */; };
 		AFFBA48B17DD0FA6009295D8 /* NSString+JRStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBA48A17DD0FA6009295D8 /* NSString+JRStringAdditions.m */; };
 /* End PBXBuildFile section */
@@ -69,6 +57,12 @@
 		AF313D7517ABE051004CC815 /* PlanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningViewController.m; sourceTree = "<group>"; };
 		AF313D7617ABE051004CC815 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		AF313D7717ABE051004CC815 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		AF45DFA917EDCC4D009C9ED8 /* String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = String.h; path = Classes/Helpers/String.h; sourceTree = "<group>"; };
+		AF45DFAC17EDD5AA009C9ED8 /* AHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHViewController.h; path = Classes/Controllers/AHViewController/AHViewController.h; sourceTree = "<group>"; };
+		AF45DFAD17EDD5AA009C9ED8 /* AHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHViewController.m; path = Classes/Controllers/AHViewController/AHViewController.m; sourceTree = "<group>"; };
+		AF45DFB417EDFC68009C9ED8 /* AHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHNavigationController.h; path = Classes/AHComponents/AHNavigationController/AHNavigationController.h; sourceTree = "<group>"; };
+		AF45DFB517EDFC68009C9ED8 /* AHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHNavigationController.m; path = Classes/AHComponents/AHNavigationController/AHNavigationController.m; sourceTree = "<group>"; };
+		AF45DFBA17EE1C77009C9ED8 /* Fonts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Fonts.h; path = Classes/Helpers/Fonts.h; sourceTree = "<group>"; };
 		AF6E26EF17E5CBFB006C74BA /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		AF6E26F217E5CBFB006C74BA /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
 		AF6E26F317E5CBFB006C74BA /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
@@ -85,41 +79,31 @@
 		AF720EFD179BE2F400F77CA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF720EFE179BE2F400F77CA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AF720F0C179BE3D100F77CA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
-		AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/Default-568h@2x.png"; sourceTree = "<group>"; };
-		AF720F50179BE72C00F77CA6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/Default.png; sourceTree = "<group>"; };
-		AF720F51179BE72C00F77CA6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/Default@2x.png"; sourceTree = "<group>"; };
-		AF720F5F179BE80300F77CA6 /* ah-plaza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ah-plaza.png"; path = "Resources/Images/ah-plaza.png"; sourceTree = "<group>"; };
 		AF720F90179BF20600F77CA6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/Controllers/LoginViewController.h; sourceTree = "<group>"; };
 		AF720F91179BF20600F77CA6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/Controllers/LoginViewController.m; sourceTree = "<group>"; };
-		AF720FE1179C8DA700F77CA6 /* ah-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ah-button.png"; path = "Resources/Images/ah-button.png"; sourceTree = "<group>"; };
 		AF9AC100179EA80500CF3E98 /* WebHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebHelper.h; path = Classes/WebHelper.h; sourceTree = "<group>"; };
 		AF9AC101179EA80500CF3E98 /* WebHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebHelper.m; path = Classes/WebHelper.m; sourceTree = "<group>"; };
 		AF9AC103179EA8D400CF3E98 /* Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Week.h; path = Classes/Model/Week.h; sourceTree = "<group>"; };
 		AF9AC104179EA8D400CF3E98 /* Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Week.m; path = Classes/Model/Week.m; sourceTree = "<group>"; };
-		AFB7AE54179D9C4900D58E08 /* info_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info_ico.png; path = Resources/Images/icons/info_ico.png; sourceTree = "<group>"; };
-		AFB7AE55179D9C4900D58E08 /* payment_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = payment_ico.png; path = Resources/Images/icons/payment_ico.png; sourceTree = "<group>"; };
-		AFB7AE56179D9C4900D58E08 /* planning_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = planning_ico.png; path = Resources/Images/icons/planning_ico.png; sourceTree = "<group>"; };
-		AFB7AE57179D9C4900D58E08 /* plaza_link_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plaza_link_ico.png; path = Resources/Images/icons/plaza_link_ico.png; sourceTree = "<group>"; };
-		AFB7AE58179D9C4900D58E08 /* problems_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = problems_ico.png; path = Resources/Images/icons/problems_ico.png; sourceTree = "<group>"; };
-		AFB7AE59179D9C4900D58E08 /* settings_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings_ico.png; path = Resources/Images/icons/settings_ico.png; sourceTree = "<group>"; };
-		AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shiftklaar_ico.png; path = Resources/Images/icons/shiftklaar_ico.png; sourceTree = "<group>"; };
-		AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = webcal_ico.png; path = Resources/Images/icons/webcal_ico.png; sourceTree = "<group>"; };
-		AFC6C82517DB5D0E0061B03C /* AH-Plaza_iPhone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AH-Plaza_iPhone5.png"; path = "../AH-Plaza_iPhone5.png"; sourceTree = "<group>"; };
-		AFC6C82717DB5D130061B03C /* AH-Plaza_iPhone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AH-Plaza_iPhone4.png"; path = "../AH-Plaza_iPhone4.png"; sourceTree = "<group>"; };
-		AFC6C82917DB66650061B03C /* AH-Plaza_logo_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AH-Plaza_logo_text.png"; path = "../AH-Plaza_logo_text.png"; sourceTree = "<group>"; };
-		AFC6C82B17DB740C0061B03C /* ah-button-inverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ah-button-inverse.png"; path = "Resources/Images/ah-button-inverse.png"; sourceTree = "<group>"; };
 		AFC6C82E17DB74A90061B03C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Classes/Helpers/Constants.h; sourceTree = "<group>"; };
+		AFDA881C17EBA09A00A59FDF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AFDA88B117E65525007AC0FB /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
+		AFDA88B217E65525007AC0FB /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
+		AFDA88B317E65525007AC0FB /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
+		AFDA88B417E65525007AC0FB /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
+		AFDA88B517E65525007AC0FB /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
+		AFDA88B617E65525007AC0FB /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
+		AFDA88BC17E655A8007AC0FB /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuViewController.h; path = Classes/Controllers/LeftMenuViewController.h; sourceTree = "<group>"; };
+		AFDA88BD17E655A8007AC0FB /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuViewController.m; path = Classes/Controllers/LeftMenuViewController.m; sourceTree = "<group>"; };
+		AFDA88C017E657BC007AC0FB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AFDF014F17A94D4B005CC5AA /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMLParser.h; path = Classes/HTMLParser.h; sourceTree = "<group>"; };
 		AFDF015017A94D4B005CC5AA /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMLParser.m; path = Classes/HTMLParser.m; sourceTree = "<group>"; };
 		AFE316A517B661CF00ACA245 /* Popup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Popup.h; path = "AH Plaza/Classes/Frameworks/Popup/Popup.h"; sourceTree = "<group>"; };
 		AFE316A617B661CF00ACA245 /* Popup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Popup.m; path = "AH Plaza/Classes/Frameworks/Popup/Popup.m"; sourceTree = "<group>"; };
-		AFE316A817B661F600ACA245 /* calendar_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar_ico.png; path = Resources/Images/icons/calendar_ico.png; sourceTree = "<group>"; };
 		AFE8489417B77FB400A02938 /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+AES256.h"; path = "Classes/NSData+AES256.h"; sourceTree = "<group>"; };
 		AFE8489517B77FB400A02938 /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+AES256.m"; path = "Classes/NSData+AES256.m"; sourceTree = "<group>"; };
 		AFF5E40F17B3BC250028896F /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsManager.h; path = Classes/SettingsManager.h; sourceTree = "<group>"; };
 		AFF5E41017B3BC250028896F /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsManager.m; path = Classes/SettingsManager.m; sourceTree = "<group>"; };
-		AFF5E41617B3C5670028896F /* swipe-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipe-left.png"; path = "Resources/Images/swipe-left.png"; sourceTree = "<group>"; };
-		AFF5E41717B3C5670028896F /* swipe-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipe-right.png"; path = "Resources/Images/swipe-right.png"; sourceTree = "<group>"; };
 		AFFBA48617DC735F009295D8 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePasswordViewController.h; path = Classes/Controllers/ChangePasswordViewController.h; sourceTree = "<group>"; };
 		AFFBA48717DC735F009295D8 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePasswordViewController.m; path = Classes/Controllers/ChangePasswordViewController.m; sourceTree = "<group>"; };
 		AFFBA48917DD0FA6009295D8 /* NSString+JRStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JRStringAdditions.h"; path = "Classes/Helpers/NSString+JRStringAdditions.h"; sourceTree = "<group>"; };
@@ -131,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDA88C117E657BC007AC0FB /* QuartzCore.framework in Frameworks */,
 				AF6E26F917E5CC61006C74BA /* libz.dylib in Frameworks */,
 				AF720EEF179BE2F400F77CA6 /* UIKit.framework in Frameworks */,
 				AF720EF1179BE2F400F77CA6 /* Foundation.framework in Frameworks */,
@@ -142,15 +127,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF313D4B17AA8EBC004CC815 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				AF6E26E717E5A294006C74BA /* MenuViewController */,
-				AF313D7B17ABE068004CC815 /* Menu-items */,
-			);
-			name = Menu;
-			sourceTree = "<group>";
-		};
 		AF313D7117ABE051004CC815 /* Planning */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,15 +138,85 @@
 			path = Classes/Controllers/Menu/Planning;
 			sourceTree = "<group>";
 		};
-		AF313D7B17ABE068004CC815 /* Menu-items */ = {
+		AF45DFA517EDCC06009C9ED8 /* WebHelper */ = {
 			isa = PBXGroup;
 			children = (
-				AF6E26E817E5A29D006C74BA /* PaymentDatsViewController */,
-				AF6E26E917E5A2A8006C74BA /* PayCheckViewController */,
-				AF6E26EA17E5A2B1006C74BA /* SettingsViewController */,
-				AF313D7117ABE051004CC815 /* Planning */,
+				AF9AC100179EA80500CF3E98 /* WebHelper.h */,
+				AF9AC101179EA80500CF3E98 /* WebHelper.m */,
 			);
-			name = "Menu-items";
+			name = WebHelper;
+			sourceTree = "<group>";
+		};
+		AF45DFA617EDCC15009C9ED8 /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				AFDF014F17A94D4B005CC5AA /* HTMLParser.h */,
+				AFDF015017A94D4B005CC5AA /* HTMLParser.m */,
+			);
+			name = HTMLParser;
+			sourceTree = "<group>";
+		};
+		AF45DFA717EDCC23009C9ED8 /* NSString+JRStringAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				AFFBA48917DD0FA6009295D8 /* NSString+JRStringAdditions.h */,
+				AFFBA48A17DD0FA6009295D8 /* NSString+JRStringAdditions.m */,
+			);
+			name = "NSString+JRStringAdditions";
+			sourceTree = "<group>";
+		};
+		AF45DFA817EDCC2F009C9ED8 /* NSData+AES256 */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8489417B77FB400A02938 /* NSData+AES256.h */,
+				AFE8489517B77FB400A02938 /* NSData+AES256.m */,
+			);
+			name = "NSData+AES256";
+			sourceTree = "<group>";
+		};
+		AF45DFAA17EDD07A009C9ED8 /* SettingsManager */ = {
+			isa = PBXGroup;
+			children = (
+				AFF5E40F17B3BC250028896F /* SettingsManager.h */,
+				AFF5E41017B3BC250028896F /* SettingsManager.m */,
+			);
+			name = SettingsManager;
+			sourceTree = "<group>";
+		};
+		AF45DFAB17EDD08A009C9ED8 /* Week */ = {
+			isa = PBXGroup;
+			children = (
+				AF9AC103179EA8D400CF3E98 /* Week.h */,
+				AF9AC104179EA8D400CF3E98 /* Week.m */,
+			);
+			name = Week;
+			sourceTree = "<group>";
+		};
+		AF45DFAF17EDD5AE009C9ED8 /* AHViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF45DFAC17EDD5AA009C9ED8 /* AHViewController.h */,
+				AF45DFAD17EDD5AA009C9ED8 /* AHViewController.m */,
+			);
+			name = AHViewController;
+			sourceTree = "<group>";
+		};
+		AF45DFB717EDFC73009C9ED8 /* AHNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				AF45DFB417EDFC68009C9ED8 /* AHNavigationController.h */,
+				AF45DFB517EDFC68009C9ED8 /* AHNavigationController.m */,
+			);
+			name = AHNavigationController;
+			sourceTree = "<group>";
+		};
+		AF45DFB817EE1BE3009C9ED8 /* AHComponents */ = {
+			isa = PBXGroup;
+			children = (
+				AF45DFAF17EDD5AE009C9ED8 /* AHViewController */,
+				AF45DFB717EDFC73009C9ED8 /* AHNavigationController */,
+			);
+			name = AHComponents;
 			sourceTree = "<group>";
 		};
 		AF6E26E517E5A27F006C74BA /* LoginViewController */ = {
@@ -200,13 +246,13 @@
 			name = MenuViewController;
 			sourceTree = "<group>";
 		};
-		AF6E26E817E5A29D006C74BA /* PaymentDatsViewController */ = {
+		AF6E26E817E5A29D006C74BA /* PaymentDaysViewController */ = {
 			isa = PBXGroup;
 			children = (
 				AF313D5F17ABDFA6004CC815 /* PaymentDaysViewController.h */,
 				AF313D6017ABDFA6004CC815 /* PaymentDaysViewController.m */,
 			);
-			name = PaymentDatsViewController;
+			name = PaymentDaysViewController;
 			sourceTree = "<group>";
 		};
 		AF6E26E917E5A2A8006C74BA /* PayCheckViewController */ = {
@@ -287,6 +333,7 @@
 		AF720EED179BE2F400F77CA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFDA88C017E657BC007AC0FB /* QuartzCore.framework */,
 				AF720EEE179BE2F400F77CA6 /* UIKit.framework */,
 				AF720EF0179BE2F400F77CA6 /* Foundation.framework */,
 				AF720EF2179BE2F400F77CA6 /* CoreGraphics.framework */,
@@ -297,10 +344,12 @@
 		AF720EF4179BE2F400F77CA6 /* AH Plaza */ = {
 			isa = PBXGroup;
 			children = (
-				AFC6C82D17DB74800061B03C /* Helpers */,
 				AF720F93179BF20F00F77CA6 /* ViewControllers */,
 				AF720F0F179BE3F700F77CA6 /* Model */,
 				AF720F0E179BE3DA00F77CA6 /* View */,
+				AF45DFB817EE1BE3009C9ED8 /* AHComponents */,
+				AFC6C82D17DB74800061B03C /* Helpers */,
+				AFDA881C17EBA09A00A59FDF /* Images.xcassets */,
 				AF720EF5179BE2F400F77CA6 /* Supporting Files */,
 			);
 			path = "AH Plaza";
@@ -331,10 +380,8 @@
 		AF720F0F179BE3F700F77CA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AFF5E40F17B3BC250028896F /* SettingsManager.h */,
-				AFF5E41017B3BC250028896F /* SettingsManager.m */,
-				AF9AC103179EA8D400CF3E98 /* Week.h */,
-				AF9AC104179EA8D400CF3E98 /* Week.m */,
+				AF45DFAA17EDD07A009C9ED8 /* SettingsManager */,
+				AF45DFAB17EDD08A009C9ED8 /* Week */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -342,26 +389,8 @@
 		AF720F10179BE40B00F77CA6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AF720F11179BE41700F77CA6 /* Images */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		AF720F11179BE41700F77CA6 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				AFC6C82B17DB740C0061B03C /* ah-button-inverse.png */,
-				AFC6C82717DB5D130061B03C /* AH-Plaza_iPhone4.png */,
-				AFC6C82517DB5D0E0061B03C /* AH-Plaza_iPhone5.png */,
-				AFB7AE53179D9C3300D58E08 /* icons */,
-				AF720FE1179C8DA700F77CA6 /* ah-button.png */,
-				AFC6C82917DB66650061B03C /* AH-Plaza_logo_text.png */,
-				AF720F5F179BE80300F77CA6 /* ah-plaza.png */,
-				AF720F4F179BE72C00F77CA6 /* Default-568h@2x.png */,
-				AF720F50179BE72C00F77CA6 /* Default.png */,
-				AF720F51179BE72C00F77CA6 /* Default@2x.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		AF720F93179BF20F00F77CA6 /* ViewControllers */ = {
@@ -369,45 +398,54 @@
 			children = (
 				AF6E26E517E5A27F006C74BA /* LoginViewController */,
 				AF6E26E617E5A289006C74BA /* ChangePasswordViewController */,
-				AF313D4B17AA8EBC004CC815 /* Menu */,
+				AF6E26E817E5A29D006C74BA /* PaymentDaysViewController */,
+				AF6E26E917E5A2A8006C74BA /* PayCheckViewController */,
+				AF6E26EA17E5A2B1006C74BA /* SettingsViewController */,
+				AF313D7117ABE051004CC815 /* Planning */,
+				AF6E26E717E5A294006C74BA /* MenuViewController */,
+				AFDA88BF17E655AC007AC0FB /* LeftMenuViewController */,
 			);
 			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		AFB7AE53179D9C3300D58E08 /* icons */ = {
-			isa = PBXGroup;
-			children = (
-				AFF5E41617B3C5670028896F /* swipe-left.png */,
-				AFF5E41717B3C5670028896F /* swipe-right.png */,
-				AFB7AE54179D9C4900D58E08 /* info_ico.png */,
-				AFB7AE55179D9C4900D58E08 /* payment_ico.png */,
-				AFB7AE56179D9C4900D58E08 /* planning_ico.png */,
-				AFB7AE57179D9C4900D58E08 /* plaza_link_ico.png */,
-				AFB7AE58179D9C4900D58E08 /* problems_ico.png */,
-				AFB7AE59179D9C4900D58E08 /* settings_ico.png */,
-				AFB7AE5A179D9C4900D58E08 /* shiftklaar_ico.png */,
-				AFB7AE5B179D9C4900D58E08 /* webcal_ico.png */,
-				AFE316A817B661F600ACA245 /* calendar_ico.png */,
-			);
-			name = icons;
 			sourceTree = "<group>";
 		};
 		AFC6C82D17DB74800061B03C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				AFC6C82E17DB74A90061B03C /* Constants.h */,
+				AF45DFA917EDCC4D009C9ED8 /* String.h */,
+				AF45DFBA17EE1C77009C9ED8 /* Fonts.h */,
+				AFDA88B017E65525007AC0FB /* ViewDeck */,
 				AF6E26EE17E5CBFB006C74BA /* TestFlightSDK2.0.0 */,
 				AFE316A117B6616000ACA245 /* Popup */,
-				AF9AC100179EA80500CF3E98 /* WebHelper.h */,
-				AF9AC101179EA80500CF3E98 /* WebHelper.m */,
-				AFDF014F17A94D4B005CC5AA /* HTMLParser.h */,
-				AFDF015017A94D4B005CC5AA /* HTMLParser.m */,
-				AFFBA48917DD0FA6009295D8 /* NSString+JRStringAdditions.h */,
-				AFFBA48A17DD0FA6009295D8 /* NSString+JRStringAdditions.m */,
-				AFC6C82E17DB74A90061B03C /* Constants.h */,
-				AFE8489417B77FB400A02938 /* NSData+AES256.h */,
-				AFE8489517B77FB400A02938 /* NSData+AES256.m */,
+				AF45DFA517EDCC06009C9ED8 /* WebHelper */,
+				AF45DFA617EDCC15009C9ED8 /* HTMLParser */,
+				AF45DFA717EDCC23009C9ED8 /* NSString+JRStringAdditions */,
+				AF45DFA817EDCC2F009C9ED8 /* NSData+AES256 */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		AFDA88B017E65525007AC0FB /* ViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				AFDA88B117E65525007AC0FB /* IISideController.h */,
+				AFDA88B217E65525007AC0FB /* IISideController.m */,
+				AFDA88B317E65525007AC0FB /* IIViewDeckController.h */,
+				AFDA88B417E65525007AC0FB /* IIViewDeckController.m */,
+				AFDA88B517E65525007AC0FB /* IIWrapController.h */,
+				AFDA88B617E65525007AC0FB /* IIWrapController.m */,
+			);
+			name = ViewDeck;
+			path = Classes/Helpers/ViewDeck;
+			sourceTree = "<group>";
+		};
+		AFDA88BF17E655AC007AC0FB /* LeftMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFDA88BC17E655A8007AC0FB /* LeftMenuViewController.h */,
+				AFDA88BD17E655A8007AC0FB /* LeftMenuViewController.m */,
+			);
+			name = LeftMenuViewController;
 			sourceTree = "<group>";
 		};
 		AFE316A117B6616000ACA245 /* Popup */ = {
@@ -473,26 +511,7 @@
 			files = (
 				AF720EF9179BE2F400F77CA6 /* InfoPlist.strings in Resources */,
 				AF720F0D179BE3D100F77CA6 /* Storyboard.storyboard in Resources */,
-				AF720F52179BE72C00F77CA6 /* Default-568h@2x.png in Resources */,
-				AF720F53179BE72C00F77CA6 /* Default.png in Resources */,
-				AF720F54179BE72C00F77CA6 /* Default@2x.png in Resources */,
-				AF720F60179BE80300F77CA6 /* ah-plaza.png in Resources */,
-				AF720FE2179C8DA700F77CA6 /* ah-button.png in Resources */,
-				AFB7AE5C179D9C4900D58E08 /* info_ico.png in Resources */,
-				AFB7AE5D179D9C4900D58E08 /* payment_ico.png in Resources */,
-				AFB7AE5E179D9C4900D58E08 /* planning_ico.png in Resources */,
-				AFB7AE5F179D9C4900D58E08 /* plaza_link_ico.png in Resources */,
-				AFB7AE60179D9C4900D58E08 /* problems_ico.png in Resources */,
-				AFB7AE61179D9C4900D58E08 /* settings_ico.png in Resources */,
-				AFB7AE62179D9C4900D58E08 /* shiftklaar_ico.png in Resources */,
-				AFB7AE63179D9C4900D58E08 /* webcal_ico.png in Resources */,
-				AFF5E41817B3C5670028896F /* swipe-left.png in Resources */,
-				AFF5E41917B3C5670028896F /* swipe-right.png in Resources */,
-				AFE316A917B661F600ACA245 /* calendar_ico.png in Resources */,
-				AFC6C82617DB5D0E0061B03C /* AH-Plaza_iPhone5.png in Resources */,
-				AFC6C82817DB5D130061B03C /* AH-Plaza_iPhone4.png in Resources */,
-				AFC6C82A17DB66650061B03C /* AH-Plaza_logo_text.png in Resources */,
-				AFC6C82C17DB740C0061B03C /* ah-button-inverse.png in Resources */,
+				AFDA881D17EBA09A00A59FDF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF45DFB617EDFC68009C9ED8 /* AHNavigationController.m in Sources */,
 				AF720EFB179BE2F400F77CA6 /* main.m in Sources */,
 				AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */,
 				AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */,
@@ -521,6 +541,11 @@
 				AFE8489617B77FB400A02938 /* NSData+AES256.m in Sources */,
 				AFFBA48817DC735F009295D8 /* ChangePasswordViewController.m in Sources */,
 				AFFBA48B17DD0FA6009295D8 /* NSString+JRStringAdditions.m in Sources */,
+				AFDA88B717E65525007AC0FB /* IISideController.m in Sources */,
+				AFDA88B817E65525007AC0FB /* IIViewDeckController.m in Sources */,
+				AF45DFAE17EDD5AA009C9ED8 /* AHViewController.m in Sources */,
+				AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */,
+				AFDA88BE17E655A8007AC0FB /* LeftMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +630,8 @@
 		AF720F09179BE2F400F77CA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AH Plaza/AH Plaza-Prefix.pch";
 				INFOPLIST_FILE = "AH Plaza/AH Plaza-Info.plist";
@@ -621,6 +648,8 @@
 		AF720F0A179BE2F400F77CA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AH Plaza/AH Plaza-Prefix.pch";
 				INFOPLIST_FILE = "AH Plaza/AH Plaza-Info.plist";

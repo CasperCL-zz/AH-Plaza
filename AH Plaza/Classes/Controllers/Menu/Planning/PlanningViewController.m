@@ -28,6 +28,7 @@ double totalHoursWorked;
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
