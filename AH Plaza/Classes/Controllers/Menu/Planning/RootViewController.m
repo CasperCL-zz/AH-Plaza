@@ -33,11 +33,14 @@ Popup * popup;
 	// Do any additional setup after loading the view, typically from a nib.
     // Configure the page view controller and add it as a child view controller.
     
-    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc]
-                               initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-                               target:self
-                               action:@selector(refreshPlanning)];
-    self.navigationItem.rightBarButtonItem = refreshButton;
+    
+    UIImage *buttonImage = [UIImage imageNamed:@"refresh"];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:buttonImage forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(refreshPlanning) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    self.navigationItem.rightBarButtonItem = customBarItem;
 
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle: UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.delegate = self;

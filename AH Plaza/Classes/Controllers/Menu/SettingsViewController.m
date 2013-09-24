@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Popup.h"
 #import "../../Helpers/Constants.h"
+#import "../../Helpers/UIImage+Tint/UIImage+Tint.h"
 
 @interface SettingsViewController ()
 
@@ -71,9 +72,12 @@
     UIColor *bgColor = UIColorFromRGB(ah_blue);
     
     [_popup setFont: @"STHeitiTC-Light"];
-    [_popup setButton1BackgroundImage:[UIImage imageNamed:@"ah-button"] forState:UIControlStateNormal];
-    [_popup setButton2BackgroundImage:[UIImage imageNamed:@"ah-button"] forState:UIControlStateNormal];
+    [_popup setButton1BackgroundImage:[UIImage imageWithColor: bgColor] forState:UIControlStateNormal];
+    [_popup setButton2BackgroundImage:[UIImage imageWithColor: bgColor] forState:UIControlStateNormal];
     [_popup setTextColor: bgColor highlighted: [UIColor whiteColor]];
+    [[_popup dialogLabel] setTextColor: bgColor];
+    [[_popup button1] setTitleColor: [UIColor whiteColor] forState:UIControlStateNormal];
+    [[_popup button2] setTitleColor: [UIColor whiteColor] forState:UIControlStateNormal];
     [_popup showPopupWithAnimationDuration: 0.5 withText:@"Weet je zeker dat je alle instellingen wilt terugzetten?" withButton1Text:@"Ja" withButton2Text:@"Nee" withResult:^(RESULT result) {
         if (result == OKAY) {
             [[SettingsManager sharedInstance] reset];

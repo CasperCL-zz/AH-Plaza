@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2FB68817F21B5E002ECC51 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */; };
 		AF313D6A17ABDFA7004CC815 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5C17ABDFA5004CC815 /* MenuViewController.m */; };
 		AF313D6B17ABDFA7004CC815 /* PayCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5E17ABDFA6004CC815 /* PayCheckViewController.m */; };
 		AF313D6C17ABDFA7004CC815 /* PaymentDaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D6017ABDFA6004CC815 /* PaymentDaysViewController.m */; };
@@ -43,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF2FB68617F21B5E002ECC51 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tint.h"; path = "Classes/Helpers/UIImage+Tint/UIImage+Tint.h"; sourceTree = "<group>"; };
+		AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Tint.m"; path = "Classes/Helpers/UIImage+Tint/UIImage+Tint.m"; sourceTree = "<group>"; };
 		AF313D5B17ABDFA5004CC815 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/Controllers/Menu/MenuViewController.h; sourceTree = "<group>"; };
 		AF313D5C17ABDFA5004CC815 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/Controllers/Menu/MenuViewController.m; sourceTree = "<group>"; };
 		AF313D5D17ABDFA5004CC815 /* PayCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCheckViewController.h; path = Classes/Controllers/Menu/PayCheckViewController.h; sourceTree = "<group>"; };
@@ -127,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF2FB68917F21B6A002ECC51 /* UIImage+Tint */ = {
+			isa = PBXGroup;
+			children = (
+				AF2FB68617F21B5E002ECC51 /* UIImage+Tint.h */,
+				AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */,
+			);
+			name = "UIImage+Tint";
+			sourceTree = "<group>";
+		};
 		AF313D7117ABE051004CC815 /* Planning */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +433,7 @@
 				AF45DFA617EDCC15009C9ED8 /* HTMLParser */,
 				AF45DFA717EDCC23009C9ED8 /* NSString+JRStringAdditions */,
 				AF45DFA817EDCC2F009C9ED8 /* NSData+AES256 */,
+				AF2FB68917F21B6A002ECC51 /* UIImage+Tint */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -529,6 +542,7 @@
 				AF9AC102179EA80500CF3E98 /* WebHelper.m in Sources */,
 				AF9AC105179EA8D400CF3E98 /* Week.m in Sources */,
 				AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */,
+				AF2FB68817F21B5E002ECC51 /* UIImage+Tint.m in Sources */,
 				AF313D6A17ABDFA7004CC815 /* MenuViewController.m in Sources */,
 				AF313D6B17ABDFA7004CC815 /* PayCheckViewController.m in Sources */,
 				AF313D6C17ABDFA7004CC815 /* PaymentDaysViewController.m in Sources */,
@@ -635,7 +649,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AH Plaza/AH Plaza-Prefix.pch";
 				INFOPLIST_FILE = "AH Plaza/AH Plaza-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/AH Plaza/Classes/Helpers/TestFlightSDK2.0.0\"",
@@ -653,7 +667,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AH Plaza/AH Plaza-Prefix.pch";
 				INFOPLIST_FILE = "AH Plaza/AH Plaza-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/AH Plaza/Classes/Helpers/TestFlightSDK2.0.0\"",

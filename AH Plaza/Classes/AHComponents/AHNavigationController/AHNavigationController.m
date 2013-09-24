@@ -33,6 +33,7 @@
 }
 
 -(void) customizeNavBar {
+    self.navigationBar.translucent = NO;
     self.navigationBar.tintColor = [UIColor whiteColor];
     //    self.navigationController.navigationBar.backItem.backBarButtonItem.
     

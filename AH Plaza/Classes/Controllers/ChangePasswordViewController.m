@@ -79,7 +79,7 @@
                     [self saveCredentials];
                     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
                     MenuViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MenuViewController"];
-                    [self presentModalViewController:vc animated: YES];
+                    [self presentViewController:vc animated:YES completion:^{}];
                 } onCompletion:^(BOOL finished) {}];
             }
         }];

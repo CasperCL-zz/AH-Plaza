@@ -70,12 +70,6 @@ int tries;
     _loginButton.layer.cornerRadius = 5;
     _loginButton.layer.masksToBounds = YES;
     
-    _usernameLabel.layer.cornerRadius = 5;
-    _usernameLabel.layer.masksToBounds = YES;
-    
-    _passwordLabel.layer.cornerRadius = 5;
-    _passwordLabel.layer.masksToBounds = YES;
-    
     
     [_usernameTextField setAutocorrectionType: UITextAutocorrectionTypeNo];
     
@@ -249,7 +243,7 @@ int tries;
                                     [vc setOldPassword: [_passwordTextField text]];
                                     [vc setUsername: [_usernameTextField text]];
                                     
-                                    [self presentModalViewController:vc animated:YES];
+                                    [self presentViewController:vc animated:YES completion:^{}];
                                 }
                             } onCompletion:^(BOOL finished) {}];
                         }];
