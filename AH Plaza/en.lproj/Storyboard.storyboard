@@ -957,14 +957,17 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
     </scenes>
     <resources>
         <image name="AH-Plaza_logo_text" width="198" height="223"/>
+        <image name="AH-Plaza_logo_text" width="198" height="223"/>
+        <image name="AH-Plaza_logo_text" width="198" height="223"/>
+        <image name="AH-Plaza_logo_text" width="198" height="223"/>
         <image name="ah-button-inverse" width="125" height="50"/>
         <image name="calendar_ico" width="200" height="200"/>
-        <image name="info_ico" width="94" height="94"/>
-        <image name="payment_ico" width="94" height="94"/>
-        <image name="planning_ico" width="94" height="94"/>
-        <image name="plaza_link_ico" width="94" height="94"/>
-        <image name="settings_ico" width="94" height="94"/>
-        <image name="shiftklaar_ico" width="94" height="94"/>
+        <image name="info_ico" width="150" height="150"/>
+        <image name="payment_ico" width="150" height="150"/>
+        <image name="planning_ico" width="150" height="150"/>
+        <image name="plaza_link_ico" width="150" height="150"/>
+        <image name="settings_ico" width="150" height="150"/>
+        <image name="shiftklaar_ico" width="150" height="150"/>
         <image name="swipe-right" width="319" height="319"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

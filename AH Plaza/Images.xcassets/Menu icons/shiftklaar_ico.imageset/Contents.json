@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "webcal_ico.png"
+      "filename" : "shiftklaar_ico.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "shiftklaar_ico-1.png"
     }
   ],
   "info" : {

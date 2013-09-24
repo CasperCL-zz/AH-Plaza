@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "settings_ico.png"
+      "filename" : "payment_ico.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "payment_ico kopie.png"
     }
   ],
   "info" : {
