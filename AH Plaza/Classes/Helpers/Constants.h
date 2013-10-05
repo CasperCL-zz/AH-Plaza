@@ -9,7 +9,7 @@
 #ifndef AH_Plaza_Constants_h
 #define AH_Plaza_Constants_h
 
-
+#define isiPhone4 ([[UIScreen mainScreen] bounds].size.height <= 480)
 
 #define ah_blue 0x348FD7
 

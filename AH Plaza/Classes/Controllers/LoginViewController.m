@@ -16,6 +16,7 @@
 #import "ChangePasswordViewController.h"
 #import "../Helpers/ViewDeck/IIViewDeckController.h"
 #import "LeftMenuViewController.h"
+#import "UIImage+Tint.h"
 
 @interface LoginViewController ()
 

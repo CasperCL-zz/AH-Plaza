@@ -10,8 +10,10 @@
 #import "AHViewController.h"
 
 @interface RootViewController : AHViewController <UIPageViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *monthLabel;
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (weak, nonatomic) IBOutlet UIView *dialogView;
+@property (weak, nonatomic) IBOutlet UIImageView *planningImage;
 
 @end

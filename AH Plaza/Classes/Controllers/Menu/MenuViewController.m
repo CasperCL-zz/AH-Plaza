@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 JTC. All rights reserved.
 //
 
+#import "Constants.h"
 #import "MenuViewController.h"
 #import "PlanningViewController.h"
 #import "IIViewDeckController.h"
@@ -38,6 +39,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self animateTransition:^{}];
+    if(isiPhone4){
+        CGRect newFrame = _componentsView.frame;
+        newFrame.origin.y = 0;
+        _componentsView.frame = newFrame;
+    }
 }
 
 

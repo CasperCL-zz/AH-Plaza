@@ -499,6 +499,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = JTC;
+				TargetAttributes = {
+					AF720EEA179BE2F400F77CA6 = {
+						DevelopmentTeam = Q4987Y8NA2;
+					};
+				};
 			};
 			buildConfigurationList = AF720EE6179BE2F400F77CA6 /* Build configuration list for PBXProject "AH Plaza" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -646,6 +651,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AH Plaza/AH Plaza-Prefix.pch";
 				INFOPLIST_FILE = "AH Plaza/AH Plaza-Info.plist";
@@ -664,6 +670,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AH Plaza/AH Plaza-Prefix.pch";
 				INFOPLIST_FILE = "AH Plaza/AH Plaza-Info.plist";
