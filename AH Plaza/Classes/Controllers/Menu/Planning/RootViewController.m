@@ -38,7 +38,7 @@ NSTimer * timer;
     // Configure the page view controller and add it as a child view controller.
     [_monthLabel setTextColor: UIColorFromRGB(ah_blue)];
     monthCount = -1;
-    timer = [NSTimer timerWithTimeInterval:2.0f target:self selector:@selector(changeMonth:) userInfo:nil repeats:YES];
+    timer = [NSTimer timerWithTimeInterval:3.0f target:self selector:@selector(changeMonth:) userInfo:nil repeats:YES];
     [timer fire];
     
     UIImage *buttonImage = [UIImage imageNamed:@"refresh"];

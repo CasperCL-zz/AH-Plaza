@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *upcommingPaymentsDaysTable;
 @property (weak, nonatomic) IBOutlet UILabel *nextDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *daysOrDayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nextPayDaysStaticLabel;
 
 @end

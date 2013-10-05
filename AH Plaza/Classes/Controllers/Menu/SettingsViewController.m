@@ -44,6 +44,9 @@
     _resetButton.layer.cornerRadius = 10;
     _resetButton.layer.masksToBounds = YES;
     
+    CGRect frame = _resetButton.frame;
+    frame.origin.y = self.view.frame.size.height - _resetButton.frame.size.height - 20;
+    _resetButton.frame = frame;
     
     _popup = [[Popup alloc] initWithView: self.view];
 }

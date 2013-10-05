@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "WebHelper.h"
 #import "SettingsManager.h"
+#import "Constants.h"
 
 @interface PlanningViewController ()
 
@@ -34,6 +35,16 @@ double totalHoursWorked;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     totalHoursWorked = 0;
+    UIColor * bgColor = UIColorFromRGB(ah_blue);
+    [_backgroundView setBackgroundColor: bgColor];
+    [_weekLabel setTextColor: bgColor];
+    _backgroundView.layer.cornerRadius = 5;
+    _backgroundView.layer.masksToBounds = YES;
+    
+    
+    for(UILabel * label in _staticLabels){
+        [label setTextColor: bgColor];
+    }
     
     if(![[SettingsManager sharedInstance] planningInstructionsDisplayed]) {
         _instructionDialogBackground.alpha = 0.7f;
@@ -48,6 +59,7 @@ double totalHoursWorked;
     }
     
     if([[_dataObject workingTimes] count]) {
+        [_dataObject setWeekID: [[_dataObject weekID] capitalizedString]];
         [_weekLabel setText: [_dataObject weekID]];
         
         NSString* from = [[[_dataObject workingTimes] objectForKey: @"monday"] objectForKey:@"from"];

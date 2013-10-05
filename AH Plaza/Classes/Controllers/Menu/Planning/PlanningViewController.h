@@ -18,10 +18,12 @@
 // Instruction dialog
 @property (weak, nonatomic) IBOutlet UIView *instructionDialogBackground;
 @property (weak, nonatomic) IBOutlet UIView *instructionDialogView;
+@property (weak, nonatomic) IBOutlet UIView *backgroundView;
 
 
 
 // The labels
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *staticLabels;
 @property (weak, nonatomic) IBOutlet UILabel *weekLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *mondayFromLabel;

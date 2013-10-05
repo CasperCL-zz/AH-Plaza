@@ -114,6 +114,11 @@
         originalDate = newDate;
     }
     [_upcommingPaymentsDaysTable reloadData];
+    CGRect newFrame = _upcommingPaymentsDaysTable.frame;
+    newFrame.origin.y = _nextPayDaysStaticLabel.frame.origin.y + _nextPayDaysStaticLabel.frame.size.height*2;
+    newFrame.size.height = self.view.frame.size.height - newFrame.origin.y;
+    _upcommingPaymentsDaysTable.frame = newFrame;
+    
 }
 
 - (void)didReceiveMemoryWarning

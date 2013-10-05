@@ -39,11 +39,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self animateTransition:^{}];
-    if(isiPhone4){
-        CGRect newFrame = _componentsView.frame;
-        newFrame.origin.y = 0;
-        _componentsView.frame = newFrame;
-    }
+    CGRect newFrame = _componentsView.frame;
+    newFrame.origin.y = self.view.frame.size.height / 2 - newFrame.size.height /2;
+    _componentsView.frame = newFrame;
 }
 
 
