@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HTMLParser : NSObject
+@interface AHParser : NSObject
 
 + (id)sharedInstance;
 -(NSArray*) htmlToWeeks: (UIWebView *) webHelper;
+-(NSArray*) htmlToPaychecks: (UIWebView *) webHelper;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2BC9D81809CBE9001D4077 /* Paycheck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2BC9D71809CBE9001D4077 /* Paycheck.m */; };
 		AF2FB68817F21B5E002ECC51 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */; };
 		AF313D6A17ABDFA7004CC815 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5C17ABDFA5004CC815 /* MenuViewController.m */; };
 		AF313D6B17ABDFA7004CC815 /* PayCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5E17ABDFA6004CC815 /* PayCheckViewController.m */; };
@@ -27,7 +28,7 @@
 		AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720EFE179BE2F400F77CA6 /* AppDelegate.m */; };
 		AF720F0D179BE3D100F77CA6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */; };
 		AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720F91179BF20600F77CA6 /* LoginViewController.m */; };
-		AF9AC102179EA80500CF3E98 /* WebHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC101179EA80500CF3E98 /* WebHelper.m */; };
+		AF9AC102179EA80500CF3E98 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC101179EA80500CF3E98 /* APIClient.m */; };
 		AF9AC105179EA8D400CF3E98 /* Week.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC104179EA8D400CF3E98 /* Week.m */; };
 		AFDA881D17EBA09A00A59FDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDA881C17EBA09A00A59FDF /* Images.xcassets */; };
 		AFDA88B717E65525007AC0FB /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B217E65525007AC0FB /* IISideController.m */; };
@@ -35,7 +36,7 @@
 		AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B617E65525007AC0FB /* IIWrapController.m */; };
 		AFDA88BE17E655A8007AC0FB /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88BD17E655A8007AC0FB /* LeftMenuViewController.m */; };
 		AFDA88C117E657BC007AC0FB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDA88C017E657BC007AC0FB /* QuartzCore.framework */; };
-		AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015017A94D4B005CC5AA /* HTMLParser.m */; };
+		AFDF015117A94D4C005CC5AA /* AHParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015017A94D4B005CC5AA /* AHParser.m */; };
 		AFE316A717B661CF00ACA245 /* Popup.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE316A617B661CF00ACA245 /* Popup.m */; };
 		AFE8489617B77FB400A02938 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE8489517B77FB400A02938 /* NSData+AES256.m */; };
 		AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5E41017B3BC250028896F /* SettingsManager.m */; };
@@ -44,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF2BC9D61809CBE9001D4077 /* Paycheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paycheck.h; path = Classes/Controllers/Paycheck/Paycheck.h; sourceTree = "<group>"; };
+		AF2BC9D71809CBE9001D4077 /* Paycheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Paycheck.m; path = Classes/Controllers/Paycheck/Paycheck.m; sourceTree = "<group>"; };
 		AF2FB68617F21B5E002ECC51 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tint.h"; path = "Classes/Helpers/UIImage+Tint/UIImage+Tint.h"; sourceTree = "<group>"; };
 		AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Tint.m"; path = "Classes/Helpers/UIImage+Tint/UIImage+Tint.m"; sourceTree = "<group>"; };
 		AF313D5B17ABDFA5004CC815 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/Controllers/Menu/MenuViewController.h; sourceTree = "<group>"; };
@@ -84,8 +87,8 @@
 		AF720F0C179BE3D100F77CA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
 		AF720F90179BF20600F77CA6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/Controllers/LoginViewController.h; sourceTree = "<group>"; };
 		AF720F91179BF20600F77CA6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/Controllers/LoginViewController.m; sourceTree = "<group>"; };
-		AF9AC100179EA80500CF3E98 /* WebHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebHelper.h; path = Classes/WebHelper.h; sourceTree = "<group>"; };
-		AF9AC101179EA80500CF3E98 /* WebHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebHelper.m; path = Classes/WebHelper.m; sourceTree = "<group>"; };
+		AF9AC100179EA80500CF3E98 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIClient.h; path = Classes/APIClient.h; sourceTree = "<group>"; };
+		AF9AC101179EA80500CF3E98 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIClient.m; path = Classes/APIClient.m; sourceTree = "<group>"; };
 		AF9AC103179EA8D400CF3E98 /* Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Week.h; path = Classes/Model/Week.h; sourceTree = "<group>"; };
 		AF9AC104179EA8D400CF3E98 /* Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Week.m; path = Classes/Model/Week.m; sourceTree = "<group>"; };
 		AFC6C82E17DB74A90061B03C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Classes/Helpers/Constants.h; sourceTree = "<group>"; };
@@ -99,8 +102,8 @@
 		AFDA88BC17E655A8007AC0FB /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuViewController.h; path = Classes/Controllers/LeftMenuViewController.h; sourceTree = "<group>"; };
 		AFDA88BD17E655A8007AC0FB /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuViewController.m; path = Classes/Controllers/LeftMenuViewController.m; sourceTree = "<group>"; };
 		AFDA88C017E657BC007AC0FB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		AFDF014F17A94D4B005CC5AA /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTMLParser.h; path = Classes/HTMLParser.h; sourceTree = "<group>"; };
-		AFDF015017A94D4B005CC5AA /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMLParser.m; path = Classes/HTMLParser.m; sourceTree = "<group>"; };
+		AFDF014F17A94D4B005CC5AA /* AHParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHParser.h; path = Classes/AHParser.h; sourceTree = "<group>"; };
+		AFDF015017A94D4B005CC5AA /* AHParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHParser.m; path = Classes/AHParser.m; sourceTree = "<group>"; };
 		AFE316A517B661CF00ACA245 /* Popup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Popup.h; path = "AH Plaza/Classes/Frameworks/Popup/Popup.h"; sourceTree = "<group>"; };
 		AFE316A617B661CF00ACA245 /* Popup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Popup.m; path = "AH Plaza/Classes/Frameworks/Popup/Popup.m"; sourceTree = "<group>"; };
 		AFE8489417B77FB400A02938 /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+AES256.h"; path = "Classes/NSData+AES256.h"; sourceTree = "<group>"; };
@@ -130,6 +133,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF2BC9D51809CAB9001D4077 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF45DFA517EDCC06009C9ED8 /* APIClient */,
+				AF45DFA617EDCC15009C9ED8 /* AHParser */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AF2BC9D91809DFEE001D4077 /* Paycheck */ = {
+			isa = PBXGroup;
+			children = (
+				AF2BC9D61809CBE9001D4077 /* Paycheck.h */,
+				AF2BC9D71809CBE9001D4077 /* Paycheck.m */,
+			);
+			name = Paycheck;
+			sourceTree = "<group>";
+		};
 		AF2FB68917F21B6A002ECC51 /* UIImage+Tint */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,22 +171,22 @@
 			path = Classes/Controllers/Menu/Planning;
 			sourceTree = "<group>";
 		};
-		AF45DFA517EDCC06009C9ED8 /* WebHelper */ = {
+		AF45DFA517EDCC06009C9ED8 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				AF9AC100179EA80500CF3E98 /* WebHelper.h */,
-				AF9AC101179EA80500CF3E98 /* WebHelper.m */,
+				AF9AC100179EA80500CF3E98 /* APIClient.h */,
+				AF9AC101179EA80500CF3E98 /* APIClient.m */,
 			);
-			name = WebHelper;
+			name = APIClient;
 			sourceTree = "<group>";
 		};
-		AF45DFA617EDCC15009C9ED8 /* HTMLParser */ = {
+		AF45DFA617EDCC15009C9ED8 /* AHParser */ = {
 			isa = PBXGroup;
 			children = (
-				AFDF014F17A94D4B005CC5AA /* HTMLParser.h */,
-				AFDF015017A94D4B005CC5AA /* HTMLParser.m */,
+				AFDF014F17A94D4B005CC5AA /* AHParser.h */,
+				AFDF015017A94D4B005CC5AA /* AHParser.m */,
 			);
-			name = HTMLParser;
+			name = AHParser;
 			sourceTree = "<group>";
 		};
 		AF45DFA717EDCC23009C9ED8 /* NSString+JRStringAdditions */ = {
@@ -356,6 +377,7 @@
 		AF720EF4179BE2F400F77CA6 /* AH Plaza */ = {
 			isa = PBXGroup;
 			children = (
+				AF2BC9D51809CAB9001D4077 /* Controllers */,
 				AF720F93179BF20F00F77CA6 /* ViewControllers */,
 				AF720F0F179BE3F700F77CA6 /* Model */,
 				AF720F0E179BE3DA00F77CA6 /* Storyboards */,
@@ -394,6 +416,7 @@
 			children = (
 				AF45DFAA17EDD07A009C9ED8 /* SettingsManager */,
 				AF45DFAB17EDD08A009C9ED8 /* Week */,
+				AF2BC9D91809DFEE001D4077 /* Paycheck */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -429,8 +452,6 @@
 				AFDA88B017E65525007AC0FB /* ViewDeck */,
 				AF6E26EE17E5CBFB006C74BA /* TestFlightSDK2.0.0 */,
 				AFE316A117B6616000ACA245 /* Popup */,
-				AF45DFA517EDCC06009C9ED8 /* WebHelper */,
-				AF45DFA617EDCC15009C9ED8 /* HTMLParser */,
 				AF45DFA717EDCC23009C9ED8 /* NSString+JRStringAdditions */,
 				AF45DFA817EDCC2F009C9ED8 /* NSData+AES256 */,
 				AF2FB68917F21B6A002ECC51 /* UIImage+Tint */,
@@ -544,9 +565,9 @@
 				AF720EFB179BE2F400F77CA6 /* main.m in Sources */,
 				AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */,
 				AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */,
-				AF9AC102179EA80500CF3E98 /* WebHelper.m in Sources */,
+				AF9AC102179EA80500CF3E98 /* APIClient.m in Sources */,
 				AF9AC105179EA8D400CF3E98 /* Week.m in Sources */,
-				AFDF015117A94D4C005CC5AA /* HTMLParser.m in Sources */,
+				AFDF015117A94D4C005CC5AA /* AHParser.m in Sources */,
 				AF2FB68817F21B5E002ECC51 /* UIImage+Tint.m in Sources */,
 				AF313D6A17ABDFA7004CC815 /* MenuViewController.m in Sources */,
 				AF313D6B17ABDFA7004CC815 /* PayCheckViewController.m in Sources */,
@@ -565,6 +586,7 @@
 				AF45DFAE17EDD5AA009C9ED8 /* AHViewController.m in Sources */,
 				AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */,
 				AFDA88BE17E655A8007AC0FB /* LeftMenuViewController.m in Sources */,
+				AF2BC9D81809CBE9001D4077 /* Paycheck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 #import "LoginViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "WebHelper.h"
+#import "APIClient.h"
 #import "NSData+AES256.h"
 #import "SettingsManager.h"
 #import "../Keys.h"
@@ -35,7 +35,7 @@ int tries;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [WebHelper sharedInstance]; // start loading the front page
+    [APIClient sharedInstance]; // start loading the front page
     tries = 0;
     credentialViewMoved = NO;
     
@@ -45,7 +45,7 @@ int tries;
         if([[SettingsManager sharedInstance] autologinEnabled])
             [self login];
     };
-    [[WebHelper sharedInstance] setHomePageLoadedCallback: homePageLoadCallback];
+    [[APIClient sharedInstance] setHomePageLoadedCallback: homePageLoadCallback];
     
     credentialsFrame.origin.x = 20;
     credentialsFrame.origin.y = 210;
@@ -188,7 +188,7 @@ int tries;
         completion(errors);
         return;
     }
-    [[WebHelper sharedInstance] login:[_usernameTextField text] WithPassword:[_passwordTextField text] onCompletion:^(NSArray *errors) {
+    [[APIClient sharedInstance] login:[_usernameTextField text] WithPassword:[_passwordTextField text] onCompletion:^(NSArray *errors) {
         completion(errors);
     }];
 }

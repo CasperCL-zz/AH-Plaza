@@ -7,6 +7,7 @@
 //
 
 #import "PayCheckViewController.h"
+#import "APIClient.h"
 
 @interface PayCheckViewController ()
 
@@ -14,19 +15,14 @@
 
 @implementation PayCheckViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    // Retreive the paychecks
+    [[APIClient sharedInstance] loadPayCheckPage:^(NSArray *paychecks, NSError * error) {
+        NSLog(@"Downloaded everything");
+    }];
 }
 
 - (void)didReceiveMemoryWarning

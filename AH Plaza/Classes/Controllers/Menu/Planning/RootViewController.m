@@ -12,7 +12,7 @@
 
 #import "PlanningViewController.h"
 
-#import "WebHelper.h"
+#import "APIClient.h"
 
 #import "Popup.h"
 
@@ -144,7 +144,7 @@ NSTimer * timer;
 }
 
 -(void) refreshPlanning {
-    [[WebHelper sharedInstance] loadTimetablePage:^(NSArray *weeks) {
+    [[APIClient sharedInstance] loadTimetablePage:^(NSArray *weeks) {
         [timer invalidate];
         [self.modelController setPageData: weeks];
         _weeks = weeks;

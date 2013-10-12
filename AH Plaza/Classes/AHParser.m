@@ -6,19 +6,76 @@
 //  Copyright (c) 2013 JTC. All rights reserved.
 //
 
-#import "HTMLParser.h"
+#import "AHParser.h"
 #import "Week.h"
+#import "Paycheck.h"
 
-@implementation HTMLParser
+@implementation AHParser
 
 double totalHoursWorked;
 
 + (id)sharedInstance {
-    static HTMLParser *instance;
+    static AHParser *instance;
     static dispatch_once_t predicate;
-    dispatch_once(&predicate, ^{ instance = [[HTMLParser alloc] init]; });
+    dispatch_once(&predicate, ^{ instance = [[AHParser alloc] init]; });
     
     return instance;
+}
+
+
+
+-(NSArray*) htmlToPaychecks: (UIWebView *) webHelper {
+    NSMutableArray * payChecks = [[NSMutableArray alloc] init];
+    
+    // Parse the html to the paychecks
+    NSString * html = [webHelper stringByEvaluatingJavaScriptFromString: @"document.body.innerHTML"];
+
+    int yearCounter = 0;
+    NSString *startingID = [[NSString alloc] initWithFormat:@"x-auto-26-gp-groupid-%i", yearCounter];
+
+    while ([html rangeOfString: startingID].location != NSNotFound) {
+        
+        NSString * year = [[NSString alloc] initWithFormat:@"document.getElementById('%@').childNodes[0].childNodes[0].innerHTML", startingID];
+        year = [webHelper stringByEvaluatingJavaScriptFromString: year];
+        year = [year substringWithRange: NSMakeRange(6, 4)];
+        
+        int periodCounter = 0;
+        NSString * periodId = [[NSString alloc] initWithFormat:@"document.getElementById('%@').childNodes[1].childNodes[%i].childNodes[0].childNodes[0].childNodes[0]", startingID, periodCounter];
+        
+        NSString * genericPeriodCounter = [[NSString alloc] initWithFormat:@"%@.childNodes[0].childNodes[0].childNodes[0].innerHTML", periodId];
+        NSString * res = [webHelper stringByEvaluatingJavaScriptFromString: genericPeriodCounter];
+
+        while ([res length]) {
+            NSLog(@"Period counter: %@", periodId);
+            Paycheck * paycheck = [[Paycheck alloc] init];
+            [paycheck setYear: year];
+            NSString * monthStr = [[NSString alloc] initWithFormat: @"%@.childNodes[3].childNodes[0].childNodes[0].innerHTML", periodId];
+            [paycheck setMonth: [webHelper stringByEvaluatingJavaScriptFromString: monthStr]];
+            NSString * typeStr = [[NSString alloc] initWithFormat:@"%@.childNodes[4].childNodes[0].childNodes[0].innerHTML", periodId];
+            [paycheck setType: [[webHelper stringByEvaluatingJavaScriptFromString:typeStr] isEqualToString: @"Salarisspecificatie"] ? PAYCHECK : YEARSUMARRY];
+            NSString * dateStr = [[NSString alloc] initWithFormat:@"%@.childNodes[5].childNodes[0].childNodes[0].innerHTML", periodId];
+            NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"DD-MM-YYYY"];
+            NSDate * date = [dateFormatter dateFromString: [webHelper stringByEvaluatingJavaScriptFromString:dateStr]];
+            [paycheck setDate: date];
+            
+            // TODO: set URL
+            // [paycheck setUrlToPDF: [NSURL URLWithString: ]];
+            
+            periodCounter++;
+            periodId = [[NSString alloc] initWithFormat:@"document.getElementById('%@').childNodes[1].childNodes[%i].childNodes[0].childNodes[0].childNodes[0]", startingID, periodCounter];
+            genericPeriodCounter = [[NSString alloc] initWithFormat:@"%@.childNodes[0].childNodes[0].childNodes[0].innerHTML", periodId];
+            res = [webHelper stringByEvaluatingJavaScriptFromString: genericPeriodCounter];
+            
+            [payChecks addObject: paycheck];
+        }
+        
+        yearCounter++;
+        startingID = [[NSString alloc] initWithFormat:@"x-auto-26-gp-groupid-%i", yearCounter];
+    }
+    
+    
+    return payChecks;
 }
 
 

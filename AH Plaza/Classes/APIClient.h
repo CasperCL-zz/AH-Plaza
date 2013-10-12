@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebHelper : UIWebView <UIWebViewDelegate>
+@interface APIClient : UIWebView <UIWebViewDelegate>
 
 
 typedef void (^callbackTimetable)(NSArray* weeks);
 typedef void (^callbackLogin)(NSArray* errors);
-typedef void (^callbackPayCheck)(NSArray * months);
+typedef void (^callbackPayCheck)(NSArray * paychecks, NSError * error);
 typedef void (^callback)();
 typedef void (^callbackErrors)(NSArray* errors);
 

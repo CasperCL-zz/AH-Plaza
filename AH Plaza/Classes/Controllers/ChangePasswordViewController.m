@@ -9,7 +9,7 @@
 #import "ChangePasswordViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
-#import "WebHelper.h"
+#import "APIClient.h"
 #import "Constants.h"
 #import "NSString+JRStringAdditions.h"
 #import "MenuViewController.h"
@@ -67,7 +67,7 @@
     NSString * error = [self checkCredentials: password check: [_checkNewPasswordTextField text]];
     
     if(!error){
-        [[WebHelper sharedInstance] changePassword: password withOldPassword: _oldPassword onCompletion:^(NSArray *errors) {
+        [[APIClient sharedInstance] changePassword: password withOldPassword: _oldPassword onCompletion:^(NSArray *errors) {
             if([errors count]) {
                 [_popup showPopupWithAnimationDuration:.5 withText:[errors objectAtIndex:0] withButtonText:@"OK" withResult:^(RESULT result) {
                     [_popup hidePopupWithAnimationDuration:.5 onCompletion:^(BOOL finished) {

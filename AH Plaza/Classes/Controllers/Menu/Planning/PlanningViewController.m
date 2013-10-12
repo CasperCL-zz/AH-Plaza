@@ -8,7 +8,7 @@
 
 #import "PlanningViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "WebHelper.h"
+#import "APIClient.h"
 #import "SettingsManager.h"
 #import "Constants.h"
 

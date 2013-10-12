@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 JTC. All rights reserved.
 //
 
-#import "WebHelper.h"
+#import "APIClient.h"
 #import "Week.h"
-#import "HTMLParser.h"
+#import "AHParser.h"
 #import "NSString+JRStringAdditions.h"
 
-@implementation WebHelper
+@implementation APIClient
 
 NSString * HOME_URL = @"https://plaza.ah.nl/";
 NSString * TIMETABLE_URL = @"https://plaza.ah.nl/store_rendering_p1/wps/myportal/ahplaza/rooster";
@@ -19,10 +19,13 @@ NSString * PAY_CHECK_BASE = @"https://plaza.ah.nl/wps/AppLaunch2/AppLaunchServle
 NSString * LOGIN_FAIL_URL = @"https://plaza.ah.nl/pkmslogin.form";
 NSString * LOGIN_SCCS_URL = @"https://plaza.ah.nl/cgi-bin/final.pl";
 NSString * CHANGE_PASS_URL = @"https://plaza.ah.nl/pkmspasswd";
+NSString * PAYCHECK_URL = @"https://www.mijn-loonstrook.nl/?authcode=";
 NSString * LOGIN_FORM = @"<form onsubmit=\"return checkrequired(this)\" method=\"POST\" action=\"/pkmslogin.form\"><font size=\"+2\"><table border=\"0\" width=\"400\"><tbody><tr><td align=\"LEFT\"><ul><li>Gebruikersnaam</li></ul></td><td><input type=\"TEXT\" name=\"username\" size=\"15\" autocomplete=\"off\"></td></tr><tr><td align=\"LEFT\"><ul><li>Wachtwoord</li></ul></td><td><input type=\"PASSWORD\" name=\"password\" size=\"15\" autocomplete=\"off\"></td><input type=\"HIDDEN\" name=\"login-form-type\" value=\"pwd\"></tr></tbody></table></font><br>&nbsp; <input type=\"SUBMIT\" value=\"Aanmelden\"></form>";
 NSString *_username;
 NSString *_password;
 NSString * accountBlockedString  = @"Je account / gebruikersnaam is geblokkeerd. Gebruik de onderstaande link om via \"SelfHelp\" je wachtwoord opnieuw in te voeren of bel de helpdesk.";
+
+BOOL calledPaycheckParser;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -35,9 +38,9 @@ NSString * accountBlockedString  = @"Je account / gebruikersnaam is geblokkeerd.
 
 
 + (id)sharedInstance {
-    static WebHelper *instance;
+    static APIClient *instance;
     static dispatch_once_t predicate;
-    dispatch_once(&predicate, ^{ instance = [[WebHelper alloc] init]; });
+    dispatch_once(&predicate, ^{ instance = [[APIClient alloc] init]; });
     
     return instance;
 }
@@ -48,6 +51,7 @@ NSString * accountBlockedString  = @"Je account / gebruikersnaam is geblokkeerd.
     if (self) {
         [self setDelegate: self];
         [self loadHomePage];
+        calledPaycheckParser = NO;
     }
     return self;
 }
@@ -120,11 +124,11 @@ NSString * accountBlockedString  = @"Je account / gebruikersnaam is geblokkeerd.
     _paycheckCallback = callback;
     
     // Makes the uiwebview load the page
-    NSString *hidfldval = [self stringByEvaluatingJavaScriptFromString: @"document.getElementById('hdfld').value"];
-    NSString *strURL = [[NSString alloc] initWithFormat: @"%@%@%@", PAY_CHECK_BASE,  @"&", hidfldval];
+    
+    NSString *strURL = [[NSString alloc] initWithFormat: @"%@%@%@", PAY_CHECK_BASE,  @"&", @"contextFromSession=true&vpname=ahstore&brand=Albert%20Heijn&country=NL&language=nl&policyPath=/plaza/store/ah"];
     NSURLRequest * urlReq = [[NSURLRequest alloc] initWithURL: [[NSURL alloc] initWithString: strURL]];
     [self loadRequest: urlReq];
-    [NSException raise:@"Unimplemented Exception" format:@"Unimplemented method loadPayCheckPage"];
+    
 }
 
 
@@ -135,7 +139,6 @@ NSString * accountBlockedString  = @"Je account / gebruikersnaam is geblokkeerd.
     if(_loginCallback) {
         if([currentURL isEqualToString: LOGIN_SCCS_URL]){
             _loginCallback(nil);
-            [self stopLoading];
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
             _loginCallback = nil;
         }
@@ -150,7 +153,6 @@ NSString * accountBlockedString  = @"Je account / gebruikersnaam is geblokkeerd.
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
     NSString * currentURL = [self stringByEvaluatingJavaScriptFromString:@"document.URL"];
     
-    
     // Check if the session is not expired
     if(![currentURL isEqualToString: @"https://plaza.ah.nl/pkmslogout?filename=wpslogout.html"]) {
         if([currentURL isEqualToString: HOME_URL]) {
@@ -164,7 +166,7 @@ NSString * accountBlockedString  = @"Je account / gebruikersnaam is geblokkeerd.
             }
         } else if ([currentURL isEqualToString: TIMETABLE_URL]) {
             // Parse the HTML to weeks
-            NSArray *weeks = [[HTMLParser sharedInstance] htmlToWeeks: self];
+            NSArray *weeks = [[AHParser sharedInstance] htmlToWeeks: self];
             if([weeks count] != 0)
                 _timetableCallback(weeks);
         } else if ([currentURL isEqualToString: LOGIN_FAIL_URL]) {
@@ -193,6 +195,11 @@ NSString * accountBlockedString  = @"Je account / gebruikersnaam is geblokkeerd.
                 _changePasswordCallback(error);
                 _changePasswordCallback = nil;
             }
+        } else if([currentURL hasPrefix: PAYCHECK_URL]) {
+            if(!calledPaycheckParser) {
+                calledPaycheckParser = YES;
+                [self performSelector:@selector(paychecksLoaded) withObject:nil afterDelay:8.0f];
+            }
         }
     } else {
         NSMutableArray *errors = [[NSMutableArray alloc] init];
@@ -201,6 +208,11 @@ NSString * accountBlockedString  = @"Je account / gebruikersnaam is geblokkeerd.
         NSLog(@"Session expired");
         [self reauthenticate];
     }
+}
+-(void) paychecksLoaded {
+    calledPaycheckParser = NO;
+    NSArray *paychecks = [[AHParser sharedInstance] htmlToPaychecks: self];
+    _paycheckCallback(paychecks, nil);
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {

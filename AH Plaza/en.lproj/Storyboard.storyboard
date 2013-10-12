@@ -276,10 +276,10 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
             </objects>
             <point key="canvasLocation" x="-11" y="485"/>
         </scene>
-        <!--View Controller - Loonstroken-->
+        <!--Pay Check View Controller - Loonstroken-->
         <scene sceneID="NV1-dP-14M">
             <objects>
-                <viewController storyboardIdentifier="PayCheckViewController" id="FEw-mU-m0n" customClass="AHViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PayCheckViewController" id="FEw-mU-m0n" customClass="PayCheckViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CTS-MS-KAZ">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -982,9 +982,6 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
         </scene>
     </scenes>
     <resources>
-        <image name="AH-Plaza_logo_text" width="198" height="223"/>
-        <image name="AH-Plaza_logo_text" width="198" height="223"/>
-        <image name="AH-Plaza_logo_text" width="198" height="223"/>
         <image name="AH-Plaza_logo_text" width="198" height="223"/>
         <image name="ah-button-inverse" width="125" height="50"/>
         <image name="calendar_ico" width="200" height="200"/>
