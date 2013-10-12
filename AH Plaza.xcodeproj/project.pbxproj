@@ -358,7 +358,7 @@
 			children = (
 				AF720F93179BF20F00F77CA6 /* ViewControllers */,
 				AF720F0F179BE3F700F77CA6 /* Model */,
-				AF720F0E179BE3DA00F77CA6 /* View */,
+				AF720F0E179BE3DA00F77CA6 /* Storyboards */,
 				AF45DFB817EE1BE3009C9ED8 /* AHComponents */,
 				AFC6C82D17DB74800061B03C /* Helpers */,
 				AFDA881C17EBA09A00A59FDF /* Images.xcassets */,
@@ -381,12 +381,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AF720F0E179BE3DA00F77CA6 /* View */ = {
+		AF720F0E179BE3DA00F77CA6 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */,
 			);
-			name = View;
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		AF720F0F179BE3F700F77CA6 /* Model */ = {

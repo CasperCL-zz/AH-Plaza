@@ -9,7 +9,15 @@
 #ifndef AH_Plaza_Constants_h
 #define AH_Plaza_Constants_h
 
-#define isiPhone4 ([[UIScreen mainScreen] bounds].size.height <= 480)
+#define isiPhone4 (!([[UIScreen mainScreen] bounds].size.height - 480))
+#define isiPhone5 (!([[UIScreen mainScreen] bounds].size.height - 580))
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+#define iOS6 (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0.0") && SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(@"6.1.3"))
+#define iOS7 (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0.0"))
 
 #define ah_blue 0x348FD7
 

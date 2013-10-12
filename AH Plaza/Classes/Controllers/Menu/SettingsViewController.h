@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch *keepLoggedInSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *notificationSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *jobOfferSwitch;
 
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
 

@@ -276,7 +276,7 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
             </objects>
             <point key="canvasLocation" x="-11" y="485"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Loonstroken-->
         <scene sceneID="NV1-dP-14M">
             <objects>
                 <viewController storyboardIdentifier="PayCheckViewController" id="FEw-mU-m0n" customClass="AHViewController" sceneMemberID="viewController">
@@ -297,7 +297,7 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VSN-ux-dEC"/>
+                    <navigationItem key="navigationItem" title="Loonstroken" id="VSN-ux-dEC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vfb-nZ-uiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -480,6 +480,7 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
                     </view>
                     <navigationItem key="navigationItem" title="Instellingen" id="I8A-fz-DVj"/>
                     <connections>
+                        <outlet property="jobOfferSwitch" destination="jva-o4-86u" id="ljn-9z-gEx"/>
                         <outlet property="keepLoggedInSwitch" destination="eks-IX-NJ6" id="r4L-y5-dDU"/>
                         <outlet property="notificationSwitch" destination="S8T-ZS-4UF" id="0k7-j3-rPQ"/>
                         <outlet property="resetButton" destination="ajB-D0-qaj" id="dOZ-Zr-jPa"/>

@@ -49,6 +49,23 @@
     _resetButton.frame = frame;
     
     _popup = [[Popup alloc] initWithView: self.view];
+    
+    if(iOS6){
+        CGFloat moveToRight = 20;
+        frame = _keepLoggedInSwitch.frame;
+        frame.origin.x += moveToRight;
+        _keepLoggedInSwitch.frame = frame;
+        
+        
+        frame = _notificationSwitch.frame;
+        frame.origin.x += moveToRight;
+        _notificationSwitch.frame = frame;
+        
+        
+        frame = _jobOfferSwitch.frame;
+        frame.origin.x += moveToRight;
+        _jobOfferSwitch.frame = frame;
+    }
 }
 
 - (void)didReceiveMemoryWarning
