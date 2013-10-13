@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "AHViewController.h"
 
-@interface PayCheckViewController : AHViewController
+@interface PayCheckViewController : AHViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

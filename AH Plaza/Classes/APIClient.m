@@ -210,15 +210,20 @@ BOOL calledPaycheckParser;
     }
 }
 -(void) paychecksLoaded {
-    calledPaycheckParser = NO;
-    NSArray *paychecks = [[AHParser sharedInstance] htmlToPaychecks: self];
-    _paycheckCallback(paychecks, nil);
+    NSLog(@"HTML size: %i ", [[self stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"] length]);
+    if([[self stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"] length] > 300) {
+        calledPaycheckParser = NO;
+        NSArray *paychecks = [[AHParser sharedInstance] htmlToPaychecks: self];
+        _paycheckCallback(paychecks, nil);
+    } else {
+        [self performSelector:@selector(paychecksLoaded) withObject:nil afterDelay:3.0f];
+    }
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     NSInteger errorCode = [error code];
     
-    if(errorCode != NSURLErrorCancelled) { // Ignore fast redirection
+    if(errorCode != NSURLErrorCancelled) { // Ignore fast redirection error
         NSLog(@"An error occured in the webview with Error code: %i", errorCode);
         switch (errorCode) {
             case -1009: // Error Domain=NSURLErrorDomain "The Internet connection appears to be offline."

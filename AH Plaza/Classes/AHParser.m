@@ -34,6 +34,7 @@ double totalHoursWorked;
     NSString *startingID = [[NSString alloc] initWithFormat:@"x-auto-26-gp-groupid-%i", yearCounter];
 
     while ([html rangeOfString: startingID].location != NSNotFound) {
+        NSMutableArray * paychecksOfThisYear = [[NSMutableArray alloc] init];
         
         NSString * year = [[NSString alloc] initWithFormat:@"document.getElementById('%@').childNodes[0].childNodes[0].innerHTML", startingID];
         year = [webHelper stringByEvaluatingJavaScriptFromString: year];
@@ -46,16 +47,15 @@ double totalHoursWorked;
         NSString * res = [webHelper stringByEvaluatingJavaScriptFromString: genericPeriodCounter];
 
         while ([res length]) {
-            NSLog(@"Period counter: %@", periodId);
             Paycheck * paycheck = [[Paycheck alloc] init];
             [paycheck setYear: year];
             NSString * monthStr = [[NSString alloc] initWithFormat: @"%@.childNodes[3].childNodes[0].childNodes[0].innerHTML", periodId];
-            [paycheck setMonth: [webHelper stringByEvaluatingJavaScriptFromString: monthStr]];
+            [paycheck setMonth: [[webHelper stringByEvaluatingJavaScriptFromString: monthStr] integerValue]];
             NSString * typeStr = [[NSString alloc] initWithFormat:@"%@.childNodes[4].childNodes[0].childNodes[0].innerHTML", periodId];
             [paycheck setType: [[webHelper stringByEvaluatingJavaScriptFromString:typeStr] isEqualToString: @"Salarisspecificatie"] ? PAYCHECK : YEARSUMARRY];
             NSString * dateStr = [[NSString alloc] initWithFormat:@"%@.childNodes[5].childNodes[0].childNodes[0].innerHTML", periodId];
             NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
-            [dateFormatter setDateFormat:@"DD-MM-YYYY"];
+            [dateFormatter setDateFormat:@"dd-MM-yyyy"];
             NSDate * date = [dateFormatter dateFromString: [webHelper stringByEvaluatingJavaScriptFromString:dateStr]];
             [paycheck setDate: date];
             
@@ -67,11 +67,12 @@ double totalHoursWorked;
             genericPeriodCounter = [[NSString alloc] initWithFormat:@"%@.childNodes[0].childNodes[0].childNodes[0].innerHTML", periodId];
             res = [webHelper stringByEvaluatingJavaScriptFromString: genericPeriodCounter];
             
-            [payChecks addObject: paycheck];
+            [paychecksOfThisYear addObject: paycheck];
         }
         
         yearCounter++;
         startingID = [[NSString alloc] initWithFormat:@"x-auto-26-gp-groupid-%i", yearCounter];
+        [payChecks addObject: paychecksOfThisYear];
     }
     
     

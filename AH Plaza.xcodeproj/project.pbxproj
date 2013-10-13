@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF038A06180AB357006CB990 /* PaycheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF038A05180AB357006CB990 /* PaycheckCell.m */; };
 		AF2BC9D81809CBE9001D4077 /* Paycheck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2BC9D71809CBE9001D4077 /* Paycheck.m */; };
 		AF2FB68817F21B5E002ECC51 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */; };
 		AF313D6A17ABDFA7004CC815 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5C17ABDFA5004CC815 /* MenuViewController.m */; };
@@ -45,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF038A04180AB357006CB990 /* PaycheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaycheckCell.h; path = Classes/View/PaycheckCell/PaycheckCell.h; sourceTree = "<group>"; };
+		AF038A05180AB357006CB990 /* PaycheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaycheckCell.m; path = Classes/View/PaycheckCell/PaycheckCell.m; sourceTree = "<group>"; };
 		AF2BC9D61809CBE9001D4077 /* Paycheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paycheck.h; path = Classes/Controllers/Paycheck/Paycheck.h; sourceTree = "<group>"; };
 		AF2BC9D71809CBE9001D4077 /* Paycheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Paycheck.m; path = Classes/Controllers/Paycheck/Paycheck.m; sourceTree = "<group>"; };
 		AF2FB68617F21B5E002ECC51 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tint.h"; path = "Classes/Helpers/UIImage+Tint/UIImage+Tint.h"; sourceTree = "<group>"; };
@@ -133,6 +136,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF038A02180AB30E006CB990 /* Paycheck */ = {
+			isa = PBXGroup;
+			children = (
+				AF038A03180AB319006CB990 /* PaycheckCell */,
+				AF6E26E917E5A2A8006C74BA /* PayCheckViewController */,
+			);
+			name = Paycheck;
+			sourceTree = "<group>";
+		};
+		AF038A03180AB319006CB990 /* PaycheckCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF038A04180AB357006CB990 /* PaycheckCell.h */,
+				AF038A05180AB357006CB990 /* PaycheckCell.m */,
+			);
+			name = PaycheckCell;
+			sourceTree = "<group>";
+		};
 		AF2BC9D51809CAB9001D4077 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,7 +455,7 @@
 				AF6E26E517E5A27F006C74BA /* LoginViewController */,
 				AF6E26E617E5A289006C74BA /* ChangePasswordViewController */,
 				AF6E26E817E5A29D006C74BA /* PaymentDaysViewController */,
-				AF6E26E917E5A2A8006C74BA /* PayCheckViewController */,
+				AF038A02180AB30E006CB990 /* Paycheck */,
 				AF6E26EA17E5A2B1006C74BA /* SettingsViewController */,
 				AF313D7117ABE051004CC815 /* Planning */,
 				AF6E26E717E5A294006C74BA /* MenuViewController */,
@@ -577,6 +598,7 @@
 				AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */,
 				AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */,
 				AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */,
+				AF038A06180AB357006CB990 /* PaycheckCell.m in Sources */,
 				AFE316A717B661CF00ACA245 /* Popup.m in Sources */,
 				AFE8489617B77FB400A02938 /* NSData+AES256.m in Sources */,
 				AFFBA48817DC735F009295D8 /* ChangePasswordViewController.m in Sources */,
