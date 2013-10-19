@@ -340,6 +340,33 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
             </objects>
             <point key="canvasLocation" x="358" y="488"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="k8U-xG-hQo">
+            <objects>
+                <viewController id="Fys-Iq-eD4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kPj-Tp-vPf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="uHh-Cs-yJ8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Periode 11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ujn-Iq-fhk">
+                                <rect key="frame" x="20" y="20" width="163" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.54061140124341822" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oqz-8D-eBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768" y="825"/>
+        </scene>
         <!--Menu View Controller - AH Plaza-->
         <scene sceneID="ybA-Ld-kYD">
             <objects>

@@ -16,7 +16,7 @@ typedef enum {
 } PaycheckType;
 
 @property NSString * year;
-@property NSString * month;
+@property NSInteger month;
 @property NSDate * date;
 @property PaycheckType type;
 @property NSURL * urlToPDF;

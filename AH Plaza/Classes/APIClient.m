@@ -152,6 +152,7 @@ BOOL calledPaycheckParser;
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
     NSString * currentURL = [self stringByEvaluatingJavaScriptFromString:@"document.URL"];
+    NSLog(@"Finished loading: %@", currentURL);
     
     // Check if the session is not expired
     if(![currentURL isEqualToString: @"https://plaza.ah.nl/pkmslogout?filename=wpslogout.html"]) {
@@ -211,6 +212,7 @@ BOOL calledPaycheckParser;
 }
 -(void) paychecksLoaded {
     NSLog(@"HTML size: %i ", [[self stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"] length]);
+    NSString  * html = [self stringByEvaluatingJavaScriptFromString: @"document.body.innerHTML"];
     if([[self stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"] length] > 300) {
         calledPaycheckParser = NO;
         NSArray *paychecks = [[AHParser sharedInstance] htmlToPaychecks: self];

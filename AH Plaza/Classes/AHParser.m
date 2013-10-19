@@ -59,6 +59,11 @@ double totalHoursWorked;
             NSDate * date = [dateFormatter dateFromString: [webHelper stringByEvaluatingJavaScriptFromString:dateStr]];
             [paycheck setDate: date];
             
+            dateStr = [[NSString alloc] initWithFormat:@"%@.childNodes[7].childNodes[0].childNodes[0].onclick()", periodId];
+            [webHelper stringByEvaluatingJavaScriptFromString: dateStr];
+//            NSString * url = [webHelper stringByEvaluatingJavaScriptFromString:@"document.URL"];
+//            return nil;
+            
             // TODO: set URL
             // [paycheck setUrlToPDF: [NSURL URLWithString: ]];
             

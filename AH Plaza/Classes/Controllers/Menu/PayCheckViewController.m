@@ -14,24 +14,29 @@
 
 @interface PayCheckViewController ()
 
-@property NSArray * paychecks;
-
 @end
 
 @implementation PayCheckViewController
 
+static NSArray * paychecks;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     // Retreive the paychecks
-    [[APIClient sharedInstance] loadPayCheckPage:^(NSArray *paychecks, NSError * error) {
-        NSLog(@"Downloaded everything (%i paychecks)", [paychecks count]);
-        _paychecks = paychecks;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [_tableView reloadData];
-        });
-    }];
+    if(!paychecks)
+        [[APIClient sharedInstance] loadPayCheckPage:^(NSArray *paychecksArray, NSError * error) {
+            if([paychecksArray count] > 0 && !error){
+                NSLog(@"Downloaded everything (%i paychecks)", [paychecks count]);
+                paychecks = paychecksArray;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [_tableView reloadData];
+                });
+            } else {
+                // show errors
+            }
+        }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +47,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PaycheckCell * paycheckCell = [tableView dequeueReusableCellWithIdentifier:@"PaycheckCell" forIndexPath: indexPath];
-    Paycheck * paycheck = [[_paychecks objectAtIndex: [indexPath section]] objectAtIndex: [indexPath item]];
+    Paycheck * paycheck = [[paychecks objectAtIndex: [indexPath section]] objectAtIndex: [indexPath item]];
     
     [[paycheckCell natureImageView] setImage: [UIImage imageNamed: [[NSString alloc] initWithFormat: @"month-%i", [paycheck month]]]];
     
@@ -63,11 +68,11 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[_paychecks objectAtIndex: section] count];
+    return [[paychecks objectAtIndex: section] count];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [_paychecks count];
+    return [paychecks count];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -82,7 +87,7 @@
     [yearLabel setBackgroundColor: [UIColor clearColor]];
     [yearLabel setTextColor: [UIColor whiteColor]];
     [yearLabel setFont: app_font(18)];
-    [yearLabel setText: [(Paycheck*)[[_paychecks objectAtIndex: section] objectAtIndex:0] year]];
+    [yearLabel setText: [(Paycheck*)[[paychecks objectAtIndex: section] objectAtIndex:0] year]];
     
     [view addSubview: yearLabel];
     
