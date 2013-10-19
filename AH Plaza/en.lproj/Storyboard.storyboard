@@ -1049,8 +1049,6 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
     </scenes>
     <resources>
         <image name="AH-Plaza_logo_text" width="198" height="223"/>
-        <image name="AH-Plaza_logo_text" width="198" height="223"/>
-        <image name="AH-Plaza_logo_text" width="198" height="223"/>
         <image name="ah-button-inverse" width="125" height="50"/>
         <image name="calendar_ico" width="200" height="200"/>
         <image name="info_ico" width="110" height="110"/>
