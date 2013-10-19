@@ -290,15 +290,15 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="PaycheckCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaycheckCell" rowHeight="75" id="AqY-uQ-c4V" customClass="PaycheckCell">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="PaycheckCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PaycheckCell" rowHeight="75" id="AqY-uQ-c4V" customClass="PaycheckCell">
                                         <rect key="frame" x="0.0" y="30" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AqY-uQ-c4V" id="UqI-hx-aYv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bWS-cO-svo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="67" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KSE-4j-2wP">
@@ -320,6 +320,7 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
                                             <outlet property="dateLabel" destination="Zib-xY-SrQ" id="JbI-5p-5jZ"/>
                                             <outlet property="natureImageView" destination="bWS-cO-svo" id="3Ci-6P-DzO"/>
                                             <outlet property="periodLabel" destination="KSE-4j-2wP" id="tyI-Kc-rhA"/>
+                                            <segue destination="Fys-Iq-eD4" kind="push" id="kYO-8Y-PtW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -345,23 +346,24 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
             <objects>
                 <viewController id="Fys-Iq-eD4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kPj-Tp-vPf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="uHh-Cs-yJ8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="month-12-big" id="uHh-Cs-yJ8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Periode 11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ujn-Iq-fhk">
                                 <rect key="frame" x="20" y="20" width="163" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" red="0.0" green="0.54061140124341822" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sct-q8-9UK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqz-8D-eBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1047,9 +1049,12 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
     </scenes>
     <resources>
         <image name="AH-Plaza_logo_text" width="198" height="223"/>
+        <image name="AH-Plaza_logo_text" width="198" height="223"/>
+        <image name="AH-Plaza_logo_text" width="198" height="223"/>
         <image name="ah-button-inverse" width="125" height="50"/>
         <image name="calendar_ico" width="200" height="200"/>
         <image name="info_ico" width="110" height="110"/>
+        <image name="month-12-big" width="320" height="240"/>
         <image name="payment_ico" width="110" height="110"/>
         <image name="planning-1" width="235" height="147"/>
         <image name="planning-clear" width="250" height="208"/>

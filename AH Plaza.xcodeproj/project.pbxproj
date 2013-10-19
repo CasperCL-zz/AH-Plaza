@@ -31,6 +31,7 @@
 		AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720F91179BF20600F77CA6 /* LoginViewController.m */; };
 		AF9AC102179EA80500CF3E98 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC101179EA80500CF3E98 /* APIClient.m */; };
 		AF9AC105179EA8D400CF3E98 /* Week.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC104179EA8D400CF3E98 /* Week.m */; };
+		AFC901F31812B66B00E1BF93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC901F21812B66B00E1BF93 /* Images.xcassets */; };
 		AFDA88B717E65525007AC0FB /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B217E65525007AC0FB /* IISideController.m */; };
 		AFDA88B817E65525007AC0FB /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B417E65525007AC0FB /* IIViewDeckController.m */; };
 		AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B617E65525007AC0FB /* IIWrapController.m */; };
@@ -94,6 +95,7 @@
 		AF9AC103179EA8D400CF3E98 /* Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Week.h; path = Classes/Model/Week.h; sourceTree = "<group>"; };
 		AF9AC104179EA8D400CF3E98 /* Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Week.m; path = Classes/Model/Week.m; sourceTree = "<group>"; };
 		AFC6C82E17DB74A90061B03C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Classes/Helpers/Constants.h; sourceTree = "<group>"; };
+		AFC901F21812B66B00E1BF93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AFDA88B117E65525007AC0FB /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
 		AFDA88B217E65525007AC0FB /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
 		AFDA88B317E65525007AC0FB /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 				AF720F0E179BE3DA00F77CA6 /* Storyboards */,
 				AF45DFB817EE1BE3009C9ED8 /* AHComponents */,
 				AFC6C82D17DB74800061B03C /* Helpers */,
+				AFC901F21812B66B00E1BF93 /* Images.xcassets */,
 				AF720EF5179BE2F400F77CA6 /* Supporting Files */,
 			);
 			path = "AH Plaza";
@@ -566,6 +569,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC901F31812B66B00E1BF93 /* Images.xcassets in Resources */,
 				AF720EF9179BE2F400F77CA6 /* InfoPlist.strings in Resources */,
 				AF720F0D179BE3D100F77CA6 /* Storyboard.storyboard in Resources */,
 			);
