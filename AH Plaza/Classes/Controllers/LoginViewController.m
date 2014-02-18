@@ -17,6 +17,7 @@
 #import "../Helpers/ViewDeck/IIViewDeckController.h"
 #import "LeftMenuViewController.h"
 #import "UIImage+Tint.h"
+#import "Constants.h"
 
 @interface LoginViewController ()
 
@@ -154,13 +155,13 @@ int tries;
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     if(!credentialViewMoved){
         credentialViewMoved = YES;
-        [self moveCredentialsViewUp: 170 completion: ^(BOOL finished) {}];
+        [self moveCredentialsViewUp: isiPhone4 ? 170 : 90 completion: ^(BOOL finished) {}];
     }
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
     if(textField == _usernameTextField) {
-        [self moveCredentialsViewUp: 170 completion: ^(BOOL finished) {}];
+        [self moveCredentialsViewUp: isiPhone4 ? 170 : 90 completion: ^(BOOL finished) {}];
         credentialViewMoved = 2;
         [_passwordTextField becomeFirstResponder];
     } else if (textField == _passwordTextField){
@@ -289,13 +290,18 @@ int tries;
     [_usernameTextField setEnabled: NO];
     [_passwordTextField setEnabled: NO];
     
+    CGRect credentialsFrame = _credentialsView.frame;
+    credentialsFrame.origin.y += 400;
+    
     [UIView animateWithDuration: 1.0 animations:^{
         //        _usernameTextField.alpha = 0.0f;
         //        _passwordTextField.alpha = 0.0f;
         //        _loginButton.alpha = 0.0f;
         //        _usernameLabel.alpha = 0.0f;
         //        _passwordLabel.alpha = 0.0f;
-        _credentialsView.alpha = 0.0f;
+
+        _credentialsView.frame = credentialsFrame;
+//        _credentialsView.alpha = 0.0f;
         _ahplazaImage.alpha = 0.0f;
     } completion:^(BOOL finished) {
         completion(finished);

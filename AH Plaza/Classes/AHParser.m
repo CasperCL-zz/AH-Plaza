@@ -52,15 +52,13 @@ double totalHoursWorked;
             NSString * monthStr = [[NSString alloc] initWithFormat: @"%@.childNodes[3].childNodes[0].childNodes[0].innerHTML", periodId];
             [paycheck setMonth: [[webHelper stringByEvaluatingJavaScriptFromString: monthStr] integerValue]];
             NSString * typeStr = [[NSString alloc] initWithFormat:@"%@.childNodes[4].childNodes[0].childNodes[0].innerHTML", periodId];
-            [paycheck setType: [[webHelper stringByEvaluatingJavaScriptFromString:typeStr] isEqualToString: @"Salarisspecificatie"] ? PAYCHECK : YEARSUMARRY];
+            [paycheck setType: [[webHelper stringByEvaluatingJavaScriptFromString:typeStr] isEqualToString: @"Salarisspecificatie"] ? PAYCHECK_TYPE : YEARSUMARRY_TYPE];
             NSString * dateStr = [[NSString alloc] initWithFormat:@"%@.childNodes[5].childNodes[0].childNodes[0].innerHTML", periodId];
             NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
             [dateFormatter setDateFormat:@"dd-MM-yyyy"];
             NSDate * date = [dateFormatter dateFromString: [webHelper stringByEvaluatingJavaScriptFromString:dateStr]];
             [paycheck setDate: date];
             
-            dateStr = [[NSString alloc] initWithFormat:@"%@.childNodes[7].childNodes[0].childNodes[0].onclick()", periodId];
-            [webHelper stringByEvaluatingJavaScriptFromString: dateStr];
 //            NSString * url = [webHelper stringByEvaluatingJavaScriptFromString:@"document.URL"];
 //            return nil;
             
@@ -199,6 +197,20 @@ double totalHoursWorked;
         minutes = @"00";
     
     return [[NSString alloc] initWithFormat:@"%@:%@", hours, minutes];
+}
+
+// Core Data parsing
+-(Paycheck*) parseSavedPaycheck:(NSManagedObject*)object {
+    
+    Paycheck * paycheck = [[Paycheck alloc] init];
+    
+    [paycheck setYear: [object valueForKey: @"year"]];
+    [paycheck setMonth: [[object valueForKey: @"month"] intValue]];
+    [paycheck setDate: [object valueForKey: @"date"]];
+    [paycheck setUrlToPDF: [object valueForKey:@"urlToPDF"]];
+    [paycheck setType: [[object valueForKey: @"type"] intValue]];
+    
+    return paycheck;
 }
 
 @end

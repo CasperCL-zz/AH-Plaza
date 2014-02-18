@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="xbb-fU-RDj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="xbb-fU-RDj">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -298,7 +298,7 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bWS-cO-svo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="67" height="75"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KSE-4j-2wP">
@@ -320,7 +320,6 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
                                             <outlet property="dateLabel" destination="Zib-xY-SrQ" id="JbI-5p-5jZ"/>
                                             <outlet property="natureImageView" destination="bWS-cO-svo" id="3Ci-6P-DzO"/>
                                             <outlet property="periodLabel" destination="KSE-4j-2wP" id="tyI-Kc-rhA"/>
-                                            <segue destination="Fys-Iq-eD4" kind="push" id="kYO-8Y-PtW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -341,33 +340,52 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
             </objects>
             <point key="canvasLocation" x="358" y="488"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - 2013-->
         <scene sceneID="k8U-xG-hQo">
             <objects>
                 <viewController id="Fys-Iq-eD4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kPj-Tp-vPf">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1640"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="month-12-big" id="uHh-Cs-yJ8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Periode 11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ujn-Iq-fhk">
-                                <rect key="frame" x="20" y="20" width="163" height="60"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="nzC-o4-pwK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="month-1-big" id="uHh-Cs-yJ8">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01-01-2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eFg-iA-YsN">
+                                        <rect key="frame" x="20" y="71" width="163" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Periode 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ujn-Iq-fhk">
+                                        <rect key="frame" x="20" y="20" width="163" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" id="gZF-YI-PsL">
+                                        <rect key="frame" x="0.0" y="495" width="320" height="5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.54061140119999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sct-q8-9UK"/>
+                    <navigationItem key="navigationItem" title="2013" id="sct-q8-9UK"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqz-8D-eBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768" y="825"/>
+            <point key="canvasLocation" x="786" y="825"/>
         </scene>
         <!--Menu View Controller - AH Plaza-->
         <scene sceneID="ybA-Ld-kYD">
@@ -1052,7 +1070,7 @@ Het wachtwoord mag niet lijken op uw voornaam en of achternaam</string>
         <image name="ah-button-inverse" width="125" height="50"/>
         <image name="calendar_ico" width="200" height="200"/>
         <image name="info_ico" width="110" height="110"/>
-        <image name="month-12-big" width="320" height="240"/>
+        <image name="month-1-big" width="320" height="240"/>
         <image name="payment_ico" width="110" height="110"/>
         <image name="planning-1" width="235" height="147"/>
         <image name="planning-clear" width="250" height="208"/>

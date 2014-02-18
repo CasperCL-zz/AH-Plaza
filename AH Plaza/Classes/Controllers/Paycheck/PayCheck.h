@@ -11,8 +11,8 @@
 @interface Paycheck : NSObject
 
 typedef enum {
-    PAYCHECK,
-    YEARSUMARRY
+    PAYCHECK_TYPE,
+    YEARSUMARRY_TYPE
 } PaycheckType;
 
 @property NSString * year;

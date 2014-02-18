@@ -92,7 +92,8 @@
         [_popUpView setAlpha: 0.0f];
     } completion:^(BOOL finished) {
         [_popUpView setHidden: YES];
-        completion(finished);
+        if(completion)
+            completion(finished);
     }];
 }
 

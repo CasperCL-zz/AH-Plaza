@@ -211,14 +211,20 @@ BOOL calledPaycheckParser;
     }
 }
 -(void) paychecksLoaded {
+    static int timePast = 8;
     NSLog(@"HTML size: %i ", [[self stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"] length]);
-    NSString  * html = [self stringByEvaluatingJavaScriptFromString: @"document.body.innerHTML"];
-    if([[self stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"] length] > 300) {
+//    NSString  * html = [self stringByEvaluatingJavaScriptFromString: @"document.body.innerHTML"];
+    if([[self stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"] length] > 2326) {
         calledPaycheckParser = NO;
         NSArray *paychecks = [[AHParser sharedInstance] htmlToPaychecks: self];
         _paycheckCallback(paychecks, nil);
     } else {
         [self performSelector:@selector(paychecksLoaded) withObject:nil afterDelay:3.0f];
+        timePast +=3;
+        if(timePast > 14){
+            NSDictionary * errorDictionary = @{@"reason" : @"AH-Plaza is offline"};
+            _paycheckCallback(nil, [[NSError alloc] initWithDomain: @"" code:500 userInfo: errorDictionary]);
+        }
     }
 }
 

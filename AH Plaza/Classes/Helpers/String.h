@@ -11,4 +11,6 @@
 
 #define left_menu_items @[@"Overzicht", @"Uitbetalingsdata", @"Werkrooster", @"Loonstroken", @"Instellingen"]
 
+#define entity_paycheck @"PaycheckItem"
+
 #endif

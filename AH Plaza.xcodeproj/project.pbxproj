@@ -32,6 +32,9 @@
 		AF9AC102179EA80500CF3E98 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC101179EA80500CF3E98 /* APIClient.m */; };
 		AF9AC105179EA8D400CF3E98 /* Week.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC104179EA8D400CF3E98 /* Week.m */; };
 		AFC901F31812B66B00E1BF93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC901F21812B66B00E1BF93 /* Images.xcassets */; };
+		AFD25EE01813FF190067D612 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFD25EDE1813FF190067D612 /* DataModel.xcdatamodeld */; };
+		AFD25EE31814002B0067D612 /* APIData.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD25EE21814002B0067D612 /* APIData.m */; };
+		AFD25EE6181400FD0067D612 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD25EE5181400FD0067D612 /* CoreData.framework */; };
 		AFDA88B717E65525007AC0FB /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B217E65525007AC0FB /* IISideController.m */; };
 		AFDA88B817E65525007AC0FB /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B417E65525007AC0FB /* IIViewDeckController.m */; };
 		AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B617E65525007AC0FB /* IIWrapController.m */; };
@@ -96,6 +99,10 @@
 		AF9AC104179EA8D400CF3E98 /* Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Week.m; path = Classes/Model/Week.m; sourceTree = "<group>"; };
 		AFC6C82E17DB74A90061B03C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Classes/Helpers/Constants.h; sourceTree = "<group>"; };
 		AFC901F21812B66B00E1BF93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AFD25EDF1813FF190067D612 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		AFD25EE11814002B0067D612 /* APIData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIData.h; path = Classes/Controllers/APIData/APIData.h; sourceTree = "<group>"; };
+		AFD25EE21814002B0067D612 /* APIData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIData.m; path = Classes/Controllers/APIData/APIData.m; sourceTree = "<group>"; };
+		AFD25EE5181400FD0067D612 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AFDA88B117E65525007AC0FB /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
 		AFDA88B217E65525007AC0FB /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
 		AFDA88B317E65525007AC0FB /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
@@ -124,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD25EE6181400FD0067D612 /* CoreData.framework in Frameworks */,
 				AFDA88C117E657BC007AC0FB /* QuartzCore.framework in Frameworks */,
 				AF6E26F917E5CC61006C74BA /* libz.dylib in Frameworks */,
 				AF720EEF179BE2F400F77CA6 /* UIKit.framework in Frameworks */,
@@ -157,8 +165,10 @@
 		AF2BC9D51809CAB9001D4077 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AFD25EDD1813FEDF0067D612 /* DataModel */,
 				AF45DFA517EDCC06009C9ED8 /* APIClient */,
 				AF45DFA617EDCC15009C9ED8 /* AHParser */,
+				AFD25EE41814002F0067D612 /* APIData */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -387,6 +397,7 @@
 		AF720EED179BE2F400F77CA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFD25EE5181400FD0067D612 /* CoreData.framework */,
 				AFDA88C017E657BC007AC0FB /* QuartzCore.framework */,
 				AF720EEE179BE2F400F77CA6 /* UIKit.framework */,
 				AF720EF0179BE2F400F77CA6 /* Foundation.framework */,
@@ -478,6 +489,23 @@
 				AF2FB68917F21B6A002ECC51 /* UIImage+Tint */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		AFD25EDD1813FEDF0067D612 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFD25EDE1813FF190067D612 /* DataModel.xcdatamodeld */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		AFD25EE41814002F0067D612 /* APIData */ = {
+			isa = PBXGroup;
+			children = (
+				AFD25EE11814002B0067D612 /* APIData.h */,
+				AFD25EE21814002B0067D612 /* APIData.m */,
+			);
+			name = APIData;
 			sourceTree = "<group>";
 		};
 		AFDA88B017E65525007AC0FB /* ViewDeck */ = {
@@ -599,12 +627,14 @@
 				AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */,
 				AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */,
 				AF038A06180AB357006CB990 /* PaycheckCell.m in Sources */,
+				AFD25EE01813FF190067D612 /* DataModel.xcdatamodeld in Sources */,
 				AFE316A717B661CF00ACA245 /* Popup.m in Sources */,
 				AFE8489617B77FB400A02938 /* NSData+AES256.m in Sources */,
 				AFFBA48817DC735F009295D8 /* ChangePasswordViewController.m in Sources */,
 				AFFBA48B17DD0FA6009295D8 /* NSString+JRStringAdditions.m in Sources */,
 				AFDA88B717E65525007AC0FB /* IISideController.m in Sources */,
 				AFDA88B817E65525007AC0FB /* IIViewDeckController.m in Sources */,
+				AFD25EE31814002B0067D612 /* APIData.m in Sources */,
 				AF45DFAE17EDD5AA009C9ED8 /* AHViewController.m in Sources */,
 				AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */,
 				AFDA88BE17E655A8007AC0FB /* LeftMenuViewController.m in Sources */,
@@ -750,6 +780,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AFD25EDE1813FF190067D612 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AFD25EDF1813FF190067D612 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = AFD25EDF1813FF190067D612 /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = Classes/Model/DataModel/DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AF720EE3179BE2F400F77CA6 /* Project object */;
 }

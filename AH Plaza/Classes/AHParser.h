@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Paycheck.h"
+#import <CoreData/CoreData.h>
 
 @interface AHParser : NSObject
 
 + (id)sharedInstance;
 -(NSArray*) htmlToWeeks: (UIWebView *) webHelper;
 -(NSArray*) htmlToPaychecks: (UIWebView *) webHelper;
+
+-(Paycheck*) parseSavedPaycheck:(NSManagedObject*)object;
 
 @end

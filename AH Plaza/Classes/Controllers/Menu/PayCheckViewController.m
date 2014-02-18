@@ -11,8 +11,13 @@
 #import "PaycheckCell.h"
 #import "Paycheck.h"
 #import "Fonts.h"
+#import "Popup.h"
+#import "UIImage+Tint.h"
+#import "APIData.h"
 
 @interface PayCheckViewController ()
+
+@property Popup * popup;
 
 @end
 
@@ -24,19 +29,84 @@ static NSArray * paychecks;
 {
     [super viewDidLoad];
     
-    // Retreive the paychecks
+    _popup = [[Popup alloc] initWithView: self.view];
+    
+    UIColor *bgColor = UIColorFromRGB(ah_blue);
+    [_popup setFont: @"STHeitiTC-Light"];
+    
+    [_popup setButton1BackgroundImage:[UIImage imageWithColor: bgColor] forState:UIControlStateNormal];
+    [_popup setButton2BackgroundImage:[UIImage imageWithColor: bgColor] forState:UIControlStateNormal];
+    [_popup setTextColor: bgColor highlighted: [UIColor whiteColor]];    [[_popup dialogLabel] setTextColor: bgColor];
+    [[_popup button1] setTitleColor: [UIColor whiteColor] forState:UIControlStateNormal];
+    [[_popup button2] setTitleColor: [UIColor whiteColor] forState:UIControlStateNormal];
+    [[_popup activityIndicator] setColor: bgColor];
+    
+    
     if(!paychecks)
-        [[APIClient sharedInstance] loadPayCheckPage:^(NSArray *paychecksArray, NSError * error) {
-            if([paychecksArray count] > 0 && !error){
-                NSLog(@"Downloaded everything (%i paychecks)", [paychecks count]);
-                paychecks = paychecksArray;
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [_tableView reloadData];
-                });
+        // Retreive the paychecks
+        [[APIData sharedInstance] loadPaychecks:^(NSArray *paychecksArray, NSError *error) {
+            
+            if(!paychecksArray || ![paychecksArray count] || error) {
+                [self renewPaychecks];
             } else {
-                // show errors
+                Paycheck * lastPaycheck = [[paychecksArray objectAtIndex:0] objectAtIndex: 0];
+                NSTimeInterval lastPaycheckTI = ceil(fabs([lastPaycheck.date timeIntervalSinceNow] / (60 * 60 * 24)));
+                
+                
+                if (lastPaycheckTI > 28) {
+                    NSString * message;
+                    if(lastPaycheckTI < 56)
+                        message = @"Er is een nieuwe loonstrook beschikbaar, wil je deze ophalen?";
+                    else
+                        message = @"Er zijn nieuwe loonstroken, wil je deze ophalen?";
+                    
+                    [_popup showPopupWithAnimationDuration:.4f withText: message  withButton1Text:@"Ja" withButton2Text:@"Later" withResult:^(RESULT result) {
+                        if(result == OKAY){
+                            [self renewPaychecks];
+                        } else {
+                            [_popup hidePopupWithAnimationDuration:.4f onCompletion: nil];
+                        }
+                    } onCompletion: nil];
+                }
+                [_popup hidePopupWithAnimationDuration:.5f onCompletion:^(BOOL finished) {
+                    
+                    if([paychecksArray count] > 0 && !error){
+                        NSLog(@"Downloaded everything (%i paychecks)", [paychecks count]);
+                        paychecks = paychecksArray;
+                        
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [_tableView reloadData];
+                        });
+                    } else {
+                        // show errors
+                    }
+                    
+                }];
             }
         }];
+}
+
+-(void) renewPaychecks {
+    
+    [_popup showPopupWithAnimationDuration:.2f withActivityIndicatorAndText: @"Loonstroken laden" onCompletion:^(BOOL finished) {
+        [[APIClient sharedInstance] loadPayCheckPage:^(NSArray *paychecksArray, NSError * error) {
+            [_popup hidePopupWithAnimationDuration:.5f onCompletion:^(BOOL finished) {
+                
+                if([paychecksArray count] > 0 && !error){
+                    NSLog(@"Downloaded everything (%i paychecks)", [paychecks count]);
+                    paychecks = paychecksArray;
+                    
+                    [[APIData sharedInstance] savePaychecks:paychecks onCompletion: nil];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [_tableView reloadData];
+                    });
+                } else {
+                    // show errors
+                }
+                
+            }];
+        }];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
