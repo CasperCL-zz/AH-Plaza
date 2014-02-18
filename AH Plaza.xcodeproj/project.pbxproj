@@ -1,0 +1,799 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF038A06180AB357006CB990 /* PaycheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF038A05180AB357006CB990 /* PaycheckCell.m */; };
+		AF2BC9D81809CBE9001D4077 /* Paycheck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2BC9D71809CBE9001D4077 /* Paycheck.m */; };
+		AF2FB68817F21B5E002ECC51 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */; };
+		AF313D6A17ABDFA7004CC815 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5C17ABDFA5004CC815 /* MenuViewController.m */; };
+		AF313D6B17ABDFA7004CC815 /* PayCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5E17ABDFA6004CC815 /* PayCheckViewController.m */; };
+		AF313D6C17ABDFA7004CC815 /* PaymentDaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D6017ABDFA6004CC815 /* PaymentDaysViewController.m */; };
+		AF313D7017ABDFA7004CC815 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D6917ABDFA7004CC815 /* SettingsViewController.m */; };
+		AF313D7817ABE051004CC815 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7317ABE051004CC815 /* ModelController.m */; };
+		AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7517ABE051004CC815 /* PlanningViewController.m */; };
+		AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7717ABE051004CC815 /* RootViewController.m */; };
+		AF45DFAE17EDD5AA009C9ED8 /* AHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF45DFAD17EDD5AA009C9ED8 /* AHViewController.m */; };
+		AF45DFB617EDFC68009C9ED8 /* AHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF45DFB517EDFC68009C9ED8 /* AHNavigationController.m */; };
+		AF6E26F517E5CBFB006C74BA /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E26EF17E5CBFB006C74BA /* libTestFlight.a */; };
+		AF6E26F917E5CC61006C74BA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E26F817E5CC61006C74BA /* libz.dylib */; };
+		AF720EEF179BE2F400F77CA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EEE179BE2F400F77CA6 /* UIKit.framework */; };
+		AF720EF1179BE2F400F77CA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF0179BE2F400F77CA6 /* Foundation.framework */; };
+		AF720EF3179BE2F400F77CA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF720EF2179BE2F400F77CA6 /* CoreGraphics.framework */; };
+		AF720EF9179BE2F400F77CA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF720EF7179BE2F400F77CA6 /* InfoPlist.strings */; };
+		AF720EFB179BE2F400F77CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720EFA179BE2F400F77CA6 /* main.m */; };
+		AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720EFE179BE2F400F77CA6 /* AppDelegate.m */; };
+		AF720F0D179BE3D100F77CA6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */; };
+		AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720F91179BF20600F77CA6 /* LoginViewController.m */; };
+		AF9AC102179EA80500CF3E98 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC101179EA80500CF3E98 /* APIClient.m */; };
+		AF9AC105179EA8D400CF3E98 /* Week.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC104179EA8D400CF3E98 /* Week.m */; };
+		AFC901F31812B66B00E1BF93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC901F21812B66B00E1BF93 /* Images.xcassets */; };
+		AFD25EE01813FF190067D612 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFD25EDE1813FF190067D612 /* DataModel.xcdatamodeld */; };
+		AFD25EE31814002B0067D612 /* APIData.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD25EE21814002B0067D612 /* APIData.m */; };
+		AFD25EE6181400FD0067D612 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD25EE5181400FD0067D612 /* CoreData.framework */; };
+		AFDA88B717E65525007AC0FB /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B217E65525007AC0FB /* IISideController.m */; };
+		AFDA88B817E65525007AC0FB /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B417E65525007AC0FB /* IIViewDeckController.m */; };
+		AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B617E65525007AC0FB /* IIWrapController.m */; };
+		AFDA88BE17E655A8007AC0FB /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88BD17E655A8007AC0FB /* LeftMenuViewController.m */; };
+		AFDA88C117E657BC007AC0FB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDA88C017E657BC007AC0FB /* QuartzCore.framework */; };
+		AFDF015117A94D4C005CC5AA /* AHParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015017A94D4B005CC5AA /* AHParser.m */; };
+		AFE316A717B661CF00ACA245 /* Popup.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE316A617B661CF00ACA245 /* Popup.m */; };
+		AFE8489617B77FB400A02938 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE8489517B77FB400A02938 /* NSData+AES256.m */; };
+		AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5E41017B3BC250028896F /* SettingsManager.m */; };
+		AFFBA48817DC735F009295D8 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBA48717DC735F009295D8 /* ChangePasswordViewController.m */; };
+		AFFBA48B17DD0FA6009295D8 /* NSString+JRStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBA48A17DD0FA6009295D8 /* NSString+JRStringAdditions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF038A04180AB357006CB990 /* PaycheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaycheckCell.h; path = Classes/View/PaycheckCell/PaycheckCell.h; sourceTree = "<group>"; };
+		AF038A05180AB357006CB990 /* PaycheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaycheckCell.m; path = Classes/View/PaycheckCell/PaycheckCell.m; sourceTree = "<group>"; };
+		AF2BC9D61809CBE9001D4077 /* Paycheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paycheck.h; path = Classes/Controllers/Paycheck/Paycheck.h; sourceTree = "<group>"; };
+		AF2BC9D71809CBE9001D4077 /* Paycheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Paycheck.m; path = Classes/Controllers/Paycheck/Paycheck.m; sourceTree = "<group>"; };
+		AF2FB68617F21B5E002ECC51 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tint.h"; path = "Classes/Helpers/UIImage+Tint/UIImage+Tint.h"; sourceTree = "<group>"; };
+		AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Tint.m"; path = "Classes/Helpers/UIImage+Tint/UIImage+Tint.m"; sourceTree = "<group>"; };
+		AF313D5B17ABDFA5004CC815 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/Controllers/Menu/MenuViewController.h; sourceTree = "<group>"; };
+		AF313D5C17ABDFA5004CC815 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/Controllers/Menu/MenuViewController.m; sourceTree = "<group>"; };
+		AF313D5D17ABDFA5004CC815 /* PayCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCheckViewController.h; path = Classes/Controllers/Menu/PayCheckViewController.h; sourceTree = "<group>"; };
+		AF313D5E17ABDFA6004CC815 /* PayCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCheckViewController.m; path = Classes/Controllers/Menu/PayCheckViewController.m; sourceTree = "<group>"; };
+		AF313D5F17ABDFA6004CC815 /* PaymentDaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentDaysViewController.h; path = Classes/Controllers/Menu/PaymentDaysViewController.h; sourceTree = "<group>"; };
+		AF313D6017ABDFA6004CC815 /* PaymentDaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentDaysViewController.m; path = Classes/Controllers/Menu/PaymentDaysViewController.m; sourceTree = "<group>"; };
+		AF313D6817ABDFA6004CC815 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/Controllers/Menu/SettingsViewController.h; sourceTree = "<group>"; };
+		AF313D6917ABDFA7004CC815 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/Controllers/Menu/SettingsViewController.m; sourceTree = "<group>"; };
+		AF313D7217ABE051004CC815 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
+		AF313D7317ABE051004CC815 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
+		AF313D7417ABE051004CC815 /* PlanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningViewController.h; sourceTree = "<group>"; };
+		AF313D7517ABE051004CC815 /* PlanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningViewController.m; sourceTree = "<group>"; };
+		AF313D7617ABE051004CC815 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		AF313D7717ABE051004CC815 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		AF45DFA917EDCC4D009C9ED8 /* String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = String.h; path = Classes/Helpers/String.h; sourceTree = "<group>"; };
+		AF45DFAC17EDD5AA009C9ED8 /* AHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHViewController.h; path = Classes/Controllers/AHViewController/AHViewController.h; sourceTree = "<group>"; };
+		AF45DFAD17EDD5AA009C9ED8 /* AHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHViewController.m; path = Classes/Controllers/AHViewController/AHViewController.m; sourceTree = "<group>"; };
+		AF45DFB417EDFC68009C9ED8 /* AHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHNavigationController.h; path = Classes/AHComponents/AHNavigationController/AHNavigationController.h; sourceTree = "<group>"; };
+		AF45DFB517EDFC68009C9ED8 /* AHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHNavigationController.m; path = Classes/AHComponents/AHNavigationController/AHNavigationController.m; sourceTree = "<group>"; };
+		AF45DFBA17EE1C77009C9ED8 /* Fonts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Fonts.h; path = Classes/Helpers/Fonts.h; sourceTree = "<group>"; };
+		AF6E26EF17E5CBFB006C74BA /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		AF6E26F217E5CBFB006C74BA /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		AF6E26F317E5CBFB006C74BA /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		AF6E26F417E5CBFB006C74BA /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		AF6E26F817E5CC61006C74BA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		AF720EEB179BE2F400F77CA6 /* AH Plaza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AH Plaza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF720EEE179BE2F400F77CA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AF720EF0179BE2F400F77CA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF720EF2179BE2F400F77CA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF720EF6179BE2F400F77CA6 /* AH Plaza-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AH Plaza-Info.plist"; sourceTree = "<group>"; };
+		AF720EF8179BE2F400F77CA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF720EFA179BE2F400F77CA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF720EFC179BE2F400F77CA6 /* AH Plaza-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AH Plaza-Prefix.pch"; sourceTree = "<group>"; };
+		AF720EFD179BE2F400F77CA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF720EFE179BE2F400F77CA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF720F0C179BE3D100F77CA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
+		AF720F90179BF20600F77CA6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/Controllers/LoginViewController.h; sourceTree = "<group>"; };
+		AF720F91179BF20600F77CA6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/Controllers/LoginViewController.m; sourceTree = "<group>"; };
+		AF9AC100179EA80500CF3E98 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIClient.h; path = Classes/APIClient.h; sourceTree = "<group>"; };
+		AF9AC101179EA80500CF3E98 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIClient.m; path = Classes/APIClient.m; sourceTree = "<group>"; };
+		AF9AC103179EA8D400CF3E98 /* Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Week.h; path = Classes/Model/Week.h; sourceTree = "<group>"; };
+		AF9AC104179EA8D400CF3E98 /* Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Week.m; path = Classes/Model/Week.m; sourceTree = "<group>"; };
+		AFC6C82E17DB74A90061B03C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Classes/Helpers/Constants.h; sourceTree = "<group>"; };
+		AFC901F21812B66B00E1BF93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AFD25EDF1813FF190067D612 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		AFD25EE11814002B0067D612 /* APIData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIData.h; path = Classes/Controllers/APIData/APIData.h; sourceTree = "<group>"; };
+		AFD25EE21814002B0067D612 /* APIData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIData.m; path = Classes/Controllers/APIData/APIData.m; sourceTree = "<group>"; };
+		AFD25EE5181400FD0067D612 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AFDA88B117E65525007AC0FB /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
+		AFDA88B217E65525007AC0FB /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
+		AFDA88B317E65525007AC0FB /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
+		AFDA88B417E65525007AC0FB /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
+		AFDA88B517E65525007AC0FB /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
+		AFDA88B617E65525007AC0FB /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
+		AFDA88BC17E655A8007AC0FB /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuViewController.h; path = Classes/Controllers/LeftMenuViewController.h; sourceTree = "<group>"; };
+		AFDA88BD17E655A8007AC0FB /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuViewController.m; path = Classes/Controllers/LeftMenuViewController.m; sourceTree = "<group>"; };
+		AFDA88C017E657BC007AC0FB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AFDF014F17A94D4B005CC5AA /* AHParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHParser.h; path = Classes/AHParser.h; sourceTree = "<group>"; };
+		AFDF015017A94D4B005CC5AA /* AHParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHParser.m; path = Classes/AHParser.m; sourceTree = "<group>"; };
+		AFE316A517B661CF00ACA245 /* Popup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Popup.h; path = "AH Plaza/Classes/Frameworks/Popup/Popup.h"; sourceTree = "<group>"; };
+		AFE316A617B661CF00ACA245 /* Popup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Popup.m; path = "AH Plaza/Classes/Frameworks/Popup/Popup.m"; sourceTree = "<group>"; };
+		AFE8489417B77FB400A02938 /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+AES256.h"; path = "Classes/NSData+AES256.h"; sourceTree = "<group>"; };
+		AFE8489517B77FB400A02938 /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+AES256.m"; path = "Classes/NSData+AES256.m"; sourceTree = "<group>"; };
+		AFF5E40F17B3BC250028896F /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsManager.h; path = Classes/SettingsManager.h; sourceTree = "<group>"; };
+		AFF5E41017B3BC250028896F /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsManager.m; path = Classes/SettingsManager.m; sourceTree = "<group>"; };
+		AFFBA48617DC735F009295D8 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePasswordViewController.h; path = Classes/Controllers/ChangePasswordViewController.h; sourceTree = "<group>"; };
+		AFFBA48717DC735F009295D8 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePasswordViewController.m; path = Classes/Controllers/ChangePasswordViewController.m; sourceTree = "<group>"; };
+		AFFBA48917DD0FA6009295D8 /* NSString+JRStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JRStringAdditions.h"; path = "Classes/Helpers/NSString+JRStringAdditions.h"; sourceTree = "<group>"; };
+		AFFBA48A17DD0FA6009295D8 /* NSString+JRStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JRStringAdditions.m"; path = "Classes/Helpers/NSString+JRStringAdditions.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF720EE8179BE2F400F77CA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD25EE6181400FD0067D612 /* CoreData.framework in Frameworks */,
+				AFDA88C117E657BC007AC0FB /* QuartzCore.framework in Frameworks */,
+				AF6E26F917E5CC61006C74BA /* libz.dylib in Frameworks */,
+				AF720EEF179BE2F400F77CA6 /* UIKit.framework in Frameworks */,
+				AF720EF1179BE2F400F77CA6 /* Foundation.framework in Frameworks */,
+				AF720EF3179BE2F400F77CA6 /* CoreGraphics.framework in Frameworks */,
+				AF6E26F517E5CBFB006C74BA /* libTestFlight.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF038A02180AB30E006CB990 /* Paycheck */ = {
+			isa = PBXGroup;
+			children = (
+				AF038A03180AB319006CB990 /* PaycheckCell */,
+				AF6E26E917E5A2A8006C74BA /* PayCheckViewController */,
+			);
+			name = Paycheck;
+			sourceTree = "<group>";
+		};
+		AF038A03180AB319006CB990 /* PaycheckCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF038A04180AB357006CB990 /* PaycheckCell.h */,
+				AF038A05180AB357006CB990 /* PaycheckCell.m */,
+			);
+			name = PaycheckCell;
+			sourceTree = "<group>";
+		};
+		AF2BC9D51809CAB9001D4077 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFD25EDD1813FEDF0067D612 /* DataModel */,
+				AF45DFA517EDCC06009C9ED8 /* APIClient */,
+				AF45DFA617EDCC15009C9ED8 /* AHParser */,
+				AFD25EE41814002F0067D612 /* APIData */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AF2BC9D91809DFEE001D4077 /* Paycheck */ = {
+			isa = PBXGroup;
+			children = (
+				AF2BC9D61809CBE9001D4077 /* Paycheck.h */,
+				AF2BC9D71809CBE9001D4077 /* Paycheck.m */,
+			);
+			name = Paycheck;
+			sourceTree = "<group>";
+		};
+		AF2FB68917F21B6A002ECC51 /* UIImage+Tint */ = {
+			isa = PBXGroup;
+			children = (
+				AF2FB68617F21B5E002ECC51 /* UIImage+Tint.h */,
+				AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */,
+			);
+			name = "UIImage+Tint";
+			sourceTree = "<group>";
+		};
+		AF313D7117ABE051004CC815 /* Planning */ = {
+			isa = PBXGroup;
+			children = (
+				AF6E26EB17E5A2BD006C74BA /* ModelController */,
+				AF6E26EC17E5A2C6006C74BA /* PlanningViewController */,
+				AF6E26ED17E5A2D2006C74BA /* RootViewController */,
+			);
+			name = Planning;
+			path = Classes/Controllers/Menu/Planning;
+			sourceTree = "<group>";
+		};
+		AF45DFA517EDCC06009C9ED8 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				AF9AC100179EA80500CF3E98 /* APIClient.h */,
+				AF9AC101179EA80500CF3E98 /* APIClient.m */,
+			);
+			name = APIClient;
+			sourceTree = "<group>";
+		};
+		AF45DFA617EDCC15009C9ED8 /* AHParser */ = {
+			isa = PBXGroup;
+			children = (
+				AFDF014F17A94D4B005CC5AA /* AHParser.h */,
+				AFDF015017A94D4B005CC5AA /* AHParser.m */,
+			);
+			name = AHParser;
+			sourceTree = "<group>";
+		};
+		AF45DFA717EDCC23009C9ED8 /* NSString+JRStringAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				AFFBA48917DD0FA6009295D8 /* NSString+JRStringAdditions.h */,
+				AFFBA48A17DD0FA6009295D8 /* NSString+JRStringAdditions.m */,
+			);
+			name = "NSString+JRStringAdditions";
+			sourceTree = "<group>";
+		};
+		AF45DFA817EDCC2F009C9ED8 /* NSData+AES256 */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8489417B77FB400A02938 /* NSData+AES256.h */,
+				AFE8489517B77FB400A02938 /* NSData+AES256.m */,
+			);
+			name = "NSData+AES256";
+			sourceTree = "<group>";
+		};
+		AF45DFAA17EDD07A009C9ED8 /* SettingsManager */ = {
+			isa = PBXGroup;
+			children = (
+				AFF5E40F17B3BC250028896F /* SettingsManager.h */,
+				AFF5E41017B3BC250028896F /* SettingsManager.m */,
+			);
+			name = SettingsManager;
+			sourceTree = "<group>";
+		};
+		AF45DFAB17EDD08A009C9ED8 /* Week */ = {
+			isa = PBXGroup;
+			children = (
+				AF9AC103179EA8D400CF3E98 /* Week.h */,
+				AF9AC104179EA8D400CF3E98 /* Week.m */,
+			);
+			name = Week;
+			sourceTree = "<group>";
+		};
+		AF45DFAF17EDD5AE009C9ED8 /* AHViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF45DFAC17EDD5AA009C9ED8 /* AHViewController.h */,
+				AF45DFAD17EDD5AA009C9ED8 /* AHViewController.m */,
+			);
+			name = AHViewController;
+			sourceTree = "<group>";
+		};
+		AF45DFB717EDFC73009C9ED8 /* AHNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				AF45DFB417EDFC68009C9ED8 /* AHNavigationController.h */,
+				AF45DFB517EDFC68009C9ED8 /* AHNavigationController.m */,
+			);
+			name = AHNavigationController;
+			sourceTree = "<group>";
+		};
+		AF45DFB817EE1BE3009C9ED8 /* AHComponents */ = {
+			isa = PBXGroup;
+			children = (
+				AF45DFAF17EDD5AE009C9ED8 /* AHViewController */,
+				AF45DFB717EDFC73009C9ED8 /* AHNavigationController */,
+			);
+			name = AHComponents;
+			sourceTree = "<group>";
+		};
+		AF6E26E517E5A27F006C74BA /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF720F90179BF20600F77CA6 /* LoginViewController.h */,
+				AF720F91179BF20600F77CA6 /* LoginViewController.m */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		AF6E26E617E5A289006C74BA /* ChangePasswordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFFBA48617DC735F009295D8 /* ChangePasswordViewController.h */,
+				AFFBA48717DC735F009295D8 /* ChangePasswordViewController.m */,
+			);
+			name = ChangePasswordViewController;
+			sourceTree = "<group>";
+		};
+		AF6E26E717E5A294006C74BA /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF313D5B17ABDFA5004CC815 /* MenuViewController.h */,
+				AF313D5C17ABDFA5004CC815 /* MenuViewController.m */,
+			);
+			name = MenuViewController;
+			sourceTree = "<group>";
+		};
+		AF6E26E817E5A29D006C74BA /* PaymentDaysViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF313D5F17ABDFA6004CC815 /* PaymentDaysViewController.h */,
+				AF313D6017ABDFA6004CC815 /* PaymentDaysViewController.m */,
+			);
+			name = PaymentDaysViewController;
+			sourceTree = "<group>";
+		};
+		AF6E26E917E5A2A8006C74BA /* PayCheckViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF313D5D17ABDFA5004CC815 /* PayCheckViewController.h */,
+				AF313D5E17ABDFA6004CC815 /* PayCheckViewController.m */,
+			);
+			name = PayCheckViewController;
+			sourceTree = "<group>";
+		};
+		AF6E26EA17E5A2B1006C74BA /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF313D6817ABDFA6004CC815 /* SettingsViewController.h */,
+				AF313D6917ABDFA7004CC815 /* SettingsViewController.m */,
+			);
+			name = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		AF6E26EB17E5A2BD006C74BA /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				AF313D7217ABE051004CC815 /* ModelController.h */,
+				AF313D7317ABE051004CC815 /* ModelController.m */,
+			);
+			name = ModelController;
+			sourceTree = "<group>";
+		};
+		AF6E26EC17E5A2C6006C74BA /* PlanningViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF313D7417ABE051004CC815 /* PlanningViewController.h */,
+				AF313D7517ABE051004CC815 /* PlanningViewController.m */,
+			);
+			name = PlanningViewController;
+			sourceTree = "<group>";
+		};
+		AF6E26ED17E5A2D2006C74BA /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF313D7617ABE051004CC815 /* RootViewController.h */,
+				AF313D7717ABE051004CC815 /* RootViewController.m */,
+			);
+			name = RootViewController;
+			sourceTree = "<group>";
+		};
+		AF6E26EE17E5CBFB006C74BA /* TestFlightSDK2.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				AF6E26F817E5CC61006C74BA /* libz.dylib */,
+				AF6E26EF17E5CBFB006C74BA /* libTestFlight.a */,
+				AF6E26F217E5CBFB006C74BA /* TestFlight+AsyncLogging.h */,
+				AF6E26F317E5CBFB006C74BA /* TestFlight+ManualSessions.h */,
+				AF6E26F417E5CBFB006C74BA /* TestFlight.h */,
+			);
+			name = TestFlightSDK2.0.0;
+			path = Classes/Helpers/TestFlightSDK2.0.0;
+			sourceTree = "<group>";
+		};
+		AF720EE2179BE2F400F77CA6 = {
+			isa = PBXGroup;
+			children = (
+				AF720EF4179BE2F400F77CA6 /* AH Plaza */,
+				AF720EED179BE2F400F77CA6 /* Frameworks */,
+				AF720EEC179BE2F400F77CA6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF720EEC179BE2F400F77CA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF720EEB179BE2F400F77CA6 /* AH Plaza.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF720EED179BE2F400F77CA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFD25EE5181400FD0067D612 /* CoreData.framework */,
+				AFDA88C017E657BC007AC0FB /* QuartzCore.framework */,
+				AF720EEE179BE2F400F77CA6 /* UIKit.framework */,
+				AF720EF0179BE2F400F77CA6 /* Foundation.framework */,
+				AF720EF2179BE2F400F77CA6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF720EF4179BE2F400F77CA6 /* AH Plaza */ = {
+			isa = PBXGroup;
+			children = (
+				AF2BC9D51809CAB9001D4077 /* Controllers */,
+				AF720F93179BF20F00F77CA6 /* ViewControllers */,
+				AF720F0F179BE3F700F77CA6 /* Model */,
+				AF720F0E179BE3DA00F77CA6 /* Storyboards */,
+				AF45DFB817EE1BE3009C9ED8 /* AHComponents */,
+				AFC6C82D17DB74800061B03C /* Helpers */,
+				AFC901F21812B66B00E1BF93 /* Images.xcassets */,
+				AF720EF5179BE2F400F77CA6 /* Supporting Files */,
+			);
+			path = "AH Plaza";
+			sourceTree = "<group>";
+		};
+		AF720EF5179BE2F400F77CA6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF720F10179BE40B00F77CA6 /* Resources */,
+				AF720EFD179BE2F400F77CA6 /* AppDelegate.h */,
+				AF720EFE179BE2F400F77CA6 /* AppDelegate.m */,
+				AF720EF6179BE2F400F77CA6 /* AH Plaza-Info.plist */,
+				AF720EF7179BE2F400F77CA6 /* InfoPlist.strings */,
+				AF720EFA179BE2F400F77CA6 /* main.m */,
+				AF720EFC179BE2F400F77CA6 /* AH Plaza-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF720F0E179BE3DA00F77CA6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		AF720F0F179BE3F700F77CA6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF45DFAA17EDD07A009C9ED8 /* SettingsManager */,
+				AF45DFAB17EDD08A009C9ED8 /* Week */,
+				AF2BC9D91809DFEE001D4077 /* Paycheck */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AF720F10179BE40B00F77CA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AF720F93179BF20F00F77CA6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF6E26E517E5A27F006C74BA /* LoginViewController */,
+				AF6E26E617E5A289006C74BA /* ChangePasswordViewController */,
+				AF6E26E817E5A29D006C74BA /* PaymentDaysViewController */,
+				AF038A02180AB30E006CB990 /* Paycheck */,
+				AF6E26EA17E5A2B1006C74BA /* SettingsViewController */,
+				AF313D7117ABE051004CC815 /* Planning */,
+				AF6E26E717E5A294006C74BA /* MenuViewController */,
+				AFDA88BF17E655AC007AC0FB /* LeftMenuViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AFC6C82D17DB74800061B03C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AFC6C82E17DB74A90061B03C /* Constants.h */,
+				AF45DFA917EDCC4D009C9ED8 /* String.h */,
+				AF45DFBA17EE1C77009C9ED8 /* Fonts.h */,
+				AFDA88B017E65525007AC0FB /* ViewDeck */,
+				AF6E26EE17E5CBFB006C74BA /* TestFlightSDK2.0.0 */,
+				AFE316A117B6616000ACA245 /* Popup */,
+				AF45DFA717EDCC23009C9ED8 /* NSString+JRStringAdditions */,
+				AF45DFA817EDCC2F009C9ED8 /* NSData+AES256 */,
+				AF2FB68917F21B6A002ECC51 /* UIImage+Tint */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		AFD25EDD1813FEDF0067D612 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFD25EDE1813FF190067D612 /* DataModel.xcdatamodeld */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		AFD25EE41814002F0067D612 /* APIData */ = {
+			isa = PBXGroup;
+			children = (
+				AFD25EE11814002B0067D612 /* APIData.h */,
+				AFD25EE21814002B0067D612 /* APIData.m */,
+			);
+			name = APIData;
+			sourceTree = "<group>";
+		};
+		AFDA88B017E65525007AC0FB /* ViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				AFDA88B117E65525007AC0FB /* IISideController.h */,
+				AFDA88B217E65525007AC0FB /* IISideController.m */,
+				AFDA88B317E65525007AC0FB /* IIViewDeckController.h */,
+				AFDA88B417E65525007AC0FB /* IIViewDeckController.m */,
+				AFDA88B517E65525007AC0FB /* IIWrapController.h */,
+				AFDA88B617E65525007AC0FB /* IIWrapController.m */,
+			);
+			name = ViewDeck;
+			path = Classes/Helpers/ViewDeck;
+			sourceTree = "<group>";
+		};
+		AFDA88BF17E655AC007AC0FB /* LeftMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFDA88BC17E655A8007AC0FB /* LeftMenuViewController.h */,
+				AFDA88BD17E655A8007AC0FB /* LeftMenuViewController.m */,
+			);
+			name = LeftMenuViewController;
+			sourceTree = "<group>";
+		};
+		AFE316A117B6616000ACA245 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				AFE316A517B661CF00ACA245 /* Popup.h */,
+				AFE316A617B661CF00ACA245 /* Popup.m */,
+			);
+			name = Popup;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF720EEA179BE2F400F77CA6 /* AH Plaza */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF720F08179BE2F400F77CA6 /* Build configuration list for PBXNativeTarget "AH Plaza" */;
+			buildPhases = (
+				AF720EE7179BE2F400F77CA6 /* Sources */,
+				AF720EE8179BE2F400F77CA6 /* Frameworks */,
+				AF720EE9179BE2F400F77CA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AH Plaza";
+			productName = "AH Plaza";
+			productReference = AF720EEB179BE2F400F77CA6 /* AH Plaza.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF720EE3179BE2F400F77CA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = JTC;
+				TargetAttributes = {
+					AF720EEA179BE2F400F77CA6 = {
+						DevelopmentTeam = Q4987Y8NA2;
+					};
+				};
+			};
+			buildConfigurationList = AF720EE6179BE2F400F77CA6 /* Build configuration list for PBXProject "AH Plaza" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AF720EE2179BE2F400F77CA6;
+			productRefGroup = AF720EEC179BE2F400F77CA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF720EEA179BE2F400F77CA6 /* AH Plaza */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF720EE9179BE2F400F77CA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFC901F31812B66B00E1BF93 /* Images.xcassets in Resources */,
+				AF720EF9179BE2F400F77CA6 /* InfoPlist.strings in Resources */,
+				AF720F0D179BE3D100F77CA6 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF720EE7179BE2F400F77CA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF45DFB617EDFC68009C9ED8 /* AHNavigationController.m in Sources */,
+				AF720EFB179BE2F400F77CA6 /* main.m in Sources */,
+				AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */,
+				AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */,
+				AF9AC102179EA80500CF3E98 /* APIClient.m in Sources */,
+				AF9AC105179EA8D400CF3E98 /* Week.m in Sources */,
+				AFDF015117A94D4C005CC5AA /* AHParser.m in Sources */,
+				AF2FB68817F21B5E002ECC51 /* UIImage+Tint.m in Sources */,
+				AF313D6A17ABDFA7004CC815 /* MenuViewController.m in Sources */,
+				AF313D6B17ABDFA7004CC815 /* PayCheckViewController.m in Sources */,
+				AF313D6C17ABDFA7004CC815 /* PaymentDaysViewController.m in Sources */,
+				AF313D7017ABDFA7004CC815 /* SettingsViewController.m in Sources */,
+				AF313D7817ABE051004CC815 /* ModelController.m in Sources */,
+				AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */,
+				AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */,
+				AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */,
+				AF038A06180AB357006CB990 /* PaycheckCell.m in Sources */,
+				AFD25EE01813FF190067D612 /* DataModel.xcdatamodeld in Sources */,
+				AFE316A717B661CF00ACA245 /* Popup.m in Sources */,
+				AFE8489617B77FB400A02938 /* NSData+AES256.m in Sources */,
+				AFFBA48817DC735F009295D8 /* ChangePasswordViewController.m in Sources */,
+				AFFBA48B17DD0FA6009295D8 /* NSString+JRStringAdditions.m in Sources */,
+				AFDA88B717E65525007AC0FB /* IISideController.m in Sources */,
+				AFDA88B817E65525007AC0FB /* IIViewDeckController.m in Sources */,
+				AFD25EE31814002B0067D612 /* APIData.m in Sources */,
+				AF45DFAE17EDD5AA009C9ED8 /* AHViewController.m in Sources */,
+				AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */,
+				AFDA88BE17E655A8007AC0FB /* LeftMenuViewController.m in Sources */,
+				AF2BC9D81809CBE9001D4077 /* Paycheck.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AF720EF7179BE2F400F77CA6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF720EF8179BE2F400F77CA6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF720F0C179BE3D100F77CA6 /* en */,
+			);
+			name = Storyboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF720F06179BE2F400F77CA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF720F07179BE2F400F77CA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF720F09179BE2F400F77CA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AH Plaza/AH Plaza-Prefix.pch";
+				INFOPLIST_FILE = "AH Plaza/AH Plaza-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AH Plaza/Classes/Helpers/TestFlightSDK2.0.0\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AF720F0A179BE2F400F77CA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AH Plaza/AH Plaza-Prefix.pch";
+				INFOPLIST_FILE = "AH Plaza/AH Plaza-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AH Plaza/Classes/Helpers/TestFlightSDK2.0.0\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF720EE6179BE2F400F77CA6 /* Build configuration list for PBXProject "AH Plaza" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF720F06179BE2F400F77CA6 /* Debug */,
+				AF720F07179BE2F400F77CA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF720F08179BE2F400F77CA6 /* Build configuration list for PBXNativeTarget "AH Plaza" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF720F09179BE2F400F77CA6 /* Debug */,
+				AF720F0A179BE2F400F77CA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AFD25EDE1813FF190067D612 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AFD25EDF1813FF190067D612 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = AFD25EDF1813FF190067D612 /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = Classes/Model/DataModel/DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AF720EE3179BE2F400F77CA6 /* Project object */;
+}
