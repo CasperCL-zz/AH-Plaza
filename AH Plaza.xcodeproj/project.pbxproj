@@ -572,6 +572,14 @@
 				TargetAttributes = {
 					AF720EEA179BE2F400F77CA6 = {
 						DevelopmentTeam = Q4987Y8NA2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
