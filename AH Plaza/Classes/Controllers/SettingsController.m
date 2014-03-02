@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 JTC. All rights reserved.
 //
 
-#import "SettingsManager.h"
+#import "SettingsController.h"
 
-@implementation SettingsManager
+@implementation SettingsController
 
 NSString *documentsDirectory;
 NSString *fileLocation;
@@ -46,9 +46,9 @@ NSString *fileLocation;
 }
 
 + (id)sharedInstance {
-    static SettingsManager *instance;
+    static SettingsController *instance;
     static dispatch_once_t predicate;
-    dispatch_once(&predicate, ^{ instance = [[SettingsManager alloc] init]; });
+    dispatch_once(&predicate, ^{ instance = [[SettingsController alloc] init]; });
     
     return instance;
 }

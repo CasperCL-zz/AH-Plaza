@@ -7,17 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF038A06180AB357006CB990 /* PaycheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF038A05180AB357006CB990 /* PaycheckCell.m */; };
+		AF2A127B18C3C4FC00A74FBA /* PaycheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A127A18C3C4FC00A74FBA /* PaycheckCell.m */; };
+		AF2A127E18C3C54100A74FBA /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A127D18C3C54100A74FBA /* NSData+AES256.m */; };
+		AF2A128118C3C59700A74FBA /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A128018C3C59700A74FBA /* SettingsController.m */; };
+		AF2A128418C3C5C300A74FBA /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A128318C3C5C300A74FBA /* APIClient.m */; };
+		AF2A128718C3C5D300A74FBA /* AHParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A128618C3C5D300A74FBA /* AHParser.m */; };
+		AF2A128A18C3C66400A74FBA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A128918C3C66400A74FBA /* LoginViewController.m */; };
+		AF2A128D18C3C67E00A74FBA /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A128C18C3C67E00A74FBA /* ChangePasswordViewController.m */; };
+		AF2A128F18C3C69E00A74FBA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A128E18C3C69E00A74FBA /* SettingsViewController.m */; };
+		AF2A129218C3C6BC00A74FBA /* PaymentDaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A129118C3C6BC00A74FBA /* PaymentDaysViewController.m */; };
+		AF2A129518C3C6E200A74FBA /* PayCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A129418C3C6E200A74FBA /* PayCheckViewController.m */; };
+		AF2A129918C3C72000A74FBA /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A129818C3C72000A74FBA /* ModelController.m */; };
+		AF2A129E18C3C75000A74FBA /* PlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A129B18C3C75000A74FBA /* PlanningViewController.m */; };
+		AF2A129F18C3C75000A74FBA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A129D18C3C75000A74FBA /* RootViewController.m */; };
+		AF2A12A218C3C77000A74FBA /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A12A118C3C77000A74FBA /* LeftMenuViewController.m */; };
+		AF2A12A518C3C79500A74FBA /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A12A418C3C79500A74FBA /* MenuViewController.m */; };
+		AF2A12A818C3C7BC00A74FBA /* AHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A12A718C3C7BC00A74FBA /* AHViewController.m */; };
 		AF2BC9D81809CBE9001D4077 /* Paycheck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2BC9D71809CBE9001D4077 /* Paycheck.m */; };
 		AF2FB68817F21B5E002ECC51 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */; };
-		AF313D6A17ABDFA7004CC815 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5C17ABDFA5004CC815 /* MenuViewController.m */; };
-		AF313D6B17ABDFA7004CC815 /* PayCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D5E17ABDFA6004CC815 /* PayCheckViewController.m */; };
-		AF313D6C17ABDFA7004CC815 /* PaymentDaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D6017ABDFA6004CC815 /* PaymentDaysViewController.m */; };
-		AF313D7017ABDFA7004CC815 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D6917ABDFA7004CC815 /* SettingsViewController.m */; };
-		AF313D7817ABE051004CC815 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7317ABE051004CC815 /* ModelController.m */; };
-		AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7517ABE051004CC815 /* PlanningViewController.m */; };
-		AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF313D7717ABE051004CC815 /* RootViewController.m */; };
-		AF45DFAE17EDD5AA009C9ED8 /* AHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF45DFAD17EDD5AA009C9ED8 /* AHViewController.m */; };
 		AF45DFB617EDFC68009C9ED8 /* AHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF45DFB517EDFC68009C9ED8 /* AHNavigationController.m */; };
 		AF6E26F517E5CBFB006C74BA /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E26EF17E5CBFB006C74BA /* libTestFlight.a */; };
 		AF6E26F917E5CC61006C74BA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E26F817E5CC61006C74BA /* libz.dylib */; };
@@ -28,8 +35,6 @@
 		AF720EFB179BE2F400F77CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720EFA179BE2F400F77CA6 /* main.m */; };
 		AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720EFE179BE2F400F77CA6 /* AppDelegate.m */; };
 		AF720F0D179BE3D100F77CA6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF720F0B179BE3D100F77CA6 /* Storyboard.storyboard */; };
-		AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF720F91179BF20600F77CA6 /* LoginViewController.m */; };
-		AF9AC102179EA80500CF3E98 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC101179EA80500CF3E98 /* APIClient.m */; };
 		AF9AC105179EA8D400CF3E98 /* Week.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9AC104179EA8D400CF3E98 /* Week.m */; };
 		AFC901F31812B66B00E1BF93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC901F21812B66B00E1BF93 /* Images.xcassets */; };
 		AFD25EE01813FF190067D612 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFD25EDE1813FF190067D612 /* DataModel.xcdatamodeld */; };
@@ -38,40 +43,49 @@
 		AFDA88B717E65525007AC0FB /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B217E65525007AC0FB /* IISideController.m */; };
 		AFDA88B817E65525007AC0FB /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B417E65525007AC0FB /* IIViewDeckController.m */; };
 		AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88B617E65525007AC0FB /* IIWrapController.m */; };
-		AFDA88BE17E655A8007AC0FB /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA88BD17E655A8007AC0FB /* LeftMenuViewController.m */; };
 		AFDA88C117E657BC007AC0FB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDA88C017E657BC007AC0FB /* QuartzCore.framework */; };
-		AFDF015117A94D4C005CC5AA /* AHParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDF015017A94D4B005CC5AA /* AHParser.m */; };
 		AFE316A717B661CF00ACA245 /* Popup.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE316A617B661CF00ACA245 /* Popup.m */; };
-		AFE8489617B77FB400A02938 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE8489517B77FB400A02938 /* NSData+AES256.m */; };
-		AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5E41017B3BC250028896F /* SettingsManager.m */; };
-		AFFBA48817DC735F009295D8 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBA48717DC735F009295D8 /* ChangePasswordViewController.m */; };
 		AFFBA48B17DD0FA6009295D8 /* NSString+JRStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBA48A17DD0FA6009295D8 /* NSString+JRStringAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF038A04180AB357006CB990 /* PaycheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaycheckCell.h; path = Classes/View/PaycheckCell/PaycheckCell.h; sourceTree = "<group>"; };
-		AF038A05180AB357006CB990 /* PaycheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaycheckCell.m; path = Classes/View/PaycheckCell/PaycheckCell.m; sourceTree = "<group>"; };
+		AF2A127918C3C4FC00A74FBA /* PaycheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaycheckCell.h; sourceTree = "<group>"; };
+		AF2A127A18C3C4FC00A74FBA /* PaycheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaycheckCell.m; sourceTree = "<group>"; };
+		AF2A127C18C3C54100A74FBA /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+AES256.h"; path = "Classes/Helpers/NSData+AES256.h"; sourceTree = "<group>"; };
+		AF2A127D18C3C54100A74FBA /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+AES256.m"; path = "Classes/Helpers/NSData+AES256.m"; sourceTree = "<group>"; };
+		AF2A127F18C3C59700A74FBA /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsController.h; path = Classes/Controllers/SettingsController.h; sourceTree = "<group>"; };
+		AF2A128018C3C59700A74FBA /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsController.m; path = Classes/Controllers/SettingsController.m; sourceTree = "<group>"; };
+		AF2A128218C3C5C300A74FBA /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIClient.h; path = Classes/Controllers/APIClient.h; sourceTree = "<group>"; };
+		AF2A128318C3C5C300A74FBA /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIClient.m; path = Classes/Controllers/APIClient.m; sourceTree = "<group>"; };
+		AF2A128518C3C5D300A74FBA /* AHParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHParser.h; path = Classes/Controllers/AHParser.h; sourceTree = "<group>"; };
+		AF2A128618C3C5D300A74FBA /* AHParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHParser.m; path = Classes/Controllers/AHParser.m; sourceTree = "<group>"; };
+		AF2A128818C3C66400A74FBA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/View/LoginViewController.h; sourceTree = "<group>"; };
+		AF2A128918C3C66400A74FBA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/View/LoginViewController.m; sourceTree = "<group>"; };
+		AF2A128B18C3C67E00A74FBA /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePasswordViewController.h; path = Classes/View/ChangePasswordViewController.h; sourceTree = "<group>"; };
+		AF2A128C18C3C67E00A74FBA /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePasswordViewController.m; path = Classes/View/ChangePasswordViewController.m; sourceTree = "<group>"; };
+		AF2A128E18C3C69E00A74FBA /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/View/Menu/SettingsViewController.m; sourceTree = "<group>"; };
+		AF2A129018C3C6BC00A74FBA /* PaymentDaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentDaysViewController.h; path = Classes/View/Menu/PaymentDaysViewController.h; sourceTree = "<group>"; };
+		AF2A129118C3C6BC00A74FBA /* PaymentDaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentDaysViewController.m; path = Classes/View/Menu/PaymentDaysViewController.m; sourceTree = "<group>"; };
+		AF2A129318C3C6E200A74FBA /* PayCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCheckViewController.h; path = Classes/View/Menu/PayCheckViewController.h; sourceTree = "<group>"; };
+		AF2A129418C3C6E200A74FBA /* PayCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCheckViewController.m; path = Classes/View/Menu/PayCheckViewController.m; sourceTree = "<group>"; };
+		AF2A129618C3C6FC00A74FBA /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/View/Menu/SettingsViewController.h; sourceTree = "<group>"; };
+		AF2A129718C3C72000A74FBA /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelController.h; path = "AH Plaza/Classes/View/Menu/Planning/ModelController.h"; sourceTree = SOURCE_ROOT; };
+		AF2A129818C3C72000A74FBA /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelController.m; path = "AH Plaza/Classes/View/Menu/Planning/ModelController.m"; sourceTree = SOURCE_ROOT; };
+		AF2A129A18C3C75000A74FBA /* PlanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlanningViewController.h; path = "AH Plaza/Classes/View/Menu/Planning/PlanningViewController.h"; sourceTree = SOURCE_ROOT; };
+		AF2A129B18C3C75000A74FBA /* PlanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlanningViewController.m; path = "AH Plaza/Classes/View/Menu/Planning/PlanningViewController.m"; sourceTree = SOURCE_ROOT; };
+		AF2A129C18C3C75000A74FBA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = "AH Plaza/Classes/View/Menu/Planning/RootViewController.h"; sourceTree = SOURCE_ROOT; };
+		AF2A129D18C3C75000A74FBA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = "AH Plaza/Classes/View/Menu/Planning/RootViewController.m"; sourceTree = SOURCE_ROOT; };
+		AF2A12A018C3C77000A74FBA /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuViewController.h; path = Classes/View/LeftMenuViewController.h; sourceTree = "<group>"; };
+		AF2A12A118C3C77000A74FBA /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuViewController.m; path = Classes/View/LeftMenuViewController.m; sourceTree = "<group>"; };
+		AF2A12A318C3C79500A74FBA /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/View/Menu/MenuViewController.h; sourceTree = "<group>"; };
+		AF2A12A418C3C79500A74FBA /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/View/Menu/MenuViewController.m; sourceTree = "<group>"; };
+		AF2A12A618C3C7BC00A74FBA /* AHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHViewController.h; path = Classes/AHComponents/AHViewController/AHViewController.h; sourceTree = "<group>"; };
+		AF2A12A718C3C7BC00A74FBA /* AHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHViewController.m; path = Classes/AHComponents/AHViewController/AHViewController.m; sourceTree = "<group>"; };
 		AF2BC9D61809CBE9001D4077 /* Paycheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paycheck.h; path = Classes/Controllers/Paycheck/Paycheck.h; sourceTree = "<group>"; };
 		AF2BC9D71809CBE9001D4077 /* Paycheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Paycheck.m; path = Classes/Controllers/Paycheck/Paycheck.m; sourceTree = "<group>"; };
 		AF2FB68617F21B5E002ECC51 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tint.h"; path = "Classes/Helpers/UIImage+Tint/UIImage+Tint.h"; sourceTree = "<group>"; };
 		AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Tint.m"; path = "Classes/Helpers/UIImage+Tint/UIImage+Tint.m"; sourceTree = "<group>"; };
-		AF313D5B17ABDFA5004CC815 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/Controllers/Menu/MenuViewController.h; sourceTree = "<group>"; };
-		AF313D5C17ABDFA5004CC815 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/Controllers/Menu/MenuViewController.m; sourceTree = "<group>"; };
-		AF313D5D17ABDFA5004CC815 /* PayCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCheckViewController.h; path = Classes/Controllers/Menu/PayCheckViewController.h; sourceTree = "<group>"; };
-		AF313D5E17ABDFA6004CC815 /* PayCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCheckViewController.m; path = Classes/Controllers/Menu/PayCheckViewController.m; sourceTree = "<group>"; };
-		AF313D5F17ABDFA6004CC815 /* PaymentDaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentDaysViewController.h; path = Classes/Controllers/Menu/PaymentDaysViewController.h; sourceTree = "<group>"; };
-		AF313D6017ABDFA6004CC815 /* PaymentDaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentDaysViewController.m; path = Classes/Controllers/Menu/PaymentDaysViewController.m; sourceTree = "<group>"; };
-		AF313D6817ABDFA6004CC815 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Classes/Controllers/Menu/SettingsViewController.h; sourceTree = "<group>"; };
-		AF313D6917ABDFA7004CC815 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Classes/Controllers/Menu/SettingsViewController.m; sourceTree = "<group>"; };
-		AF313D7217ABE051004CC815 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
-		AF313D7317ABE051004CC815 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
-		AF313D7417ABE051004CC815 /* PlanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanningViewController.h; sourceTree = "<group>"; };
-		AF313D7517ABE051004CC815 /* PlanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanningViewController.m; sourceTree = "<group>"; };
-		AF313D7617ABE051004CC815 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		AF313D7717ABE051004CC815 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		AF45DFA917EDCC4D009C9ED8 /* String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = String.h; path = Classes/Helpers/String.h; sourceTree = "<group>"; };
-		AF45DFAC17EDD5AA009C9ED8 /* AHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHViewController.h; path = Classes/Controllers/AHViewController/AHViewController.h; sourceTree = "<group>"; };
-		AF45DFAD17EDD5AA009C9ED8 /* AHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHViewController.m; path = Classes/Controllers/AHViewController/AHViewController.m; sourceTree = "<group>"; };
 		AF45DFB417EDFC68009C9ED8 /* AHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHNavigationController.h; path = Classes/AHComponents/AHNavigationController/AHNavigationController.h; sourceTree = "<group>"; };
 		AF45DFB517EDFC68009C9ED8 /* AHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHNavigationController.m; path = Classes/AHComponents/AHNavigationController/AHNavigationController.m; sourceTree = "<group>"; };
 		AF45DFBA17EE1C77009C9ED8 /* Fonts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Fonts.h; path = Classes/Helpers/Fonts.h; sourceTree = "<group>"; };
@@ -91,10 +105,6 @@
 		AF720EFD179BE2F400F77CA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF720EFE179BE2F400F77CA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AF720F0C179BE3D100F77CA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
-		AF720F90179BF20600F77CA6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/Controllers/LoginViewController.h; sourceTree = "<group>"; };
-		AF720F91179BF20600F77CA6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/Controllers/LoginViewController.m; sourceTree = "<group>"; };
-		AF9AC100179EA80500CF3E98 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIClient.h; path = Classes/APIClient.h; sourceTree = "<group>"; };
-		AF9AC101179EA80500CF3E98 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIClient.m; path = Classes/APIClient.m; sourceTree = "<group>"; };
 		AF9AC103179EA8D400CF3E98 /* Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Week.h; path = Classes/Model/Week.h; sourceTree = "<group>"; };
 		AF9AC104179EA8D400CF3E98 /* Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Week.m; path = Classes/Model/Week.m; sourceTree = "<group>"; };
 		AFC6C82E17DB74A90061B03C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Classes/Helpers/Constants.h; sourceTree = "<group>"; };
@@ -109,19 +119,9 @@
 		AFDA88B417E65525007AC0FB /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
 		AFDA88B517E65525007AC0FB /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
 		AFDA88B617E65525007AC0FB /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
-		AFDA88BC17E655A8007AC0FB /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuViewController.h; path = Classes/Controllers/LeftMenuViewController.h; sourceTree = "<group>"; };
-		AFDA88BD17E655A8007AC0FB /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuViewController.m; path = Classes/Controllers/LeftMenuViewController.m; sourceTree = "<group>"; };
 		AFDA88C017E657BC007AC0FB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		AFDF014F17A94D4B005CC5AA /* AHParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHParser.h; path = Classes/AHParser.h; sourceTree = "<group>"; };
-		AFDF015017A94D4B005CC5AA /* AHParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHParser.m; path = Classes/AHParser.m; sourceTree = "<group>"; };
 		AFE316A517B661CF00ACA245 /* Popup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Popup.h; path = "AH Plaza/Classes/Frameworks/Popup/Popup.h"; sourceTree = "<group>"; };
 		AFE316A617B661CF00ACA245 /* Popup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Popup.m; path = "AH Plaza/Classes/Frameworks/Popup/Popup.m"; sourceTree = "<group>"; };
-		AFE8489417B77FB400A02938 /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+AES256.h"; path = "Classes/NSData+AES256.h"; sourceTree = "<group>"; };
-		AFE8489517B77FB400A02938 /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+AES256.m"; path = "Classes/NSData+AES256.m"; sourceTree = "<group>"; };
-		AFF5E40F17B3BC250028896F /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsManager.h; path = Classes/SettingsManager.h; sourceTree = "<group>"; };
-		AFF5E41017B3BC250028896F /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsManager.m; path = Classes/SettingsManager.m; sourceTree = "<group>"; };
-		AFFBA48617DC735F009295D8 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePasswordViewController.h; path = Classes/Controllers/ChangePasswordViewController.h; sourceTree = "<group>"; };
-		AFFBA48717DC735F009295D8 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePasswordViewController.m; path = Classes/Controllers/ChangePasswordViewController.m; sourceTree = "<group>"; };
 		AFFBA48917DD0FA6009295D8 /* NSString+JRStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JRStringAdditions.h"; path = "Classes/Helpers/NSString+JRStringAdditions.h"; sourceTree = "<group>"; };
 		AFFBA48A17DD0FA6009295D8 /* NSString+JRStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JRStringAdditions.m"; path = "Classes/Helpers/NSString+JRStringAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,25 +147,33 @@
 		AF038A02180AB30E006CB990 /* Paycheck */ = {
 			isa = PBXGroup;
 			children = (
-				AF038A03180AB319006CB990 /* PaycheckCell */,
 				AF6E26E917E5A2A8006C74BA /* PayCheckViewController */,
 			);
 			name = Paycheck;
 			sourceTree = "<group>";
 		};
-		AF038A03180AB319006CB990 /* PaycheckCell */ = {
+		AF2A127718C3C4FC00A74FBA /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				AF038A04180AB357006CB990 /* PaycheckCell.h */,
-				AF038A05180AB357006CB990 /* PaycheckCell.m */,
+				AF2A127818C3C4FC00A74FBA /* PaycheckCell */,
 			);
-			name = PaycheckCell;
+			name = UIComponents;
+			path = Classes/UIComponents;
+			sourceTree = "<group>";
+		};
+		AF2A127818C3C4FC00A74FBA /* PaycheckCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF2A127918C3C4FC00A74FBA /* PaycheckCell.h */,
+				AF2A127A18C3C4FC00A74FBA /* PaycheckCell.m */,
+			);
+			path = PaycheckCell;
 			sourceTree = "<group>";
 		};
 		AF2BC9D51809CAB9001D4077 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AFD25EDD1813FEDF0067D612 /* DataModel */,
+				AF45DFAA17EDD07A009C9ED8 /* SettingsController */,
 				AF45DFA517EDCC06009C9ED8 /* APIClient */,
 				AF45DFA617EDCC15009C9ED8 /* AHParser */,
 				AFD25EE41814002F0067D612 /* APIData */,
@@ -205,8 +213,8 @@
 		AF45DFA517EDCC06009C9ED8 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				AF9AC100179EA80500CF3E98 /* APIClient.h */,
-				AF9AC101179EA80500CF3E98 /* APIClient.m */,
+				AF2A128218C3C5C300A74FBA /* APIClient.h */,
+				AF2A128318C3C5C300A74FBA /* APIClient.m */,
 			);
 			name = APIClient;
 			sourceTree = "<group>";
@@ -214,8 +222,8 @@
 		AF45DFA617EDCC15009C9ED8 /* AHParser */ = {
 			isa = PBXGroup;
 			children = (
-				AFDF014F17A94D4B005CC5AA /* AHParser.h */,
-				AFDF015017A94D4B005CC5AA /* AHParser.m */,
+				AF2A128518C3C5D300A74FBA /* AHParser.h */,
+				AF2A128618C3C5D300A74FBA /* AHParser.m */,
 			);
 			name = AHParser;
 			sourceTree = "<group>";
@@ -232,19 +240,19 @@
 		AF45DFA817EDCC2F009C9ED8 /* NSData+AES256 */ = {
 			isa = PBXGroup;
 			children = (
-				AFE8489417B77FB400A02938 /* NSData+AES256.h */,
-				AFE8489517B77FB400A02938 /* NSData+AES256.m */,
+				AF2A127C18C3C54100A74FBA /* NSData+AES256.h */,
+				AF2A127D18C3C54100A74FBA /* NSData+AES256.m */,
 			);
 			name = "NSData+AES256";
 			sourceTree = "<group>";
 		};
-		AF45DFAA17EDD07A009C9ED8 /* SettingsManager */ = {
+		AF45DFAA17EDD07A009C9ED8 /* SettingsController */ = {
 			isa = PBXGroup;
 			children = (
-				AFF5E40F17B3BC250028896F /* SettingsManager.h */,
-				AFF5E41017B3BC250028896F /* SettingsManager.m */,
+				AF2A127F18C3C59700A74FBA /* SettingsController.h */,
+				AF2A128018C3C59700A74FBA /* SettingsController.m */,
 			);
-			name = SettingsManager;
+			name = SettingsController;
 			sourceTree = "<group>";
 		};
 		AF45DFAB17EDD08A009C9ED8 /* Week */ = {
@@ -259,8 +267,8 @@
 		AF45DFAF17EDD5AE009C9ED8 /* AHViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF45DFAC17EDD5AA009C9ED8 /* AHViewController.h */,
-				AF45DFAD17EDD5AA009C9ED8 /* AHViewController.m */,
+				AF2A12A618C3C7BC00A74FBA /* AHViewController.h */,
+				AF2A12A718C3C7BC00A74FBA /* AHViewController.m */,
 			);
 			name = AHViewController;
 			sourceTree = "<group>";
@@ -286,8 +294,8 @@
 		AF6E26E517E5A27F006C74BA /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF720F90179BF20600F77CA6 /* LoginViewController.h */,
-				AF720F91179BF20600F77CA6 /* LoginViewController.m */,
+				AF2A128818C3C66400A74FBA /* LoginViewController.h */,
+				AF2A128918C3C66400A74FBA /* LoginViewController.m */,
 			);
 			name = LoginViewController;
 			sourceTree = "<group>";
@@ -295,8 +303,8 @@
 		AF6E26E617E5A289006C74BA /* ChangePasswordViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AFFBA48617DC735F009295D8 /* ChangePasswordViewController.h */,
-				AFFBA48717DC735F009295D8 /* ChangePasswordViewController.m */,
+				AF2A128B18C3C67E00A74FBA /* ChangePasswordViewController.h */,
+				AF2A128C18C3C67E00A74FBA /* ChangePasswordViewController.m */,
 			);
 			name = ChangePasswordViewController;
 			sourceTree = "<group>";
@@ -304,8 +312,8 @@
 		AF6E26E717E5A294006C74BA /* MenuViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF313D5B17ABDFA5004CC815 /* MenuViewController.h */,
-				AF313D5C17ABDFA5004CC815 /* MenuViewController.m */,
+				AF2A12A318C3C79500A74FBA /* MenuViewController.h */,
+				AF2A12A418C3C79500A74FBA /* MenuViewController.m */,
 			);
 			name = MenuViewController;
 			sourceTree = "<group>";
@@ -313,8 +321,8 @@
 		AF6E26E817E5A29D006C74BA /* PaymentDaysViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF313D5F17ABDFA6004CC815 /* PaymentDaysViewController.h */,
-				AF313D6017ABDFA6004CC815 /* PaymentDaysViewController.m */,
+				AF2A129018C3C6BC00A74FBA /* PaymentDaysViewController.h */,
+				AF2A129118C3C6BC00A74FBA /* PaymentDaysViewController.m */,
 			);
 			name = PaymentDaysViewController;
 			sourceTree = "<group>";
@@ -322,8 +330,8 @@
 		AF6E26E917E5A2A8006C74BA /* PayCheckViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF313D5D17ABDFA5004CC815 /* PayCheckViewController.h */,
-				AF313D5E17ABDFA6004CC815 /* PayCheckViewController.m */,
+				AF2A129318C3C6E200A74FBA /* PayCheckViewController.h */,
+				AF2A129418C3C6E200A74FBA /* PayCheckViewController.m */,
 			);
 			name = PayCheckViewController;
 			sourceTree = "<group>";
@@ -331,8 +339,8 @@
 		AF6E26EA17E5A2B1006C74BA /* SettingsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF313D6817ABDFA6004CC815 /* SettingsViewController.h */,
-				AF313D6917ABDFA7004CC815 /* SettingsViewController.m */,
+				AF2A129618C3C6FC00A74FBA /* SettingsViewController.h */,
+				AF2A128E18C3C69E00A74FBA /* SettingsViewController.m */,
 			);
 			name = SettingsViewController;
 			sourceTree = "<group>";
@@ -340,8 +348,8 @@
 		AF6E26EB17E5A2BD006C74BA /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
-				AF313D7217ABE051004CC815 /* ModelController.h */,
-				AF313D7317ABE051004CC815 /* ModelController.m */,
+				AF2A129718C3C72000A74FBA /* ModelController.h */,
+				AF2A129818C3C72000A74FBA /* ModelController.m */,
 			);
 			name = ModelController;
 			sourceTree = "<group>";
@@ -349,8 +357,8 @@
 		AF6E26EC17E5A2C6006C74BA /* PlanningViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF313D7417ABE051004CC815 /* PlanningViewController.h */,
-				AF313D7517ABE051004CC815 /* PlanningViewController.m */,
+				AF2A129A18C3C75000A74FBA /* PlanningViewController.h */,
+				AF2A129B18C3C75000A74FBA /* PlanningViewController.m */,
 			);
 			name = PlanningViewController;
 			sourceTree = "<group>";
@@ -358,8 +366,8 @@
 		AF6E26ED17E5A2D2006C74BA /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF313D7617ABE051004CC815 /* RootViewController.h */,
-				AF313D7717ABE051004CC815 /* RootViewController.m */,
+				AF2A129C18C3C75000A74FBA /* RootViewController.h */,
+				AF2A129D18C3C75000A74FBA /* RootViewController.m */,
 			);
 			name = RootViewController;
 			sourceTree = "<group>";
@@ -410,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				AF2BC9D51809CAB9001D4077 /* Controllers */,
+				AF2A127718C3C4FC00A74FBA /* UIComponents */,
 				AF720F93179BF20F00F77CA6 /* ViewControllers */,
 				AF720F0F179BE3F700F77CA6 /* Model */,
 				AF720F0E179BE3DA00F77CA6 /* Storyboards */,
@@ -446,7 +455,7 @@
 		AF720F0F179BE3F700F77CA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AF45DFAA17EDD07A009C9ED8 /* SettingsManager */,
+				AFD25EDD1813FEDF0067D612 /* DataModel */,
 				AF45DFAB17EDD08A009C9ED8 /* Week */,
 				AF2BC9D91809DFEE001D4077 /* Paycheck */,
 			);
@@ -525,8 +534,8 @@
 		AFDA88BF17E655AC007AC0FB /* LeftMenuViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AFDA88BC17E655A8007AC0FB /* LeftMenuViewController.h */,
-				AFDA88BD17E655A8007AC0FB /* LeftMenuViewController.m */,
+				AF2A12A018C3C77000A74FBA /* LeftMenuViewController.h */,
+				AF2A12A118C3C77000A74FBA /* LeftMenuViewController.m */,
 			);
 			name = LeftMenuViewController;
 			sourceTree = "<group>";
@@ -613,31 +622,31 @@
 				AF45DFB617EDFC68009C9ED8 /* AHNavigationController.m in Sources */,
 				AF720EFB179BE2F400F77CA6 /* main.m in Sources */,
 				AF720EFF179BE2F400F77CA6 /* AppDelegate.m in Sources */,
-				AF720F92179BF20600F77CA6 /* LoginViewController.m in Sources */,
-				AF9AC102179EA80500CF3E98 /* APIClient.m in Sources */,
 				AF9AC105179EA8D400CF3E98 /* Week.m in Sources */,
-				AFDF015117A94D4C005CC5AA /* AHParser.m in Sources */,
 				AF2FB68817F21B5E002ECC51 /* UIImage+Tint.m in Sources */,
-				AF313D6A17ABDFA7004CC815 /* MenuViewController.m in Sources */,
-				AF313D6B17ABDFA7004CC815 /* PayCheckViewController.m in Sources */,
-				AF313D6C17ABDFA7004CC815 /* PaymentDaysViewController.m in Sources */,
-				AF313D7017ABDFA7004CC815 /* SettingsViewController.m in Sources */,
-				AF313D7817ABE051004CC815 /* ModelController.m in Sources */,
-				AF313D7917ABE051004CC815 /* PlanningViewController.m in Sources */,
-				AF313D7A17ABE051004CC815 /* RootViewController.m in Sources */,
-				AFF5E41117B3BC250028896F /* SettingsManager.m in Sources */,
-				AF038A06180AB357006CB990 /* PaycheckCell.m in Sources */,
+				AF2A127B18C3C4FC00A74FBA /* PaycheckCell.m in Sources */,
+				AF2A128118C3C59700A74FBA /* SettingsController.m in Sources */,
+				AF2A129F18C3C75000A74FBA /* RootViewController.m in Sources */,
+				AF2A12A518C3C79500A74FBA /* MenuViewController.m in Sources */,
+				AF2A128F18C3C69E00A74FBA /* SettingsViewController.m in Sources */,
+				AF2A128D18C3C67E00A74FBA /* ChangePasswordViewController.m in Sources */,
+				AF2A128A18C3C66400A74FBA /* LoginViewController.m in Sources */,
+				AF2A127E18C3C54100A74FBA /* NSData+AES256.m in Sources */,
 				AFD25EE01813FF190067D612 /* DataModel.xcdatamodeld in Sources */,
+				AF2A129E18C3C75000A74FBA /* PlanningViewController.m in Sources */,
 				AFE316A717B661CF00ACA245 /* Popup.m in Sources */,
-				AFE8489617B77FB400A02938 /* NSData+AES256.m in Sources */,
-				AFFBA48817DC735F009295D8 /* ChangePasswordViewController.m in Sources */,
+				AF2A128718C3C5D300A74FBA /* AHParser.m in Sources */,
 				AFFBA48B17DD0FA6009295D8 /* NSString+JRStringAdditions.m in Sources */,
+				AF2A129218C3C6BC00A74FBA /* PaymentDaysViewController.m in Sources */,
+				AF2A12A818C3C7BC00A74FBA /* AHViewController.m in Sources */,
 				AFDA88B717E65525007AC0FB /* IISideController.m in Sources */,
 				AFDA88B817E65525007AC0FB /* IIViewDeckController.m in Sources */,
 				AFD25EE31814002B0067D612 /* APIData.m in Sources */,
-				AF45DFAE17EDD5AA009C9ED8 /* AHViewController.m in Sources */,
+				AF2A128418C3C5C300A74FBA /* APIClient.m in Sources */,
+				AF2A129518C3C6E200A74FBA /* PayCheckViewController.m in Sources */,
 				AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */,
-				AFDA88BE17E655A8007AC0FB /* LeftMenuViewController.m in Sources */,
+				AF2A129918C3C72000A74FBA /* ModelController.m in Sources */,
+				AF2A12A218C3C77000A74FBA /* LeftMenuViewController.m in Sources */,
 				AF2BC9D81809CBE9001D4077 /* Paycheck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

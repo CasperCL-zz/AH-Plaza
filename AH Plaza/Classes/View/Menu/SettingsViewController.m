@@ -7,7 +7,7 @@
 //
 
 #import "SettingsViewController.h"
-#import "SettingsManager.h"
+#import "SettingsController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "Popup.h"
 #import "../../Helpers/Constants.h"
@@ -35,8 +35,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [_keepLoggedInSwitch setOn: [[SettingsManager sharedInstance] autologinEnabled]];
-    [_notificationSwitch setOn: [[SettingsManager sharedInstance] notificationPaymentEnabled]];
+    [_keepLoggedInSwitch setOn: [[SettingsController sharedInstance] autologinEnabled]];
+    [_notificationSwitch setOn: [[SettingsController sharedInstance] notificationPaymentEnabled]];
     
     [_keepLoggedInSwitch setOnTintColor: UIColorFromRGB(ah_blue)];
     [_notificationSwitch setOnTintColor: UIColorFromRGB(ah_blue)];
@@ -82,10 +82,10 @@
     [super viewDidUnload];
 }
 - (IBAction)autoLoginSliderValueChanged:(id)sender {
-    [[SettingsManager sharedInstance] setAutologinEnabled: [_keepLoggedInSwitch isOn]];
+    [[SettingsController sharedInstance] setAutologinEnabled: [_keepLoggedInSwitch isOn]];
 }
 - (IBAction)notificationSwitchValueChanged:(id)sender {
-    [[SettingsManager sharedInstance] setNotificationPaymentEnabled: [_notificationSwitch isOn]];
+    [[SettingsController sharedInstance] setNotificationPaymentEnabled: [_notificationSwitch isOn]];
 }
 
 - (IBAction)resetSettings:(id)sender {
@@ -100,7 +100,7 @@
     [[_popup button2] setTitleColor: [UIColor whiteColor] forState:UIControlStateNormal];
     [_popup showPopupWithAnimationDuration: 0.5 withText:@"Weet je zeker dat je alle instellingen wilt terugzetten?" withButton1Text:@"Ja" withButton2Text:@"Nee" withResult:^(RESULT result) {
         if (result == OKAY) {
-            [[SettingsManager sharedInstance] reset];
+            [[SettingsController sharedInstance] reset];
             for (UISwitch *swtch in _switches) {
                 [swtch setOn: NO animated: YES];
             }

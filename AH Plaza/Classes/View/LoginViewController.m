@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "APIClient.h"
 #import "NSData+AES256.h"
-#import "SettingsManager.h"
+#import "SettingsController.h"
 #import "../Keys.h"
 #import "../Helpers/Constants.h"
 #import "ChangePasswordViewController.h"
@@ -43,7 +43,7 @@ int tries;
     callback homePageLoadCallback = ^() {
         loadedCookies = YES;
         [_loginButton setEnabled: loadedCookies];
-        if([[SettingsManager sharedInstance] autologinEnabled])
+        if([[SettingsController sharedInstance] autologinEnabled])
             [self login];
     };
     [[APIClient sharedInstance] setHomePageLoadedCallback: homePageLoadCallback];
@@ -77,7 +77,7 @@ int tries;
     
     
     [self showCredentialsView:^(BOOL finished) {}];
-    if([[SettingsManager sharedInstance] autologinEnabled]){
+    if([[SettingsController sharedInstance] autologinEnabled]){
         NSString *documentsDirectory = [NSHomeDirectory()
                                         stringByAppendingPathComponent:@"Documents"];
         NSString *fileLocation =  [[NSString alloc] initWithFormat: @"%@/%@", documentsDirectory , @"user.ahpu"];
@@ -92,10 +92,10 @@ int tries;
                 [_usernameTextField setText: [[NSString alloc] initWithData:plainUsername encoding:NSUTF8StringEncoding]];
                 [_passwordTextField setText: [[NSString alloc] initWithData:plainPassword encoding:NSUTF8StringEncoding]];
             } else {
-                [[SettingsManager sharedInstance] setAutologinEnabled: NO];
+                [[SettingsController sharedInstance] setAutologinEnabled: NO];
             }
         } else {
-            [[SettingsManager sharedInstance] setAutologinEnabled: NO];
+            [[SettingsController sharedInstance] setAutologinEnabled: NO];
         }
     }
 }
