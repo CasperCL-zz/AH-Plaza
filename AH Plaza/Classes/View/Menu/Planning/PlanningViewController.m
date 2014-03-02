@@ -9,7 +9,7 @@
 #import "PlanningViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "APIClient.h"
-#import "SettingsManager.h"
+#import "SettingsController.h"
 #import "Constants.h"
 
 @interface PlanningViewController ()
@@ -46,7 +46,7 @@ double totalHoursWorked;
         [label setTextColor: bgColor];
     }
     
-    if(![[SettingsManager sharedInstance] planningInstructionsDisplayed]) {
+    if(![[SettingsController sharedInstance] planningInstructionsDisplayed]) {
         _instructionDialogBackground.alpha = 0.7f;
         _instructionDialogView.alpha = 1.0f;
         _instructionDialogView.hidden = NO;
@@ -55,7 +55,7 @@ double totalHoursWorked;
         _instructionDialogView.layer.cornerRadius = 10.0;
         _instructionDialogView.layer.masksToBounds = YES;
         [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(hideInstructions) userInfo:nil repeats:NO];
-        [[SettingsManager sharedInstance] setPlanningInstructionsDisplayed: YES];
+        [[SettingsController sharedInstance] setPlanningInstructionsDisplayed: YES];
     }
     
     if([[_dataObject workingTimes] count]) {

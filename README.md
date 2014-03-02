@@ -1,6 +1,8 @@
 AH-Plaza
 ========
 
+![alt tag](http://wieiscasper.nl/images/projects/600x300/AH-Plaza/AH-Plaza.png)
+
 Albert Heijn Plaza iPhone voor Medewerkers
 
 Deze app is bedoeld voor Medewerkers van de winkel Albert Heijn.

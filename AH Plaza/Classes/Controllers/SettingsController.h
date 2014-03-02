@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SettingsManager : NSObject <NSCoding>
+@interface SettingsController : NSObject <NSCoding>
 
 + (id)sharedInstance;
 
