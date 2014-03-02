@@ -23,7 +23,7 @@
 		AF2A12A218C3C77000A74FBA /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A12A118C3C77000A74FBA /* LeftMenuViewController.m */; };
 		AF2A12A518C3C79500A74FBA /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A12A418C3C79500A74FBA /* MenuViewController.m */; };
 		AF2A12A818C3C7BC00A74FBA /* AHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A12A718C3C7BC00A74FBA /* AHViewController.m */; };
-		AF2BC9D81809CBE9001D4077 /* Paycheck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2BC9D71809CBE9001D4077 /* Paycheck.m */; };
+		AF2A12AB18C3C90200A74FBA /* PayCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A12AA18C3C90200A74FBA /* PayCheck.m */; };
 		AF2FB68817F21B5E002ECC51 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */; };
 		AF45DFB617EDFC68009C9ED8 /* AHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF45DFB517EDFC68009C9ED8 /* AHNavigationController.m */; };
 		AF6E26F517E5CBFB006C74BA /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E26EF17E5CBFB006C74BA /* libTestFlight.a */; };
@@ -81,8 +81,8 @@
 		AF2A12A418C3C79500A74FBA /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/View/Menu/MenuViewController.m; sourceTree = "<group>"; };
 		AF2A12A618C3C7BC00A74FBA /* AHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHViewController.h; path = Classes/AHComponents/AHViewController/AHViewController.h; sourceTree = "<group>"; };
 		AF2A12A718C3C7BC00A74FBA /* AHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHViewController.m; path = Classes/AHComponents/AHViewController/AHViewController.m; sourceTree = "<group>"; };
-		AF2BC9D61809CBE9001D4077 /* Paycheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paycheck.h; path = Classes/Controllers/Paycheck/Paycheck.h; sourceTree = "<group>"; };
-		AF2BC9D71809CBE9001D4077 /* Paycheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Paycheck.m; path = Classes/Controllers/Paycheck/Paycheck.m; sourceTree = "<group>"; };
+		AF2A12A918C3C90200A74FBA /* PayCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCheck.h; path = Classes/Model/Paycheck/PayCheck.h; sourceTree = "<group>"; };
+		AF2A12AA18C3C90200A74FBA /* PayCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCheck.m; path = Classes/Model/Paycheck/PayCheck.m; sourceTree = "<group>"; };
 		AF2FB68617F21B5E002ECC51 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tint.h"; path = "Classes/Helpers/UIImage+Tint/UIImage+Tint.h"; sourceTree = "<group>"; };
 		AF2FB68717F21B5E002ECC51 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Tint.m"; path = "Classes/Helpers/UIImage+Tint/UIImage+Tint.m"; sourceTree = "<group>"; };
 		AF45DFA917EDCC4D009C9ED8 /* String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = String.h; path = Classes/Helpers/String.h; sourceTree = "<group>"; };
@@ -184,8 +184,8 @@
 		AF2BC9D91809DFEE001D4077 /* Paycheck */ = {
 			isa = PBXGroup;
 			children = (
-				AF2BC9D61809CBE9001D4077 /* Paycheck.h */,
-				AF2BC9D71809CBE9001D4077 /* Paycheck.m */,
+				AF2A12A918C3C90200A74FBA /* PayCheck.h */,
+				AF2A12AA18C3C90200A74FBA /* PayCheck.m */,
 			);
 			name = Paycheck;
 			sourceTree = "<group>";
@@ -642,12 +642,12 @@
 				AFDA88B717E65525007AC0FB /* IISideController.m in Sources */,
 				AFDA88B817E65525007AC0FB /* IIViewDeckController.m in Sources */,
 				AFD25EE31814002B0067D612 /* APIData.m in Sources */,
+				AF2A12AB18C3C90200A74FBA /* PayCheck.m in Sources */,
 				AF2A128418C3C5C300A74FBA /* APIClient.m in Sources */,
 				AF2A129518C3C6E200A74FBA /* PayCheckViewController.m in Sources */,
 				AFDA88B917E65525007AC0FB /* IIWrapController.m in Sources */,
 				AF2A129918C3C72000A74FBA /* ModelController.m in Sources */,
 				AF2A12A218C3C77000A74FBA /* LeftMenuViewController.m in Sources */,
-				AF2BC9D81809CBE9001D4077 /* Paycheck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
