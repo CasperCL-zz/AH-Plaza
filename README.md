@@ -11,7 +11,7 @@ Voel je vrij om het project te forken en te verbeteren!
 
 
 
-Casper
+Casper 
 Verkoopmedewerker AH en IT'er aan de Hogeschool van Amsterdam :)
 
 Functies
