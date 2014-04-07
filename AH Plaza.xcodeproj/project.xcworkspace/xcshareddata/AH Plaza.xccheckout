@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BF2C8E6D-4F03-4AC8-9363-27AF9126CA51</string>
+	<string>5B5967DD-EFCF-419E-9095-42FB938C91B7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AH Plaza</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F305812E-3AAE-4D04-A951-38C037EBBDB3</key>
+		<key>3C8CE5CE-EC4C-4572-953D-262D40611FED</key>
 		<string>https://github.com/CasperCL/AH-Plaza.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>AH Plaza.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F305812E-3AAE-4D04-A951-38C037EBBDB3</key>
+		<key>3C8CE5CE-EC4C-4572-953D-262D40611FED</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,16 +25,16 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F305812E-3AAE-4D04-A951-38C037EBBDB3</string>
+	<string>3C8CE5CE-EC4C-4572-953D-262D40611FED</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F305812E-3AAE-4D04-A951-38C037EBBDB3</string>
+			<string>3C8CE5CE-EC4C-4572-953D-262D40611FED</string>
 			<key>IDESourceControlWCCName</key>
-			<string>AH-Plaza</string>
+			<string>AH Plaza</string>
 		</dict>
 	</array>
 </dict>
